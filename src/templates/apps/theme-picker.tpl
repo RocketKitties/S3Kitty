@@ -20,8 +20,7 @@
 			<div class="col-sm-6">
 				<h2><i class="fa fa-check"></i>Features</h2>
 				<ul>
-					<li>Apply pre-existing themes to change groups of settings. </li>
-					<li>Make your environment look like your favorite desktop OS. </li> 
+					<li>Apply pre-existing themes to change groups of settings.</li>
 				</ul>
 			</div>
 			<div class="col-sm-6">

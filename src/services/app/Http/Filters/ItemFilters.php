@@ -192,22 +192,22 @@ class ItemFilters
 	 */
 	static function filterByCreateDate(Request $request, $items) {
 
-		// filter by before create date
+		// filter by after create date
 		//
-		if ($request->has('before-create-date')) {
-			$date = strtotime($request->input('before-create-date'));
+		if ($request->has('created_after')) {
+			$date = strtotime($request->input('created_after'));
 
 			// filter collection
 			//
 			$items = $items->filter(function($item) use ($date) {
-				return $item->created_at < $date;
+				return $item->created_at > $date;
 			})->values();
 		}
 
 		// filter by create date
 		//
-		if ($request->has('create-date')) {
-			$date = strtotime($request->input('create-date'));
+		if ($request->has('created_at')) {
+			$date = strtotime($request->input('created_at'));
 
 			// filter collection
 			//
@@ -216,15 +216,15 @@ class ItemFilters
 			})->values();
 		}
 
-		// filter by after create date
+		// filter by before create date
 		//
-		if ($request->has('after-create-date')) {
-			$date = strtotime($request->input('after-create-date'));
+		if ($request->has('created_before')) {
+			$date = strtotime($request->input('created_before'));
 
 			// filter collection
 			//
 			$items = $items->filter(function($item) use ($date) {
-				return $item->created_at > $date;
+				return $item->created_at < $date;
 			})->values();
 		}
 
@@ -240,22 +240,22 @@ class ItemFilters
 	 */
 	static function filterByModifyDate(Request $request, $items) {
 
-		// filter by before modify date
+		// filter by modified after
 		//
-		if ($request->has('before-modify-date')) {
-			$date = strtotime($request->input('before-modify-date'));
+		if ($request->has('modified_after')) {
+			$date = strtotime($request->input('modified_after'));
 
 			// filter collection
 			//
 			$items = $items->filter(function($item) use ($date) {
-				return $item->modified_at < $date;
+				return $item->modified_at > $date;
 			})->values();
 		}
 
 		// filter by modify date
 		//
-		if ($request->has('modify-date')) {
-			$date = strtotime($request->input('modify-date'));
+		if ($request->has('modified_at')) {
+			$date = strtotime($request->input('modified_at'));
 
 			// filter collection
 			//
@@ -264,15 +264,15 @@ class ItemFilters
 			})->values();
 		}
 
-		// filter by modified after
+		// filter by before modify date
 		//
-		if ($request->has('after-modify-date')) {
-			$date = strtotime($request->input('after-modify-date'));
+		if ($request->has('modified_before')) {
+			$date = strtotime($request->input('modified_before'));
 
 			// filter collection
 			//
 			$items = $items->filter(function($item) use ($date) {
-				return $item->modified_at > $date;
+				return $item->modified_at < $date;
 			})->values();
 		}
 
@@ -288,22 +288,22 @@ class ItemFilters
 	 */
 	static function filterByAccessDate(Request $request, $items) {
 
-		// filter by before access date
+		// filter by after access date
 		//
-		if ($request->has('before-access-date')) {
-			$date = strtotime($request->input('before-access-date'));
+		if ($request->has('accessed_after')) {
+			$date = strtotime($request->input('accessed_after'));
 
 			// filter collection
 			//
 			$items = $items->filter(function($item) use ($date) {
-				return $item->accessed_at < $date;
+				return $item->accessed_at > $date;
 			})->values();
 		}
 
 		// filter by access date
 		//
-		if ($request->has('access-date')) {
-			$date = strtotime($request->input('access-date'));
+		if ($request->has('accessed_at')) {
+			$date = strtotime($request->input('accessed_at'));
 
 			// filter collection
 			//
@@ -312,15 +312,15 @@ class ItemFilters
 			})->values();
 		}
 
-		// filter by after access date
+		// filter by before access date
 		//
-		if ($request->has('after-access-date')) {
-			$date = strtotime($request->input('after-access-date'));
+		if ($request->has('accessed_before')) {
+			$date = strtotime($request->input('accessed_before'));
 
 			// filter collection
 			//
 			$items = $items->filter(function($item) use ($date) {
-				return $item->accessed_at > $date;
+				return $item->accessed_at < $date;
 			})->values();
 		}
 

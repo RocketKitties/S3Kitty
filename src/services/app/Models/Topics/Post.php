@@ -88,6 +88,7 @@ class Post extends TimeStamped
 		'attachments',
 		'num_likes',
 		'num_comments',
+		'num_attachments',
 		'likes',
 		'comments',
 
@@ -111,6 +112,7 @@ class Post extends TimeStamped
 		'check_in',
 		'num_likes',
 		'num_comments',
+		'num_attachments',
 		'likes',
 		'comments'
 	];
@@ -220,6 +222,15 @@ class Post extends TimeStamped
 	 */
 	public function getNumCommentsAttribute(): int {
 		return $this->comments()->count();
+	}
+
+	/**
+	 * Get this post's num comments attribute.
+	 *
+	 * @return int
+	 */
+	public function getNumAttachmentsAttribute(): int {
+		return $this->attachments()->count();
 	}
 
 	/**

@@ -1310,7 +1310,7 @@
 			},
 
 			"Uploads": {
-				"font": "fa fa-upload",
+				"font": ["fa fa-upload", "fa fa-upload"],
 				"icon": ["uploads-empty.svg", "uploads-full.svg"]
 			},
 

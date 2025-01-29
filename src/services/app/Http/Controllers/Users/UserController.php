@@ -35,6 +35,7 @@ use App\Http\Controllers\Controller;
 use App\Utilities\Uuids\Guid;
 use App\Http\Filters\DateFilter;
 use App\Http\Filters\LimitFilter;
+use App\Http\Filters\UserNameFilter;
 
 class UserController extends Controller
 {
@@ -224,7 +225,7 @@ class UserController extends Controller
 	 *
 	 * @return App\Models\Users\User[]
 	 */
-	public function getAll() {
+	public function getAll(Request $request) {
 
 		// create query
 		//
@@ -234,6 +235,7 @@ class UserController extends Controller
 		//
 		$query = DateFilter::applyTo($request, $query);
 		$query = LimitFilter::applyTo($request, $query);
+		$query = UserNameFilter::applyTo($request, $query);
 
 		// perform query
 		//
@@ -336,7 +338,9 @@ class UserController extends Controller
 
 		// destroy session cookies
 		//
-		Session::flush();
+		if ($user->isCurrent()) {
+			Session::flush();
+		}
 
 		return $user;
 	}

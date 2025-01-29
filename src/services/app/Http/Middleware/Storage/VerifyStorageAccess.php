@@ -247,7 +247,7 @@ class VerifyStorageAccess
 
 		// set user's file storage
 		//
-		FileStorage::setUserContext($userAccount, '/Public/');
+		FileStorage::setUserContext($userAccount, 'Public/');
 	}
 
 	/**
@@ -358,7 +358,7 @@ class VerifyStorageAccess
 		// check for shared items
 		//
 		$path = $request->input('path');
-		if (StringUtils::startsWith($path, '/Shared')) {
+		if (str_starts_with($path, '/Shared')) {
 			return;
 		}
 
@@ -382,6 +382,16 @@ class VerifyStorageAccess
 	 */
 	public function handle($request, Closure $next)
 	{
+		// check if absolute paths
+		//
+		if ($request->has('path')) {
+			$path = $request->get('path');
+			if (str_starts_with($path, '/') && !str_starts_with($path, '/Shared')) {
+				return response("You do not have permissions to read this directory.", 400);
+
+			}
+		}
+
 		// set file system context to link
 		//
 		if ($request->has('link_id')) {

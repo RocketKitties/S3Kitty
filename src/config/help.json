@@ -2,7 +2,7 @@
 	"name": "User Guide & Reference",
 	"logo": {
 		"src": "images/logos/logo.png",
-		"background": "var(--primary-color)"
+		"background": "pink"
 	},
 	"version": "2.0",
 	"items": {

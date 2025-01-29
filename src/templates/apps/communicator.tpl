@@ -25,8 +25,7 @@
 					<li>'Like' posts, comments, and replies.</li>
 					<li>Include files and photos with your posts.</li>
 					<li>Organize and view posts according to topic.</li>
-					<li>Create new public or private news topics.</li>
-					<li>Invite friends to join discussion topics.</li>
+					<li>Create new public or private news topics and invite friends to join the discussion.</li>
 					<li>Direct message friends in a private chat.</li>
 					<li>Invite one or more friends to a chat session.</li>
 					<li>Attach photos, files, and folders to chat messages.</li> 
@@ -35,8 +34,8 @@
 			<div class="col-sm-6">
 				<h2><i class="fa fa-star"></i>Benefits</h2>
 				<ul>
-					<li>Keep up-to-date with events in the lives of your friends and colleagues.</li>
-					<li>Engage in private discussions. </li>
+					<li>Allows you to keep up-to-date with events in the lives of your friends.</li>
+					<li>Enables private discussions. </p>
 				</ul>
 			</div>
 		</div>

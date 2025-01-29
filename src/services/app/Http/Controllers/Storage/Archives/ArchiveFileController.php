@@ -182,4 +182,74 @@ class ArchiveFileController extends Controller
 
 		return $file->getContents($dirname, $filter, '__MACOSX', true);
 	}
+
+	/**
+	 * Recursively get the counts of contents of an archive file.
+	 *
+	 * @param Illuminate\Http\Request $request - the Http request object
+	 * @return App\Models\Storage\Item[]
+	 */
+	public function getNumContents(Request $request) {
+
+		// parse params
+		//
+		$path = $request->input('path');
+		$volume = $request->input('volume');
+		$linkId = $request->input('link_id');
+		$shareId = $request->input('share_id');
+
+		// parse archive params
+		//
+		$dirname = $request->input('dirname');
+		$filter = $request->input('filter');
+
+		// create file
+		//
+		$extension = strtolower(pathinfo($path, PATHINFO_EXTENSION));
+		if ($extension == 'tar') {
+			$file = new TarArchiveFile([
+				'path' => $path,
+				'volume' => $volume,
+				'link_id' => $linkId,
+				'share_id' => $shareId
+			]);
+		} else {
+			$file = new ZipArchiveFile([
+				'path' => $path,
+				'volume' => $volume,
+				'link_id' => $linkId,
+				'share_id' => $shareId
+			]);
+		}
+
+		// check if file exists
+		//
+		if (!$file->exists()) {
+			return response("File '" . $file->getPath() . "' not found.", 404);
+		}
+
+		// get archive contents
+		//
+		$items = $file->getContents($dirname, $filter, '__MACOSX', true);
+
+		// count files and folders
+		//
+		$numFiles = 0;
+		$numFolders = 0;
+		for ($i = 0; $i < count($items); $i++) {
+			$item = $items[$i];
+			if (str_ends_with($item['path'], '/')) {
+				$numFolders++;
+			} else {
+				$numFiles++;
+			}
+		}
+
+		// return counts
+		//
+		return [
+			'files' => $numFiles,
+			'directories' => $numFolders
+		];
+	}
 }

@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="description section">
-		<p>The <%= config.apps['web_browser'].name %> app lets you view and navigate websites. </p>
+		<p>The <%= config.apps['web_browser'].name %> app lets you view and navigate web pages. </p>
 	</div>
 
 	<div class="details section">

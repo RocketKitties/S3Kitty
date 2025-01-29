@@ -19,10 +19,17 @@
 namespace App\Models\Storage\Media;
 
 use App\Models\Storage\File;
+use App\Models\Storage\Traits\ExifReadable;
 use Spatie\PdfToText\Pdf;
 
 class PdfFile extends File
 {
+	/**
+	 * The traits that are inherited.
+	 *
+	 */
+	use ExifReadable;
+
 	//
 	// constants
 	//

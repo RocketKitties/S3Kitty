@@ -20,9 +20,9 @@
 			<div class="col-sm-6">
 				<h2><i class="fa fa-check"></i>Features</h2>
 				<ul>
-					<li>Shows current audio level. </li>
-					<li>Displays results on digital display. </li>
-					<li>Keeps track of max audio level since previous reset. </li>
+					<li>Shows current audio level</li>
+					<li>Displays results on digital display</li>
+					<li>Keeps track of max audio level since previous reset.</li>
 				</ul>
 			</div>
 			<div class="col-sm-6">

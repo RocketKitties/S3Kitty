@@ -307,7 +307,7 @@ class Link extends TimeStamped
 	 * @return bool
 	 */
 	public function isEditable(): bool {
-		return $this->editable;
+		return $this->editable == true;
 	}
 
 	/**

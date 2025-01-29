@@ -1,24 +1,32 @@
 {
-	"name": "Sharedigm",
-	"title": "Sharedigm",
+	"name": "S3Kitty",
+	"title": "S3Kitty",
 
 	"header": {
+		"background": "transparent",
 
 		"brand": {
 			"logo": {
-				"src": "images/logos/logo.svg",
-				"border": "rounded"
+				"src": "images/logos/kitty-icon-simple.svg",
+				"background": "var(--primary-color)",
+				"border": "rounded",
+				"height": 30
 			},
 
 			"logotype": {
-				"font": "Syncopate",
+				"font": "Varela Round",
 
 				"names": {
-					"Share": {
-						"color": ""
+					"S3": {
+						"font_size": "125%",
+						"color": "var(--primary-color)"
 					},
-					"digm": {
-						"color": "hsl(220, 100%, 66%)"
+					"K": {
+						"font_size": "125%",
+						"color": "#a0a0c0"
+					},
+					"itty": {
+						"color": "#a0a0c0"
 					}
 				}
 			}
@@ -29,22 +37,23 @@
 				"icon": "fa fa-info-circle",
 				"href": "#about"
 			},
-			"Uses": {
-				"icon": "fa fa-user-circle",
-				"href": "#uses"
-			},
 			"Features": {
 				"icon": "fa fa-lightbulb",
 				"href": "#features"
 			},
-			"Apps": {
-				"icon": "fa fa-rocket",
-				"href": "#apps"
-			},
-			"Platform": {
-				"icon": "fa fa-laptop",
-				"href": "#platform",
+			"Downloads": {
+				"icon": "fa fa-download",
+				"href": "#downloads",
 				"platform": "desktop-only"
+			},
+			"Installation": {
+				"icon": "fa fa-computer",
+				"href": "#installation",
+				"platform": "desktop-only"
+			},
+			"RocketKitty": {
+				"icon": "fa fa-rocket",
+				"href": "http://www.rocketkitty.org"
 			}
 		},
 
@@ -65,147 +74,109 @@
 	},
 
 	"welcome": {
-		"background": "linear-gradient(to bottom, hsl(220, 75%, 0%) 0%, hsla(220, 50%, 50%, 100%) 100%)",
+		"background": "linear-gradient(to bottom, hsla(0, 100%, 50%, 0%) 0%, hsla(0, 100%, 50%, 25%) 100%)",
 		"template": "templates/welcome.tpl",
 
 		"carousel": {
-			"template": "templates/welcome/carousel.tpl",
-			"color": "white"
+			"template": "templates/welcome/carousel.tpl"
 		},
 
 		"splash": {
 			"background": "transparent",
-			"background2": "linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 100%)",
-
 			"brand": {
 				"logo": {
-					"src": "images/logos/logo.svg",
-					"border": "rounded"
+					"src": "images/logos/cloud-icon.svg",
+					"border": "rounded",
+					"transform": "scale(1.5)",
+					"filter": "drop-shadow(5px 5px 10px rgba(0,0,0,0.2))"
 				},
 
 				"logotype": {
-					"font": "Syncopate",
+					"font": "Varela Round",
+					"short": false,
 
 					"names": {
-						"Share": {
-							"color": "white"
+						"S3": {
+							"font_size": "150%",
+							"color": "var(--primary-color)"
 						},
-						"digm": {
-							"color": "hsl(220, 100%, 66%)"
+						"K": {
+							"font_size": "150%",
+							"color": "#a0a0c0"
+						},
+						"itty": {
+							"color": "#a0a0c0"
+						},
+						".org": {
+							"font_size": "25%"
 						}
 					}
 				}
 			},
 
 			"tagline": {
-				"text": "Sharing Made Simple",
+				"text": "Your Buckets, Your Cloud",
 				"font": "Syncopate",
 				"font_weight": "bold",
 				"color": "white",
-				"background": "hsl(220, 100%, 66%)",
+				"background_color": "var(--primary-color)",
 				"border": "rounded"
 			},
 
 			"description": {
-				"text": "Self-hostable cloud based <a href='#features/easy-to-use'>operating system</a>, <a href='#uses/file-sharing'>file sharing</a>, and <a href='#uses/social-networking'>social network</a>.",
-				"color": "white"
+				"text": "Free, friendly, self-hostable web interface for S3 file storage and sharing."
 			}
-		},
-
-		"crawler2": {
-			"scale": 1,
-			"rotation": 30,
-			"fov": 100,
-			"step": 2,
-			"time_step": 30,
-			"items_per_row": 7,
-
-			"images": {
-				"Albums": "images/icons/apps/file-browser.svg",
-				"Audio": "images/icons/apps/file-browser.svg",
-				"Audiobook.mp3": "images/icons/files/mp3.svg",
-				"Code": "images/icons/apps/file-browser.svg",
-				"Contacts": "images/icons/apps/file-browser.svg",
-				"Data": "images/icons/apps/file-browser.svg",
-				"database.sql": "images/icons/files/sql.svg",
-
-				"Documents": "images/icons/apps/file-browser.svg",
-				"Favorites": "images/icons/apps/file-browser.svg",
-				"Untitled": "images/icons/apps/file-browser.svg",
-				"Fonts": "images/icons/apps/file-browser.svg",
-				"Gallery": "images/icons/apps/file-browser.svg",
-				"Goo": "images/icons/apps/file-browser.svg",
-				"index.html": "images/icons/files/html.svg",
-
-				"main.js": "images/icons/files/js.svg",
-				"Maps": "images/icons/apps/file-browser.svg",
-				"Map.kml": "images/icons/files/kml.svg",
-				"Movies": "images/icons/apps/file-browser.svg",
-				"Music": "images/icons/apps/file-browser.svg",
-				"parser.cpp": "images/icons/files/cpp.svg",
-				"parser.h": "images/icons/files/h.svg",
-
-				"Pictures": "images/icons/apps/file-browser.svg",
-				"Picture.png": "images/icons/files/png.svg",
-				"Podcasts": "images/icons/apps/file-browser.svg",
-				"Podcast.mp3": "images/icons/files/mp3.svg",
-				"Portrait.jpg": "images/icons/files/jpg.svg",
-				"Resume.doc": "images/icons/files/doc.svg",
-				"Report.pdf": "images/icons/files/pdf.svg",
-
-				"Reminders.doc": "images/icons/files/doc.svg",
-				"script.py": "images/icons/files/py.svg",
-				"Scripts": "images/icons/apps/file-browser.svg",
-				"Song.mp3": "images/icons/files/mp3.svg",
-				"Songs": "images/icons/apps/file-browser.svg",
-				"To Do List.txt": "images/icons/files/txt.svg",
-				"Work": "images/icons/apps/file-browser.svg"
-			}
-		},
-
-		"overlay2": {
-			"far_color": "hsl(220, 75%, 25%)",
-			"near_color": "hsla(220, 100%, 80%, 25%)"
 		}
 	},
 
 	"page": {
 		"background": "",
 		"theme": "",
-		"font": "",
+		"font": "Proxima Nova",
+
+		"heading1": {
+			"font": "Varela Round"
+		},
+
+		"heading2": {
+			"font": "Varela Round"
+		},
+
+		"heading3": {
+			"font": "Varela Round"
+		},
 
 		"footer": {
-			"background": "#272740",
-			"color": null,
-
+			"background": "hsla(0, 100%, 50%, 15%)",
+			
 			"brand": {
 				"logo": {
-					"src": "images/logos/logo.svg",
-					"href": "#",
-					"border": "rounded"
+					"src": "images/logos/cloud-icon.svg",
+					"height": 150,
+					"border": "rounded",
+					"filter": "drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25))"
 				},
 
 				"logotype": {
-					"font": "Syncopate",
+					"font": "Varela Round",
 
 					"names": {
-						"Share": {
-							"color": "white"
+						"S3": {
+							"font_size": "125%",
+							"color": "var(--primary-color)"
 						},
-						"digm": {
-							"color": "hsl(220, 100%, 66%)"
+						"K": {
+							"font_size": "125%",
+							"color": "#a0a0c0"
+						},
+						"itty": {
+							"color": "#a0a0c0"
+						},
+						".org": {
+							"font_size": "50%"
 						}
 					}
 				}
-			},
-
-			"tagline": {
-				"text": "Sharing Made Simple",
-				"font": "Syncopate",
-				"font_weight": "bold",
-				"color": "white",
-				"background": "hsl(220, 100%, 66%)",
-				"border": "rounded"
 			},
 
 			"info": {
@@ -216,10 +187,6 @@
 							"icon": "fa fa-info-circle",
 							"href": "#about"
 						},
-						"Uses": {
-							"icon": "fa fa-user-circle",
-							"href": "#uses"
-						},
 						"Features": {
 							"icon": "fa fa-lightbulb",
 							"href": "#features"
@@ -228,9 +195,9 @@
 							"icon": "fa fa-rocket",
 							"href": "#apps"
 						},
-						"Platform": {
-							"icon": "fa fa-laptop",
-							"href": "#platform"
+						"Downloads": {
+							"icon": "fa fa-download",
+							"href": "#downloads"
 						}
 					}
 				},
@@ -253,10 +220,6 @@
 						"Code of Conduct": {
 							"icon": "fa fa-file-alt",
 							"href": "#policies/code-of-conduct"
-						},
-						"All": {
-							"icon": "fa fa-file-alt",
-							"href": "#policies"
 						}
 					}
 				},
@@ -265,12 +228,20 @@
 					"icon": "fa fa-question-circle",
 					"links": {
 						"User Guide": {
-							"icon": "fa fa-book",
+							"icon": "fa fa-question-circle",
 							"href": "#help"
+						},
+						"Installation": {
+							"icon": "fa fa-computer",
+							"href": "#installation"
 						},
 						"Contact Us": {
 							"icon": "fa fa-envelope",
 							"href": "#contact"
+						},
+						"RocketKitty": {
+							"icon": "fa fa-rocket",
+							"href": "http://www.rocketkitty.org"
 						}
 					}
 				}
@@ -279,13 +250,13 @@
 	},
 
 	"footer": {
-		"background": "hsl(220, 100%, 66%)",
-		"font": "",
+		"background": "var(--primary-color)",
 		"color": "white",
 		"copyright": {
 			"year": "2024",
-			"logo": "images/logos/logo.svg",
-			"entity": "Sharedigm"
+			"logo": "images/logos/rocketkitty-icon-white.svg",
+			"url": "http://www.rocketkitty.org",
+			"entity": "RocketKitty.org"
 		}
 	}
 }

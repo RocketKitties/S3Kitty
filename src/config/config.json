@@ -1,18 +1,18 @@
 {
 	"servers": {
-		"authentication": "/services/public/api",
-		"api": "/services/public/api",
+		"authentication": "services/public/api",
+		"api": "services/public/api",
 		"images": "images"
 	},
 
 	"storage": {
 		"dropbox": {
-			"appKey": "Your API Key Here"
+			"appKey": "<YOUR APP KEY HERE>"
 		},
 
 		"google": {
-			"developerKey": "Your Developer Key Here",
-			"clientId": "Your Client ID Here"
+			"developerKey": "<YOUR DEVELOPER KEY HERE>",
+			"clientId": "<YOUR CLIENT ID KEY HERE>"
 		}
 	},
 
@@ -35,7 +35,7 @@
 
 		"accuweather": {
 			"server": "https://api.accuweather.com/maps/v1/models/gfs/zxy",
-			"appKey": "Your API Key Here"
+			"appKey": "<YOUR APP KEY HERE>"
 		},
 
 		"aviationweather": {
@@ -44,14 +44,14 @@
 
 		"mapbox": {
 			"server": "https://a.tiles.mapbox.com/v4/mapbox.terrain-rgb",
-			"appKey": "Your API Key Here"
+			"appKey": "<YOUR APP KEY HERE>"
 		}
 	},
 
 	"geocoding": {
 		"google": {
 			"server": "https://maps.googleapis.com/maps/api/geocode/json",
-			"apiKey": "Your API Key Here"
+			"apiKey": "<YOUR API KEY HERE>"
 		},
 
 		"us_census": {
@@ -63,7 +63,7 @@
 	"autocomplete": {
 		"google": {
 			"server": "https://maps.googleapis.com/maps/api/place/autocomplete/json",
-			"apiKey": "Your API Key Here"
+			"apiKey": "<YOUR API KEY HERE>"
 		}
 	},
 	

@@ -10,24 +10,24 @@
 	<div class="attention"><i class="fa fa-paint-brush"></i></div>
 
 	<div class="description section">
-		<p>Themes allow you to customize your user experience using pre-defined or user created themes to suit your personal style and taste. </p>
+		<p>The Themes features allow you to customize your user experience using pre-defined or user created themes to suit your personal style and taste. </p>
 	</div>
 
 	<div class="details section">
 		<div class="row">
+			<div class="col-sm-6">
+				<h2><i class="fa fa-star"></i>Benefits</h2>
+				<ul>
+					<li>Create a more efficient computing environment by matching the visual aesthetics of the environment that you are most familiar with. </li>
+					<li>Create a more enjoyable computing environment. </li>
+				</ul>
+			</div>
 			<div class="col-sm-6">
 				<h2><i class="fa fa-check"></i>Features</h2>
 				<ul>
 					<li>Use the <a href="#apps/theme-manager">Theme Manager</a> to customize the aesthetics of your computing experience. </li>
 					<li>Apply themes from a library of pre-defined aesthetics. </li>
 					<li>Create your own themes to capture your own personal taste and style. </li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<h2><i class="fa fa-star"></i>Benefits</h2>
-				<ul>
-					<li>Create a more efficient computing environment by matching the look and feel of the environment that you are most familiar with. </li>
-					<li>Create a more enjoyable computing environment. </li>
 				</ul>
 			</div>
 		</div>

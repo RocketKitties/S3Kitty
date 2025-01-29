@@ -132,10 +132,6 @@ class Directory extends Item
 		//
 		'permissions',
 
-		// sharing
-		//
-		'owner',
-
 		// metadata
 		//
 		'is_empty'
@@ -852,7 +848,7 @@ class Directory extends Item
 
 			// check if storage exists
 			//
-			$storage = this->getStorage();
+			$storage = $this->getStorage();
 			if (!$storage) {
 				return false;
 			}

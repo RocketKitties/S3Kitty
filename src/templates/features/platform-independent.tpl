@@ -16,17 +16,17 @@
 	<div class="details section">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2><i class="fa fa-check"></i>Features</h2>
-				<ul>
-					<li>Responsive web app is attractive and easy to use on any screen size. </li>
-					<li>Viewer apps use touch gestures to pinch zoom or swipe to pan. </li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
 				<h2><i class="fa fa-star"></i>Benefits</h2>
 				<ul>
 					<li>Access your data from any internet connected device.</li>
 					<li>Access your data while on the go. </li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<h2><i class="fa fa-check"></i>Features</h2>
+				<ul>
+					<li>Responsive web app is attractive and easy to use on any screen size. </li>
+					<li>Viewer apps use touch gestures to pinch zoom or swipe to pan. </li>
 				</ul>
 			</div>
 		</div>
@@ -181,7 +181,7 @@
 			<div class="caption">Mobile Map Viewer</div>
 		</div>
 		<div class="figure col-sm-6">
-			<a href="images/info/apps/topic-viewer/mobile/mobile-topic-viewer.png" target="_blank" class="lightbox" title="<%= config.apps['topic_viewer'].name %>"><img src="images/info/apps/topic-viewer/mobile/mobile-topic-viewer.png" /></a>
+			<a href="images/info/apps/news-browser/mobile/mobile-news-browser.png" target="_blank" class="lightbox" title="<%= config.apps['topic_viewer'].name %>"><img src="images/info/apps/news-browser/mobile/mobile-news-browser.png" /></a>
 			<div class="caption"><%= config.apps['topic_viewer'].name %></div>
 		</div>
 		<div class="figure col-sm-6">

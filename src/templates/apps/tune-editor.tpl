@@ -30,7 +30,7 @@
 				<h2><i class="fa fa-star"></i>Benefits</h2>
 				<ul>
 					<li>Read and write music from any network connected device. </li>
-					<li>The ABC music notation format is simple to use and extremely efficient so you can store a huge number of songs in a very small amount of space. </li>
+					<li>The ABC music notation format is simple to use and extremely efficient so you can store a huge number of songs in a very small amount of space. </p>
 				</ul>
 			</div>
 		</div>

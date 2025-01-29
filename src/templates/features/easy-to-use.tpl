@@ -16,6 +16,15 @@
 	<div class="details section">
 		<div class="row">
 			<div class="col-sm-6">
+				<h2><i class="fa fa-star"></i>Benefits</h2>
+				<ul>
+					<li>Manage your data and apps. </li>
+					<li>Looks and functions just like your native operating system when running from your desktop computer. </li>
+					<li>Looks and functions just like your mobile operating system when running from your phone.</li>
+					<li>There is almost no learning curve because you basically already know how to use it. </li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
 				<h2><i class="fa fa-check"></i>Features</h2>
 				<ul>
 					<li>Organize your files into folders.</li>
@@ -26,21 +35,12 @@
 					<li>Full screen mode.</li>
 				</ul>
 			</div>
-			<div class="col-sm-6">
-				<h2><i class="fa fa-star"></i>Benefits</h2>
-				<ul>
-					<li>Manage your data and apps. </li>
-					<li>Looks and functions just like your native operating system when running from your desktop computer. </li>
-					<li>Looks and functions just like your mobile operating system when running from your phone.</li>
-					<li>There is almost no learning curve because you basically already know how to use it. </li>
-				</ul>
-			</div>
 		</div>
 	</div>
 
 	<h2><i class="fa fa-desktop"></i>Screen Shots</h2>
 	<div class="figure desktop-only">
-		<a href="images/info/desktop/desktop-windows.png" target="_blank" class="lightbox" title="<%= application.name %> Desktop"><img src="images/info/desktop/desktop-windows.png" /></a>
+		<a href="images/info/desktop/desktop.png" target="_blank" class="lightbox" title="<%= application.name %> Desktop"><img src="images/info/desktop/desktop.png" /></a>
 		<div class="caption"><%= application.name %> Desktop</div>
 	</div>
 	<div class="figure row">

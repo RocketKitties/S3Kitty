@@ -21,13 +21,12 @@
 				<h2><i class="fa fa-check"></i>Features</h2>
 				<ul>
 					<li>Analog or digital display</li>
-					<li>View hours, minutes, and seconds. </li>
 				</ul>
 			</div>
 			<div class="col-sm-6">
 				<h2><i class="fa fa-star"></i>Benefits</h2>
 				<ul>
-					<li>Keep track of time easily and conveniently. </li>
+					<li>View hours, minutes, and seconds. </li>
 				</ul>
 			</div>
 		</div>

@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="description section">
-		<p>The <%= config.apps['chat_viewer'].name %> app </p>
+		<p>The <%= config.apps['chat_viewer'].name %> app lets you view and post news updates and exchange direct messages. </p>
 	</div>
 
 	<div class="details section">
@@ -20,15 +20,16 @@
 			<div class="col-sm-6">
 				<h2><i class="fa fa-check"></i>Features</h2>
 				<ul>
-					<li>Invite one or more friends to a private chat session.</li>
+					<li>Direct message friends in a private chat.</li>
+					<li>Invite one or more friends to a chat session.</li>
 					<li>Attach photos, files, and folders to chat messages.</li> 
 				</ul>
 			</div>
 			<div class="col-sm-6">
 				<h2><i class="fa fa-star"></i>Benefits</h2>
 				<ul>
-					<li>Keep up-to-date with your friends or colleagues.</li>
-					<li>Engage in private discussions. </p>
+					<li>Allows you to keep up-to-date with events in the lives of your friends.</li>
+					<li>Enables private discussions. </p>
 				</ul>
 			</div>
 		</div>

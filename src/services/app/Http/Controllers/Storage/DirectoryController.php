@@ -774,7 +774,7 @@ class DirectoryController extends Controller
 			}
 		}
 
-		if ($request->has('shared-by')) {
+		if ($request->has('shared_by')) {
 
 			// get directory contents
 			//

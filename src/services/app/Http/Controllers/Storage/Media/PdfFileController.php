@@ -61,4 +61,39 @@ class PdfFileController extends Controller
 
 		return $file->toText();
 	}
+
+	/**
+	 * Get a pdf file's exif information.
+	 *
+	 * @param Illuminate\Http\Request $request - the Http request object
+	 * @return object
+	 */
+	public function getExif(Request $request) {
+
+		// parse params
+		//
+		$path = $request->input('path');
+		$volume = $request->input('volume');
+		$linkId = $request->input('link_id');
+		$shareId = $request->input('share_id');
+
+		// create image file
+		//
+		$file = new PdfFile([
+			'path' => $path,
+			'volume' => $volume,
+			'link_id' => $linkId,
+			'share_id' => $shareId
+		]);
+
+		// check if file exists
+		//
+		if (!$file->exists()) {
+			return response("File '" . $file->getPath() . "' not found.", 404);
+		}
+
+		// query image
+		//
+		return $file->readExifTool();
+	}
 }

@@ -21,20 +21,16 @@
 				<h2><i class="fa fa-check"></i>Features</h2>
 				<ul>
 					<li>Create and edit your personal profile, including your name and profile photo.</li>
-					<li>View and edit your:
-						<ul>
-							<li>Geographical location and past homes.</li>
-							<li>Work and occupational history.</li>
-							<li>Educational background.</li>
-							<li>Family members' info.</li>
-							<li>Writing and publications.</li>
-							<li>Contact info.</li>
-						</ul>
-					</li>
+					<li>View and edit your geographical location and past homes.</li>
+					<li>View and edit your work and occupational history.</li>
+					<li>View and edit your educational background.</li>
+					<li>View and edit your family info.</li>
+					<li>View and edit your contact info.</li>
 					<li>View other users' connections to find new connections.</li>
 					<li>Invite users to become connections.</li>
 					<li>View other users' posts.</li>
 					<li>View the mutual connections that you share with friends and colleagues.</li>
+					<li>Manage your account and password.</li>
 				</ul>
 			</div>
 			<div class="col-sm-6">

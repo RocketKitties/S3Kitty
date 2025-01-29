@@ -21,9 +21,9 @@
 		"show_app_launcher": true,
 		"preferences": {
 			"desktop_apps": {
-				"phone": ["app_launcher"],
-				"tablet": ["app_launcher"],
-				"desktop": ["file_browser", "communicator"]
+				"phone": ["file_browser"],
+				"tablet": ["file_browser"],
+				"desktop": ["file_browser"]
 			},
 			"admin_apps": {
 				"phone": ["app_launcher"],
@@ -48,7 +48,7 @@
 	"help": {
 		"show_app": true,
 		"show_pdf": false,
-		"show_topic": "Sharedigm",
+		"show_topic": true,
 		"show_contact": true
 	},
 
@@ -56,14 +56,9 @@
 	},
 
 	"search": {
-		"placeholder": "Search for terms or text.",
-		"options": ["view_kind", "detail_kind", "create_date"],
-		"hidden": true,
-		"index": {
-			"name": "search index",
-			"icon": "<i class=\"fa fa-search\"></i>"
-		},
-		"directory": "/Shared"
+		"directory": "/Shared",
+		"placeholder": "Search",
+		"hidden": true
 	},
 
 	"settings": {
@@ -138,96 +133,5 @@
 		"content": [
 			"p", ".section li"
 		]
-	},
-
-	"websites": {
-		"Categories": {
-			"homepage": {
-				"icon": "fa fa-home",
-				"label": "Homepage"
-			},
-			"blog": {
-				"icon": "fa fa-comment",
-				"label": "Blog"						
-			},
-			"business": {
-				"icon": "fa fa-money-bill",
-				"label": "Business"						
-			},
-			"photos": {
-				"icon": "fa fa-camera",
-				"label": "Photos"						
-			},
-			"videos": {
-				"icon": "fa fa-video",
-				"label": "Videos"						
-			},
-			"music": {
-				"icon": "fa fa-music",
-				"label": "Music"						
-			},
-			"portfolio": {
-				"icon": "fa fa-briefcase",
-				"label": "Portfolio"						
-			},
-			"interest": {
-				"icon": "fa fa-smile",
-				"label": "Interest"						
-			},
-			"social": {
-				"icon": "fa fa-users",
-				"label": "Social"						
-			}
-		},
-		"Commercial": {
-			"etsy": {
-				"icon": "fab fa-etsy",
-				"label": "Etsy"						
-			},
-			"facebook": {
-				"icon": "fab fa-facebook-official",
-				"label": "Facebook"						
-			},
-			"flickr": {
-				"icon": "fab fa-flickr",
-				"label": "Flickr"						
-			},
-			"github": {
-				"icon": "fab fa-github",
-				"label": "GitHub"						
-			},
-			"instagram": {
-				"icon": "fab fa-instagram",
-				"label": "Instagram"						
-			},
-			"linkedin": {
-				"icon": "fab fa-linkedin-square",
-				"label": "LinkedIn"						
-			},
-			"pinterest": {
-				"icon": "fab fa-pinterest",
-				"label": "Pinterest"						
-			},
-			"snapchat": {
-				"icon": "fab fa-snapchat-ghost",
-				"label": "Snapchat"						
-			},
-			"twitter": {
-				"icon": "fab fa-twitter-square",
-				"label": "Twitter"						
-			},
-			"vimeo": {
-				"icon": "fab fa-vimeo",
-				"label": "Vimeo"						
-			},
-			"wordpress": {
-				"icon": "fab fa-wordpress",
-				"label": "Wordpress"						
-			},
-			"youtube": {
-				"icon": "fab fa-youtube",
-				"label": "YouTube"						
-			}
-		}
 	}
 }

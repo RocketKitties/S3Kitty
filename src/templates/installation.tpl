@@ -1,12 +1,23 @@
-<h1><i class="fa fa-download"></i>Installation</h1>
+<h1><i class="fa fa-rocket"></i>Launchpad</h1>
 
 <ol class="breadcrumb">
 	<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-	<li><i class="fa fa-installation"></i>Installation</li>
+	<li><i class="fa fa-rocket"></i>Launchpad</li>
 </ol>
 
 <div class="content">
-	<p>To install and run the <%= application.name %> software on your own desktop computer or web server, follow the instructions below. </p>
+	<div class="well">
+		<b>launchpad</b> (noun): something that sets a particular activity, enterprise, etc. in motion.
+	</div>
+
+	<p>Welcome to the beginning of your journey into <%= application.name %> self-hosting. To launch <%= application.name %> on your own desktop computer or web server, follow the instructions below. </p>
+
+	<div class="attention">
+		<img src="images/logos/rocketkitty-icon.svg" />
+		<div class="emphasis">
+			Launch Me!
+		</div>
+	</div>
 
 	<ol>
 		<li>

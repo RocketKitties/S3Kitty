@@ -12,7 +12,7 @@
 		},
 
 		"color_scheme": "colored",
-		"highlight_color": "blue",
+		"highlight_color": "red",
 		"accent_color": "none",
 		"material": "none",
 		"transparency": "translucent",
@@ -25,7 +25,7 @@
 		"icon_material": "auto",
 		"icon_corners": "auto",
 		"icon_tilt": "none",
-		"icon_tint": "none",
+		"icon_tint": "orange",
 		"icon_background": true,
 
 		"icon_select_effect": "none",
@@ -34,7 +34,7 @@
 		"icon_unhighlight_effect": "none",
 		"icon_open_effect": "wobble",
 
-		"system_font": "Proxima Nova",
+		"system_font": "Bryant",
 		"title_font": null,
 		"label_font":  null,
 		"heading_font": null,
@@ -60,10 +60,10 @@
 
 		"background_image": null,
 		"background_size": "tile",
-		"background_color": "grey",
+		"background_color": "auto",
 		"background_repeats": 5,
 
-		"desktop_sidebar_transparency": "transparent",
+		"desktop_sidebar_transparency": "opaque",
 		"desktop_sidebar_panels": "auto",
 
 		"show_app_name": false,

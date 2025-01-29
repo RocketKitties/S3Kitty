@@ -24,13 +24,13 @@
 					<li>Create and save your own themes.</li>
 					<li>View and modify theme settings including:
 						<ul>
-							<li>Type of app launcher to use (task bar, dock bar, or run menu)</li>
-							<li>Color scheme</li>
-							<li>Background color, image, size, and repeats</li>
-							<li>Material attributes (none, chalk, plastic, glass, metal)</li>
-							<li>Dialog transparency</li>
-							<li>Icon labels</li>
-							<li>Font family and size</li>
+							<li>type of app launcher to use (task bar, dock bar, or run menu)</li>
+							<li>color scheme</li>
+							<li>background color, image, size, and repeats</li>
+							<li>material attributes (none, chalk, plastic, glass, metal)</li>
+							<li>dialog transparency</li>
+							<li>icon labels</li>
+							<li>font family and size</li>
 						</ul>
 					</li>
 				</ul>

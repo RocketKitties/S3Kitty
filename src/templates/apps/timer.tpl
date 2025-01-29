@@ -20,8 +20,8 @@
 			<div class="col-sm-6">
 				<h2><i class="fa fa-check"></i>Features</h2>
 				<ul>
-					<li>Start, stop, and reset functions. </li>
-					<li>Displays hours, minutes, seconds and hundredths of seconds. </li>
+					<li>Start, stop, and reset functions</li>
+					<li>Displays hours, minutes, seconds and hundredths of seconds.</li>
 				</ul>
 			</div>
 			<div class="col-sm-6">

@@ -83,6 +83,7 @@ class Connection extends User
 		'gender',
 		'location',
 		'occupation',
+		'age',
 		'check_in',
 		'email',
 
@@ -116,6 +117,9 @@ class Connection extends User
 		'gender',
 		'location',
 		'occupation',
+		'age',
+		'join_date',
+		'connect_date',
 		'check_in',
 
 		// appended flags
@@ -141,6 +145,33 @@ class Connection extends User
 	 */
 	public function getBirthDateAttribute(): ?string {
 		return $this->getBirthDate();
+	}
+
+	/**
+	 * Get this connection's join date attribute.
+	 *
+	 * @return string
+	 */
+	public function getJoinDateAttribute(): ?string {
+		return $this->getJoinDate();
+	}
+
+	/**
+	 * Get this connection's connect date attribute.
+	 *
+	 * @return string
+	 */
+	public function getConnectDateAttribute(): ?string {
+		return $this->getConnectDate();
+	}
+
+	/**
+	 * Get this connection's age attribute.
+	 *
+	 * @return int
+	 */
+	public function getAgeAttribute(): ?int {
+		return $this->getAge();
 	}
 
 	/**
@@ -217,5 +248,27 @@ class Connection extends User
 	 */
 	public function scopeBelongingTo($query, string $userId) {
 		return $query->where('user_id', '=', $userId);
+	}
+
+	//
+	// getting methods
+	//
+
+	/**
+	 * Get this users's birth date.
+	 *
+	 * @return string
+	 */
+	public function getJoinDate(): ?string {
+		return $this->created_at;
+	}
+
+	/**
+	 * Get this users's birth date.
+	 *
+	 * @return string
+	 */
+	public function getConnectDate(): ?string {
+		return $this->accepted_at;
 	}
 }

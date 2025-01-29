@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="description section">
-		<p>The <%= config.apps['topic_viewer'].name %> app lets you view and post discussion topic comments and replies. </p>
+		<p>The <%= config.apps['topic_viewer'].name %> app lets you view and post news updates and discussion. </p>
 	</div>
 
 	<div class="details section">

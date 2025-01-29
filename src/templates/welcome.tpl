@@ -1,8 +1,13 @@
 <div class="primary colored section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><img class="icon" src="images/logos/logo.svg" />Sharing Made Simple</h2>
-			<p><%= application.name %> is a self-hostable cloud based operating system that brings together file management, file sharing, and collaboration / social networking all in one easy to use platform. </p>
+			<h2><img class="icon" src="images/logos/icon.svg" />What is <%= application.name %>?</h2>
+
+			<div class="well">
+				<b>kitty</b> (noun): a collection of goods often made up of small contributions
+			</div>
+
+			<p><%= application.name %> is a cloud-based web interface for managing S3 data.  It combines the capacity of S3 with the familiar look and feel of your desktop or mobile OS. Best of all, you can run it on your own server. </p>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
@@ -16,47 +21,15 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-dollar-sign"></i>It's Free To Use!</h2>
-			<p><%= application.name %> is <a href="#policies/terms-of-use">free to use</a> for non-commmercial applications. </p>
-		</div>
-	</div>
-</div>
-
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-smile"></i>It's Easy to Use!</h2>
-			<p><%= application.name %> has the <a href="#features/easy-to-use">familiar look and feel</a> of your desktop or mobile OS.  It's so familiar that you'll be comfortable with it right from the start.  It's like your computer but in the cloud. </p>
+			<h2><i class="fa fa-dollar-sign"></i>It's Free!</h2>
+			<p><%= application.name %> is <a href="#policies/terms-of-use">free to use</a> for non-commmercial applications.  It's also <a href="#downloads">free to download</a> and run on your own server. </p>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
-				<a href="images/info/desktop/desktop-photos.png" target="_blank" class="lightbox" title="<%= application.name %>"><img src="images/info/desktop/desktop-photos.png" /></a>
-				<div class="caption"><%= application.name %></div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<% let identityProviders = application.session.has('config')? application.session.get('config').identity_providers : undefined; %>
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-pencil-alt"></i>It's Quick To Sign Up</h2>
-			<% if (identityProviders && identityProviders.length > 0) { %>
-			<p>Signing up is quick and easy.  There's a simple registration form or if you're already signed in to an identity provider (<%= identityProviders.join(', ') %>), just hit the "Sign Up With" button and you can get started in seconds! </p>
-			<% } else { %>
-			<p>Signing up is quick and easy.  Fill out a simple registration to get started in seconds! </p>
-			<% } %>
-		</div>
-		<div class="col-sm-6">
-			<div class="well">
-				<br />
-				<div class="buttons">
-					<button class="sign-up btn btn-lg">
-						<i class="fa fa-pencil-alt"></i>Sign Up!
-					</button>
-				</div>
-				<br />
+				<a href="#downloads">
+					<img style="width:150px" src="images/logos/icon.svg" />
+				</a>
+				<div class="caption"><i class="fa fa-heart" style="color:hotpink; margin-right:5px"></i>Adopt Me!</div>
 			</div>
 		</div>
 	</div>
@@ -65,16 +38,18 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-mobile"></i>It's Accessible Anywhere</h2>
-			<p>Access your digital world from anywhere on <a href="#features/platform-independent">any internet connected device.</a> </p>
+			<h2><i class="fa fa-fire"></i>It's Easy to Launch</h2>
+			<p><%= application.name %> makes it <a href="#installation">quick and easy to launch</a> your own personal, customized <%= application.name %> on your own server. </p>
 		</div>
 		<div class="col-sm-6">
-			<a href="#features/platform-independent">
-				<div class="figure">
-					<a href="images/info/desktop/iphone-desktop.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/desktop/iphone-desktop.png" /></a>
-					<div class="caption"><%= application.name %> Mobile</div>
+			<div class="figure">
+				<a href="#downloads">
+					<img height="175px" src="images/logos/rocketkitty-icon.svg" />
+				</a>
+				<div class="caption">
+					Launch Me!
 				</div>
-			</a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -82,37 +57,52 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-rocket"></i>It's Got Apps!</h2>
-			<p><%= application.name %> has a collection of <a href="#apps">apps</a> for viewing, managing and sharing your data.</p>
+			<h2><i class="fa fa-folder"></i>Manage Your Bucket</h2>
+			<p><%= application.name %> lets you view and organize your bucket just like working with files on your desktop computer. <%= application.name %> makes managing your files easy.</p>
 		</div>
 		<div class="col-sm-6">
-			<div class="icons carousel">
-				<% let apps = config.apps; %>
-				<% let keys = Object.keys(apps); %>
-				<% for (let i = 0; i < keys.length; i++) { %>
-				<% let app = apps[keys[i]]; %>
-
-				<% if (!app.disabled) { %>
-				<div class="carousel-cell">
-					<div class="app-icons large icon-grid items">
-						<a href="#apps/<%= app.app %>">
-						<div class="item" href="#apps/profile-browser" style="text-decoration:none">	
-							<div class="row">
-								<div class="icon colored <%= app.color %>">
-									<img src="images/icons/apps/<%= app.image || app.app + '.svg' %>" />
-									<i class="<%= app.icon %>"></i>
-								</div>
-							</div>
-							<div class="row">
-								<div class="name"><%= app.name %></div>
-							</div>
-						</div>
-						</a>
+			<div class="icon-grid figure">
+				<div class="directory item">
+					<div class="row">
+						<div class="icon"><img src="images/icons/folders/folder-empty.svg" /></div>
+					</div>
+					<div class="row">
+						<div class="name">Empty Folder</div>
 					</div>
 				</div>
-				<% } %>
-
-				<% } %>
+				<div class="directory item">
+					<div class="row">
+						<div class="icon"><img src="images/icons/folders/folder-full.svg" /></div>
+					</div>
+					<div class="row">
+						<div class="name">Full Folder</div>
+					</div>
+				</div>
+				<br />
+				<div class="directory item">
+					<div class="row">
+						<div class="icon"><img src="images/icons/folders/albums-full.svg" /></div>
+					</div>
+					<div class="row">
+						<div class="name">Audio</div>
+					</div>
+				</div>
+				<div class="directory item">
+					<div class="row">
+						<div class="icon"><img src="images/icons/folders/images-full.svg" /></div>
+					</div>
+					<div class="row">
+						<div class="name">Images</div>
+					</div>
+				</div>
+				<div class="directory item">
+					<div class="row">
+						<div class="icon"><img src="images/icons/folders/videos-full.svg" /></div>
+					</div>
+					<div class="row">
+						<div class="name">Video</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -121,105 +111,76 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-tools"></i>It's Self-Hostable!</h2>
-			<p>Are you a DIY type person?  You can <a href="#features/self-hostable">run <%= application.name %> on your own server</a>! Join the host it yourself (HIY) movement to retake control over your data! </p>
+			<h2><i class="fa fa-eye"></i>View Your Bucket</h2>
+			<p><%= application.name %> includes viewer apps for a variety of image, sound, and data files. </p>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<img width="150px" src="images/welcome/camera.svg" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-share"></i>Share Your Bucket</h2>
+			<p>Use <%= application.name %> to share your bucket files with your friends, family, and colleagues. <%= application.name %> lets you share your S3 data without having to give out your bucket credentials. </p>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure" style="width:400px">
+				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F46E.svg" />
+				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F468.svg" />
+				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F469.svg" />
+				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F471.svg" />
+				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F474.svg" />
+				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F477.svg" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-mobile"></i>Access Your Bucket From Any Device</h2>
+			<p>Access your bucket from any internet connected device. <%= application.name %> also makes it easy to move files between your devices. </p>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<a href="images/info/desktop/iphone-desktop.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/desktop/iphone-desktop.png" /></a>
+				<div class="caption"><%= application.name %> Mobile</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-save"></i>Back Up Your Files</h2>
+			<p>Use <%= application.name %> to back up your files to your bucket. <%= application.name %> handles large files and archive files so it's relatively easy to batch upload large numbers of files. </p>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<img height="200px" src="images/welcome/safe.svg" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-tools"></i>Take Back Control</h2>
+			<p>You no longer need to give up control over your data just to get access to a technology platform. By running your own <%= application.name %>, you control the platform and your data. Join the <a href="#features/host-it-yourself">host it yourself (HIY)</a> movement and take back control over your (digital) life! </p>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
 				<a href="#welcome/we-can-do-it">
 					<img class="vertical" src="images/welcome/we-can-do-it.jpg" />
 				</a>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-heart"></i>You Might Also Like</h2>
-			<p>You might also like these other websites built upon the Sharedigm <a href="#platform">platform</a>. </p>
-		</div>
-		<div class="col-sm-6">
-			<div class="icons large icon-grid items">
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.dreamachines.ai" target="_blank">
-							<div class="icon">
-								<img src="images/logos/dreamachines.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Dreamachines</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.opticexplorer.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/opticexplorer.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">OpticExplorer</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.easybucket.org" target="_blank">
-							<div class="icon">
-								<img src="images/logos/easybucket.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">EasyBucket</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.rocketkitty.org" target="_blank">
-							<div class="icon">
-								<img src="images/logos/rocketkitty.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">RocketKitty</div>
-					</div>
-				</div>
-
-				<div class="item">
-					<div class="row">
-						<a href="http://www.cloudintosh.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/cloudintosh.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Cloudintosh</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.windows3000.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/windows3000.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Windows3000</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

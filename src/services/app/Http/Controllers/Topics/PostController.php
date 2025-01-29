@@ -736,6 +736,7 @@ class PostController extends Controller
 	private function filter(Request $request, $collection) {
 		$collection = $this->filterByNumLikes($request, $collection);
 		$collection = $this->filterByNumComments($request, $collection);
+		$collection = $this->filterByNumAttachments($request, $collection);
 		return $collection;
 	}
 
@@ -747,22 +748,22 @@ class PostController extends Controller
 	 * @return Illuminate\Support\Collection
 	 */
 	private function filterByNumLikes(Request $request, $collection) {
-		if ($request->has('num_likes_greater_than')) {
-			$numLikes = $request->input('num_likes_greater_than');
-			$collection = $collection->filter(function($value) use ($numLikes) {
-				return $value->num_likes > $numLikes;
+		if ($request->has('min_likes')) {
+			$minLikes = $request->input('min_likes');
+			$collection = $collection->filter(function($post) use ($minLikes) {
+				return $post->num_likes > $minLikes;
 			})->values();
 		}
 		if ($request->has('num_likes')) {
 			$numLikes = $request->input('num_likes');
-			$collection = $collection->filter(function($value) use ($numLikes) {
-				return $value->num_likes == $numLikes;
+			$collection = $collection->filter(function($post) use ($numLikes) {
+				return $post->num_likes == $numLikes;
 			})->values();
 		}
-		if ($request->has('num_likes_less_than')) {
-			$numLikes = $request->input('num_likes_less_than');
-			$collection = $collection->filter(function($value) use ($numLikes) {
-				return $value->num_likes < $numLikes;
+		if ($request->has('max_likes')) {
+			$maxLikes = $request->input('max_likes');
+			$collection = $collection->filter(function($post) use ($maxLikes) {
+				return $post->num_likes < $maxLikes;
 			})->values();
 		}
 
@@ -777,25 +778,55 @@ class PostController extends Controller
 	 * @return Illuminate\Support\Collection
 	 */
 	private function filterByNumComments(Request $request, $collection) {
-		if ($request->has('num_comments_greater_than')) {
-			$numComments = $request->input('num_comments_greater_than');
-			$collection = $collection->filter(function($value) use ($numComments) {
-				return $value->num_comments > $numComments;
+		if ($request->has('min_comments')) {
+			$minComments = $request->input('min_comments');
+			$collection = $collection->filter(function($post) use ($minComments) {
+				return $post->num_comments > $minComments;
 			})->values();
 		}
 		if ($request->has('num_comments')) {
 			$numComments = $request->input('num_comments');
-			$collection = $collection->filter(function($value) use ($numComments) {
-				return $value->num_comments == $numComments;
+			$collection = $collection->filter(function($post) use ($numComments) {
+				return $post->num_comments == $numComments;
 			})->values();
 		}
-		if ($request->has('num_comments_less_than')) {
-			$numComments = $request->input('num_comments_less_than');
-			$collection = $collection->filter(function($value) use ($numComments) {
-				return $value->num_comments < $numComments;
+		if ($request->has('max_comments')) {
+			$maxComments = $request->input('max_comments');
+			$collection = $collection->filter(function($post) use ($maxComments) {
+				return $post->num_comments < $maxComments;
 			})->values();
 		}
-		
+
+		return $collection;
+	}
+
+	/**
+	 * Filter a collection of posts by number of attachments.
+	 *
+	 * @param Illuminate\Http\Request $request - the Http request object
+	 * @param Collection $collection - the collection to filter
+	 * @return Illuminate\Support\Collection
+	 */
+	private function filterByNumAttachments(Request $request, $collection) {
+		if ($request->has('min_attachments')) {
+			$minAttachments = $request->input('min_attachments');
+			$collection = $collection->filter(function($post) use ($minAttachments) {
+				return $post->num_attachments > $minAttachments;
+			})->values();
+		}
+		if ($request->has('num_attachments')) {
+			$numAttachments = $request->input('num_attachments');
+			$collection = $collection->filter(function($post) use ($numAttachments) {
+				return $post->num_attachments == $numAttachments;
+			})->values();
+		}
+		if ($request->has('max_attachments')) {
+			$maxAttachments = $request->input('max_attachments');
+			$collection = $collection->filter(function($post) use ($maxAttachments) {
+				return $post->num_attachments < $maxAttachments;
+			})->values();
+		}
+
 		return $collection;
 	}
 }

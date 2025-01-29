@@ -20,8 +20,8 @@
 			<div class="col-sm-6">
 				<h2><i class="fa fa-check"></i>Features</h2>
 				<ul>
-					<li>Execute simple shell commands.</li>
 					<li>Perform file system manipulations.</li>
+					<li>Execute simple shell commands.</li>
 				</ul>
 			</div>
 			<div class="col-sm-6">

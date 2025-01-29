@@ -30,7 +30,7 @@
 				<ul>
 					<li>Create, edit, and manage your contact information. </li>
 					<li>Manage your contact information across all of your devices. </li>
-					<li>A safer way of storing your contact information because you don't have to worry about losing your mobile device. </li>
+					<li>A safer way of storing your contact information because you don't have to worry about losing your mobile device. </p>
 				</ul>
 			</div>
 		</div>

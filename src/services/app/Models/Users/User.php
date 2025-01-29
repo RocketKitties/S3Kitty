@@ -132,6 +132,7 @@ class User extends TimeStamped
 		'gender',
 		'location',
 		'occupation',
+		'age',
 
 		// appended flags
 		//
@@ -163,6 +164,7 @@ class User extends TimeStamped
 		'gender',
 		'location',
 		'occupation',
+		'age',
 
 		// appended flags
 		//
@@ -241,6 +243,15 @@ class User extends TimeStamped
 	 */
 	public function getOccupationAttribute(): ?string {
 		return $this->getOccupation();
+	}
+
+	/**
+	 * Get this user's age attribute.
+	 *
+	 * @return int
+	 */
+	public function getAgeAttribute(): ?int {
+		return $this->getAge();
 	}
 
 	/**
@@ -616,6 +627,15 @@ class User extends TimeStamped
 		return $this->profile? $this->profile->cover_photo_path != null : false;
 	}
 
+	/**
+	 * Whether or not this user has a birth date.
+	 *
+	 * @return bool
+	 */
+	public function hasBirthDate(): bool {
+		return $this->profile? $this->profile->birth_date != null : false;
+	}
+
 	//
 	// profile getting methods
 	//
@@ -656,6 +676,20 @@ class User extends TimeStamped
 	public function getOccupation(): ?string {
 		$job = UserJob::where('user_id', '=', $this->id)->first();
 		return $job? $job->toString() : null;
+	}
+
+	/**
+	 * Get this users's age.
+	 *
+	 * @return int
+	 */
+	public function getAge(): ?int {
+		if ($this->hasBirthDate()) {
+			$diff = time() - strtotime($this->getBirthDate());
+			return floor($diff / (365 * 60 * 60 * 24));
+		} else {
+			return null;
+		}
 	}
 
 	//

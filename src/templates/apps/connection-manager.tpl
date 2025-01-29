@@ -31,8 +31,8 @@
 			<div class="col-sm-6">
 				<h2><i class="fa fa-star"></i>Benefits</h2>
 				<ul>
-					<li>Easy to use - works a lot like the <a href="#apps/file-browser">File Browser</a> app. </li>
-					<li>Grouping makes it easy to manage and view a large number of connections. </li>
+					<li>Easy to use - works a lot like the <a href="#apps/file-browser">File Browser</a> app, which you are already familiar with. </li>
+					<li>Grouping makes it easy to manage and view a large number of connections. </p>
 				</ul>
 			</div>
 		</div>

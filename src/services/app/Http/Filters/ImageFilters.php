@@ -39,8 +39,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('min-width')) {
-			$width = intval($request->input('min-width'));
+		if ($request->has('min_width')) {
+			$width = intval($request->input('min_width'));
 
 			// filter collection
 			//
@@ -87,8 +87,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('max-width')) {
-			$width = intval($request->input('max-width'));
+		if ($request->has('max_width')) {
+			$width = intval($request->input('max_width'));
 
 			// filter collection
 			//
@@ -115,8 +115,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('min-height')) {
-			$height = intval($request->input('min-height'));
+		if ($request->has('min_height')) {
+			$height = intval($request->input('min_height'));
 
 			// filter collection
 			//
@@ -163,8 +163,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('max-height')) {
-			$height = intval($request->input('max-height'));
+		if ($request->has('max_height')) {
+			$height = intval($request->input('max_height'));
 
 			// filter collection
 			//
@@ -191,13 +191,13 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('min-resolution')) {
-			$resolution = intval($request->input('min-resolution'));
+		if ($request->has('min_resolution')) {
+			$resolution = intval($request->input('min_resolution'));
 
 			// filter collection
 			//
 			$items = $items->filter(function($item) use ($resolution) {
-				return $item instanceof ImageFile && round($item->resolution[0] * $item->resolution[1] / 1000000) > $resolution;
+				return ($item instanceof ImageFile && ($item->resolution[0] > $resolution) && $item->resolution[1] > $resolution);
 			})->values();
 		}
 
@@ -221,7 +221,7 @@ class ImageFilters
 			// filter collection
 			//
 			$items = $items->filter(function($item) use ($resolution) {
-				return $item instanceof ImageFile && round($item->resolution[0] * $item->resolution[1] / 1000000) == $resolution;
+				return ($item instanceof ImageFile && ($item->resolution[0] == $resolution) || $item->resolution[1] == $resolution);
 			})->values();
 		}
 
@@ -239,13 +239,13 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('max-resolution')) {
-			$resolution = intval($request->input('max-resolution'));
+		if ($request->has('max_resolution')) {
+			$resolution = intval($request->input('max_resolution'));
 
 			// filter collection
 			//
 			$items = $items->filter(function($item) use ($resolution) {
-				return $item instanceof ImageFile && round($item->resolution[0] * $item->resolution[1] / 1000000) < $resolution;
+				return ($item instanceof ImageFile && ($item->resolution[0] < $resolution) && $item->resolution[1] < $resolution);
 			})->values();
 		}
 
@@ -267,8 +267,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('make-model')) {
-			$makeModel = strtolower($request->input('make-model'));
+		if ($request->has('make_model')) {
+			$makeModel = strtolower($request->input('make_model'));
 
 			// filter collection
 			//
@@ -295,8 +295,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('min-focal-length')) {
-			$focalLength = intval(rtrim($request->input('min-focal-length'), 'mm'));
+		if ($request->has('min_focal_length')) {
+			$focalLength = intval(rtrim($request->input('min_focal_length'), 'mm'));
 
 			// filter collection
 			//
@@ -319,8 +319,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('focal-length')) {
-			$focalLength = intval(rtrim($request->input('focal-length'), 'mm'));
+		if ($request->has('focal_length')) {
+			$focalLength = intval(rtrim($request->input('focal_length'), 'mm'));
 
 			// filter collection
 			//
@@ -343,8 +343,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('max-focal-length')) {
-			$focalLength = intval(rtrim($request->input('max-focal-length'), 'mm'));
+		if ($request->has('max_focal_length')) {
+			$focalLength = intval(rtrim($request->input('max_focal_length'), 'mm'));
 
 			// filter collection
 			//
@@ -371,8 +371,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('min-aperture')) {
-			$aperture = floatval(ltrim($request->input('min-aperture'), 'F'));
+		if ($request->has('min_aperture')) {
+			$aperture = floatval(ltrim($request->input('min_aperture'), 'F'));
 
 			// filter collection
 			//
@@ -419,8 +419,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('max-aperture')) {
-			$aperture = floatval(ltrim($request->input('max-aperture'), 'F'));
+		if ($request->has('max_aperture')) {
+			$aperture = floatval(ltrim($request->input('max_aperture'), 'F'));
 
 			// filter collection
 			//
@@ -447,8 +447,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('min-exposure')) {
-			$exposure = $request->input('min-exposure');
+		if ($request->has('min_exposure')) {
+			$exposure = $request->input('min_exposure');
 			if (StringUtils::startsWith($exposure, '1/')) {
 				$exposure = 1.0 / intval(substr($exposure, 2));
 			}
@@ -501,8 +501,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('max-exposure')) {
-			$exposure = $request->input('max-exposure');
+		if ($request->has('max_exposure')) {
+			$exposure = $request->input('max_exposure');
 			if (StringUtils::startsWith($exposure, '1/')) {
 				$exposure = 1.0 / intval(substr($exposure, 2));
 			}
@@ -532,8 +532,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('min-iso')) {
-			$iso = intval($request->input('min-iso'));
+		if ($request->has('min_iso')) {
+			$iso = intval($request->input('min_iso'));
 
 			// filter collection
 			//
@@ -580,8 +580,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('max-iso')) {
-			$iso = intval($request->input('max-iso'));
+		if ($request->has('max_iso')) {
+			$iso = intval($request->input('max_iso'));
 
 			// filter collection
 			//
@@ -608,8 +608,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('before-capture-date')) {
-			$date = date_parse($request->input('before-capture-date'));
+		if ($request->has('before_capture_date')) {
+			$date = date_parse($request->input('before_capture_date'));
 
 			// filter collection
 			//
@@ -632,8 +632,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('capture-date')) {
-			$date = date_parse($request->input('capture-date'));
+		if ($request->has('capture_date')) {
+			$date = date_parse($request->input('capture_date'));
 
 			// filter collection
 			//
@@ -656,8 +656,8 @@ class ImageFilters
 
 		// parse parameters
 		//
-		if ($request->has('after-capture-date')) {
-			$date = date_parse($request->input('after-capture-date'));
+		if ($request->has('after_capture_date')) {
+			$date = date_parse($request->input('after_capture_date'));
 
 			// filter collection
 			//
