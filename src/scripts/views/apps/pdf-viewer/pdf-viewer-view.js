@@ -25,6 +25,7 @@ import HeaderBarView from '../../../views/apps/pdf-viewer/header-bar/header-bar-
 import SideBarView from '../../../views/apps/pdf-viewer/sidebar/sidebar-view.js';
 import PdfSplitView from '../../../views/apps/pdf-viewer/mainbar/pdf-split-view.js';
 import FooterBarView from '../../../views/apps/pdf-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/pdf-viewer/forms/preferences/preferences-form-view.js'
 import FileUtils from '../../../utilities/files/file-utils.js';
 import Browser from '../../../utilities/web/browser.js';
 
@@ -751,4 +752,13 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 			}
 		}
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

@@ -24,33 +24,6 @@ import HelpMenuView from '../../../../../views/apps/theme-manager/header-bar/men
 export default MenuBarView.extend({
 
 	//
-	// attributes
-	//
-
-	items: [
-		{
-			"class": "file",
-			"icon": "fa fa-file",
-			"name": "File"
-		},
-		{
-			"class": "select",
-			"icon": "fa fa-mouse-pointer",
-			"name": "Select"
-		},
-		{
-			"class": "view",
-			"icon": "fa fa-eye",
-			"name": "View"
-		},
-		{
-			"class": "help",
-			"icon": "fa fa-question-circle",
-			"name": "Help"
-		}
-	],
-
-	//
 	// rendering methods
 	//
 

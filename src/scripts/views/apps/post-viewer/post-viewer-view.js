@@ -15,6 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
+import Post from '../../../models/topics/post.js';
 import Topic from '../../../models/topics/topic.js';
 import Topics from '../../../collections/topics/topics.js';
 import Directory from '../../../models/storage/directories/directory.js';
@@ -26,6 +27,7 @@ import HeaderBarView from '../../../views/apps/post-viewer/header-bar/header-bar
 import SideBarView from '../../../views/apps/post-viewer/sidebar/sidebar-view.js';
 import PostView from '../../../views/apps/post-viewer/mainbar/posts/post-view.js';
 import FooterBarView from '../../../views/apps/post-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/post-viewer/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
 export default AppSplitView.extend(_.extend({}, ItemOpenable, LinkShareable, {
@@ -241,7 +243,7 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, LinkShareable, {
 
 	shareByLink: function() {
 		import(
-			'../../../views/apps/web-browser/dialogs/links/copy-link-dialog-view.js'
+			'../../../views/apps/file-browser/dialogs/links/copy-link-dialog-view.js'
 		).then((CopyLinkDialogView) => {
 
 			// show copy link dialog
@@ -481,7 +483,7 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, LinkShareable, {
 }), {
 
 	//
-	// static methods
+	// static querying methods
 	//
 
 	isDefaultTopicName: function(name) {
@@ -492,11 +494,87 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, LinkShareable, {
 		return this.getTopicName() != undefined;
 	},
 
+	//
+	// static getting methods
+	//
+
 	getPreferences: function() {
 		return config.preferences.post_viewer || {};
 	},
 
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
 	getDefaultTopicName: function() {
 		return this.getPreferences().default_topic;
+	},
+
+	//
+	// static rendering methods
+	//
+
+	showPost: function(id, options) {
+		import(
+			'../../../views/apps/post-viewer/mainbar/post-info-view.js'
+		).then((PostInfoView) => {
+			this.fetchPost(id, {
+
+				// callbacks
+				//
+				success: (post) => {
+
+					// show post info page
+					//
+					application.showPage(new PostInfoView.default({
+						model: post
+					}));
+				},
+
+				error: (response) => {
+					if (options && options.error) {
+						options.error(response);
+					}
+				}
+			});
+		});
+	},
+
+	showGallery: function() {
+		import(
+			'../../../views/apps/post-viewer/mainbar/post-gallery-view.js'
+		).then((PostGalleryView) => {
+
+			// show post gallery page
+			//
+			application.showPage(new PostGalleryView.default(), {
+				nav: 'gallery'
+			});
+		});
+	},
+
+	//
+	// static ajax methods
+	//
+
+	fetchPost: function(id, options) {
+		new Post({
+			'id': id
+		}).fetch({
+
+			// callbacks
+			//
+			success: (model) => {
+				if (options && options.success) {
+					options.success(model);
+				}
+			},
+
+			error: (model, response) => {
+				if (options && options.error) {
+					options.error(response);
+				}
+			}
+		});
 	}
 });

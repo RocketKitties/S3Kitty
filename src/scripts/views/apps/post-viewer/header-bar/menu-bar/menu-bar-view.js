@@ -26,43 +26,6 @@ import HelpMenuView from '../../../../../views/apps/post-viewer/header-bar/menu-
 export default MenuBarView.extend({
 
 	//
-	// attributes
-	//
-
-	items: [
-		{
-			"class": "file",
-			"icon": "fa fa-file",
-			"name": "File"
-		},
-		{
-			"class": "edit",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit"
-		},
-		{
-			"class": "view",
-			"icon": "fa fa-eye",
-			"name": "View"
-		},
-		{
-			"class": "search",
-			"icon": "fa fa-search",
-			"name": "Search"
-		},
-		{
-			"class": "share",
-			"icon": "fa fa-share",
-			"name": "Share"
-		},
-		{
-			"class": "help",
-			"icon": "fa fa-question-circle",
-			"name": "Help"
-		}
-	],
-
-	//
 	// rendering methods
 	//
 
@@ -80,18 +43,6 @@ export default MenuBarView.extend({
 		this.showChildView('share', new ShareMenuView());
 		this.showChildView('search', new SearchMenuView());
 		this.showChildView('help', new HelpMenuView());
-
-		// hide dropdowns
-		//
-		/*
-		if (!this.app.topic.isOwnedBy(application.session.user)) {
-			this.setMenuHidden('edit');
-		}
-		if (this.app.topic.isRequired()) {
-			this.setMenuHidden('share');
-		}
-		*/
-		// this.setMenuHidden('search');
 
 		// listen to model for changes
 		//

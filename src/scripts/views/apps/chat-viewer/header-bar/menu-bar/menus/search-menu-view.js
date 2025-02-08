@@ -23,23 +23,6 @@ export default SearchMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "search-by-message",
-			"group": "search-by",
-			"icon": "fa fa-quote-left",
-			"name": "By Message",
-			"select": true
-		},
-		{
-			"class": "search-by-date",
-			"group": "search-by",
-			"icon": "fa fa-calendar-alt",
-			"name": "By Date",
-			"select": true
-		}
-	],
-
 	events: {
 		'click .search-by > a': 'onClickSearchBy'
 	},
@@ -48,12 +31,21 @@ export default SearchMenuView.extend({
 	// querying methods
 	//
 
+	enabled: function() {
+		let hasChat = this.parent.app.collection.length > 0;
+
+		return {
+			'search-by-message': hasChat,
+			'search-by-date': hasChat
+		};
+	},
+
 	selected: function() {
 		let preferences = this.parent.app.preferences;
 		let searchKind = preferences.get('search_kind');
 
 		return {
-			'search-by-name': searchKind == 'name',
+			'search-by-message': searchKind == 'message',
 			'search-by-date': searchKind == 'date'
 		};
 	}

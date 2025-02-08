@@ -23,27 +23,6 @@ export default SelectMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "select-all",
-			"icon": "fa fa-asterisk",
-			"name": "All",
-			"shortcut": "command-A"
-		},
-		{
-			"class": "select-none",
-			"icon": "fa fa-minus",
-			"name": "None",
-			"shortcut": "shift-command-A"
-		},
-		{
-			"class": "select-invert",
-			"icon": "fa fa-random",
-			"name": "Invert",
-			"shortcut": "shift-command-I"
-		}
-	],
-
 	events: {
 		'click .select-all': 'onClickSelectAll',
 		'click .select-none': 'onClickSelectNone',

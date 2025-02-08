@@ -18,13 +18,13 @@
 import UserAccount from '../../../models/users/account/user-account.js';
 import UserPreferences from '../../../models/preferences/user-preferences.js';
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
-import PrefsLoadable from '../../../views/apps/common/behaviors/loading/prefs-loadable.js';
 import HeaderBarView from '../../../views/apps/settings-manager/header-bar/header-bar-view.js';
 import SideBarView from '../../../views/apps/settings-manager/sidebar/sidebar-view.js';
 import FooterBarView from '../../../views/apps/settings-manager/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/settings-manager/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
-export default AppSplitView.extend(_.extend({}, PrefsLoadable, {
+export default AppSplitView.extend( {
 
 	//
 	// attributes
@@ -271,6 +271,35 @@ export default AppSplitView.extend(_.extend({}, PrefsLoadable, {
 		}
 	},
 
+	clearAll: function() {
+
+		// confirm delete
+		//
+		application.confirm({
+			icon: '<i class="fa fa-trash-alt"></i>',
+			title: "Delete",
+			message: "Are you sure you want to clear your preferences?",
+
+			// callbacks
+			//
+			accept: () => {
+				this.clearPreferences({
+
+					// callbacks
+					//
+					success: () => {
+
+						// notify user
+						//
+						application.alert({
+							message: "Your preferences have been cleared."
+						});
+					}
+				});
+			}
+		});
+	},
+
 	savePreferences: function(options) {
 
 		// save preferences
@@ -281,6 +310,28 @@ export default AppSplitView.extend(_.extend({}, PrefsLoadable, {
 				// callbacks
 				//
 				success: () => {
+
+					// perform callback
+					//
+					if (options && options.success) {
+						options.success();
+					}
+				}
+			});
+		}
+	},
+
+	clearPreferences: function(options) {
+
+		// clear preferences
+		//
+		if (this.options.prefs) {
+			this.options.prefs.delete({
+
+				// callbacks
+				//
+				success: () => {
+					this.options.prefs.clear();
 
 					// perform callback
 					//
@@ -590,30 +641,35 @@ export default AppSplitView.extend(_.extend({}, PrefsLoadable, {
 	},
 
 	showPreferencesForm: function(app, preferences) {
-		this.loadPrefsFormView(app, (PreferencesFormView) => {
+		application.loadApp(app, {
 
-			// check for preferences form
+			// callbacks
 			//
-			if (!PreferencesFormView) {
-				application.error({
-					message: 'Preferences form view not found.'
-				});
-				return;
-			}
+			success: (AppView) => {
 
-			// make a copy of preferences
-			//
-			this.prefs = this.options.prefs.clone();
-
-			// show child view
-			//
-			this.showChildView('content', new PreferencesFormView({
-				model: preferences,
-
-				// callbacks
+				// check for preferences form
 				//
-				onchange: (key, value) => this.onChangePreferences(key, value)
-			}));
+				if (!AppView.getPreferencesFormView) {
+					application.alert({
+						message: 'Preferences form view not found.'
+					});
+					return;
+				}
+
+				// make a copy of preferences
+				//
+				this.prefs = this.options.prefs.clone();
+
+				// show child view
+				//
+				this.showChildView('content', AppView.getPreferencesFormView({
+					model: preferences,
+
+					// callbacks
+					//
+					onchange: (key, value) => this.onChangePreferences(key, value)
+				}));
+			}
 		});
 	},
 
@@ -679,4 +735,13 @@ export default AppSplitView.extend(_.extend({}, PrefsLoadable, {
 		//
 		this.constructor.current = null;
 	}
-}));
+}, {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

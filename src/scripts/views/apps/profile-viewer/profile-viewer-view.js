@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                             profile-viewer-view.js                            |
+|                            profile-viewer-view.js                            |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -32,6 +32,7 @@ import HeaderBarView from '../../../views/apps/profile-viewer/header-bar/header-
 import UserPanelsView from '../../../views/apps/profile-viewer/mainbar/user-panels-view.js';
 import SideBarView from '../../../views/apps/profile-viewer/sidebar/sidebar-view.js';
 import FooterBarView from '../../../views/apps/profile-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/profile-viewer/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, ItemOpenable, ConnectionShareable, LinkShareable, {
 
@@ -299,7 +300,7 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, ConnectionShareabl
 	},
 
 	shareMessage: function() {
-		application.launch('chat-viewer', {
+		application.launch('chat_viewer', {
 			user: this.model
 		});
 	},
@@ -666,9 +667,7 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, ConnectionShareabl
 			onselect: (item) => this.onSelect(item),
 			ondeselect: () => this.onDeselect(),
 			onclicktab: (tab) => this.onClickTab(tab),
-			onopen: (item) => this.onOpen(item),
-			onadd: (item) => this.onAdd(item),
-			onremove: (items) => this.onRemove(items)
+			onopen: (item) => this.onOpen(item)
 		});
 	},
 
@@ -685,19 +684,19 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, ConnectionShareabl
 	//
 
 	showOpenDialog: function(connections) {
-		import(
-			'../../../views/apps/connection-manager/dialogs/connections/select-connections-dialog-view.js'
-		).then((SelectConnectionsDialogView) => {
+		application.loadAppView('connection_manager', {
 
-			// show open dialog
+			// callbacks
 			//
-			this.show(new SelectConnectionsDialogView.default({
-				collection: connections,
+			success: (ConnectionManagerView) => {
+				ConnectionManagerView.showSelectConnectionsDialog({
+					collection: connections,
 
-				// callbacks
-				//
-				select: (items) => this.setModel(items[0])
-			}));
+					// callbacks
+					//
+					select: (items) => this.setModel(items[0])
+				});
+			}
 		});
 	},
 
@@ -729,16 +728,14 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, ConnectionShareabl
 	},
 
 	showInfoDialog: function() {
-		import(
-			'../../../views/apps/connection-manager/dialogs/info/connection-info-dialog-view.js'
-		).then((ConnectionInfoDialogView) => {
+		application.loadAppView('connection_manager', {
 
-			// show connection info dialog
+			// callbacks
 			//
-			this.show(new ConnectionInfoDialogView.default({
-				model: this.model
-			}));				
-		});	
+			success: (ConnectionManagerView) => {
+				ConnectionManagerView.showConnectionInfoDialog(this.model);
+			}
+		});
 	},
 
 	showPreferencesDialog: function() {
@@ -755,13 +752,13 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, ConnectionShareabl
 	},
 
 	showCheckInDialog: function(options) {
-		import(
-			'../../../views/apps/map-viewer/dialogs/places/check-in-dialog-view.js'
-		).then((CheckInDialogView) => {
+		application.loadAppView('map_viewer', {
 
-			// show check in-in dialog
+			// callbacks
 			//
-			this.show(new CheckInDialogView.default(options));
+			success: (MapViewerView) => {
+				MapViewerView.showCheckInDialog(options);
+			}
 		});
 	},
 
@@ -836,21 +833,14 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, ConnectionShareabl
 		} else if (item.model instanceof File) {
 			this.openFile(item.model);
 		}
-	},
-
-	onAdd: function() {
-
-		// play new sound
-		//
-		application.play('new');
-	},
-
-	onRemove: function(item) {
-		this.selected = null;
-		this.getChildView('header menu').onDeselect(item);
-
-		// play delete sound
-		//
-		application.play('delete');
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

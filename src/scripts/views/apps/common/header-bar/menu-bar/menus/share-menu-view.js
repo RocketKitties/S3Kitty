@@ -23,45 +23,15 @@ export default MenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "share-by-invitation",
-			"icon": "fa fa-user-friends",
-			"name": "By Invitation"
-		},
-		"separator",
-		{
-			"class": "share-by-topic",
-			"icon": "fa fa-newspaper",
-			"name": "By Discussion Topic"
-		},
-		{
-			"class": "share-by-message",
-			"icon": "fa fa-comments",
-			"name": "By Chat Messsage"
-		},
-		"separator",
-		{
-			"class": "share-by-link",
-			"icon": "fa fa-link",
-			"name": "By Link"
-		},
-		{
-			"class": "share-by-email",
-			"icon": "fa fa-envelope",
-			"name": "By Email"
-		}
-	],
-
 	visible: function() {
-		let hasTopics = application.hasApp('topic_browser');
-		let hasChats = application.hasApp('chat_browser');
 		let hasConnectionManager = application.hasApp('connection_manager');
+		let hasTopicViewer = application.hasApp('topic_viewer');
+		let hasChatViewer = application.hasApp('chat_viewer');
 
 		return {
 			'share-by-invitation': hasConnectionManager,
-			'share-by-topic': hasTopics,
-			'share-by-message': hasChats,
+			'share-by-topic': hasTopicViewer,
+			'share-by-message': hasChatViewer,
 			'share-by-link': true,
 			'share-by-email': true
 		};
@@ -82,10 +52,6 @@ export default MenuView.extend({
 	//
 	// getting methods
 	//
-
-	getItems: function() {
-		return this.items;
-	},
 
 	getFileItems: function() {
 		let files = config.defaults.sharing.files;

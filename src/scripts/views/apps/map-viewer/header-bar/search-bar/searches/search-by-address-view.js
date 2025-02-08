@@ -17,7 +17,7 @@
 
 import SearchByTextView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-text-view.js';
 import SearchOptionsListView from '../../../../../../views/apps/map-viewer/header-bar/search-bar/search-options-list/search-options-list-view.js';
-import GoogleAutocomplete from '../../../../../../views/maps/behaviors/autocomplete/google-autocomplete.js';
+import GoogleAutocomplete from '../../../../../../views/apps/map-viewer/mainbar/maps/behaviors/autocomplete/google-autocomplete.js';
 
 export default SearchByTextView.extend({
 

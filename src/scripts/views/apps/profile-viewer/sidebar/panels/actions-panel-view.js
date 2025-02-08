@@ -51,16 +51,16 @@ export default SideBarPanelView.extend({
 	//
 
 	sendConnectionRequest: function() {
-		import(
-			'../../../../../views/apps/connection-manager/dialogs/connections/connection-request-dialog-view.js'
-		).then((ConnectionRequestDialogView) => {
+		application.loadAppView('connection_manager', {
 
-			// show connection dialog
+			// callbacks
 			//
-			application.show(new ConnectionRequestDialogView.default({
-				model: application.session.user,
-				collection: new Connections([this.model])
-			}));
+			success: (ConnectionManagerView) => {
+				ConnectionManagerView.showConnectionRequestDialog({
+					model: application.session.user,
+					collection: new Connections([this.model])
+				});
+			}
 		});
 	},
 

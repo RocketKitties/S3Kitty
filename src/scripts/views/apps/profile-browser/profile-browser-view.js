@@ -16,6 +16,7 @@
 \******************************************************************************/
 
 import Users from '../../../collections/users/users.js';
+import Contacts from '../../../collections/contacts/contacts.js';
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import SelectableContainable from '../../../views/behaviors/containers/selectable-containable.js';
 import MultiSelectable from '../../../views/behaviors/selection/multi-selectable.js';
@@ -25,6 +26,7 @@ import HeaderBarView from '../../../views/apps/profile-browser/header-bar/header
 import SideBarView from '../../../views/apps/profile-browser/sidebar/sidebar-view.js';
 import UsersView from '../../../views/apps/profile-browser/mainbar/users/users-view.js';
 import FooterBarView from '../../../views/apps/profile-browser/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/clock/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, ConnectionShareable, GoogleContactsImportable, {
 
@@ -377,4 +379,35 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 			this.options.onopen(item);
 		}
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	getUsersView: function(options) {
+		return new UsersView(options);
+	},
+
+	//
+	// static inviting methods
+	//
+
+	inviteGoogleContacts: function(contacts) {
+		import(
+			'../../../views/apps/profile-browser/dialogs/invitations/invite-google-contacts-dialog-view.js'
+		).then((InviteGoogleContactsDialogView) => {
+
+			// show invite google contacts dialog
+			//
+			application.show(new InviteGoogleContactsDialogView.default({
+				collection: new Contacts(contacts),
+				message: config.apps.profile_browser.invitation_message
+			}));
+		});
+	}
+});

@@ -15,8 +15,8 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import ItemsMapView from '../../../../../../views/maps/items-map-view.js';
-import GeolocatableUsersView from '../../../../../../views/maps/items/geolocatable-users-view.js';
+import ItemsMapView from '../../../../../../views/apps/map-viewer/mainbar/maps/items-map-view.js';
+import MappableUsersView from '../../../../../../views/apps/map-viewer/mainbar/users/mappable-users-view.js';
 
 export default ItemsMapView.extend({
 
@@ -25,7 +25,7 @@ export default ItemsMapView.extend({
 	//
 
 	getItemsLayerView: function() {
-		return new GeolocatableUsersView(_.extend({}, this.options, {
+		return new MappableUsersView(_.extend({}, this.options, {
 			collection: this.collection,
 
 			// options

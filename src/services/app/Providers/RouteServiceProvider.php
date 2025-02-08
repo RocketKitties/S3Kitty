@@ -62,8 +62,6 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes('routes/topics.php');
         $this->mapApiRoutes('routes/users.php');
         $this->mapApiRoutes('routes/utilities.php');
-        $this->mapApiRoutes('routes/test.php');
-        // $this->mapWebRoutes('routes/web.php');
     }
 
     /**

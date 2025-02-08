@@ -23,48 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "new-window",
-			"icon": "fa fa-file",
-			"name": "New Window",
-			"shortcut": "enter"
-		},
-		{
-			"class": "open-url",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"separator",
-		{
-			"class": "add-to-favorites",
-			"icon": "fa fa-star",
-			"name": "Add to Favorites",
-			"shortcut": "command-="
-		},
-		{
-			"class": "delete-favorites",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Favorites",
-			"shortcut": "delete"
-		},
-		"separator",
-		{
-			"class": "save-url-as",
-			"icon": "fa fa-save",
-			"name": "Save As",
-			"shortcut": "command-S"
-		},
-		"separator",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	],
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .open-url': 'onClickOpenUrl',

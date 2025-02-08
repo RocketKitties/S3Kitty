@@ -22,6 +22,7 @@ import HeaderBarView from '../../../views/apps/search-viewer/header-bar/header-b
 import SideBarView from '../../../views/apps/search-viewer/sidebar/sidebar-view.js';
 import SearchView from '../../../views/apps/search-viewer/mainbar/search-view.js';
 import FooterBarView from '../../../views/apps/search-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/search-viewer/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, ItemOpenable, ItemInfoShowable, {
 
@@ -197,4 +198,30 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, ItemInfoShowable, 
 	onChange: function() {
 		this.updateStatusBar();
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	//
+	// static rendering methods
+	//
+
+	showSearch: function() {
+		import(
+			'../../../views/apps/search-viewer/mainbar/results/search-page-view.js'
+		).then((SearchPageView) => {
+
+			// show search page
+			//
+			application.showPage(new SearchPageView.default(), {
+				nav: 'search'
+			});
+		});
+	}
+});

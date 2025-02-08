@@ -25,38 +25,6 @@ import HelpMenuView from '../../../../../views/apps/profile-viewer/header-bar/me
 export default MenuBarView.extend({
 
 	//
-	// attributes
-	//
-
-	items: [
-		{
-			"class": "file",
-			"icon": "fa fa-file",
-			"name": "File"
-		},
-		{
-			"class": "edit",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit"
-		},
-		{
-			"class": "view",
-			"icon": "fa fa-eye",
-			"name": "View"
-		},
-		{
-			"class": "share",
-			"icon": "fa fa-share",
-			"name": "Share"
-		},
-		{
-			"class": "help",
-			"icon": "fa fa-question-circle",
-			"name": "Help"
-		}
-	],
-
-	//
 	// rendering methods
 	//
 

@@ -23,29 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "open-theme",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"separator",
-		{
-			"class": "save-as",
-			"icon": "fa fa-save",
-			"name": "Save As",
-			"shortcut": "command-S"
-		},
-		"separator",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	],
-
 	events: {
 		'click .open-theme': 'onClickOpenTheme',
 		'click .open-my-theme': 'onClickOpenMyTheme',

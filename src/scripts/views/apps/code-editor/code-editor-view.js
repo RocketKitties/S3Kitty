@@ -31,6 +31,7 @@ import HeaderBarView from '../../../views/apps/code-editor/header-bar/header-bar
 import SideBarView from '../../../views/apps/code-editor/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/code-editor/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/code-editor/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/code-editor/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable, FindReplaceable, ItemShareable, ItemFavorable, FileDownloadable, FileUploadable, FileDisposable, {
 
@@ -742,5 +743,13 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 	//
 
 	defaultName: 'Untitled.txt',
-	clipboard: undefined
+	clipboard: undefined,
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
 });

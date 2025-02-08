@@ -23,23 +23,6 @@ export default EditMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "edit message",
-			"group": "chat option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Message",
-			"shortcut": "command-E"
-		},
-		{
-			"class": "delete message",
-			"group": "chat option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Message",
-			"shortcut": "delete"
-		}
-	],
-
 	events: {
 
 		// topic options
@@ -53,7 +36,8 @@ export default EditMenuView.extend({
 	//
 
 	enabled: function() {
-		let hasSelectedMessage = this.parent.app.hasSelectedMessage();
+		let hasChat = this.parent.app.collection.length > 0;
+		let hasSelectedMessage = hasChat && this.parent.app.hasSelectedMessage();
 
 		return {
 			'edit': hasSelectedMessage,

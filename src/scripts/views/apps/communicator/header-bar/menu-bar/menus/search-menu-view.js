@@ -25,39 +25,6 @@ export default SearchMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "search-by-message",
-			"group": "search-by",
-			"icon": "fa fa-quote-left",
-			"name": "By Message",
-			"select": true
-		},
-		"separator",
-		{
-			"class": "search-by-date",
-			"group": "search-by",
-			"icon": "fa fa-calendar-alt",
-			"name": "By Date",
-			"select": true
-		},
-		"separator",
-		{
-			"class": "search-by-num-likes",
-			"group": "search-by",
-			"icon": "fa fa-thumbs-up",
-			"name": "By Likes",
-			"select": true
-		},
-		{
-			"class": "search-by-num-comments",
-			"group": "search-by",
-			"icon": "fa fa-comment",
-			"name": "By Comments",
-			"select": true
-		}
-	],
-
 	events: {
 		'click .search-by > a': 'onClickSearchBy'
 	},

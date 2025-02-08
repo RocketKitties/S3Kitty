@@ -23,21 +23,6 @@ export default FindMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "find",
-			"icon": "fa fa-search",
-			"name": "Find",
-			"shortcut": "command-F"
-		},
-		{
-			"class": "find-next",
-			"icon": "fa fa-search",
-			"name": "Find Next",
-			"shortcut": "shift-command-F"
-		}
-	],
-
 	events: {
 		'click .find': 'onClickFind',
 	},

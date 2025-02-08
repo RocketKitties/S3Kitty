@@ -28,6 +28,7 @@ import HeaderBarView from '../../../views/apps/audio-player/header-bar/header-ba
 import SideBarView from '../../../views/apps/audio-player/sidebar/sidebar-view.js';
 import AudioSplitView from '../../../views/apps/audio-player/mainbar/audio-split-view.js';
 import FooterBarView from '../../../views/apps/audio-player/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/audio-player/forms/preferences/preferences-form-view.js'
 import Audio from '../../../utilities/multimedia/audio.js';
 import Browser from '../../../utilities/web/browser.js';
 
@@ -1084,4 +1085,13 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, Fi
 	onBeforeDestroy: function() {
 		this.pause();
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

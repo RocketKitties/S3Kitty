@@ -19,6 +19,7 @@ import File from '../../../models/storage/files/file.js';
 import Items from '../../../collections/storage/items.js';
 import AppView from '../../../views/apps/common/app-view.js';
 import FilesView from '../../../views/apps/file-browser/mainbar/files/files-view.js';
+import PreferencesFormView from '../../../views/apps/theme-picker/forms/preferences/preferences-form-view.js'
 
 export default AppView.extend({
 
@@ -75,12 +76,14 @@ export default AppView.extend({
 
 		// create theme files
 		//
-		let themes = config.apps.theme_picker.themes;
 		let files = [];
-		for (let i = 0; i < themes.length; i++) {
-			files.push(new File({
-				path: themes[i]
-			}));
+		let themes = config.apps.theme_picker.themes;
+		if (themes) {
+			for (let i = 0; i < themes.length; i++) {
+				files.push(new File({
+					path: themes[i]
+				}));
+			}
 		}
 
 		// set attributes
@@ -91,7 +94,7 @@ export default AppView.extend({
 
 		// set window size
 		//
-		if (themes.length <= 6) {
+		if (themes && themes.length <= 6) {
 			if (config.apps.theme_manager.hidden) {
 				this.size = [undefined, 300];
 			} else {
@@ -305,5 +308,14 @@ export default AppView.extend({
 		// clear static attributes
 		//
 		this.constructor.current = null;
+	}
+}, {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
 	}
 });

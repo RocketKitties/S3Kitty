@@ -23,54 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "new-file",
-			"icon": "fa fa-file-alt",
-			"name": "New File",
-			"shortcut": "command-F"
-		},
-		{
-			"class": "new-window",
-			"icon": "far fa-window-maximize",
-			"name": "New Window",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "open-file",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"separator",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		"separator",
-		{
-			"class": "save-file",
-			"icon": "fa fa-save",
-			"name": "Save",
-			"shortcut": "command-S"
-		},
-		{
-			"class": "save-as",
-			"icon": "fa fa-save",
-			"name": "Save As",
-			"shortcut": "shift-command-S"
-		},
-		"separator",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	],
-
 	events: {
 		'click .new-file': 'onClickNewFile',
 		'click .new-window': 'onClickNewWindow',

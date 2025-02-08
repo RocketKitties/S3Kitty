@@ -34,6 +34,9 @@ import HeaderBarView from '../../../views/apps/topic-viewer/header-bar/header-ba
 import SideBarView from '../../../views/apps/topic-viewer/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/topic-viewer/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/topic-viewer/footer-bar/footer-bar-view.js';
+import OpenTopicsDialogView from '../../../views/apps/topic-viewer/dialogs/topics/open-topics-dialog-view.js';
+import UserTopicView from '../../../views/apps/topic-viewer/mainbar/topics/user-topic-view.js';
+import PreferencesFormView from '../../../views/apps/topic-viewer/forms/preferences/preferences-form-view.js';
 
 export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, ItemOpenable, LinkShareable, ItemInfoShowable, TopicInfoShowable, {
 
@@ -266,6 +269,23 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	loadModel: function(model, options) {
 		this.addModel(model, options);
+
+		// set options
+		//
+		if (options && (options.message || options.items)) {
+			let activeView = this.getActiveView();
+			if (activeView) {
+				let formView = activeView.getChildView('form');
+				if (formView) {
+					if (options.message) {
+						formView.setValue('message', options.message);
+					}
+					if (options.items) {
+						formView.addAttachments(options.items);
+					}
+				}
+			}
+		}
 	},
 
 	//
@@ -411,24 +431,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 	//
 
 	openTopic: function(topic, options) {
-		this.openModel(topic);
-
-		// set options
-		//
-		if (options && (options.message || options.items)) {
-			let activeView = this.getActiveView();
-			if (activeView) {
-				let formView = activeView.getChildView('form');
-				if (formView) {
-					if (options.message) {
-						formView.setValue('message', options.message);
-					}
-					if (options.items) {
-						formView.addAttachments(options.items);
-					}
-				}
-			}
-		}
+		this.openModel(topic, options);
 	},
 
 	openTopics: function(topics, options) {
@@ -705,7 +708,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	shareSelectedByLink: function() {
 		import(
-			'../../../views/apps/web-browser/dialogs/links/copy-link-dialog-view.js'
+			'../../../views/apps/file-browser/dialogs/links/copy-link-dialog-view.js'
 		).then((CopyLinkDialogView) => {
 
 			// show copy link dialog
@@ -1101,7 +1104,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 }), {
 
 	//
-	// static methods
+	// static querying methods
 	//
 
 	isDefaultTopicName: function(name) {
@@ -1112,11 +1115,31 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		return this.getTopicName() != undefined;
 	},
 
+	//
+	// static getting methods
+	//
+
 	getPreferences: function() {
 		return config.preferences.topic_viewer || {};
 	},
 
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
 	getDefaultTopicName: function() {
 		return this.getPreferences().default_topic;
+	},
+
+	getUserTopicView: function(options) {
+		return new UserTopicView(options);
+	},
+
+	//
+	// static dialog rendering methods
+	//
+
+	showOpenTopicsDialog: function(options) {
+		application.show(new OpenTopicsDialogView(options));
 	}
 });

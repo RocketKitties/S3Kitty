@@ -869,6 +869,7 @@ h1 .icon i {
   height: 100%;
 }
 .app.fixed-size .body {
+  height: 100%;
   flex-grow: 0 !important;
   margin: auto;
 }
@@ -5839,10 +5840,6 @@ body.red {
   --primary-color: hsl(0, 80%, 60%);
 }
 
-body.raspberry {
-  --primary-color: hsl(330, 80%, 60%);
-}
-
 body.red-orange {
   --primary-color: hsl(15, 80%, 60%);
 }
@@ -5864,7 +5861,7 @@ body.yellow {
 }
 
 body.lime {
-  --primary-color: hsl(90, 50%, 50%);
+  --primary-color: hsl(135, 50%, 50%);
 }
 
 body.green {
@@ -5907,6 +5904,10 @@ body.magenta {
   --primary-color: hsl(280, 33%, 50%);
 }
 
+body.raspberry {
+  --primary-color: hsl(330, 80%, 60%);
+}
+
 body.grey {
   --primary-color: #6060a0;
 }
@@ -5917,10 +5918,6 @@ body.brown {
 
 .red-accented {
   --secondary-color: hsl(0, 80%, 60%);
-}
-
-.raspberry-accented {
-  --secondary-color: hsl(330, 80%, 60%);
 }
 
 .red-orange-accented {
@@ -5944,7 +5941,7 @@ body.brown {
 }
 
 .lime-accented {
-  --secondary-color: hsl(90, 50%, 50%);
+  --secondary-color: hsl(135, 50%, 50%);
 }
 
 .green-accented {
@@ -5985,6 +5982,10 @@ body.brown {
 
 .magenta-accented {
   --secondary-color: hsl(280, 33%, 50%);
+}
+
+.raspberry-accented {
+  --secondary-color: hsl(330, 80%, 60%);
 }
 
 .grey-accented {
@@ -10207,6 +10208,9 @@ body[device=phone] .item-tree .expander button.btn-sm, body[device=tablet] .item
   height: 36px;
 }
 
+.extra-large.tile-grid .item {
+  width: 256px;
+}
 .extra-large.tile-grid .item > .tile {
   width: 256px;
   height: 256px;
@@ -17554,7 +17558,7 @@ a.unstyled {
   margin: 5px 0;
   background: none;
 }
-.menu li.divider:last-child, .dropdown-menu li.divider:last-child {
+.menu li.divider:first-child, .menu li.divider:last-child, .dropdown-menu li.divider:first-child, .dropdown-menu li.divider:last-child {
   display: none;
 }
 .menu li.divider:hover, .dropdown-menu li.divider:hover {
@@ -17944,10 +17948,14 @@ body:not(.binary):not(.flat-menus):not(.flat.auto-menus) .menu-bar > ul.nav-menu
 }
 
 @media (max-width: 480px) {
-  .menu-bar > ul.nav-menus > li > a i {
-    display: none;
+  .menu-bar > ul.nav-menus > li {
+    /*
+    &.help {
+    	display: none;
+    }
+    */
   }
-  .menu-bar > ul.nav-menus > li.help {
+  .menu-bar > ul.nav-menus > li > a i {
     display: none;
   }
 }

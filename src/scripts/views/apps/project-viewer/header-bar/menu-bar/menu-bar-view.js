@@ -27,54 +27,6 @@ import HelpMenuView from '../../../../../views/apps/project-viewer/header-bar/me
 export default MenuBarView.extend({
 
 	//
-	// attributes
-	//
-
-	items: [
-		{
-			"class": "file",
-			"icon": "fa fa-file",
-			"name": "File"
-		},
-		{
-			"class": "edit",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit"
-		},
-		{
-			"class": "select",
-			"icon": "fa fa-mouse-pointer",
-			"name": "Select"
-		},
-		{
-			"class": "view",
-			"icon": "fa fa-eye",
-			"name": "View"
-		},
-		{
-			"class": "sort",
-			"icon": "fa fa-sort",
-			"name": "Sort"
-		},
-		{
-			"class": "search",
-			"icon": "fa fa-search",
-			"name": "Search",
-			"hidden": true
-		},
-		{
-			"class": "share",
-			"icon": "fa fa-share",
-			"name": "Share"
-		},
-		{
-			"class": "help",
-			"icon": "fa fa-question-circle",
-			"name": "Help"
-		}
-	],
-
-	//
 	// rendering methods
 	//
 

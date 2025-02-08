@@ -24,48 +24,6 @@ export default EditMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "add-job",
-			"group": "work option",
-			"icon": "fa fa-plus",
-			"name": "Add Organization"
-		},
-		{
-			"class": "edit-job",
-			"group": "work option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Organization"
-		},
-		{
-			"class": "delete-job",
-			"group": "work option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Organization",
-			"shortcut": "delete"
-		},
-		"separator",
-		{
-			"class": "add-contact",
-			"group": "contact option",
-			"icon": "fa fa-plus",
-			"name": "Add Contact"
-		},
-		{
-			"class": "edit-contact",
-			"group": "contact option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Contact"
-		},
-		{
-			"class": "delete-contact",
-			"group": "contact option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Contacts",
-			"shortcut": "delete"
-		}
-	],
-
 	events: {
 
 		// work options

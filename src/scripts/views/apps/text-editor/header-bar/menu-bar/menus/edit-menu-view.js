@@ -23,33 +23,6 @@ export default EditMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "cut",
-			"icon": "fa fa-cut",
-			"name": "Cut",
-			"shortcut": "command-X"
-		},
-		{
-			"class": "copy",
-			"icon": "fa fa-copy",
-			"name": "Copy",
-			"shortcut": "command-C"
-		},
-		{
-			"class": "paste",
-			"icon": "fa fa-paste",
-			"name": "Paste",
-			"shortcut": "command-V"
-		},
-		{
-			"class": "delete",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete",
-			"shortcut": ""
-		}
-	],
-
 	events: {
 		'click .cut': 'onClickCut',
 		'click .copy': 'onClickCopy',

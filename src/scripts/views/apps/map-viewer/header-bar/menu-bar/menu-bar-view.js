@@ -27,48 +27,6 @@ import HelpMenuView from '../../../../../views/apps/map-viewer/header-bar/menu-b
 export default MenuBarView.extend({
 
 	//
-	// attributes
-	//
-
-	items: [
-		{
-			"class": "file",
-			"icon": "fa fa-file",
-			"name": "File"
-		},
-		{
-			"class": "edit",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit"
-		},
-		{
-			"class": "select",
-			"icon": "fa fa-mouse-pointer",
-			"name": "Select"
-		},
-		{
-			"class": "view",
-			"icon": "fa fa-eye",
-			"name": "View"
-		},
-		{
-			"class": "search",
-			"icon": "fa fa-search",
-			"name": "Search"
-		},
-		{
-			"class": "share",
-			"icon": "fa fa-share",
-			"name": "Share"
-		},
-		{
-			"class": "help",
-			"icon": "fa fa-question-circle",
-			"name": "Help"
-		}
-	],
-
-	//
 	// setting methods
 	//
 

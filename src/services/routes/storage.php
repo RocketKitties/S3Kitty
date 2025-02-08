@@ -130,6 +130,7 @@ Route::group(['middleware' => 'verify.storage_access'], function() {
 	Route::post('archive/extract', [ArchiveFileController::class, 'postExtract']);
 	Route::get('archive/contents', [ArchiveFileController::class, 'getContents']);
 	Route::get('archive/contents/all', [ArchiveFileController::class, 'getAllContents']);
+	Route::get('archive/contents/num', [ArchiveFileController::class, 'getNumContents']);
 
 	// attachment routes
 	//

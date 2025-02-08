@@ -22,53 +22,6 @@ export default EditMenuView.extend({
 	//
 	// attributes
 	//
-
-	items: [
-		{
-			"class": "edit-selected",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Selected",
-			"shortcut": "command-E"
-		},
-		"separator",
-		{
-			"class": "add-photos",
-			"icon": "fa fa-camera",
-			"name": "Add Photos",
-			"shortcut": "command-P"
-		},
-		{
-			"class": "add-videos",
-			"icon": "fa fa-video",
-			"name": "Add Videos",
-			"shortcut": "command-V"
-		},
-		{
-			"class": "add-people",
-			"icon": "fa fa-user-friends",
-			"name": "Add People",
-			"shortcut": "shift-command-P"
-		},
-		{
-			"class": "add-place",
-			"icon": "fa fa-map-marker-alt",
-			"name": "Add Place",
-			"shortcut": "shift-command-L"
-		},
-		{
-			"class": "add-favorite",
-			"icon": "fa fa-map-pin",
-			"name": "Add Favorite",
-			"shortcut": "shift-command-F"
-		},
-		"separator",
-		{
-			"class": "delete-selected",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Selected",
-			"shortcut": "delete"
-		}
-	],
 	
 	events: {
 		'click .edit-selected': 'onClickEditSelected',

@@ -23,67 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "new-window",
-			"icon": "far fa-window-maximize",
-			"name": "New Window",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "new-connection",
-			"icon": "fa fa-plus",
-			"name": "New Connection",
-			"shortcut": "shift-command-N"
-		},
-		{
-			"class": "open-connection",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"separator",
-		{
-			"class": "add-group",
-			"icon": "fa fa-user-plus",
-			"name": "Add Group",
-			"shortcut": "command-G"
-		},
-		{
-			"class": "delete-groups",
-			"icon": "fa fa-user-times",
-			"name": "Delete Groups",
-			"shortcut": "delete"
-		},
-
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		{
-			"class": "show-on-map",
-			"icon": "fa fa-map",
-			"name": "Show on Map",
-			"shortcut": "command-M"
-		},
-		"separator",
-		{
-			"class": "delete-connections",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Connections",
-			"shortcut": "delete"
-		},
-		"separator",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	],
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .new-connection': 'onClickNewConnection',

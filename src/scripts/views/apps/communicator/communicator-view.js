@@ -38,6 +38,7 @@ import HeaderBarView from '../../../views/apps/communicator/header-bar/header-ba
 import SideBarView from '../../../views/apps/communicator/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/communicator/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/communicator/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/communicator/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 import HtmlUtils from '../../../utilities/web/html-utils.js';
 
@@ -913,7 +914,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	shareSelectedByLink: function() {
 		import(
-			'../../../views/apps/web-browser/dialogs/links/copy-link-dialog-view.js'
+			'../../../views/apps/file-browser/dialogs/links/copy-link-dialog-view.js'
 		).then((CopyLinkDialogView) => {
 
 			// show copy link dialog
@@ -1431,6 +1432,10 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	getPreferences: function() {
 		return config.preferences.communicator || {};
+	},
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
 	},
 
 	getDefaultTopicName: function() {

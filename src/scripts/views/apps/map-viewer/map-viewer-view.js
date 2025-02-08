@@ -25,8 +25,8 @@ import Directory from '../../../models/storage/directories/directory.js';
 import User from '../../../models/users/user.js';
 import Places from '../../../collections/places/places.js';
 import Items from '../../../collections/storage/items.js';
-import USCensusGeocoding from '../../../views/maps/behaviors/geocoding/us-census-geocoding.js';
-import GoogleGeocoding from '../../../views/maps/behaviors/geocoding/google-geocoding.js';
+import USCensusGeocoding from '../../../views/apps/map-viewer/mainbar/maps/behaviors/geocoding/us-census-geocoding.js';
+import GoogleGeocoding from '../../../views/apps/map-viewer/mainbar/maps/behaviors/geocoding/google-geocoding.js';
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import Multifile from '../../../views/apps/common/behaviors/tabbing/multifile.js';
 import ItemOpenable from '../../../views/apps/common/behaviors/opening/item-openable.js';
@@ -51,6 +51,11 @@ import SideBarView from '../../../views/apps/map-viewer/sidebar/sidebar-view.js'
 import TabbedContentView from '../../../views/apps/map-viewer/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/map-viewer/footer-bar/footer-bar-view.js';
 import ContextMenuView from '../../../views/apps/map-viewer/context-menus/context-menu-view.js';
+import ItemsMapView from '../../../views/apps/map-viewer/mainbar/maps/items-map-view.js';
+import DirectoryMapView from '../../../views/apps/map-viewer/mainbar/maps/directory-map-view.js';
+import SelectPlaceDialogView from '../../../views/apps/map-viewer/dialogs/places/select-place-dialog-view.js';
+import CheckInDialogView from '../../../views/apps/map-viewer/dialogs/places/check-in-dialog-view.js';
+import PreferencesFormView from '../../../views/apps/map-viewer/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable, FileDisposable, ItemOpenable, Multifile, SelectableContainable, MultiSelectable, ItemShareable, ItemInfoShowable, ConnectionInfoShowable, PhotoMappable, VideoMappable, OverlayMappable, PersonMappable, PlaceMappable, FavoriteMappable, DropboxUploadable, GDriveUploadable, {
 
@@ -88,27 +93,12 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 		//
 		AppSplitView.prototype.initialize.call(this);
 
-		// check if we are opening an image or video
-		//
-		if (this.model instanceof ImageFile && !this.model.hasGeoposition()) {
-			this.options.photos = [this.model];
-			this.model = null;
-		}
-		if (this.model instanceof VideoFile) {
-			this.options.videos = [this.model];
-			this.model = null;
-		}
-		if (this.model instanceof ImageFile && this.model.hasGeoposition()) {
-			this.options.overlays = [this.model];
-			this.model = null;
-		}
-		if (this.model && !(this.model instanceof MapFile)) {
-			this.options.items = [this.model];
-			this.model = null;
-		} 
-
 		// set model
 		//
+		this.setItem();
+		if (this.options.items) {
+			this.setItems(this.options.items);
+		}
 		if (this.collection && !this.model) {
 			this.model = this.collection.at(0);
 		}
@@ -136,6 +126,7 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 			path: this.preferences.get('home_directory')
 		});
 	},
+
 
 	//
 	// iterator
@@ -172,6 +163,10 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 
 	hasItems: function(kind) {
 		return this.hasActivePaneView() && this.getActivePaneView().hasItems(kind);
+	},
+
+	hasMapView: function() {
+		return this.hasActivePaneView();
 	},
 
 	hasSelected: function() {
@@ -376,6 +371,48 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 	// setting methods
 	//
 
+	setItem: function() {
+		if (this.model instanceof ImageFile && !this.model.hasGeoposition()) {
+			this.options.photos = [this.model];
+			this.model = null;
+		}
+		if (this.model instanceof VideoFile) {
+			this.options.videos = [this.model];
+			this.model = null;
+		}
+		if (this.model instanceof ImageFile && this.model.hasGeoposition()) {
+			this.options.overlays = [this.model];
+			this.model = null;
+		}
+		if (this.model && !(this.model instanceof MapFile)) {
+			this.options.items = [this.model];
+			this.model = null;
+		}
+	},
+
+	setItems: function(items) {
+		if (!items) {
+			return;
+		}
+		this.options.items = [];
+		for (let i = 0; i < items.length; i++) {
+			let item = items[i];
+			if (item instanceof ImageFile) {
+				if (!this.options.photos) {
+					this.options.photos = [];
+				}
+				this.options.photos.push(item);
+			} else if (item instanceof VideoFile) {
+				if (!this.options.photos) {
+					this.options.photos = [];
+				}
+				this.options.videos.push(item);
+			} else {
+				this.options.items.push(item);
+			}
+		}
+	},
+
 	setPreferences: function(preferences) {
 
 		// set rendering preferences
@@ -552,16 +589,8 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 	//
 
 	toggleFullScreen: function() {
-
-		// request full screen
-		//
-		let mapView = this.getMapView();
-		if (mapView) {
-			if (!mapView.isFullScreen()) {
-				mapView.requestFullScreen();
-			} else {
-				mapView.exitFullScreen();
-			}
+		if (this.hasMapView()) {
+			this.getMapView().toggleFullScreen();
 		}
 	},
 
@@ -2134,5 +2163,33 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 	// static attributes
 	//
 
-	defaultName: 'Untitled.kml'
+	defaultName: 'Untitled.kml',
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	getItemsMapView: function(options) {
+		return new ItemsMapView(options);
+	},
+
+	getDirectoryMapView: function(options) {
+		return new DirectoryMapView(options);
+	},
+
+	//
+	// static dialog rendering methods
+	//
+
+	showSelectPlaceDialog: function(options) {
+		application.show(new SelectPlaceDialogView(options));
+	},
+
+	showCheckInDialog: function(options) {
+		application.show(new CheckInDialogView(options));
+	}
 });

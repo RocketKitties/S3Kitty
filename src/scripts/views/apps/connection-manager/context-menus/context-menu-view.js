@@ -23,77 +23,6 @@ export default ContextMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "open-item",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"separator",
-		{
-			"class": "share",
-			"icon": "fa fa-share",
-			"name": "Share",
-			"menu": [
-				{
-					"class": "share-files",
-					"icon": "fa fa-file",
-					"name": "Files"
-				},
-				{
-					"class": "share-audio",
-					"icon": "fa fa-volume-up",
-					"name": "Audio"
-				},
-				{
-					"class": "share-music",
-					"icon": "fa fa-music",
-					"name": "Music"
-				},
-				{
-					"class": "share-pictures",
-					"icon": "fa fa-image",
-					"name": "Pictures"
-				},
-				{
-					"class": "share-videos",
-					"icon": "fa fa-video",
-					"name": "Videos"
-				},
-				{
-					"class": "share-maps",
-					"icon": "fa fa-map",
-					"name": "Maps"
-				},
-				"separator",
-				{
-					"class": "share-message",
-					"icon": "fa fa-comments",
-					"name": "Message"
-				},
-				{
-					"class": "share-gesture",
-					"icon": "fa fa-hand-pointer",
-					"name": "Gesture"
-				}
-			]
-		},
-		"separator",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		{
-			"class": "show-on-map",
-			"icon": "fa fa-map",
-			"name": "Show on Map",
-			"shortcut": "command-M"
-		}
-	],
-
 	events: _.extend({}, ContextMenuView.prototype.events, {
 		'click .open-item': 'onClickOpenItem',
 		'click .show-info': 'onClickShowInfo',
@@ -129,16 +58,6 @@ export default ContextMenuView.extend({
 			'share-maps': hasSelected,
 			'share-message': oneSelected,
 			'share-gesture': oneSelected
-		};
-	},
-
-	//
-	// rendering methods
-	//
-
-	templateContext: function() {
-		return {
-			is_desktop: this.parent.isDesktop()
 		};
 	},
 

@@ -17,7 +17,7 @@
 
 import CardView from '../../../../../../views/items/cards/card-view.js';
 import FileDroppable from '../../../../../../views/apps/file-browser/mainbar/behaviors/file-droppable.js';
-import Mappable from '../../../../../../views/maps/behaviors/mappable.js';
+import Mappable from '../../../../../../views/apps/map-viewer/mainbar/maps/behaviors/mappable.js';
 import AccountBadgesView from '../../../../../../views/apps/account-manager/mainbar/accounts/badges/account-badges-view.js';
 
 export default CardView.extend(_.extend({}, FileDroppable, Mappable, {

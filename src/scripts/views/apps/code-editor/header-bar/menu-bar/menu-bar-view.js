@@ -27,48 +27,6 @@ import HelpMenuView from '../../../../../views/apps/code-editor/header-bar/menu-
 export default MenuBarView.extend({
 
 	//
-	// attributes
-	//
-
-	items: [
-		{
-			"class": "file",
-			"icon": "fa fa-file",
-			"name": "File"
-		},
-		{
-			"class": "edit",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit"
-		},
-		{
-			"class": "select",
-			"icon": "fa fa-mouse-pointer",
-			"name": "Select"
-		},
-		{
-			"class": "find",
-			"icon": "fa fa-search",
-			"name": "Find"
-		},
-		{
-			"class": "view",
-			"icon": "fa fa-eye",
-			"name": "View"
-		},
-		{
-			"class": "share",
-			"icon": "fa fa-share",
-			"name": "Share"
-		},
-		{
-			"class": "help",
-			"icon": "fa fa-question-circle",
-			"name": "Help"
-		}
-	],
-
-	//
 	// rendering methods
 	//
 

@@ -23,67 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "new-window",
-			"icon": "far fa-window-maximize",
-			"name": "New Window",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "new-event",
-			"icon": "fa fa-file",
-			"name": "New Event",
-			"shortcut": "command-E"
-		},
-		"separator",
-		{
-			"class": "open-date",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"menu": [
-				{
-					"class": "open-prev",
-					"icon": "fa fa-arrow-left",
-					"name": "Prev",
-					"shortcut": "left arrow"
-				},
-				{
-					"class": "open-next",
-					"icon": "fa fa-arrow-right",
-					"name": "Next",
-					"shortcut": "right arrow"
-				},
-				{
-					"class": "open-up",
-					"icon": "fa fa-arrow-up",
-					"name": "Up",
-					"shortcut": "up arrow"
-				},
-				{
-					"class": "open-current",
-					"icon": "fa fa-redo",
-					"name": "Current",
-					"shortcut": "down arrow"
-				}
-			]
-		},
-		"separator",
-		{
-			"class": "delete-event",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Event",
-			"shortcut": "delete"
-		},
-		"separator",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	],
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .new-event': 'onClickNewEvent',

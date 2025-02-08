@@ -23,42 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "new-window",
-			"icon": "far fa-window-maximize",
-			"name": "New Window",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "open-profiles",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"separator",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		"separator",
-		{
-			"class": "delete-accounts",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Accounts",
-			"shortcut": "delete"
-		},
-		"separator",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	],
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .open-profiles': 'onClickOpenProfiles',

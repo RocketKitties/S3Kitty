@@ -23,53 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "new-window",
-			"icon": "far fa-window-maximize",
-			"name": "New Window",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "open-file",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"separator",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		"separator",
-		{
-			"class": "save-as",
-			"icon": "fa fa-save",
-			"name": "Save As",
-			"shortcut": "shift-command-S"
-		},
-		"separator",
-		{
-			"class": "download-file",
-			"icon": "fa fa-download",
-			"name": "Download",
-			"shortcut": "shift-command-D"
-		},
-		"separator",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	],
-
-	disabled: {
-		'download': true
-	},
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .open-file': 'onClickOpenFile',

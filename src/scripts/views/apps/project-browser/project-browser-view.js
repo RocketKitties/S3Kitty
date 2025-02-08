@@ -24,6 +24,7 @@ import HeaderBarView from '../../../views/apps/project-browser/header-bar/header
 import SideBarView from '../../../views/apps/project-browser/sidebar/sidebar-view.js';
 import ProjectsView from '../../../views/apps/project-browser/mainbar/projects/projects-view.js';
 import FooterBarView from '../../../views/apps/project-browser/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/project-browser/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, ProjectInfoShowable, {
 
@@ -530,4 +531,13 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		//
 		this.getChildView('sidebar').setNumSelected(this.numSelected());
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

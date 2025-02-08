@@ -61,6 +61,16 @@ export default SideBarPanelView.extend({
 	},
 
 	//
+	// querying methods
+	//
+
+	hasActivities: function() {
+		return application.hasApp('connection_manager') ||
+			application.hasApp('post_viewer') ||
+			application.hasApp('chat_viewer');
+	},
+
+	//
 	// rendering methods
 	//
 
@@ -71,6 +81,12 @@ export default SideBarPanelView.extend({
 			num_comments: this.model.get('num_comments') || 0,
 			num_chats: this.model.get('num_chats') || 0
 		};
+	},
+
+	onRender: function() {
+		if (!this.hasActivities()) {
+			this.hide();
+		}
 	},
 
 	showConnections: function() {

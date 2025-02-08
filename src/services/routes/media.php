@@ -55,6 +55,7 @@ Route::group(['middleware' => 'verify.storage_access'], function() {
 	// pdf file routes
 	//
 	Route::get('pdf/text', [PdfFileController::class, 'getText']);
+	Route::get('pdf/exif', [PdfFileController::class, 'getExif']);
 
 	// video file routes
 	//

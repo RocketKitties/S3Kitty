@@ -25,7 +25,7 @@ import FileMovable from '../../../../../views/apps/file-browser/mainbar/behavior
 import FileCopyable from '../../../../../views/apps/file-browser/mainbar/behaviors/file-copyable.js';
 import FileUploadable from '../../../../../views/apps/file-browser/mainbar/behaviors/file-uploadable.js';
 import DroppableUploadable from '../../../../../views/apps/file-browser/mainbar/behaviors/droppable-uploadable.js';
-import Geolocatable from '../../../../../views/maps/behaviors/geolocatable.js';
+import Geolocatable from '../../../../../views/apps/map-viewer/mainbar/maps/behaviors/geolocatable.js';
 import FilesView from '../../../../../views/apps/file-browser/mainbar/files/files-view.js';
 import Keyboard from '../../../../../views/keyboard/keyboard.js';
 import HtmlUtils from '../../../../../utilities/web/html-utils.js';
@@ -831,7 +831,7 @@ export default FormView.extend(_.extend({}, Emotable, FileMovable, FileCopyable,
 
 	showOpenImagesDialog: function(options) {
 		import(
-			'../../../../../views/apps/image-viewer/dialogs/images/open-images-dialog-view.js'
+			'../../../../../views/apps/file-browser/dialogs/images/open-images-dialog-view.js'
 		).then((OpenImagesDialogView) => {
 			
 			// show open images dialog

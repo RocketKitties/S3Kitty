@@ -23,48 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "new-window",
-			"icon": "far fa-window-maximize",
-			"name": "New Window",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "new-chat",
-			"icon": "fa fa-plus",
-			"name": "New Chat",
-			"shortcut": "shift-command-enter"
-		},
-		{
-			"class": "open-chats",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"separator",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		"separator",
-		{
-			"class": "end-chat",
-			"icon": "fa fa-minus",
-			"name": "End Chat",
-			"shortcut": "delete"
-		},
-		"separator",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	],
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .new-chat': 'onClickNewChat',

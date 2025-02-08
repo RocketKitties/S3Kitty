@@ -23,52 +23,6 @@ export default SelectMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "select-all",
-			"icon": "fa fa-asterisk",
-			"name": "All",
-			"shortcut": "command-A"
-		},
-		"separator",
-		{
-			"class": "select-word",
-			"icon": "fa fa-text-width",
-			"name": "Word",
-			"shortcut": "command-1"
-		},
-		{
-			"class": "select-line",
-			"icon": "fa fa-arrows-alt-h",
-			"name": "Line",
-			"shortcut": "command-2"
-		},
-		{
-			"class": "select-block",
-			"icon": "fa fa-align-justify",
-			"name": "Block",
-			"shortcut": "command-3"
-		},
-		"separator",
-		{
-			"class": "select-before",
-			"icon": "fa fa-long-arrow-alt-up",
-			"name": "Before",
-			"shortcut": "command-["
-		},
-		{
-			"class": "select-after",
-			"icon": "fa fa-long-arrow-alt-down",
-			"name": "After",
-			"shortcut": "command-]"
-		},
-		{
-			"class": "select-range",
-			"icon": "fa fa-arrows-alt-v",
-			"name": "Range"
-		}
-	],
-
 	events: {
 		'click .select-all': 'onClickSelectAll',
 		'click .select-invert': 'onClickSelectInvert',

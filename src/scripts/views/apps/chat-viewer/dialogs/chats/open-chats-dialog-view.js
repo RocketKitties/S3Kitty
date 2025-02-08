@@ -16,7 +16,6 @@
 \******************************************************************************/
 
 import DialogView from '../../../../../views/dialogs/dialog-view.js';
-import ChatBrowserView from '../../../../../views/apps/chat-browser/chat-browser-view.js';
 
 export default DialogView.extend({
 
@@ -58,7 +57,7 @@ export default DialogView.extend({
 	`),
 
 	regions: {
-		body: {
+		chat_browser: {
 			el: '.modal-body',
 			replaceElement: true
 		}
@@ -115,14 +114,7 @@ export default DialogView.extend({
 	},
 
 	showChatBrowser: function() {
-		this.showChildView('body', new ChatBrowserView({
-
-			// options
-			//
-			dialog: this,
-			hidden: {
-				'footer-bar': true
-			},
+		this.showChildApp('chat_browser', {
 
 			// state
 			//
@@ -134,7 +126,7 @@ export default DialogView.extend({
 			onchange: () => this.onChange(),
 			onselect: () => this.update(),
 			ondeselect: () => this.update()
-		}));
+		});
 	},
 
 	update: function() {
@@ -142,7 +134,7 @@ export default DialogView.extend({
 		// update buttons
 		//
 		this.$el.find('.modal-footer .open').prop('disabled', 
-			!this.getChildView('body').hasSelected());
+			!this.getChildView('chat_browser').hasSelected());
 	},
 
 	//
@@ -150,7 +142,7 @@ export default DialogView.extend({
 	//
 
 	onClickOpenButton: function() {
-		let selected = this.getChildView('body').getSelectedModels();
+		let selected = this.getChildView('chat_browser').getSelectedModels();
 
 		// open selected item
 		//
@@ -183,6 +175,6 @@ export default DialogView.extend({
 	//
 
 	onKeyDown: function(event) {
-		this.getChildView('body').onKeyDown(event);
+		this.getChildView('chat_browser').onKeyDown(event);
 	}
 });

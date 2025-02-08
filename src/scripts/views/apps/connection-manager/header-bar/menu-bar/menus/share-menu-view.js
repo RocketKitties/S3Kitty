@@ -22,19 +22,6 @@ export default ShareMenuView.extend({
 	//
 	// attributes
 	//
-
-	items: [
-		{
-			"class": "share-message",
-			"icon": "fa fa-comments",
-			"name": "Message"
-		},
-		{
-			"class": "share-gesture",
-			"icon": "fa fa-hand-pointer",
-			"name": "Gesture"
-		}
-	],
 	
 	events: {
 		'click .share-attachments': 'onClickShareAttachments',
@@ -62,7 +49,8 @@ export default ShareMenuView.extend({
 	//
 
 	getItems: function() {
-		return this.items.clone().concat(this.getFileItems());
+		let items = ShareMenuView.prototype.getItems.call(this);
+		return items.concat(this.getFileItems());
 	},
 
 	//

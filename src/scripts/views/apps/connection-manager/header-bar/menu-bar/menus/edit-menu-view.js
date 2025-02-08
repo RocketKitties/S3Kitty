@@ -23,24 +23,6 @@ export default EditMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "edit-group",
-			"group": "delete group-option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Group",
-			"shortcut": "command-E"
-		},
-		"separator",
-		{
-			"class": "delete-members",
-			"group": "delete member-option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Members",
-			"shortcut": "delete"
-		}
-	],
-
 	events: {
 		'click .edit-group': 'onClickEditGroup',
 		'click .delete-members': 'onClickDeleteItems'

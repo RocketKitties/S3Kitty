@@ -40,6 +40,6 @@ Route::group(['middleware' => 'verify.auth'], function() {
 	//
 	Route::group(['middleware' => 'verify.admin'], function() {
 		Route::get('users/all', [UserController::class, 'getAll']);
-		Route::get('users/{id}/delete', [UserController::class, 'deleteIndex']);
+		Route::delete('users/{id}/delete', [UserController::class, 'deleteIndex']);
 	});
 });

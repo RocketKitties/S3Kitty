@@ -112,6 +112,10 @@ export default Timestamped.extend({
 		});
 	},
 
+	getUrl: function() {
+		return application.getUrl() + '#posts/' + this.get('id');
+	},
+
 	//
 	// setting methods
 	//

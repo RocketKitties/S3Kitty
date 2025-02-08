@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import ListView from '../../../../../../views/items/lists/list-view.js';
-import ContainableMappable from '../../../../../../views/maps/behaviors/containable-mappable.js';
+import ContainableMappable from '../../../../../../views/apps/map-viewer/mainbar/maps/behaviors/containable-mappable.js';
 import AccountListItemView from '../../../../../../views/apps/account-manager/mainbar/accounts/lists/account-list-item-view.js';
 
 export default ListView.extend(_.extend({}, ContainableMappable, {

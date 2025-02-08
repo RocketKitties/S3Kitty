@@ -22,59 +22,6 @@ export default EditMenuView.extend({
 	//
 	// attributes
 	//
-	
-	items: [
-		{
-			"class": "undo",
-			"icon": "fa fa-undo",
-			"name": "Undo",
-			"shortcut": "command-Z"
-		},
-		{
-			"class": "redo",
-			"icon": "fa fa-redo",
-			"name": "Redo",
-			"shortcut": "command-Y"
-		},
-		"separator",
-		{
-			"class": "cut",
-			"icon": "fa fa-cut",
-			"name": "Cut",
-			"shortcut": "command-X"
-		},
-		{
-			"class": "copy",
-			"icon": "fa fa-copy",
-			"name": "Copy",
-			"shortcut": "command-C"
-		},
-		{
-			"class": "paste",
-			"icon": "fa fa-paste",
-			"name": "Paste",
-			"shortcut": "command-V"
-		},
-		{
-			"class": "delete",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete",
-			"shortcut": "delete"
-		},
-		"separator",
-		{
-			"class": "indent",
-			"icon": "fa fa-indent",
-			"name": "Indent",
-			"shortcut": "tab"
-		},
-		{
-			"class": "outdent",
-			"icon": "fa fa-outdent",
-			"name": "Outdent",
-			"shortcut": "shift-tab"
-		}
-	],
 
 	events: {
 		'click .undo': 'onClickUndo',

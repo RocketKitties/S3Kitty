@@ -289,7 +289,7 @@ export default NotificationsListItemView.extend({
 	
 	onClickAccept: function() {
 		import(
-			'../../../../views/apps/file-browser/dialogs/files/save-as-dialog-view.js'
+			'../../../../../views/apps/file-browser/dialogs/files/save-as-dialog-view.js'
 		).then((SaveAsDialogView) => {
 
 			// get file name

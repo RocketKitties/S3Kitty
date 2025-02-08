@@ -33,6 +33,8 @@ import HeaderBarView from '../../../views/apps/chat-viewer/header-bar/header-bar
 import SideBarView from '../../../views/apps/chat-viewer/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/chat-viewer/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/chat-viewer/footer-bar/footer-bar-view.js';
+import OpenChatsDialogView from '../../../views/apps/chat-viewer/dialogs/chats/open-chats-dialog-view.js';
+import PreferencesFormView from '../../../views/apps/chat-viewer/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, ItemOpenable, ItemInfoShowable, ChatInfoShowable, {
 
@@ -586,12 +588,24 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		//
 		this.hideMessage();
 
-		// open first chat
+		// open a chat
 		//
 		if (this.collection.isEmpty() && collection && collection.length > 0) {
+
+			// get selected chat
+			//
+			if (this.options.user) {
+				this.model = collection.getChatByUser(this.options.user)
+			}
+
+			// get first chat
+			//
 			if (!this.model) {
 				this.model = collection.at(0);
 			}
+
+			// load chat
+			//
 			this.loadModel(this.model);
 		}
 
@@ -655,18 +669,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		// call superclass method
 		//
 		AppSplitView.prototype.onSelect.call(this, item);
-
-		/*
-		// update menu
-		//
-		this.getChildView('header menu').onSelect(item);
-
-		// perform callback
-		//
-		if (this.options.onselect) {
-			this.options.onselect(item);
-		}
-		*/
 	},
 
 	onDeselect: function(item) {
@@ -675,17 +677,22 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		// call superclass method
 		//
 		AppSplitView.prototype.onDeselect.call(this, item);
-
-		/*
-		// update menu
-		//
-		this.getChildView('header menu').onDeselect(item);
-
-		// perform callback
-		//
-		if (this.options.ondeselect) {
-			this.options.ondeselect(item);
-		}
-		*/
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	//
+	// static dialog rendering methods
+	//
+
+	showOpenChatsDialog: function(options) {
+		application.show(new OpenChatsDialogView(options));
+	}
+});

@@ -25,6 +25,7 @@ import HeaderBarView from '../../../views/apps/account-manager/header-bar/header
 import SideBarView from '../../../views/apps/account-manager/sidebar/sidebar-view.js';
 import AccountsView from '../../../views/apps/account-manager/mainbar/accounts/accounts-view.js';
 import FooterBarView from '../../../views/apps/account-manager/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/account-manager/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, ConnectionShareable, GoogleContactsImportable, {
 
@@ -437,4 +438,13 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 			this.options.onopen(item);
 		}
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

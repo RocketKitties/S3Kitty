@@ -24,6 +24,7 @@ import HeaderBarView from '../../../views/apps/chat-browser/header-bar/header-ba
 import SideBarView from '../../../views/apps/chat-browser/sidebar/sidebar-view.js';
 import ChatsView from '../../../views/apps/chat-browser/mainbar/chats/chats-view.js';
 import FooterBarView from '../../../views/apps/chat-browser/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/chat-browser/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, ChatInfoShowable, {
 
@@ -384,4 +385,13 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		//
 		this.$el.find('.search-bar input').focus();
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

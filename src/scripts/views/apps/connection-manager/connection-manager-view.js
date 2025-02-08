@@ -33,7 +33,14 @@ import HeaderBarView from '../../../views/apps/connection-manager/header-bar/hea
 import SideBarView from '../../../views/apps/connection-manager/sidebar/sidebar-view.js';
 import ContextMenuView from '../../../views/apps/connection-manager/context-menus/context-menu-view.js';
 import FooterBarView from '../../../views/apps/connection-manager/footer-bar/footer-bar-view.js';
-import UsersView from '../../../views/apps/profile-browser/mainbar/users/users-view.js';
+import UserConnectionsView from '../../../views/apps/connection-manager/mainbar/user-connections-view.js';
+import ConnectionRequestsDropdownView from '../../../views/apps/connection-manager/connection-requests/connection-requests-dropdown-view.js';
+import FindConnectionsDialogView from '../../../views/apps/connection-manager/dialogs/connections/find-connections-dialog-view.js';
+import SelectConnectionsDialogView from '../../../views/apps/connection-manager/dialogs/connections/select-connections-dialog-view.js';
+import ConnectionInfoDialogView from '../../../views/apps/connection-manager/dialogs/info/connection-info-dialog-view.js';
+import ShareWithConnectionsDialogView from '../../../views/apps/connection-manager/dialogs/sharing/share-with-connections-dialog-view.js';
+import ConnectionRequestDialogView from '../../../views/apps/connection-manager/dialogs/connections/connection-request-dialog-view.js';
+import PreferencesFormView from '../../../views/apps/connection-manager/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, LinkShareable, ConnectionShareable, ConnectionInfoShowable, {
 
@@ -203,7 +210,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// call attention to selected items
 		//
 		this.each((item) => {
-			if (item.isSelected()) {
+			if (item.isSelected && item.isSelected()) {
 				item.showEffect(effect);
 			}
 		});
@@ -681,7 +688,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 	},
 
 	getContentView: function() {
-		return new UsersView({
+		return new UserConnectionsView({
 			collection: this.connections,
 
 			// options
@@ -943,4 +950,57 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 			this.shareWithConnections(connections, items);
 		}
 	}
-}));
+}), {
+
+	//
+	// static methods
+	//
+
+	fetchMutualConnections(model, options) {
+		new Connections().fetchMutual(application.session.user, model, options);
+	},
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	getConnectionRequestsDropdownView: function(model) {
+		return new ConnectionRequestsDropdownView({
+			model: model
+		});
+	},
+
+	getUserConnectionsView: function(options) {
+		return new UserConnectionsView(options);
+	},
+
+	//
+	// static dialog rendering methods
+	//
+
+	showFindConnectionsDialog: function() {
+		application.show(new FindConnectionsDialogView());
+	},
+
+	showSelectConnectionsDialog: function(options) {
+		application.show(new SelectConnectionsDialogView(options));
+	},
+
+	showConnectionInfoDialog: function(model) {
+		application.show(new ConnectionInfoDialogView({
+			model: model
+		}));
+	},
+
+	showShareWithConnectionsDialog: function(options) {
+		application.show(new ShareWithConnectionsDialogView(options));
+	},
+
+	showConnectionRequestDialog: function(options) {
+		application.show(new ConnectionRequestDialogView(options));
+	}
+});

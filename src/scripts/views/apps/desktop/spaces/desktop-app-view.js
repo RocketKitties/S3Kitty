@@ -145,37 +145,21 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 	// loading methods
 	//
 
-	loadPreferences: function(user, appName, options) {
+	loadPreferences: function(appName, options) {
 
-		// check for user
+		// load user preferences
 		//
-		if (!user) {
-			return;
-		}
-
-		// load preferences by user
-		//
-		this.preferences.loadByUser(user, {
+		UserPreferences.create(appName).fetch({
 
 			// callbacks
 			//
-			success: (model) => {
+			success: (preferences) => {
 
 				// perform callback
 				//
 				if (options && options.success) {
-					options.success(model);
+					options.success(preferences);
 				}
-			},
-
-			error: (model, response) => {
-
-				// show error message
-				//
-				application.error({
-					message: "Could not fetch desktop app preferences.",
-					response: response
-				});
 			}
 		});
 	},
@@ -200,7 +184,7 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 
 		// show child views
 		//
-		this.loadApp(this.options.app.get('id'));
+		this.showApp(this.options.app.get('id'));
 
 		// add modals to desktop space
 		//
@@ -220,54 +204,6 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 
 	showModals: function() {
 		this.showChildView('modals', new ModalsView());
-	},
-
-	loadApp: function(appName) {
-		let user = this.getUser();
-
-		// set attributes
-		//
-		if (appName != this.appName) {
-			this.appName = appName;
-		} else {
-			return;
-		}
-
-		// create default preferences
-		//
-		switch (appName) {
-			case 'app_launcher':
-				this.preferences = null;
-				break;
-			default:
-				this.preferences = UserPreferences.create(appName);
-				break;
-		}
-
-		if (this.preferences) {
-			this.loadPreferences(user, appName, {
-
-				// callbacks
-				//
-				success: () => {
-
-					// check if view still exists
-					//
-					if (this.isDestroyed()) {
-						return;
-					}
-
-					// update view
-					//
-					this.showApp(appName);
-				}
-			});
-		} else {
-
-			// update view
-			//
-			this.showApp(appName);
-		}
 	},
 
 	showAppView: function(appName, AppView) {
@@ -317,12 +253,39 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 	},
 
 	showApp: function(appName) {
-		this.loadAppView(appName, {
+
+		// show desktop app
+		//
+		application.loadApp(appName, {
 
 			// callbacks
 			//
 			success: (AppView) => {
-				this.showAppView(appName, AppView);
+
+				// load user preferences
+				//
+				this.loadPreferences(appName, {
+
+					// callbacks
+					//
+					success: (preferences) => {
+						this.preferences = preferences;
+
+						// check if view still exists
+						//
+						if (this.isDestroyed()) {
+							return;
+						}
+
+						// update view
+						//
+						this.showAppView(appName, AppView);
+
+						// apply dialog styles
+						//
+						application.settings.dialogs.apply();
+					}
+				});
 			},
 
 			error: () => {
@@ -350,10 +313,6 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 		// show app launcher
 		//
 		this.showLauncher(application.desktop.settings.get('launcher_style'));
-
-		// apply dialog styles
-		//
-		application.settings.dialogs.apply();
 
 		// set initial focus
 		//

@@ -207,6 +207,12 @@ export default BaseView.extend({
 		} else {
 			this.showPanels(this.options.nav);
 		}
+
+		// hide connections tab
+		//
+		if (!application.hasApp('connection_manager')) {
+			this.hideTab('connections');
+		}
 	},
 
 	showHeader: function() {
@@ -222,6 +228,10 @@ export default BaseView.extend({
 			//
 			editable: this.model.isCurrent() && this.options.editable
 		}));
+	},
+
+	hideTab: function(name) {
+		this.$el.find('.' + name).hide();
 	},
 
 	//
@@ -275,7 +285,7 @@ export default BaseView.extend({
 			case 'photos':
 				this.showUserPhotos();
 				break;
-		}	
+		}
 	},
 
 	showProfile: function() {
@@ -304,15 +314,13 @@ export default BaseView.extend({
 	},
 
 	showNewsPanel: function() {
-		let hasTopics = config.apps.topic_viewer != undefined && config.apps.topic_viewer.hidden != true;
-
-		if (hasTopics) {
+		if (application.hasApp('topic_viewer')) {
 			this.fetchAndShowUserNews();
 		} else {
-			this.$el.find('.news').hide();
+			this.hideTab('news');
 		}
 	},
-	
+
 	fetchAndShowUserNews: function() {
 		let preferences = UserPreferences.create('topic_viewer');
 
@@ -330,6 +338,15 @@ export default BaseView.extend({
 			// callbacks
 			//
 			success: (model) => {
+
+				// check if view still exists
+				//
+				if (this.isDestroyed()) {
+					return;
+				}
+
+				// update view
+				//
 				this.showUserNews(model);
 			},
 
@@ -340,73 +357,80 @@ export default BaseView.extend({
 				application.error({
 					message: "Could not fetch user preferences.",
 					response: response
-				});	
+				});
 			}
 		});
 	},
 
 	showUserNews: function(preferences) {
-		import(
-			'../../../../views/apps/profile-viewer/mainbar/news/user-news-view.js'
-		).then((UserNewsView) => {
-			this.showChildView('news', new UserNewsView.default({
-				user: this.model,
+		application.loadAppView('topic_viewer', {
 
-				// options
-				//
-				nav: this.options.tab,
-				preferences: preferences,
-				collapsed: !preferences.get('show_comments'),
-				condensed: !preferences.get('show_options'),
-				itemsPerPage: preferences.get('items_per_page'),
-				public: this.options.public,
+			// callbacks
+			//
+			success: (TopicViewerView) => {
+				this.showChildView('news', TopicViewerView.getUserTopicView({
+					user: this.model,
 
-				// capabilities
-				//
-				editable: false,
+					// options
+					//
+					nav: this.options.tab,
+					preferences: preferences,
+					collapsed: !preferences.get('show_comments'),
+					condensed: !preferences.get('show_options'),
+					itemsPerPage: preferences.get('items_per_page'),
+					public: this.options.public,
 
-				// callbacks
-				//
-				onselect: this.options.onselect,
-				ondeselect: this.options.ondeselect,
-				onopen: this.options.onopen,
-				onadd: this.options.onadd,
-				onremove: this.options.onremove
-			}));
+					// capabilities
+					//
+					editable: false,
+
+					// callbacks
+					//
+					onselect: this.options.onselect,
+					ondeselect: this.options.ondeselect,
+					onopen: this.options.onopen,
+					onadd: this.options.onadd,
+					onremove: this.options.onremove
+				}));
+			}
 		});
 	},
 
 	showUserConnections: function() {
 
-		// check if we can show users
+		// check if we can show connections
 		//
-		if (!config.apps.profile_browser) {
+		if (!application.hasApp('connection_manager')) {
 			this.$el.find('.connections').hide();
 			return;
 		}
 
-		import(
-			'../../../../views/apps/profile-viewer/mainbar/connections/user-connections-view.js'
-		).then((UserConnectionsView) => {
-			this.showChildView('connections', new UserConnectionsView.default({
-				model: this.model,
+		application.loadAppView('connection_manager', {
 
-				// options
-				//
-				preferences: UserPreferences.create('connection_manager'),
+			// callbacks
+			//
+			success: (ConnectionManagerView) => {
+				this.showChildView('connections', ConnectionManagerView.getUserConnectionsView({
+					model: this.model,
+					load: true,
 
-				// capabilities
-				//
-				selectable: true,
+					// options
+					//
+					preferences: UserPreferences.create('connection_manager'),
 
-				// callbacks
-				//
-				onselect: this.options.onselect,
-				ondeselect: this.options.ondeselect,
-				onopen: this.options.onopen,
-				onadd: this.options.onadd,
-				onremove: this.options.onremove
-			}));
+					// capabilities
+					//
+					selectable: true,
+
+					// callbacks
+					//
+					onselect: this.options.onselect,
+					ondeselect: this.options.ondeselect,
+					onopen: this.options.onopen,
+					onadd: this.options.onadd,
+					onremove: this.options.onremove
+				}));
+			}
 		});
 	},
 

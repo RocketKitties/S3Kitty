@@ -29,6 +29,7 @@ import HeaderBarView from '../../../views/apps/image-viewer/header-bar/header-ba
 import SideBarView from '../../../views/apps/image-viewer/sidebar/sidebar-view.js';
 import ImageSplitView from '../../../views/apps/image-viewer/mainbar/image-split-view.js';
 import FooterBarView from '../../../views/apps/image-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/image-viewer/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
 export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFavorable, FileDownloadable, FileUploadable, FileDisposable, {
@@ -866,7 +867,7 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFav
 
 	showOpenImagesDialog: function() {
 		import(
-			'../../../views/apps/image-viewer/dialogs/images/open-images-dialog-view.js'
+			'../../../views/apps/file-browser/dialogs/images/open-images-dialog-view.js'
 		).then((OpenImagesDialogView) => {
 
 			// show open images dialog
@@ -1091,4 +1092,13 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFav
 			this.animation.stop();
 		}
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

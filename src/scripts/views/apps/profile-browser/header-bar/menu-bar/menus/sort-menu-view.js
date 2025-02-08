@@ -23,52 +23,10 @@ export default SortMenuView.extend({
 	// attributes
 	//
 
-	items: [
-		{
-			"class": "sort-by-name",
-			"group": "sort-by",
-			"icon": "fa fa-font",
-			"name": "By Name",
-			"select": true
-		},
-		"separator",
-		{
-			"class": "sort-by-location",
-			"group": "sort-by",
-			"icon": "fa fa-globe-americas",
-			"name": "By Location",
-			"select": true
-		},
-		{
-			"class": "sort-by-occupation",
-			"group": "sort-by",
-			"icon": "fa fa-briefcase",
-			"name": "By Occupation",
-			"select": true
-		},
-		{
-			"class": "sort-by-gender",
-			"group": "sort-by",
-			"icon": "fa fa-transgender",
-			"name": "By Gender",
-			"select": true
-		},
-		"separator",
-		{
-			"class": "sort-increasing",
-			"group": "sort-order",
-			"icon": "fa fa-sort-amount-up",
-			"name": "Increasing",
-			"select": true
-		},
-		{
-			"class": "sort-decreasing",
-			"group": "sort-order",
-			"icon": "fa fa-sort-amount-down",
-			"name": "Decreasing",
-			"select": true
-		}
-	],
+	events: {
+		'click .sort-by a': 'onClickSortBy',
+		'click .sort-order a': 'onClickSortOrder'
+	},
 
 	//
 	// querying methods

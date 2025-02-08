@@ -1,0 +1,68 @@
+{
+	"items": [
+		{
+			"class": "new-window",
+			"icon": "far fa-window-maximize",
+			"name": "New Window",
+			"shortcut": "command-enter"
+		},
+		{
+			"class": "new-contact",
+			"icon": "fa fa-file",
+			"name": "New Contact",
+			"shortcut": "shift-command-enter"
+		},
+		{
+			"class": "open-item",
+			"icon": "fa fa-folder-open",
+			"name": "Open",
+			"shortcut": "command-O"
+		},
+		{
+			"clas": "import",
+			"icon": "fa fa-cloud-upload-alt",
+			"name": "Import",
+			"menu": [
+				{
+					"class": "import-google",
+					"icon": "fab fa-google",
+					"name": "Google Contacts"
+				}
+			]
+		},
+		"separator",
+		{
+			"class": "show-info",
+			"icon": "fa fa-info-circle",
+			"name": "Show Info",
+			"shortcut": "command-I"
+		},
+		"separator",
+		{
+			"class": "save-contact",
+			"icon": "fa fa-save",
+			"name": "Save",
+			"shortcut": "command-S"
+		},
+		{
+			"class": "save-as",
+			"icon": "fa fa-save",
+			"name": "Save As",
+			"shortcut": "shift-command-S"
+		},
+		"separator",
+		{
+			"class": "close-tab",
+			"icon": "fa fa-xmark",
+			"name": "Close Tab",
+			"shortcut": "command-L"
+		},
+		"separator",
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}
