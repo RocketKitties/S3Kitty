@@ -34,20 +34,20 @@ Desktop
 
 ## Live Demo
 
-You can create an account and explore the features and benefits of the platform at [www.s3kitty.org](https://www.s3kitty.org).
+You can create an account and explore the features and benefits of the platform at [s3kitty.org](https://s3kitty.org).
 
 ## Installation
 
-Please follow the instructions in [www.s3kitty.org/#installation](https://www.s3kitty.org/#installation) to install the software on your computer or web server.
+Please follow the instructions in [s3kitty.org/#installation](https://s3kitty.org/#installation) to install the software on your computer or web server.
 
 ## Instructions
 
-See the [Sharedigm User Guide](https://www.sharedigm.com/#help) for instructions on how to use the platform.
+See the [S3Kitty User Guide](https://s3kitty.org/#help) for instructions on how to use the platform.
 
 ## License
 
-Distributed under the IndieSource License which allows unrestricted use of the software except by very large corporations. See [LICENSE.md](LICENSE.md) for more information.
+Distributed under the <a href="https://indiesource.org/">IndieSource License</a> which allows unrestricted use of the software except by very large corporations. See [LICENSE.md](LICENSE.md) for more information.
 
 ## Contact
 
-mailto:admin@sharedigm.com
+mailto:admin@s3kitty.org
