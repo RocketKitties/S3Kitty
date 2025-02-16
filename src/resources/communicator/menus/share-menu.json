@@ -73,12 +73,6 @@
 			"name": "By Link"
 		},
 		{
-			"class": "share-attachments",
-			"group": "topic-option chat-option",
-			"icon": "fa fa-map",
-			"name": "Maps"
-		},
-		{
 			"class": "share-location",
 			"group": "topic-option chat-option",
 			"icon": "fa fa-map-marker-alt",

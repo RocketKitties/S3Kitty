@@ -18,21 +18,21 @@
 			"name": "Open",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",
 			"name": "Show Info",
 			"shortcut": "command-I"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "end-chat",
 			"icon": "fa fa-minus",
 			"name": "End Chat",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

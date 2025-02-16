@@ -12,7 +12,7 @@
 			"name": "Find Next",
 			"shortcut": "shift-command-F"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "find-replace",
 			"icon": "fa fa-search-plus",

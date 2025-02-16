@@ -6,7 +6,7 @@
 			"name": "All",
 			"shortcut": "command-A"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "select-word",
 			"icon": "fa fa-text-width",
@@ -25,7 +25,7 @@
 			"name": "Paragraph",
 			"shortcut": "command-3"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "select-before",
 			"icon": "fa fa-long-arrow-alt-up",

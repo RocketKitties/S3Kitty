@@ -47,14 +47,14 @@
 				"name": "Open",
 				"shortcut": "command-O"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-info",
 				"icon": "fa fa-info-circle",
 				"name": "Show Info",
 				"shortcut": "command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "save-file",
 				"icon": "fa fa-save",
@@ -67,7 +67,7 @@
 				"name": "Save As",
 				"shortcut": "shift-command-S"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-window",
 				"icon": "fa fa-circle-xmark",
@@ -90,7 +90,7 @@
 				"name": "Find Next",
 				"shortcut": "shift-command-F"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "find-replace",
 				"icon": "fa fa-search-plus",
@@ -112,7 +112,7 @@
 				"icon": "fa fa-info-circle",
 				"name": "About"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-app",
 				"icon": "fa fa-question-circle",
@@ -123,7 +123,7 @@
 				"icon": "fa fa-newspaper",
 				"name": "Search Community Help"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "contact-us",
 				"icon": "fa fa-envelope",
@@ -178,7 +178,7 @@
 				"name": "All",
 				"shortcut": "command-A"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-word",
 				"icon": "fa fa-text-width",
@@ -197,7 +197,7 @@
 				"name": "Paragraph",
 				"shortcut": "command-3"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-before",
 				"icon": "fa fa-long-arrow-alt-up",
@@ -224,7 +224,7 @@
 				"icon": "fa fa-user-friends",
 				"name": "By Invitation"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "share-by-topic",
 				"icon": "fa fa-newspaper",
@@ -235,7 +235,7 @@
 				"icon": "fa fa-comments",
 				"name": "By Chat Messsage"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "share-by-link",
 				"icon": "fa fa-link",
@@ -275,12 +275,12 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "spaces",
 				"icon": "far fa-window-maximize",
 				"name": "Spaces",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "prev-space",
@@ -300,7 +300,7 @@
 				"class": "windows",
 				"icon": "far fa-window-restore",
 				"name": "Windows",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "minimize-all",
@@ -319,9 +319,9 @@
 				"icon": "fa fa-desktop",
 				"name": "Full Screen",
 				"shortcut": "command-up arrow",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-preferences",
 				"icon": "fa fa-snowflake",

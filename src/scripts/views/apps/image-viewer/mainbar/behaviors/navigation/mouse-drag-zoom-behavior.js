@@ -7,7 +7,7 @@
 |        This is a definition of a viewer's mouse interaction behavior.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
 import MouseDragBehavior from '../../../../../../views/behaviors/mouse/mouse-drag-behavior.js';

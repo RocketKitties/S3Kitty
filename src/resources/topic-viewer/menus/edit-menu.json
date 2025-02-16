@@ -28,7 +28,7 @@
 			"name": "Edit Reply",
 			"shortcut": "command-E"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "delete-topic",
 			"group": "topic-option",

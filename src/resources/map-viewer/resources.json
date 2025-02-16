@@ -13,14 +13,14 @@
 				"name": "Open",
 				"shortcut": "command-O"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-info",
 				"icon": "fa fa-info-circle",
 				"name": "Show Info",
 				"shortcut": "command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "share",
 				"icon": "fa fa-share",
@@ -31,7 +31,7 @@
 						"icon": "fa fa-user-friends",
 						"name": "With Connections"
 					},
-					"separator",
+					"divider",
 					{
 						"class": "share-by-topic",
 						"icon": "fa fa-newspaper",
@@ -42,7 +42,7 @@
 						"icon": "fa fa-comments",
 						"name": "By Chat Messsage"
 					},
-					"separator",
+					"divider",
 					{
 						"class": "share-by-link",
 						"icon": "fa fa-link",
@@ -55,14 +55,14 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "zoom-to",
 				"icon": "fa fa-search",
 				"name": "Zoom To",
 				"shortcut": "command-Z"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "add-photos",
 				"icon": "fa fa-camera",
@@ -135,7 +135,7 @@
 				"name": "Delete Favorite",
 				"shortcut": "delete"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "save-map",
 				"icon": "fa fa-save",
@@ -158,7 +158,7 @@
 				"name": "Edit Selected",
 				"shortcut": "command-E"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "add-photos",
 				"icon": "fa fa-camera",
@@ -189,7 +189,7 @@
 				"name": "Add Favorite",
 				"shortcut": "shift-command-F"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "delete-selected",
 				"icon": "fa fa-trash-alt",
@@ -231,14 +231,14 @@
 				"name": "Open",
 				"shortcut": "command-O"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-info",
 				"icon": "fa fa-info-circle",
 				"name": "Show Info",
 				"shortcut": "command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "save-map",
 				"icon": "fa fa-save",
@@ -257,21 +257,21 @@
 				"name": "Download",
 				"shortcut": "shift-command-D"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "delete-items",
 				"icon": "fa fa-trash-alt",
 				"name": "Delete",
 				"shortcut": "command-delete"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-tab",
 				"icon": "fa fa-xmark",
 				"name": "Close Tab",
 				"shortcut": "command-L"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-window",
 				"icon": "fa fa-circle-xmark",
@@ -287,7 +287,7 @@
 				"icon": "fa fa-info-circle",
 				"name": "About"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-app",
 				"icon": "fa fa-question-circle",
@@ -298,7 +298,7 @@
 				"icon": "fa fa-newspaper",
 				"name": "Search Community Help"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "contact-us",
 				"icon": "fa fa-envelope",
@@ -352,21 +352,21 @@
 				"group": "search-by",
 				"icon": "fa fa-home",
 				"name": "By Address",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "search-by-name",
 				"group": "search-by",
 				"icon": "fa fa-font",
 				"name": "By Place Name",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "search-by-coords",
 				"group": "search-by",
 				"icon": "fa fa-crosshairs",
 				"name": "By Coordinates",
-				"select": true
+				"state": "unselected"
 			}
 		]
 	},
@@ -390,15 +390,15 @@
 				"name": "Invert",
 				"shortcut": "shift-command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-multiple",
 				"icon": "fa fa-ellipsis-h",
 				"name": "Multiple",
 				"shortcut": "shift-command-M",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-photos",
 				"icon": "fa fa-camera",
@@ -433,7 +433,7 @@
 				"icon": "fa fa-user-friends",
 				"name": "By Invitation"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "share-by-topic",
 				"icon": "fa fa-newspaper",
@@ -444,7 +444,7 @@
 				"icon": "fa fa-comments",
 				"name": "By Chat Messsage"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "share-by-link",
 				"icon": "fa fa-link",
@@ -464,74 +464,74 @@
 				"group": "map-mode",
 				"icon": "fa fa-map",
 				"name": "Map",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "show-satellite",
 				"group": "map-mode",
 				"icon": "fa fa-satellite",
 				"name": "Satellite",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "show-hybrid",
 				"group": "map-mode",
 				"icon": "fa fa-map-marked-alt",
 				"name": "Hybrid",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "show-streets",
 				"group": "map-mode",
 				"icon": "fa fa-road",
 				"name": "Streets",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "show-transportation",
 				"group": "map-mode",
 				"icon": "fa fa-bus",
 				"name": "Transportation",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "show-elevation",
 				"group": "map-mode",
 				"icon": "fa fa-mountain",
 				"name": "Elevation",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "show-aeronautical",
 				"group": "map-mode",
 				"icon": "fa fa-plane",
 				"name": "Aeronautical",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-vfr",
 						"group": "aero-mode",
 						"icon": "fa fa-eye",
 						"name": "VFR (Sectional)",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-ifrlo",
 						"group": "aero-mode",
 						"icon": "fa fa-arrow-up",
 						"name": "IFR / Low",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-ifrhi",
 						"group": "aero-mode",
 						"icon": "fa fa-arrow-down",
 						"name": "IFR / High",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "navigation",
 				"group": "left",
@@ -544,7 +544,7 @@
 						"name": "Current Location",
 						"shortcut": "command-H"
 					},
-					"separator",
+					"divider",
 					{
 						"class": "zoom-to",
 						"icon": "fa fa-search",
@@ -563,7 +563,7 @@
 						"name": "Zoom Out",
 						"shortcut": "-"
 					},
-					"separator",
+					"divider",
 					{
 						"class": "pan-north",
 						"icon": "fa fa-arrow-up",
@@ -588,7 +588,7 @@
 						"name": "West",
 						"shortcut": "left arrow"
 					},
-					"separator",
+					"divider",
 					{
 						"class": "reset-view",
 						"icon": "fa fa-undo",
@@ -597,54 +597,54 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-toolbars",
 				"icon": "fa fa-wrench",
 				"name": "Toolbars",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-nav-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-sitemap",
 						"name": "Nav",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-mouse-mode-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-mouse-pointer",
 						"name": "Mouse Mode",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-nav-mode-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-arrows-alt",
 						"name": "Nav Mode",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-annotations-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-pencil",
 						"name": "Annotations",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-zoom-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-search",
 						"name": "Zoom",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-map-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-map",
 						"name": "Map",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -652,72 +652,72 @@
 				"class": "layers",
 				"icon": "fa fa-layer-group",
 				"name": "Layers",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-crosshairs-layer",
 						"group": "show-layer",
 						"icon": "fa fa-crosshairs",
 						"name": "Crosshairs",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-photos-layer",
 						"group": "show-layer",
 						"icon": "fa fa-camera",
 						"name": "Photos",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-videos-layer",
 						"group": "show-layer",
 						"icon": "fa fa-camera",
 						"name": "Videos",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-overlays-layer",
 						"group": "show-layer",
 						"icon": "fa fa-grip-lines",
 						"name": "Overlays",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-people-layer",
 						"group": "show-layer",
 						"icon": "fa fa-user-friends",
 						"name": "People",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-places-layer",
 						"group": "show-layer",
 						"icon": "fa fa-map-marker-alt",
 						"name": "Places",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-favorites-layer",
 						"group": "show-layer",
 						"icon": "fa fa-map-pin",
 						"name": "Favorites",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-annotations-layer",
 						"group": "show-layer",
 						"icon": "fa fa-pencil",
 						"name": "Annotations",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-weather-layer",
 						"group": "show-layer",
 						"icon": "fa fa-cloud-sun-rain",
 						"name": "Weather",
-						"select": true
+						"state": "unselected"
 					},
-					"separator",
+					"divider",
 					{
 						"class": "show-all-layers",
 						"icon": "fa fa-plus",
@@ -734,19 +734,19 @@
 				"class": "show-map-options",
 				"icon": "fa fa-map",
 				"name": "Map",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-grid",
 						"icon": "fa fa-border-none",
 						"name": "Grid",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-smoothing",
 						"icon": "fa fa-wave-square",
 						"name": "Smoothing",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -754,46 +754,46 @@
 				"class": "view-map-items",
 				"icon": "fa fa-map-location",
 				"name": "Map Items",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "view-map-icons",
 						"icon": "fa fa-th",
 						"name": "Icons",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-map-lists",
 						"icon": "fa fa-list",
 						"name": "Lists",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-map-cards",
 						"icon": "fa fa-id-card",
 						"name": "Cards",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-map-tiles",
 						"icon": "fa fa-th-large",
 						"name": "Tiles",
-						"select": true
+						"state": "unselected"
 					},
-					"separator",
+					"divider",
 					{
 						"class": "show-item-names",
 						"group": "show-toolbar",
 						"icon": "fa fa-font",
 						"name": "Names",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-geo-orientations",
 						"group": "show-toolbar",
 						"icon": "fa fa-location-arrow",
 						"name": "Orientations",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -801,63 +801,63 @@
 				"class": "show-sidebar",
 				"icon": "fa fa-pause",
 				"name": "Sidebar",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-maps-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-map",
 						"name": "Maps",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-photos-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-camera",
 						"name": "Photos",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-videos-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-video",
 						"name": "Videos",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-overlays-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-grip-lines",
 						"name": "Overlays",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-people-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-user-friends",
 						"name": "People",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-places-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-map-marker-alt",
 						"name": "Places",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-favorites-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-map-pin",
 						"name": "Favorites",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-shared-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-share",
 						"name": "Shared",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -865,46 +865,46 @@
 				"class": "view-sidebar-items",
 				"icon": "fa fa-th",
 				"name": "Sidebar Items",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "view-sidebar-icons",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-th",
 						"name": "Icons",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-lists",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-list",
 						"name": "Lists",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-trees",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-tree",
 						"name": "Trees",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-cards",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-id-card",
 						"name": "Cards",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-tiles",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-th-large",
 						"name": "Tiles",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "window-size",
 				"icon": "far fa-window-maximize",
@@ -930,12 +930,12 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "spaces",
 				"icon": "far fa-window-maximize",
 				"name": "Spaces",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "prev-space",
@@ -955,7 +955,7 @@
 				"class": "windows",
 				"icon": "far fa-window-restore",
 				"name": "Windows",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "minimize-all",
@@ -974,9 +974,9 @@
 				"icon": "fa fa-desktop",
 				"name": "Full Screen",
 				"shortcut": "command-up arrow",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-preferences",
 				"icon": "fa fa-snowflake",

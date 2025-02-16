@@ -10,7 +10,7 @@
 			"icon": "fa fa-comments",
 			"name": "By Chat Messsage"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "share-by-link",
 			"icon": "fa fa-link",

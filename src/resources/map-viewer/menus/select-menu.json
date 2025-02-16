@@ -18,15 +18,15 @@
 			"name": "Invert",
 			"shortcut": "shift-command-I"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "select-multiple",
 			"icon": "fa fa-ellipsis-h",
 			"name": "Multiple",
 			"shortcut": "shift-command-M",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "select-photos",
 			"icon": "fa fa-camera",

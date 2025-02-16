@@ -24,7 +24,7 @@
 			"name": "Open Projects",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "add-projects",
 			"icon": "fa fa-plus",
@@ -37,7 +37,7 @@
 			"name": "Remove Project",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",
@@ -50,14 +50,14 @@
 			"name": "Download",
 			"shortcut": "shift-command-D"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-tab",
 			"icon": "fa fa-xmark",
 			"name": "Close Tab",
 			"shortcut": "command-L"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

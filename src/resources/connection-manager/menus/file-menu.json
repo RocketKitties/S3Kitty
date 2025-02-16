@@ -18,7 +18,7 @@
 			"name": "Open",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "add-group",
 			"icon": "fa fa-user-plus",
@@ -44,14 +44,14 @@
 			"name": "Show on Map",
 			"shortcut": "command-M"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "delete-connections",
 			"icon": "fa fa-trash-alt",
 			"name": "Delete Connections",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

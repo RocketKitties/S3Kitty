@@ -6,14 +6,14 @@
 			"name": "Open",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "save-as",
 			"icon": "fa fa-save",
 			"name": "Save As",
 			"shortcut": "command-S"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

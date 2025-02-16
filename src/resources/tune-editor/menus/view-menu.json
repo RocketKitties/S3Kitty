@@ -4,21 +4,21 @@
 			"class": "show-toolbars",
 			"icon": "fa fa-wrench",
 			"name": "Toolbars",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "show-nav-bar",
 					"group": "show-toolbar",
 					"icon": "fa fa-sitemap",
 					"name": "Nav",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "show-track-bar",
 					"group": "show-toolbar",
 					"icon": "fa fa-play",
 					"name": "Track",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
@@ -26,14 +26,14 @@
 			"class": "show-sidebar",
 			"icon": "fa fa-pause",
 			"name": "Sidebar",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "show-tunes-panel",
 					"group": "show-sidebar-panel",
 					"icon": "fa fa-music",
 					"name": "Tunes",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
@@ -41,9 +41,9 @@
 			"class": "show-markup",
 			"icon": "fa fa-font",
 			"name": "Markup",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "window-size",
 			"icon": "far fa-window-maximize",
@@ -69,12 +69,12 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "spaces",
 			"icon": "far fa-window-maximize",
 			"name": "Spaces",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "prev-space",
@@ -94,7 +94,7 @@
 			"class": "windows",
 			"icon": "far fa-window-restore",
 			"name": "Windows",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "minimize-all",
@@ -113,9 +113,9 @@
 			"icon": "fa fa-desktop",
 			"name": "Full Screen",
 			"shortcut": "command-up arrow",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "view-preferences",
 			"icon": "fa fa-snowflake",

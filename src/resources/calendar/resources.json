@@ -13,7 +13,7 @@
 				"name": "New Event",
 				"shortcut": "command-E"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "open-date",
 				"icon": "fa fa-folder-open",
@@ -45,14 +45,14 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "delete-event",
 				"icon": "fa fa-trash-alt",
 				"name": "Delete Event",
 				"shortcut": "delete"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-window",
 				"icon": "fa fa-circle-xmark",
@@ -68,7 +68,7 @@
 				"icon": "fa fa-info-circle",
 				"name": "About"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-app",
 				"icon": "fa fa-question-circle",
@@ -79,7 +79,7 @@
 				"icon": "fa fa-newspaper",
 				"name": "Search Community Help"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "contact-us",
 				"icon": "fa fa-envelope",
@@ -113,35 +113,35 @@
 				"group": "view-kind",
 				"icon": "fa fa-calendar-alt",
 				"name": "Day",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-week",
 				"group": "view-kind",
 				"icon": "fa fa-calendar-alt",
 				"name": "Week",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-month",
 				"group": "view-kind",
 				"icon": "fa fa-calendar-alt",
 				"name": "Month",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-toolbars",
 				"icon": "fa fa-wrench",
 				"name": "Toolbars",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-nav-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-sitemap",
 						"name": "Nav",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -149,18 +149,18 @@
 				"class": "show-sidebar",
 				"icon": "fa fa-pause",
 				"name": "Sidebar",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-events-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-calendar-alt",
 						"name": "Events",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "window-size",
 				"icon": "far fa-window-maximize",
@@ -186,12 +186,12 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "spaces",
 				"icon": "far fa-window-maximize",
 				"name": "Spaces",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "prev-space",
@@ -211,7 +211,7 @@
 				"class": "windows",
 				"icon": "far fa-window-restore",
 				"name": "Windows",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "minimize-all",
@@ -230,9 +230,9 @@
 				"icon": "fa fa-desktop",
 				"name": "Full Screen",
 				"shortcut": "command-up arrow",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-preferences",
 				"icon": "fa fa-snowflake",

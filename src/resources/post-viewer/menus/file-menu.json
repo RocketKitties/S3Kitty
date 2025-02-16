@@ -12,7 +12,7 @@
 			"name": "Show Info",
 			"shortcut": "command-I"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

@@ -12,12 +12,11 @@
 |        'LICENSE.md', which is part of this source code distribution.         |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
 import User from '../../../../../models/users/user.js';
 import UserPreferences from '../../../../../models/preferences/user-preferences.js';
-import File from '../../../../../models/storage/files/file.js';
 import Items from '../../../../../collections/storage/items.js';
 import BaseView from '../../../../../views/base-view.js';
 import ItemOpenable from '../../../../../views/apps/common/behaviors/opening/item-openable.js';
@@ -139,9 +138,9 @@ export default BaseView.extend(_.extend({}, ItemOpenable, {
 					let item = data[i];
 					let owner = new User(item.user);
 
-					// add file to collection
+					// add item to collection
 					//
-					collection.add(new File({
+					collection.add(Items.toItem({
 						path: (owner.isAdmin()? '/' : '') + data[i].path,
 						size: item.size,
 						file_id: item.id,

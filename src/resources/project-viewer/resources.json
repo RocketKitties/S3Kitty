@@ -85,7 +85,7 @@
 				"name": "Open Projects",
 				"shortcut": "command-O"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "add-projects",
 				"icon": "fa fa-plus",
@@ -98,7 +98,7 @@
 				"name": "Remove Project",
 				"shortcut": "delete"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-info",
 				"icon": "fa fa-info-circle",
@@ -111,14 +111,14 @@
 				"name": "Download",
 				"shortcut": "shift-command-D"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-tab",
 				"icon": "fa fa-xmark",
 				"name": "Close Tab",
 				"shortcut": "command-L"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-window",
 				"icon": "fa fa-circle-xmark",
@@ -134,7 +134,7 @@
 				"icon": "fa fa-info-circle",
 				"name": "About"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-app",
 				"icon": "fa fa-question-circle",
@@ -145,7 +145,7 @@
 				"icon": "fa fa-newspaper",
 				"name": "Search Community Help"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "contact-us",
 				"icon": "fa fa-envelope",
@@ -200,36 +200,36 @@
 				"group": "search-by",
 				"icon": "fa fa-font",
 				"name": "By Title",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "search-by-description",
 				"group": "search-by",
 				"icon": "fa fa-quote-left",
 				"name": "By Description",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "search-by-create-date",
 				"group": "search-by",
 				"icon": "fa fa-magic",
 				"name": "By Create Date",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "search-by-update-date",
 				"group": "search-by",
 				"icon": "fa fa-pencil-alt",
 				"name": "By Update Date",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "search-by-due-date",
 				"group": "search-by",
 				"icon": "fa fa-calendar",
 				"name": "By Due Date",
-				"select": true
+				"state": "unselected"
 			}
 		]
 	},
@@ -253,15 +253,15 @@
 				"name": "Invert",
 				"shortcut": "shift-command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-multiple",
 				"icon": "fa fa-ellipsis-h",
 				"name": "Multiple",
 				"shortcut": "shift-command-M",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-first",
 				"icon": "fa fa-fast-backward",
@@ -295,66 +295,66 @@
 				"group": "sort-by",
 				"icon": "fa fa-font",
 				"name": "By Title",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "sort-by-priority",
 				"group": "sort-by",
 				"icon": "fa fa-star",
 				"name": "By Priority",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "sort-by-kind",
 				"group": "sort-by",
 				"icon": "fa fa-bug",
 				"name": "By Kind",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "sort-by-date",
 				"icon": "fa fa-calendar-alt",
 				"name": "By Date",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "sort-by-create-date",
 						"group": "sort-by",
 						"icon": "fa fa-magic",
 						"name": "Create Date",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "sort-by-modify-date",
 						"group": "sort-by",
 						"icon": "fa fa-edit",
 						"name": "Modify Date",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "sort-by-due-date",
 						"group": "sort-by",
 						"icon": "fa fa-calendar",
 						"name": "Due Date",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "sort-increasing",
 				"group": "sort-order",
 				"icon": "fa fa-sort-amount-up",
 				"name": "Increasing",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "sort-decreasing",
 				"group": "sort-order",
 				"icon": "fa fa-sort-amount-down",
 				"name": "Decreasing",
-				"select": true
+				"state": "unselected"
 			}
 		]
 	},
@@ -365,42 +365,42 @@
 				"group": "view-kind",
 				"icon": "fa fa-th",
 				"name": "Icons",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-lists",
 				"group": "view-kind",
 				"icon": "fa fa-list",
 				"name": "Lists",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-cards",
 				"group": "view-kind",
 				"icon": "fa fa-id-card",
 				"name": "Cards",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-tiles",
 				"group": "view-kind",
 				"icon": "fa fa-th-large",
 				"name": "Tiles",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-toolbars",
 				"icon": "fa fa-wrench",
 				"name": "Toolbars",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-tasks-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-circle-check",
 						"name": "Tasks",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -408,21 +408,21 @@
 				"class": "show-sidebar",
 				"icon": "fa fa-pause",
 				"name": "Sidebar",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-project-info-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-info-circle",
 						"name": "Project Info",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-projects-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-hashtag",
 						"name": "Projects",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -430,35 +430,35 @@
 				"class": "sidebar-view-kind",
 				"icon": "fa fa-th",
 				"name": "Sidebar Items",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "view-sidebar-icons",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-th",
 						"name": "Icons",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-lists",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-list",
 						"name": "Lists",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-cards",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-id-card",
 						"name": "Cards",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-tiles",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-th-large",
 						"name": "Tiles",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -466,74 +466,74 @@
 				"class": "view-details",
 				"icon": "fa fa-tags",
 				"name": "Details",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "view-priority",
 						"icon": "fa fa-star",
 						"name": "Priority",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-date",
 						"icon": "fa fa-calendar-alt",
 						"name": "Date",
-						"select": true,
+						"state": "unselected",
 						"menu": [
 							{
 								"class": "view-create-date",
 								"icon": "fa fa-magic",
 								"name": "Create Date",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-update-date",
 								"icon": "fa fa-edit",
 								"name": "Update Date",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-due-date",
 								"icon": "fa fa-calendar",
 								"name": "Due Date",
-								"select": true
+								"state": "unselected"
 							},
-							"separator",
+							"divider",
 							{
 								"class": "view-date-only",
 								"icon": "fa fa-calendar-alt",
 								"name": "Date Only",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-day-date",
 								"icon": "fa fa-calendar-plus",
 								"name": "Day, Date",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-time-only",
 								"icon": "fa fa-clock",
 								"name": "Time Only",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-date-time",
 								"icon": "fa fa-calendar-check",
 								"name": "Date, Time",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-day-date-time",
 								"icon": "fa fa-calendar-alt",
 								"name": "Day, Date, Time",
-								"select": true
+								"state": "unselected"
 							}
 						]
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "window-size",
 				"icon": "far fa-window-maximize",
@@ -559,12 +559,12 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "spaces",
 				"icon": "far fa-window-maximize",
 				"name": "Spaces",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "prev-space",
@@ -584,7 +584,7 @@
 				"class": "windows",
 				"icon": "far fa-window-restore",
 				"name": "Windows",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "minimize-all",
@@ -603,9 +603,9 @@
 				"icon": "fa fa-desktop",
 				"name": "Full Screen",
 				"shortcut": "command-up arrow",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-preferences",
 				"icon": "fa fa-snowflake",

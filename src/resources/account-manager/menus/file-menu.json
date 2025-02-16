@@ -12,21 +12,21 @@
 			"name": "Open",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",
 			"name": "Show Info",
 			"shortcut": "command-I"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "delete-accounts",
 			"icon": "fa fa-trash-alt",
 			"name": "Delete Accounts",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

@@ -6,7 +6,7 @@
 			"name": "New Window",
 			"shortcut": "command-enter"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "open-item",
 			"icon": "fa fa-folder-open",
@@ -44,7 +44,7 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "favorites",
 			"icon": "fa fa-star",
@@ -64,28 +64,28 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",
 			"name": "Show Info",
 			"shortcut": "command-I"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "download-items",
 			"icon": "fa fa-download",
 			"name": "Download",
 			"shortcut": "shift-command-D"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "delete-items",
 			"icon": "fa fa-trash-alt",
 			"name": "Delete",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

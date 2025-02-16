@@ -5,14 +5,14 @@
 			"group": "search-by",
 			"icon": "fa fa-quote-left",
 			"name": "By Message",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "search-by-date",
 			"group": "search-by",
 			"icon": "fa fa-calendar-alt",
 			"name": "By Date",
-			"select": true
+			"state": "unselected"
 		}
 	]
 }

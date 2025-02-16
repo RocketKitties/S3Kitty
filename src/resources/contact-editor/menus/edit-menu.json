@@ -19,7 +19,7 @@
 			"name": "Delete Organization",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "add-contact",
 			"group": "contact option",

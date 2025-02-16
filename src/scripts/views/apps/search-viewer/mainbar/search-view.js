@@ -12,12 +12,12 @@
 |        'LICENSE.md', which is part of this source code distribution.         |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
 import BaseView from '../../../../views/base-view.js';
-import SearchBarView from '../../../../views/apps/search-viewer/mainbar/panels/search-bar-view.js';
-import SearchPanelView from '../../../../views/apps/search-viewer/mainbar/panels/search-panel-view.js';
+import SearchBarView from '../../../../views/apps/search-viewer/forms/searches/search-bar-view.js';
+import FileUploadView from '../../../../views/apps/search-viewer/forms/searches/file-upload-view.js';
 import SearchResultsView from '../../../../views/apps/search-viewer/mainbar/results/search-results-view.js';
 
 export default BaseView.extend({
@@ -113,11 +113,13 @@ export default BaseView.extend({
 	},
 
 	setSearchTarget: function(target) {
-		if (target != 'file') {
-			this.showSearchBar();
-			this.getChildView('form').setOption('target', target);
-		} else {
-			this.showSearchPanel();
+		switch (target) {
+			case 'file':
+				this.showFileUpload();
+				break;
+			default:
+				this.showSearchBar();
+				this.getChildView('form').setOption('target', target);
 		}
 	},
 
@@ -170,8 +172,8 @@ export default BaseView.extend({
 		}));
 	},
 
-	showSearchPanel: function() {
-		this.showChildView('form', new SearchPanelView({
+	showFileUpload: function() {
+		this.showChildView('form', new FileUploadView({
 			preferences: this.options.preferences
 		}));
 	}

@@ -12,19 +12,11 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
 @use "../bootstrap/variables";
 @use "../colors/colors";
-
-//
-// variables
-//
-
-$round-border-radius: 15px;
-$rounded-border-radius: 5px;
-$meter-bar-border-radius: 2px;
 
 //
 // styles
@@ -36,86 +28,6 @@ $meter-bar-border-radius: 2px;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-	}
-
-	.search-bar {
-		display: block;
-		padding: 0;
-
-		.input {
-			display: block;
-			position: relative;
-			text-align: left;
-			padding: 0;
-
-			[contenteditable="true"] {
-				font-family: inherit;
-				font-weight: normal;
-				font-size: inherit;
-				outline: none;
-				flex-grow: 1;
-				line-height: 25px;
-				padding: 10px;
-				float: left;
-				min-width: calc(100% - 75px);
-
-				* {
-					font-family: inherit !important;
-					font-weight: normal !important;
-					font-size: inherit !important;
-				}
-
-				&:empty {
-					&:before {
-						content: var(--search-placeholder);
-						color: colors.$very-light-grey;
-					}
-
-					& + .buttons {
-
-						.submit {
-							opacity: 0.5;
-							pointer-events: none;
-						}
-
-						.clear {
-							display: none;
-						}
-					}
-				}
-			}
-
-			.buttons {
-				margin: 10px;
-				padding: 0;
-			}
-		}
-
-		&.text {
-			--search-placeholder: "Enter search terms.";
-		}
-
-		&.name {
-			--search-placeholder: "Firstname Lastname.";
-		}
-
-		&.url {
-			--search-placeholder: "Enter a URL.";
-		}
-	}
-
-	.well {
-		line-height: 25px;
-		max-height: 300px;
-		overflow: auto;
-		margin-bottom: 0;
-
-		.buttons {
-			display: flex;
-			height: 25px;
-			margin-left: auto;
-			float: right;
-		}
 	}
 
 	.search-panel {
@@ -177,15 +89,6 @@ $meter-bar-border-radius: 2px;
 				font-size: 10px !important;
 				margin: 2px 1px !important;
 			}
-
-			/*
-			.bar {
-				display: inline-block;
-				width: 5px;
-				height: 10px;
-				margin: 2px 1px;
-			}
-			*/
 		}
 	}
 
@@ -229,39 +132,10 @@ $meter-bar-border-radius: 2px;
 
 .app {
 	.search-results {
-		// padding: 10px;
 		padding-bottom: 10px;
 
 		.tab-content + .buttons {
 			display: none;
-		}
-	}
-}
-
-//
-// borders
-//
-
-.round {
-	.search-bar {
-		.input {
-			border-radius: $round-border-radius;
-
-			&::-webkit-scrollbar-track {
-				border-radius: $round-border-radius;
-			}
-		}
-	}
-}
-
-.rounded {
-	.search-bar {
-		.input {
-			border-radius: $rounded-border-radius;
-
-			&::-webkit-scrollbar-track {
-				border-radius: $rounded-border-radius;
-			}
 		}
 	}
 }

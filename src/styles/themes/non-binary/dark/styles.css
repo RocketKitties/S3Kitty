@@ -12,7 +12,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -28,7 +28,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -44,7 +44,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -60,7 +60,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark {
   /*
@@ -139,7 +139,7 @@ body:not(.binary).dark ul.panels > li:hover {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .app .header-bar, body:not(.binary).dark .app .footer-bar {
   color: #c0c0d9;
@@ -211,7 +211,7 @@ body:not(.binary).dark.sidebar-panels .app .body .contents > .sidebar .panel, bo
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -227,7 +227,7 @@ body:not(.binary).dark.sidebar-panels .app .body .contents > .sidebar .panel, bo
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -243,7 +243,7 @@ body:not(.binary).dark.sidebar-panels .app .body .contents > .sidebar .panel, bo
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -259,7 +259,7 @@ body:not(.binary).dark.sidebar-panels .app .body .contents > .sidebar .panel, bo
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -275,7 +275,7 @@ body:not(.binary).dark.sidebar-panels .app .body .contents > .sidebar .panel, bo
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -291,7 +291,7 @@ body:not(.binary).dark.sidebar-panels .app .body .contents > .sidebar .panel, bo
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -307,7 +307,7 @@ body:not(.binary).dark.sidebar-panels .app .body .contents > .sidebar .panel, bo
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) .app .header-bar, body:not(.binary) .app .footer-bar {
   color: #272740;
@@ -391,7 +391,7 @@ body:not(.binary).sidebar-panels .app .body .contents > .sidebar .panel, body:no
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) .desktop.app > .body > .app {
   border: none;
@@ -568,7 +568,7 @@ body:not(.binary) #desktop:not(.sidebar-panels):not(.auto-sidebar-panels) .deskt
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .desktop.app > .body > .app .header-bar {
   color: #c0c0d9;
@@ -690,7 +690,7 @@ body:not(.binary).dark #desktop.translucent-sidebars.sidebar-panels .desktop.app
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .modals .modal .modal-dialog .app .body > .contents > .mainbar, body:not(.binary).dark .modals .modal .modal-dialog .app .body-region > .contents > .mainbar {
   background: black !important;
@@ -752,7 +752,7 @@ body:not(.binary).dark.transparent .modals .modal:not(.focused) .modal-dialog .a
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -768,7 +768,7 @@ body:not(.binary).dark.transparent .modals .modal:not(.focused) .modal-dialog .a
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -784,7 +784,7 @@ body:not(.binary).dark.transparent .modals .modal:not(.focused) .modal-dialog .a
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 .pixelated {
   image-rendering: pixelated !important;
@@ -1008,7 +1008,7 @@ body[browser=firefox] img.pixelated {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) {
   /*
@@ -1228,7 +1228,7 @@ body:not(.binary):not(.flat) .volume-body {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) .drag-image {
   border-color: #a0a0c6;
@@ -1256,7 +1256,7 @@ body:not(.binary) svg .selection {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary):not(.dark) .item-list:not(.dropdown-menu) .item > .info .name[contenteditable=true] {
   color: #272740;
@@ -1384,7 +1384,7 @@ body:not(.binary):not(.dark) .desktop.app:not(.focused) > .body .item-list .item
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .drag-image {
   border-color: #a0a0c6;
@@ -1412,7 +1412,7 @@ body:not(.binary).dark svg .selection {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .item-list .item > .info > .specifics .details {
   color: #c0c0d9;
@@ -1483,7 +1483,7 @@ body:not(.binary).dark .desktop.app:not(.focused) > .body .item-list .item.selec
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .dropdown-menu, body:not(.binary).dark .menu-content {
   background: #272740;
@@ -1598,7 +1598,7 @@ body:not(.binary).dark.translucent .dropdown-menu .dropdown-menu {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark #desktop, body:not(.binary).dark .desktop.preview {
   background-color: #4d4d80;
@@ -1637,7 +1637,7 @@ body:not(.binary) #desktop.dark .desktop.app > .footer-bar .desktop-info-bar .to
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -1653,7 +1653,7 @@ body:not(.binary) #desktop.dark .desktop.app > .footer-bar .desktop-info-bar .to
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -1669,7 +1669,7 @@ body:not(.binary) #desktop.dark .desktop.app > .footer-bar .desktop-info-bar .to
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) .modals .modal-dialog {
   background: #6060a0;
@@ -1777,7 +1777,7 @@ body:not(.binary).translucent .modals .modal:not(.full-screen):not(.focused) .mo
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .modals .modal-dialog .modal-content {
   color: #c0c0d9;
@@ -1882,7 +1882,7 @@ body:not(.binary).dark.translucent .modals .modal:not(.full-screen):not(.focused
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -1898,7 +1898,7 @@ body:not(.binary).dark.translucent .modals .modal:not(.full-screen):not(.focused
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .dropzone::after {
   color: white;
@@ -1920,7 +1920,7 @@ body:not(.binary).dark .dropzone::after {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark legend {
   color: white;
@@ -1964,7 +1964,7 @@ body:not(.binary).dark input:not([type=range]):focus {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark form .controls input[type=radio]:checked, body:not(.binary).dark form .controls input[type=radio].colored:checked {
   border-color: white;
@@ -1991,13 +1991,16 @@ body:not(.binary).dark form .form-control:focus {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .form-group.title {
   color: white;
 }
 body:not(.binary).dark .form-group .form-label, body:not(.binary).dark .form-group .control-label {
-  color: white !important;
+  color: white;
+}
+body:not(.binary).dark .form-group .form-label i, body:not(.binary).dark .form-group .control-label i {
+  color: var(--primary-color);
 }
 
 /******************************************************************************\
@@ -2014,7 +2017,7 @@ body:not(.binary).dark .form-group .form-label, body:not(.binary).dark .form-gro
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .pie:not(.lcd) .slice.empty {
   background: #4d4d80;
@@ -2043,7 +2046,7 @@ body:not(.binary).dark .pie:not(.lcd) .slice.half-empty {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .popover {
   border-color: #4d4d80;
@@ -2103,7 +2106,7 @@ body:not(.binary).dark .popover.bottom > .arrow:after {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark form input[type=radio] {
   background-color: #3a3a60;
@@ -2126,7 +2129,7 @@ body:not(.binary).dark form input[type=radio]:checked {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -2142,7 +2145,7 @@ body:not(.binary).dark form input[type=radio]:checked {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark input[type=range]::-webkit-slider-thumb:not(:active) {
   background-color: #6060a0;
@@ -2201,7 +2204,7 @@ body:not(.binary).dark input[type=range]::-moz-range-track {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -2217,7 +2220,7 @@ body:not(.binary).dark input[type=range]::-moz-range-track {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .item .marker {
   background: #6060a0;
@@ -2237,7 +2240,7 @@ body:not(.binary).dark .item .marker {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) .icon-grid .item > .row:first-child .icon > img, body:not(.binary) .icon-grid .item > .row:first-child .icon > i, body:not(.binary) .icon-grid .item > .row:first-child .icon > .thumbnail i {
   filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.25));
@@ -2330,7 +2333,7 @@ body:not(.binary):not(.icon-backgrounds) .icon-grid .item.selected .icon, body:n
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .icon-grid .item.selected {
   border-color: #a0a0c6;
@@ -2402,7 +2405,7 @@ body:not(.binary).dark:not(.icon-backgrounds) .icon-grid .item.selected .icon, b
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .item-tree:not(.selected):not(.highlighted) > .info .expander button i {
   color: white;
@@ -2425,7 +2428,7 @@ body:not(.binary).dark .item-tree:not(.selected):not(.highlighted) > .info .name
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .tile-grid .item > .tile {
   background-color: rgba(192, 192, 217, 0.25);
@@ -2507,7 +2510,7 @@ body:not(.binary).dark .desktop.app:not(.focused) > .body .tile-grid .item.selec
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .card-grid .cards {
   background-color: transparent;
@@ -2563,7 +2566,7 @@ body:not(.binary).dark .desktop.app:not(.focused) > .body .card-grid .cards .ite
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .pages .main-carousel .item.selected .icon {
   background-color: rgba(160, 160, 198, 0.5);
@@ -2587,7 +2590,7 @@ body:not(.binary).dark .pages .main-carousel .item.selected .details {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -2598,7 +2601,7 @@ body:not(.binary).dark .pages .main-carousel .item.selected .details {
 |        This defines the dom and svg visual styles for this application.      |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .led,
 body:not(.binary) .dark .led {
@@ -2628,7 +2631,7 @@ body:not(.binary) .dark .led.pie .slice.half-full {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark {
   /*
@@ -2671,7 +2674,7 @@ body:not(.binary).dark .thumbnail:not(.missing) i {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark {
   color: #c0c0d9;
@@ -2703,7 +2706,7 @@ body:not(.binary).dark .brand {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .page {
   background-color: #131321;
@@ -2751,7 +2754,7 @@ body:not(.binary).dark .page .footer .info .links {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .panel.item > .info .name {
   color: #8080b3;
@@ -2781,7 +2784,7 @@ body:not(.binary).dark .desktop.app:not(.focused) > .body .panel.item.selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .spinner {
   border-top-color: #8080b3;
@@ -2801,7 +2804,7 @@ body:not(.binary).dark .spinner {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .split-view .gutter {
   background-color: #3a3a60;
@@ -2835,7 +2838,7 @@ body:not(.binary).dark .modal:not(.focused) .modal-dialog .split-view .gutter {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body {
   position: absolute;
@@ -3184,7 +3187,7 @@ hr {
 |        This defines the dom and svg visual styles for this application.      |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 table {
   display: table;
@@ -3447,7 +3450,7 @@ table.numbered.count-bubbles td:first-child::before {
 |        This defines the dom and svg visual styles for this application.      |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark table {
   color: #c0c0d9;
@@ -3534,7 +3537,7 @@ body:not(.binary).dark table tbody tr td:not(.append).selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .toolbar {
   background-color: #272740;
@@ -3595,7 +3598,7 @@ body:not(.binary).dark .toolbar.vertical .handle {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .welcome.page .masthead {
   color: white;
@@ -3615,7 +3618,7 @@ body:not(.binary).dark .welcome.page .masthead {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -3631,7 +3634,7 @@ body:not(.binary).dark .welcome.page .masthead {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary):not(.colored).dark .items-map .layer {
   color: #272740;
@@ -3654,7 +3657,7 @@ body:not(.binary):not(.colored).dark .items-map .map:not(.aerial):not(.satellite
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -3670,7 +3673,7 @@ body:not(.binary):not(.colored).dark .items-map .map:not(.aerial):not(.satellite
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .flat .shaded, .flat.flat.shaded {
@@ -3750,7 +3753,7 @@ body:not(.binary):not(.colored).dark .items-map .map:not(.aerial):not(.satellite
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -3766,7 +3769,7 @@ body:not(.binary):not(.colored).dark .items-map .map:not(.aerial):not(.satellite
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 i {
   font-size: 14px;
@@ -3887,7 +3890,7 @@ h1 .icon i {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 button {
   cursor: pointer;
@@ -3964,7 +3967,7 @@ body[device=desktop] button + .popover + .tooltip + button {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -3980,7 +3983,7 @@ body[device=desktop] button + .popover + .tooltip + button {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark button:not(:disabled):hover i, body:not(.binary).dark button:not(:disabled):active i {
   filter: drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
@@ -4075,7 +4078,7 @@ body:not(.binary).dark .expander .btn i {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.flat-buttons .btn, body:not(.binary).dark.flat.auto-buttons .btn {
   background-color: #6060a0;
@@ -4116,7 +4119,7 @@ body:not(.binary).dark.flat-buttons .btn:disabled:active, body:not(.binary).dark
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -4132,7 +4135,7 @@ body:not(.binary).dark.flat-buttons .btn:disabled:active, body:not(.binary).dark
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -4148,7 +4151,7 @@ body:not(.binary).dark.flat-buttons .btn:disabled:active, body:not(.binary).dark
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark button:not(:disabled):hover i, body:not(.binary).dark button:not(:disabled):active i {
   filter: url(#glowing);
@@ -4214,7 +4217,7 @@ body:not(.binary).dark .button.selected svg {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.flat-buttons button:hover, body:not(.binary).dark.flat.auto-buttons button:hover {
   background-color: #6060a0;
@@ -4243,7 +4246,7 @@ body:not(.binary).dark.flat-buttons button.selected, body:not(.binary).dark.flat
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.flat #desktop .desktop.app > .footer-bar,
 body:not(.binary).dark.flat #desktop.auto .desktop.app > .footer-bar,
@@ -4306,7 +4309,7 @@ body:not(.binary).dark.flat #desktop.medium .desktop.app > .footer-bar .desktop-
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) .dark.flat.modals .modal.focused .modal-dialog .modal-header, body:not(.binary).dark.flat .auto-material.modals .modal.focused .modal-dialog .modal-header {
   background-color: #3a3a60;
@@ -4331,7 +4334,7 @@ body:not(.binary) .dark.flat.modals .modal:not(.focused) .modal-dialog .modal-he
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .flickity-page-dots .dot {
   background-color: #3a3a60;
@@ -4356,7 +4359,7 @@ body:not(.binary).dark .flickity-page-dots .dot.is-selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.flat .flickity-page-dots .dot {
   background-color: #3a3a60;
@@ -4403,7 +4406,7 @@ body:not(.binary).dark.flat .flickity-page-dots .dot.is-selected.long.round {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .progress {
   background-color: #131321;
@@ -4426,7 +4429,7 @@ body:not(.binary).dark .progress .bar {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.flat .progress .bar {
   background-color: #6060a0;
@@ -4458,7 +4461,7 @@ body:not(.binary).dark.flat .progress .bar.long.round {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -4474,7 +4477,7 @@ body:not(.binary).dark.flat .progress .bar.long.round {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -4490,7 +4493,7 @@ body:not(.binary).dark.flat .progress .bar.long.round {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark ::-webkit-scrollbar-thumb:not(:active) {
   background-color: #4d4d80;
@@ -4523,7 +4526,7 @@ body:not(.binary).dark ::-webkit-scrollbar-thumb {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.flat-scrollbars ::-webkit-scrollbar-thumb:not(:active):horizontal, body:not(.binary).dark.flat.auto-scrollbars ::-webkit-scrollbar-thumb:not(:active):horizontal {
   background-color: #4d4d80;
@@ -4558,7 +4561,7 @@ body:not(.binary).dark.flat-scrollbars ::-webkit-scrollbar-thumb:active:vertical
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -4574,7 +4577,7 @@ body:not(.binary).dark.flat-scrollbars ::-webkit-scrollbar-thumb:active:vertical
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.flat-sliders input[type=range], body:not(.binary).dark.flat.auto-sliders input[type=range] {
   -webkit-appearance: none;
@@ -4730,7 +4733,7 @@ body:not(.binary).dark.flat-sliders input[type=range]::-ms-thumb:active.long.rou
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark ul.nav-tabs > li:not(.active) > a,
 body:not(.binary).dark ul.nav-tabs > li:not(.active) > a:focus {
@@ -4795,7 +4798,7 @@ body:not(.binary).dark .nav-tabs.flush {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.flat-tabs ul.nav-tabs > li:not(.active) > a,
 body:not(.binary).dark.flat-tabs ul.nav-tabs > li:not(.active) > a:focus, body:not(.binary).dark.flat.auto-tabs ul.nav-tabs > li:not(.active) > a,
@@ -4850,7 +4853,7 @@ body:not(.binary).dark.flat-tabs ul.nav-tabs > li:not(.active) > a:hover.long.ro
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark #desktop:not(.task-bar-minimized) .task-bar .task-list li {
   background-color: #3a3a60;
@@ -4877,7 +4880,7 @@ body:not(.binary).dark #desktop:not(.task-bar-minimized) .task-bar .task-list li
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.flat #desktop:not(.task-bar-minimized):not(.colorful) .task-bar .task-list li {
   background-color: #3a3a60;
@@ -4939,7 +4942,7 @@ body:not(.binary).dark.flat #desktop.task-bar-minimized:not(.colorful) .task-bar
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -4955,7 +4958,7 @@ body:not(.binary).dark.flat #desktop.task-bar-minimized:not(.colorful) .task-bar
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -4971,7 +4974,7 @@ body:not(.binary).dark.flat #desktop.task-bar-minimized:not(.colorful) .task-bar
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -4987,7 +4990,7 @@ body:not(.binary).dark.flat #desktop.task-bar-minimized:not(.colorful) .task-bar
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.chalk-buttons .btn, body:not(.binary).dark.chalk.auto-buttons .btn {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5034,7 +5037,7 @@ body:not(.binary).dark.chalk-buttons .btn:disabled:active, body:not(.binary).dar
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5050,7 +5053,7 @@ body:not(.binary).dark.chalk-buttons .btn:disabled:active, body:not(.binary).dar
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.chalk-buttons .button:hover, body:not(.binary).dark.chalk.auto-buttons .button:hover {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5082,7 +5085,7 @@ body:not(.binary).dark.chalk-buttons .button.selected, body:not(.binary).dark.ch
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5098,7 +5101,7 @@ body:not(.binary).dark.chalk-buttons .button.selected, body:not(.binary).dark.ch
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5114,7 +5117,7 @@ body:not(.binary).dark.chalk-buttons .button.selected, body:not(.binary).dark.ch
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.chalk #desktop .desktop.app > .footer-bar,
 body:not(.binary).dark.chalk #desktop.auto .desktop.app > .footer-bar,
@@ -5145,7 +5148,7 @@ body:not(.binary).dark.chalk #desktop.medium .desktop.app > .footer-bar .desktop
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) .dark.chalk.modals .modal.focused .modal-dialog .modal-header, body:not(.binary).dark.chalk .auto-material.modals .modal.focused .modal-dialog .modal-header {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, transparent 15%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%) no-repeat;
@@ -5172,7 +5175,7 @@ body:not(.binary) .dark.chalk.modals .modal:not(.focused) .modal-dialog .modal-h
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.chalk .flickity-page-dots .dot {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5199,7 +5202,7 @@ body:not(.binary).dark.chalk .flickity-page-dots .dot.is-selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5215,7 +5218,7 @@ body:not(.binary).dark.chalk .flickity-page-dots .dot.is-selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.chalk .progress .bar {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, transparent 50%) no-repeat, linear-gradient(to left, rgba(0, 0, 0, 0.1) 0%, transparent 50%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.5) calc(5% + 2px), rgba(255, 255, 255, 0.5) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5237,7 +5240,7 @@ body:not(.binary).dark.chalk .progress .bar {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 @media (min-width: 480px) {
   ::-webkit-scrollbar {
@@ -5284,7 +5287,7 @@ body:not(.binary).dark.chalk .progress .bar {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5300,7 +5303,7 @@ body:not(.binary).dark.chalk .progress .bar {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.chalk-scrollbars ::-webkit-scrollbar-thumb:not(:active):horizontal, body:not(.binary).dark.chalk.auto-scrollbars ::-webkit-scrollbar-thumb:not(:active):horizontal {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, transparent 5px) no-repeat, linear-gradient(to left, rgba(0, 0, 0, 0.1) 0%, transparent 5px) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.5) calc(5% + 2px), rgba(255, 255, 255, 0.5) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5338,7 +5341,7 @@ body:not(.binary).dark.chalk-scrollbars ::-webkit-scrollbar-thumb:active:vertica
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 .input {
   display: flex;
@@ -5545,7 +5548,7 @@ input[type=range]::-moz-range-track {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5561,7 +5564,7 @@ input[type=range]::-moz-range-track {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.chalk-sliders input[type=range], body:not(.binary).dark.chalk.auto-sliders input[type=range] {
   -webkit-appearance: none;
@@ -5636,7 +5639,7 @@ body:not(.binary).dark.chalk-sliders input[type=range]::-ms-thumb:active, body:n
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.chalk-tabs ul.nav-tabs > li:not(.active) > a,
 body:not(.binary).dark.chalk-tabs ul.nav-tabs > li:not(.active) > a:focus, body:not(.binary).dark.chalk.auto-tabs ul.nav-tabs > li:not(.active) > a,
@@ -5665,7 +5668,7 @@ body:not(.binary).dark.chalk-tabs ul.nav-tabs > li:not(.active) > a:hover, body:
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.chalk #desktop:not(.task-bar-minimized):not(.colorful) .task-bar .task-list li {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5697,7 +5700,7 @@ body:not(.binary).dark.chalk #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5713,7 +5716,7 @@ body:not(.binary).dark.chalk #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5729,7 +5732,7 @@ body:not(.binary).dark.chalk #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5745,7 +5748,7 @@ body:not(.binary).dark.chalk #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.plastic-buttons .btn, body:not(.binary).dark.plastic.auto-buttons .btn {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5792,7 +5795,7 @@ body:not(.binary).dark.plastic-buttons .btn:disabled:active, body:not(.binary).d
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5808,7 +5811,7 @@ body:not(.binary).dark.plastic-buttons .btn:disabled:active, body:not(.binary).d
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.plastic-buttons .button:hover, body:not(.binary).dark.plastic.auto-buttons .button:hover {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5840,7 +5843,7 @@ body:not(.binary).dark.plastic-buttons .button.selected, body:not(.binary).dark.
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5856,7 +5859,7 @@ body:not(.binary).dark.plastic-buttons .button.selected, body:not(.binary).dark.
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5872,7 +5875,7 @@ body:not(.binary).dark.plastic-buttons .button.selected, body:not(.binary).dark.
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.plastic #desktop .desktop.app > .footer-bar,
 body:not(.binary).dark.plastic #desktop.auto .desktop.app > .footer-bar,
@@ -5903,7 +5906,7 @@ body:not(.binary).dark.plastic #desktop.medium .desktop.app > .footer-bar .deskt
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) .dark.plastic.modals .modal.focused .modal-dialog .modal-header, body:not(.binary).dark.plastic .auto-material.modals .modal.focused .modal-dialog .modal-header {
   background: linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.75) 0%, rgba(0, 0, 0, 0) 15%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0) 25%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%) no-repeat;
@@ -5930,7 +5933,7 @@ body:not(.binary) .dark.plastic.modals .modal:not(.focused) .modal-dialog .modal
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.plastic .flickity-page-dots .dot {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5957,7 +5960,7 @@ body:not(.binary).dark.plastic .flickity-page-dots .dot.is-selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -5973,7 +5976,7 @@ body:not(.binary).dark.plastic .flickity-page-dots .dot.is-selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.plastic .progress .bar {
   background: linear-gradient(to right, #56569d 0%, transparent 50%) no-repeat, linear-gradient(to left, #56569d 0%, transparent 50%) no-repeat, linear-gradient(to bottom, transparent 0%, white calc(7.5% + 2px), white calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5994,7 +5997,7 @@ body:not(.binary).dark.plastic .progress .bar {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6010,7 +6013,7 @@ body:not(.binary).dark.plastic .progress .bar {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.plastic-scrollbars ::-webkit-scrollbar-thumb:not(:active):horizontal, body:not(.binary).dark.plastic.auto-scrollbars ::-webkit-scrollbar-thumb:not(:active):horizontal {
   background: linear-gradient(to right, #454580 0%, transparent 5px) no-repeat, linear-gradient(to left, #454580 0%, transparent 5px) no-repeat, linear-gradient(to bottom, transparent 0%, white calc(7.5% + 2px), white calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -6045,7 +6048,7 @@ body:not(.binary).dark.plastic-scrollbars ::-webkit-scrollbar-thumb:active:verti
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6061,7 +6064,7 @@ body:not(.binary).dark.plastic-scrollbars ::-webkit-scrollbar-thumb:active:verti
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.plastic-sliders input[type=range], body:not(.binary).dark.plastic.auto-sliders input[type=range] {
   -webkit-appearance: none;
@@ -6133,7 +6136,7 @@ body:not(.binary).dark.plastic-sliders input[type=range]::-ms-thumb:active, body
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.plastic-tabs ul.nav-tabs > li:not(.active) > a,
 body:not(.binary).dark.plastic-tabs ul.nav-tabs > li:not(.active) > a:focus, body:not(.binary).dark.plastic.auto-tabs ul.nav-tabs > li:not(.active) > a,
@@ -6162,7 +6165,7 @@ body:not(.binary).dark.plastic-tabs ul.nav-tabs > li:not(.active) > a:hover, bod
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.plastic #desktop:not(.task-bar-minimized):not(.colorful) .task-bar .task-list li {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -6194,7 +6197,7 @@ body:not(.binary).dark.plastic #desktop.task-bar-minimized:not(.colorful) .task-
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6210,7 +6213,7 @@ body:not(.binary).dark.plastic #desktop.task-bar-minimized:not(.colorful) .task-
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6226,7 +6229,7 @@ body:not(.binary).dark.plastic #desktop.task-bar-minimized:not(.colorful) .task-
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6242,7 +6245,7 @@ body:not(.binary).dark.plastic #desktop.task-bar-minimized:not(.colorful) .task-
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.glass-buttons .btn, body:not(.binary).dark.glass.auto-buttons .btn {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #dfdfec 0%, #7070aa 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(96, 96, 160, 0.5) 100%) no-repeat;
@@ -6289,7 +6292,7 @@ body:not(.binary).dark.glass-buttons .btn:disabled:active, body:not(.binary).dar
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6305,7 +6308,7 @@ body:not(.binary).dark.glass-buttons .btn:disabled:active, body:not(.binary).dar
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.glass-buttons .button:hover, body:not(.binary).dark.glass.auto-buttons .button:hover {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #dfdfec 0%, #7070aa 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(96, 96, 160, 0.5) 100%) no-repeat;
@@ -6337,7 +6340,7 @@ body:not(.binary).dark.glass-buttons .button.selected, body:not(.binary).dark.gl
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6353,7 +6356,7 @@ body:not(.binary).dark.glass-buttons .button.selected, body:not(.binary).dark.gl
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.glass #desktop .desktop.app > .footer-bar,
 body:not(.binary).dark.glass #desktop.auto .desktop.app > .footer-bar,
@@ -6384,7 +6387,7 @@ body:not(.binary).dark.glass #desktop.medium .desktop.app > .footer-bar .desktop
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6400,7 +6403,7 @@ body:not(.binary).dark.glass #desktop.medium .desktop.app > .footer-bar .desktop
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) .dark.glass.modals .modal.focused .modal-dialog .modal-header, body:not(.binary).dark.glass .auto-material.modals .modal.focused .modal-dialog .modal-header {
   background: linear-gradient(var(--light-direction), white 0%, transparent 10%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.25) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 50%, #4e4e70 100%) no-repeat;
@@ -6451,7 +6454,7 @@ body:not(.binary).translucent .dark.glass.modals .modal:not(.focused) .modal-dia
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.glass .flickity-page-dots .dot {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d8d8df 0%, #4e4e70 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(58, 58, 96, 0.5) 100%) no-repeat;
@@ -6478,7 +6481,7 @@ body:not(.binary).dark.glass .flickity-page-dots .dot.is-selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6494,7 +6497,7 @@ body:not(.binary).dark.glass .flickity-page-dots .dot.is-selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.glass .progress .bar {
   background: linear-gradient(to right, #484898 0%, transparent 50%) no-repeat, linear-gradient(to left, #484898 0%, transparent 50%) no-repeat, linear-gradient(to bottom, transparent 0%, white calc(7.5% + 2px), white calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, #7070aa calc(70% + 2px), #7070aa calc(80% + 2px), #6060a0 100%) no-repeat, #434396;
@@ -6515,7 +6518,7 @@ body:not(.binary).dark.glass .progress .bar {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6531,7 +6534,7 @@ body:not(.binary).dark.glass .progress .bar {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.glass-scrollbars ::-webkit-scrollbar-thumb:not(:active):horizontal, body:not(.binary).dark.glass.auto-scrollbars ::-webkit-scrollbar-thumb:not(:active):horizontal {
   background: linear-gradient(to right, #3a3a80 0%, transparent 5px) no-repeat, linear-gradient(to left, #3a3a80 0%, transparent 5px) no-repeat, linear-gradient(to bottom, transparent 0%, white calc(7.5% + 2px), white calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, #5f5f8d calc(70% + 2px), #5f5f8d calc(80% + 2px), #4d4d80 100%) no-repeat, #363680;
@@ -6566,7 +6569,7 @@ body:not(.binary).dark.glass-scrollbars ::-webkit-scrollbar-thumb:active:vertica
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6582,7 +6585,7 @@ body:not(.binary).dark.glass-scrollbars ::-webkit-scrollbar-thumb:active:vertica
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.glass-sliders input[type=range], body:not(.binary).dark.glass.auto-sliders input[type=range] {
   -webkit-appearance: none;
@@ -6657,7 +6660,7 @@ body:not(.binary).dark.glass-sliders input[type=range]::-ms-thumb:active, body:n
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.glass-tabs ul.nav-tabs > li:not(.active) > a,
 body:not(.binary).dark.glass-tabs ul.nav-tabs > li:not(.active) > a:focus, body:not(.binary).dark.glass.auto-tabs ul.nav-tabs > li:not(.active) > a,
@@ -6686,7 +6689,7 @@ body:not(.binary).dark.glass-tabs ul.nav-tabs > li:not(.active) > a:hover, body:
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.glass #desktop:not(.task-bar-minimized):not(.colorful) .task-bar .task-list li {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d8d8df 0%, #4e4e70 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(58, 58, 96, 0.5) 100%) no-repeat;
@@ -6718,7 +6721,7 @@ body:not(.binary).dark.glass #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6734,7 +6737,7 @@ body:not(.binary).dark.glass #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6750,7 +6753,7 @@ body:not(.binary).dark.glass #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6766,7 +6769,7 @@ body:not(.binary).dark.glass #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.metal-buttons .btn, body:not(.binary).dark.metal.auto-buttons .btn {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(128, 128, 179, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #6060a0 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(96, 96, 160, 0.5) 66%, #9090bd 100%) no-repeat;
@@ -6813,7 +6816,7 @@ body:not(.binary).dark.metal-buttons .btn:disabled:active, body:not(.binary).dar
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6829,7 +6832,7 @@ body:not(.binary).dark.metal-buttons .btn:disabled:active, body:not(.binary).dar
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.metal-buttons .button:hover, body:not(.binary).dark.metal.auto-buttons .button:hover {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(128, 128, 179, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #6060a0 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(96, 96, 160, 0.5) 66%, #9090bd 100%) no-repeat;
@@ -6861,7 +6864,7 @@ body:not(.binary).dark.metal-buttons .button.selected, body:not(.binary).dark.me
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6877,7 +6880,7 @@ body:not(.binary).dark.metal-buttons .button.selected, body:not(.binary).dark.me
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6893,7 +6896,7 @@ body:not(.binary).dark.metal-buttons .button.selected, body:not(.binary).dark.me
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.metal #desktop .desktop.app > .footer-bar,
 body:not(.binary).dark.metal #desktop.auto .desktop.app > .footer-bar,
@@ -6923,7 +6926,7 @@ body:not(.binary).dark.metal #desktop.medium .desktop.app > .footer-bar .desktop
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary) .dark.metal.modals .modal.focused .modal-dialog .modal-header, body:not(.binary).dark.metal .auto-material.modals .modal.focused .modal-dialog .modal-header {
   background: linear-gradient(var(--light-direction), #757590 0%, rgba(0, 0, 0, 0) 3px) no-repeat, linear-gradient(var(--light-direction), #757590 0%, rgba(0, 0, 0, 0) 20%) no-repeat, linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(58, 58, 96, 0.5) 50%, rgba(0, 0, 0, 0) 100%), linear-gradient(to bottom, #3a3a60 0%, #1d1d70 10%, #616180 100%);
@@ -6948,7 +6951,7 @@ body:not(.binary) .dark.metal.modals .modal:not(.focused) .modal-dialog .modal-h
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.metal .flickity-page-dots .dot {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(97, 97, 128, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #3a3a60 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(58, 58, 96, 0.5) 66%, #757590 100%) no-repeat;
@@ -6975,7 +6978,7 @@ body:not(.binary).dark.metal .flickity-page-dots .dot.is-selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -6991,7 +6994,7 @@ body:not(.binary).dark.metal .flickity-page-dots .dot.is-selected {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.metal .progress .bar {
   background: linear-gradient(to right, #3a3a93 0%, transparent 50%) no-repeat, linear-gradient(to left, #3a3a93 0%, transparent 50%) no-repeat, linear-gradient(to bottom, #8888b8 0%, #d7d7e7 calc(5% + 2px), #d7d7e7 calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 0%, #6060a0 25%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%) no-repeat, #303090;
@@ -7012,7 +7015,7 @@ body:not(.binary).dark.metal .progress .bar {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -7028,7 +7031,7 @@ body:not(.binary).dark.metal .progress .bar {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.metal-scrollbars ::-webkit-scrollbar-thumb:not(:active):horizontal, body:not(.binary).dark.metal.auto-scrollbars ::-webkit-scrollbar-thumb:not(:active):horizontal {
   background: linear-gradient(to right, #2e2e80 0%, transparent 5px) no-repeat, linear-gradient(to left, #2e2e80 0%, transparent 5px) no-repeat, linear-gradient(to bottom, #7a7aa0 0%, #d3d3df calc(5% + 2px), #d3d3df calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 0%, #4d4d80 25%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, var(--light-color) 10%, #4d4d80) 100%) no-repeat, #272780;
@@ -7063,7 +7066,7 @@ body:not(.binary).dark.metal-scrollbars ::-webkit-scrollbar-thumb:active:vertica
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -7079,7 +7082,7 @@ body:not(.binary).dark.metal-scrollbars ::-webkit-scrollbar-thumb:active:vertica
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.metal-sliders input[type=range], body:not(.binary).dark.metal.auto-sliders input[type=range] {
   -webkit-appearance: none;
@@ -7154,7 +7157,7 @@ body:not(.binary).dark.metal-sliders input[type=range]::-ms-thumb:active, body:n
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.metal-tabs ul.nav-tabs > li:not(.active) > a,
 body:not(.binary).dark.metal-tabs ul.nav-tabs > li:not(.active) > a:focus, body:not(.binary).dark.metal.auto-tabs ul.nav-tabs > li:not(.active) > a,
@@ -7183,7 +7186,7 @@ body:not(.binary).dark.metal-tabs ul.nav-tabs > li:not(.active) > a:hover, body:
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.metal #desktop:not(.task-bar-minimized):not(.colorful) .task-bar .task-list li {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(97, 97, 128, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #3a3a60 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(58, 58, 96, 0.5) 66%, #757590 100%) no-repeat;
@@ -7215,7 +7218,7 @@ body:not(.binary).dark.metal #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -7231,7 +7234,7 @@ body:not(.binary).dark.metal #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -7247,7 +7250,7 @@ body:not(.binary).dark.metal #desktop.task-bar-minimized:not(.colorful) .task-ba
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .messages-list .user.message:not(.selected) .comment-inner {
   color: #c0c0d9;
@@ -7280,7 +7283,7 @@ body:not(.binary).dark .messages-list .connection.message:not(.selected) .commen
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark a {
   color: var(--primary-color);
@@ -7303,7 +7306,7 @@ body:not(.binary).dark a:hover {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .comment-bubble > .comment-inner {
   color: #c0c0d9;
@@ -7343,7 +7346,7 @@ body:not(.binary).dark .comment-bubble.bottom > .comment-arrow {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .comments-list > .comment:not(.selected) > .info > .comment-bubble > .comment-inner {
   color: #c0c0d9;
@@ -7386,7 +7389,7 @@ body:not(.binary).dark .comments-list > .comment:not(.selected) > .info > .comme
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .replies-list > .reply:not(.selected) > .info > .comment-bubble > .comment-inner {
   color: #c0c0d9;
@@ -7426,7 +7429,7 @@ body:not(.binary).dark .replies-list > .reply:not(.selected) > .info > .comment-
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .new-post .comment-bubble .comment-inner, body:not(.binary).dark .new-comment .comment-bubble .comment-inner, body:not(.binary).dark .new-reply .comment-bubble .comment-inner, body:not(.binary).dark .new-message .comment-bubble .comment-inner {
   background-color: #131321;
@@ -7459,7 +7462,7 @@ body:not(.binary).dark .new-post .comment-bubble.bottom .comment-arrow, body:not
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -7475,7 +7478,7 @@ body:not(.binary).dark .new-post .comment-bubble.bottom .comment-arrow, body:not
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .page .breadcrumb {
   color: #c0c0d9;
@@ -7511,7 +7514,7 @@ body:not(.binary).dark .address-bar .breadcrumb > li + li:before {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark #dock-bar .shelf {
   background-color: #272740;
@@ -7546,7 +7549,7 @@ body:not(.binary).dark.translucent #dock-bar .shelf {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark h1 {
   color: white;
@@ -7579,7 +7582,7 @@ body:not(.binary).dark hr {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .menu-bar > ul.nav-menus > li > a {
   color: #c0c0d9;
@@ -7637,7 +7640,7 @@ body:not(.binary).dark.translucent.menu-margins #desktop.dark .header-bar .menu-
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark .navbar .navbar-nav > li:not(.active):not(.open) > a:hover i, body:not(.binary).dark .navbar .navbar-nav > li:not(.active):not(.open) > a:hover label, body:not(.binary).dark .navbar .navbar-nav > li:not(.active):not(.open) > a:focus:hover i, body:not(.binary).dark .navbar .navbar-nav > li:not(.active):not(.open) > a:focus:hover label {
   color: white;
@@ -7695,7 +7698,7 @@ body:not(.binary).dark .navbar:not(.colored) .navbar-nav.apps {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 body:not(.binary).dark.tabs-minimal ul.nav-tabs > li:not(.active) > a {
   color: #c0c0d9;
@@ -7736,7 +7739,7 @@ body:not(.binary).dark.tabs-minimal ul.nav-tabs > li:not(.active) > a:hover labe
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -7752,7 +7755,7 @@ body:not(.binary).dark.tabs-minimal ul.nav-tabs > li:not(.active) > a:hover labe
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
 /*# sourceMappingURL=styles.css.map */

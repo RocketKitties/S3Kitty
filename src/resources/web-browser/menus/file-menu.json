@@ -12,7 +12,7 @@
 			"name": "Open",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "add-to-favorites",
 			"icon": "fa fa-star",
@@ -25,14 +25,14 @@
 			"name": "Delete Favorites",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "save-url-as",
 			"icon": "fa fa-save",
 			"name": "Save As",
 			"shortcut": "command-S"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

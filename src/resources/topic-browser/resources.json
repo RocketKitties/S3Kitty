@@ -19,14 +19,14 @@
 				"name": "Open",
 				"shortcut": "command-O"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-info",
 				"icon": "fa fa-info-circle",
 				"name": "Show Info",
 				"shortcut": "command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-window",
 				"icon": "fa fa-circle-xmark",
@@ -42,7 +42,7 @@
 				"icon": "fa fa-info-circle",
 				"name": "About"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-app",
 				"icon": "fa fa-question-circle",
@@ -53,7 +53,7 @@
 				"icon": "fa fa-newspaper",
 				"name": "Search Community Help"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "contact-us",
 				"icon": "fa fa-envelope",
@@ -110,15 +110,15 @@
 				"name": "Invert",
 				"shortcut": "shift-command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-multiple",
 				"icon": "fa fa-ellipsis-h",
 				"name": "Multiple",
 				"shortcut": "shift-command-M",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-first",
 				"icon": "fa fa-fast-backward",
@@ -143,7 +143,7 @@
 				"name": "Last",
 				"shortcut": "down arrow"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-subscribed",
 				"icon": "fa fa-newspaper",
@@ -162,47 +162,47 @@
 				"class": "sort-by-name",
 				"icon": "fa fa-font",
 				"name": "By Name",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "sort-by-members",
 				"icon": "fa fa-users",
 				"name": "By Members",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "sort-by-date",
 				"icon": "fa fa-calendar-alt",
 				"name": "By Date",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "sort-by-create-date",
 						"icon": "fa fa-magic",
 						"name": "Create Date",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "sort-by-modify-date",
 						"icon": "fa fa-edit",
 						"name": "Modify Date",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "sort-increasing",
 				"icon": "fa fa-sort-amount-up",
 				"name": "Increasing",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "sort-decreasing",
 				"icon": "fa fa-sort-amount-down",
 				"name": "Decreasing",
-				"select": true
+				"state": "unselected"
 			}
 		]
 	},
@@ -213,131 +213,131 @@
 				"group": "view-kind",
 				"icon": "fa fa-th",
 				"name": "Icons",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-names",
 				"group": "view-kind",
 				"icon": "fa fa-align-left",
 				"name": "Names",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-lists",
 				"group": "view-kind",
 				"icon": "fa fa-list",
 				"name": "Lists",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-cards",
 				"group": "view-kind",
 				"icon": "fa fa-id-card",
 				"name": "Cards",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-tiles",
 				"group": "view-kind",
 				"icon": "fa fa-th-large",
 				"name": "Tiles",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-details",
 				"icon": "fa fa-tags",
 				"name": "Details",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "view-members",
 						"group": "detail-kind",
 						"icon": "fa fa-users",
 						"name": "Members",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-posts",
 						"group": "detail-kind",
 						"icon": "fa fa-newspaper",
 						"name": "Posts",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-date",
 						"group": "detail-kind",
 						"icon": "fa fa-calendar-alt",
 						"name": "Date",
-						"select": true,
+						"state": "unselected",
 						"menu": [
 							{
 								"class": "view-create-date",
 								"group": "detail-kind",
 								"icon": "fa fa-magic",
 								"name": "Create Date",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-modify-date",
 								"group": "detail-kind",
 								"icon": "fa fa-edit",
 								"name": "Modify Date",
-								"select": true
+								"state": "unselected"
 							},
-							"separator",
+							"divider",
 							{
 								"class": "view-date-only",
 								"group": "detail-kind",
 								"icon": "fa fa-calendar-alt",
 								"name": "Date Only",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-day-date",
 								"group": "detail-kind",
 								"icon": "fa fa-calendar-plus",
 								"name": "Day, Date",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-time-only",
 								"group": "detail-kind",
 								"icon": "fa fa-clock",
 								"name": "Time Only",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-date-time",
 								"group": "detail-kind",
 								"icon": "fa fa-calendar-check",
 								"name": "Date, Time",
-								"select": true
+								"state": "unselected"
 							},
 							{
 								"class": "view-day-date-time",
 								"group": "detail-kind",
 								"icon": "fa fa-calendar-alt",
 								"name": "Day, Date, Time",
-								"select": true
+								"state": "unselected"
 							}
 						]
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-toolbars",
 				"icon": "fa fa-wrench",
 				"name": "Toolbars",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-nav-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-sitemap",
 						"name": "Nav",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -345,18 +345,18 @@
 				"class": "show-sidebar",
 				"icon": "fa fa-pause",
 				"name": "Sidebar",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-actions-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-play-circle",
 						"name": "Actions",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "window-size",
 				"icon": "far fa-window-maximize",
@@ -382,12 +382,12 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "spaces",
 				"icon": "far fa-window-maximize",
 				"name": "Spaces",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "prev-space",
@@ -407,7 +407,7 @@
 				"class": "windows",
 				"icon": "far fa-window-restore",
 				"name": "Windows",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "minimize-all",
@@ -426,9 +426,9 @@
 				"icon": "fa fa-desktop",
 				"name": "Full Screen",
 				"shortcut": "command-up arrow",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-preferences",
 				"icon": "fa fa-snowflake",

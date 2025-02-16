@@ -13,7 +13,7 @@
 				"name": "Redo",
 				"shortcut": "command-Y"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "cut",
 				"icon": "fa fa-cut",
@@ -38,7 +38,7 @@
 				"name": "Delete",
 				"shortcut": "delete"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "indent",
 				"icon": "fa fa-indent",
@@ -73,7 +73,7 @@
 				"name": "Open",
 				"shortcut": "command-O"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "favorites",
 				"icon": "fa fa-star",
@@ -93,14 +93,14 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-info",
 				"icon": "fa fa-info-circle",
 				"name": "Show Info",
 				"shortcut": "command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "save-file",
 				"icon": "fa fa-save",
@@ -113,21 +113,21 @@
 				"name": "Save As",
 				"shortcut": "shift-command-S"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "delete-items",
 				"icon": "fa fa-trash-alt",
 				"name": "Delete",
 				"shortcut": "command-delete"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-tab",
 				"icon": "fa fa-xmark",
 				"name": "Close Tab",
 				"shortcut": "command-L"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-window",
 				"icon": "fa fa-circle-xmark",
@@ -156,7 +156,7 @@
 				"name": "Find Prev",
 				"shortcut": "shift-command-G"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "find-replace",
 				"icon": "fa fa-search-plus",
@@ -194,7 +194,7 @@
 				"icon": "fa fa-info-circle",
 				"name": "About"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-app",
 				"icon": "fa fa-question-circle",
@@ -205,7 +205,7 @@
 				"icon": "fa fa-newspaper",
 				"name": "Search Community Help"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "contact-us",
 				"icon": "fa fa-envelope",
@@ -260,7 +260,7 @@
 				"name": "All",
 				"shortcut": "command-A"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-word",
 				"icon": "fa fa-text-width",
@@ -279,7 +279,7 @@
 				"name": "Block",
 				"shortcut": "command-3"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-before",
 				"icon": "fa fa-long-arrow-alt-up",
@@ -306,7 +306,7 @@
 				"icon": "fa fa-user-friends",
 				"name": "By Invitation"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "share-by-topic",
 				"icon": "fa fa-newspaper",
@@ -317,7 +317,7 @@
 				"icon": "fa fa-comments",
 				"name": "By Chat Messsage"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "share-by-link",
 				"icon": "fa fa-link",
@@ -336,69 +336,69 @@
 				"class": "font-sizes",
 				"icon": "fa fa-font",
 				"name": "Font Size",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "font-size-10",
 						"group": "font-size",
 						"name": "10",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-11",
 						"group": "font-size",
 						"name": "11",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-12",
 						"group": "font-size",
 						"name": "12",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-13",
 						"group": "font-size",
 						"name": "13",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-14",
 						"group": "font-size",
 						"name": "14",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-15",
 						"group": "font-size",
 						"name": "15",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-16",
 						"group": "font-size",
 						"name": "16",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-18",
 						"group": "font-size",
 						"name": "18",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-20",
 						"group": "font-size",
 						"name": "20",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-24",
 						"group": "font-size",
 						"name": "24",
-						"select": true
+						"state": "unselected"
 					},
-					"separator",
+					"divider",
 					{
 						"class": "decrease-font-size",
 						"icon": "fa fa-minus",
@@ -413,32 +413,32 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-gutter",
 				"icon": "fa fa-ellipsis-v",
 				"name": "Gutter",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "show-indent-guides",
 				"icon": "fa fa-indent",
 				"name": "Indent Guides",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "show-print-margin",
 				"icon": "fa fa-print",
 				"name": "Print Margin",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "show-invisibles",
 				"icon": "fa fa-blind",
 				"name": "Invisibles",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "tabify",
 				"icon": "fa fa-long-arrow-alt-right",
@@ -449,26 +449,26 @@
 				"icon": "fa fa-angle-double-right",
 				"name": "Untabify"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-toolbars",
 				"icon": "fa fa-wrench",
 				"name": "Toolbars",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-nav-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-sitemap",
 						"name": "Nav",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-run-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-play",
 						"name": "Run",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -476,21 +476,21 @@
 				"class": "show-sidebar",
 				"icon": "fa fa-pause",
 				"name": "Sidebar",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-favorites-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-star",
 						"name": "Favorites",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-files-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-file",
 						"name": "Files",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -498,42 +498,42 @@
 				"class": "sidebar-view-kind",
 				"icon": "fa fa-th",
 				"name": "Sidebar Items",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "view-sidebar-icons",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-th",
 						"name": "Icons",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-lists",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-list",
 						"name": "Lists",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-trees",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-tree",
 						"name": "Trees",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-cards",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-id-card",
 						"name": "Cards",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-tiles",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-th-large",
 						"name": "Tiles",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -541,9 +541,9 @@
 				"class": "show-console",
 				"icon": "fa fa-chart-bar",
 				"name": "Console",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "window-size",
 				"icon": "far fa-window-maximize",
@@ -569,12 +569,12 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "spaces",
 				"icon": "far fa-window-maximize",
 				"name": "Spaces",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "prev-space",
@@ -594,7 +594,7 @@
 				"class": "windows",
 				"icon": "far fa-window-restore",
 				"name": "Windows",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "minimize-all",
@@ -613,9 +613,9 @@
 				"icon": "fa fa-desktop",
 				"name": "Full Screen",
 				"shortcut": "command-up arrow",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-preferences",
 				"icon": "fa fa-snowflake",

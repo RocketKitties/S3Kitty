@@ -31,14 +31,14 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "view-text",
 			"icon": "fa fa-font",
 			"name": "Text",
 			"shortcut": "shift-command-T"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "fit-page",
 			"icon": "fa fa-expand",
@@ -89,26 +89,26 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-toolbars",
 			"icon": "fa fa-wrench",
 			"name": "Toolbars",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "show-zoom-mode-bar",
 					"group": "show-toolbar",
 					"icon": "fa fa-expand",
 					"name": "Zoom Mode",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "show-zoom-bar",
 					"group": "show-toolbar",
 					"icon": "fa fa-search",
 					"name": "Zoom",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
@@ -116,14 +116,14 @@
 			"class": "show-sidebar",
 			"icon": "fa fa-pause",
 			"name": "Sidebar",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "show-pages-panel",
 					"group": "show-sidebar-panel",
 					"icon": "fa fa-file",
 					"name": "Pages",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
@@ -131,28 +131,28 @@
 			"class": "sidebar-tile-size",
 			"icon": "fa fa-th-large",
 			"name": "Sidebar Tile Size",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "small-tile-size",
 					"group": "sidebar-tile-size",
 					"icon": "fa fa-th",
 					"name": "Small",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "medium-tile-size",
 					"group": "sidebar-tile-size",
 					"icon": "fa fa-th-large",
 					"name": "Medium",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "large-tile-size",
 					"group": "sidebar-tile-size",
 					"icon": "fa fa-image",
 					"name": "Large",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
@@ -160,9 +160,9 @@
 			"class": "show-exif-info",
 			"icon": "fa fa-table",
 			"name": "Exif Info",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "window-size",
 			"icon": "far fa-window-maximize",
@@ -188,12 +188,12 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "spaces",
 			"icon": "far fa-window-maximize",
 			"name": "Spaces",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "prev-space",
@@ -213,7 +213,7 @@
 			"class": "windows",
 			"icon": "far fa-window-restore",
 			"name": "Windows",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "minimize-all",
@@ -232,9 +232,9 @@
 			"icon": "fa fa-desktop",
 			"name": "Full Screen",
 			"shortcut": "command-up arrow",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "view-preferences",
 			"icon": "fa fa-snowflake",

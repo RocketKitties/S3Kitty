@@ -5,44 +5,44 @@
 			"group": "sort-by",
 			"icon": "fa fa-font",
 			"name": "By Name",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "sort-by-location",
 			"group": "sort-by",
 			"icon": "fa fa-globe-americas",
 			"name": "By Location",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "sort-by-occupation",
 			"group": "sort-by",
 			"icon": "fa fa-briefcase",
 			"name": "By Occupation",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "sort-by-gender",
 			"group": "sort-by",
 			"icon": "fa fa-transgender",
 			"name": "By Gender",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "sort-increasing",
 			"group": "sort-order",
 			"icon": "fa fa-sort-amount-up",
 			"name": "Increasing",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "sort-decreasing",
 			"group": "sort-order",
 			"icon": "fa fa-sort-amount-down",
 			"name": "Decreasing",
-			"select": true
+			"state": "unselected"
 		}
 	]
 }

@@ -12,14 +12,14 @@
 			"name": "Open",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",
 			"name": "Show Info",
 			"shortcut": "command-I"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "share",
 			"icon": "fa fa-share",
@@ -30,7 +30,7 @@
 					"icon": "fa fa-user-friends",
 					"name": "With Connections"
 				},
-				"separator",
+				"divider",
 				{
 					"class": "share-by-topic",
 					"icon": "fa fa-newspaper",
@@ -41,7 +41,7 @@
 					"icon": "fa fa-comments",
 					"name": "By Chat Messsage"
 				},
-				"separator",
+				"divider",
 				{
 					"class": "share-by-link",
 					"icon": "fa fa-link",
@@ -54,14 +54,14 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "zoom-to",
 			"icon": "fa fa-search",
 			"name": "Zoom To",
 			"shortcut": "command-Z"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "add-photos",
 			"icon": "fa fa-camera",
@@ -134,7 +134,7 @@
 			"name": "Delete Favorite",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "save-map",
 			"icon": "fa fa-save",

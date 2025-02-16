@@ -7,7 +7,7 @@
 			"name": "Edit Group",
 			"shortcut": "command-E"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "delete-members",
 			"group": "delete member-option",

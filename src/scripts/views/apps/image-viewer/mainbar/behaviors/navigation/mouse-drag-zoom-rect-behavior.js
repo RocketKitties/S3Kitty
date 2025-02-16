@@ -7,7 +7,7 @@
 |        This is a definition of a viewport's mouse interaction behavior.      |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
 import MouseDragRectBehavior from '../../../../../../views/behaviors/mouse/mouse-drag-rect-behavior.js';

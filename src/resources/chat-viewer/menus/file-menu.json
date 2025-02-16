@@ -18,7 +18,7 @@
 			"name": "Open Chats",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",
@@ -31,21 +31,21 @@
 			"name": "Download",
 			"shortcut": "shift-command-D"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "end-chat",
 			"icon": "fa fa-minus",
 			"name": "End Chat",
 			"shortcut": "command-delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-tab",
 			"icon": "fa fa-xmark",
 			"name": "Close Tab",
 			"shortcut": "command-L"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

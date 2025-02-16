@@ -18,7 +18,7 @@
 			"name": "New Chat",
 			"shortcut": "shift-command-enter"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "open-topics",
 			"icon": "fa fa-folder",
@@ -31,7 +31,7 @@
 			"name": "Open Chats",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",
@@ -44,7 +44,7 @@
 			"name": "Download",
 			"shortcut": "shift-command-D"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "add-topics",
 			"icon": "fa fa-plus",
@@ -63,14 +63,14 @@
 			"name": "End Chat",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-tab",
 			"icon": "fa fa-xmark",
 			"name": "Close Tab",
 			"shortcut": "command-L"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

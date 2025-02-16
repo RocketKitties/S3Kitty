@@ -13,7 +13,7 @@
 				"name": "Open",
 				"shortcut": "command-O"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "add-to-favorites",
 				"icon": "fa fa-star",
@@ -26,14 +26,14 @@
 				"name": "Delete Favorites",
 				"shortcut": "delete"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "save-url-as",
 				"icon": "fa fa-save",
 				"name": "Save As",
 				"shortcut": "command-S"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-window",
 				"icon": "fa fa-circle-xmark",
@@ -49,7 +49,7 @@
 				"icon": "fa fa-info-circle",
 				"name": "About"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-app",
 				"icon": "fa fa-question-circle",
@@ -60,7 +60,7 @@
 				"icon": "fa fa-newspaper",
 				"name": "Search Community Help"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "contact-us",
 				"icon": "fa fa-envelope",
@@ -104,7 +104,7 @@
 				"icon": "fa fa-comments",
 				"name": "By Chat Messsage"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "share-by-link",
 				"icon": "fa fa-link",
@@ -124,26 +124,26 @@
 				"icon": "fa fa-code",
 				"name": "View Source"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-toolbars",
 				"icon": "fa fa-wrench",
 				"name": "Toolbars",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-nav-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-sitemap",
 						"name": "Nav",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-address-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-home",
 						"name": "Address",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -151,18 +151,18 @@
 				"class": "show-sidebar",
 				"icon": "fa fa-pause",
 				"name": "Sidebar",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-favorites-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-star",
 						"name": "Favorites",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "window-size",
 				"icon": "far fa-window-maximize",
@@ -188,12 +188,12 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "spaces",
 				"icon": "far fa-window-maximize",
 				"name": "Spaces",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "prev-space",
@@ -213,7 +213,7 @@
 				"class": "windows",
 				"icon": "far fa-window-restore",
 				"name": "Windows",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "minimize-all",
@@ -232,9 +232,9 @@
 				"icon": "fa fa-desktop",
 				"name": "Full Screen",
 				"shortcut": "command-up arrow",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-preferences",
 				"icon": "fa fa-snowflake",

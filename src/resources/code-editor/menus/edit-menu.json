@@ -12,7 +12,7 @@
 			"name": "Redo",
 			"shortcut": "command-Y"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "cut",
 			"icon": "fa fa-cut",
@@ -37,7 +37,7 @@
 			"name": "Delete",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "indent",
 			"icon": "fa fa-indent",

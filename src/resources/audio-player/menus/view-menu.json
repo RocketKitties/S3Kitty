@@ -4,95 +4,95 @@
 			"class": "view-name-only",
 			"icon": "fa fa-font",
 			"name": "Name Only",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-album",
 			"icon": "fa fa-folder",
 			"name": "Album",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-artist",
 			"icon": "fa fa-user",
 			"name": "Artist",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-band",
 			"icon": "fa fa-users",
 			"name": "Band",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-composer",
 			"icon": "fa fa-magic",
 			"name": "Composer",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-genre",
 			"icon": "fa fa-tags",
 			"name": "Genre",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-length",
 			"icon": "fa fa-clock",
 			"name": "Length",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-publisher",
 			"icon": "fa fa-money-bill",
 			"name": "Publisher",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-title",
 			"icon": "fa fa-font",
 			"name": "Title",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-track-number",
 			"icon": "fa fa-list-ol",
 			"name": "Track Number",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-year",
 			"icon": "fa fa-calendar-alt",
 			"name": "Year",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-toolbars",
 			"icon": "fa fa-wrench",
 			"name": "Toolbars",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "show-play-bar",
 					"group": "show-toolbar",
 					"icon": "fa fa-play",
 					"name": "Play",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "show-volume-bar",
 					"group": "show-toolbar",
 					"icon": "fa fa-volume-up",
 					"name": "Volume",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "show-track-bar",
 					"group": "show-toolbar",
 					"icon": "fa fa-list",
 					"name": "Track",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
@@ -100,14 +100,14 @@
 			"class": "show-sidebar",
 			"icon": "fa fa-pause",
 			"name": "Sidebar",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "show-favorites-panel",
 					"group": "show-sidebar-panel",
 					"icon": "fa fa-star",
 					"name": "Favorites",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "show-track-info-panel",
@@ -115,14 +115,14 @@
 					"icon": "fa fa-table",
 					"name": "Track Info",
 					"shortcut": "command-I",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "show-files-panel",
 					"group": "show-sidebar-panel",
 					"icon": "fa fa-file",
 					"name": "Files",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
@@ -130,42 +130,42 @@
 			"class": "sidebar-view-kind",
 			"icon": "fa fa-th",
 			"name": "Sidebar Items",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "view-sidebar-icons",
 					"group": "sidebar-view-kind",
 					"icon": "fa fa-th",
 					"name": "Icons",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "view-sidebar-lists",
 					"group": "sidebar-view-kind",
 					"icon": "fa fa-list",
 					"name": "Lists",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "view-sidebar-trees",
 					"group": "sidebar-view-kind",
 					"icon": "fa fa-tree",
 					"name": "Trees",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "view-sidebar-cards",
 					"group": "sidebar-view-kind",
 					"icon": "fa fa-id-card",
 					"name": "Cards",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "view-sidebar-tiles",
 					"group": "sidebar-view-kind",
 					"icon": "fa fa-th-large",
 					"name": "Tiles",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
@@ -173,9 +173,9 @@
 			"class": "show-analyser",
 			"icon": "fa fa-chart-bar",
 			"name": "Analyser",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "window-size",
 			"icon": "far fa-window-maximize",
@@ -201,12 +201,12 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "spaces",
 			"icon": "far fa-window-maximize",
 			"name": "Spaces",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "prev-space",
@@ -226,7 +226,7 @@
 			"class": "windows",
 			"icon": "far fa-window-restore",
 			"name": "Windows",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "minimize-all",
@@ -245,9 +245,9 @@
 			"icon": "fa fa-desktop",
 			"name": "Full Screen",
 			"shortcut": "command-up arrow",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "view-preferences",
 			"icon": "fa fa-snowflake",

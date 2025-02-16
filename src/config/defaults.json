@@ -57,7 +57,7 @@
 			"2025-02-07": "downloads/S3Kitty_2025-02-07.zip"
 		},
 		"development": {
-			"GitHub": "https://github.com/RocketKitty/S3Kitty"
+			"GitHub": "https://github.com/RocketKitties/S3Kitty"
 		}
 	},
 
@@ -70,7 +70,7 @@
 	"settings": {
 		"enable_notifications": true,
 		"mute_sounds": false,
-		"volume": 5
+		"volume": 1
 	},
 
 	"sharing": {

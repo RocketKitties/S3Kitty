@@ -5,59 +5,59 @@
 			"group": "sort-by",
 			"icon": "fa fa-font",
 			"name": "By Name",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "sort-by-members",
 			"group": "sort-by",
 			"icon": "fa fa-users",
 			"name": "By Members",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "sort-by-messages",
 			"group": "sort-by",
 			"icon": "fa fa-comments",
 			"name": "By Messages",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "sort-by-date",
 			"icon": "fa fa-calendar-alt",
 			"name": "By Date",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "sort-by-create-date",
 					"group": "sort-by",
 					"icon": "fa fa-magic",
 					"name": "Create Date",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "sort-by-modify-date",
 					"group": "sort-by",
 					"icon": "fa fa-edit",
 					"name": "Modify Date",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "sort-increasing",
 			"group": "sort-order",
 			"icon": "fa fa-sort-amount-up",
 			"name": "Increasing",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "sort-decreasing",
 			"group": "sort-order",
 			"icon": "fa fa-sort-amount-down",
 			"name": "Decreasing",
-			"select": true
+			"state": "unselected"
 		}
 	]
 }

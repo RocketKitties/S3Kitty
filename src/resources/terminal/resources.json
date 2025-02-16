@@ -35,7 +35,7 @@
 				"name": "New Window",
 				"shortcut": "command-enter"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-window",
 				"icon": "fa fa-circle-xmark",
@@ -51,7 +51,7 @@
 				"icon": "fa fa-info-circle",
 				"name": "About"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-app",
 				"icon": "fa fa-question-circle",
@@ -62,7 +62,7 @@
 				"icon": "fa fa-newspaper",
 				"name": "Search Community Help"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "contact-us",
 				"icon": "fa fa-envelope",
@@ -105,45 +105,45 @@
 						"class": "font-size-10",
 						"group": "font-size",
 						"name": "10",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-11",
 						"group": "font-size",
 						"name": "11",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-12",
 						"group": "font-size",
 						"name": "12",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-13",
 						"group": "font-size",
 						"name": "13",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-14",
 						"group": "font-size",
 						"name": "14",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-15",
 						"group": "font-size",
 						"name": "15",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "font-size-16",
 						"group": "font-size",
 						"name": "16",
-						"select": true
+						"state": "unselected"
 					},
-					"separator",
+					"divider",
 					{
 						"class": "decrease-font-size",
 						"icon": "fa fa-minus",
@@ -158,7 +158,7 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "window-size",
 				"icon": "far fa-window-maximize",
@@ -184,12 +184,12 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "spaces",
 				"icon": "far fa-window-maximize",
 				"name": "Spaces",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "prev-space",
@@ -209,7 +209,7 @@
 				"class": "windows",
 				"icon": "far fa-window-restore",
 				"name": "Windows",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "minimize-all",
@@ -228,9 +228,9 @@
 				"icon": "fa fa-desktop",
 				"name": "Full Screen",
 				"shortcut": "command-up arrow",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-preferences",
 				"icon": "fa fa-snowflake",

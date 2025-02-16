@@ -7,7 +7,7 @@
 |        This defines a form for viewing and editing theme settings.           |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
 import FormPanelView from '../../../../../../views/forms/form-panel-view.js';

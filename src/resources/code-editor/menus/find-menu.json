@@ -18,7 +18,7 @@
 			"name": "Find Prev",
 			"shortcut": "shift-command-G"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "find-replace",
 			"icon": "fa fa-search-plus",

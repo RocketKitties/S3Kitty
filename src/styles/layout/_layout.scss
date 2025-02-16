@@ -12,7 +12,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
 @use "../bootstrap/variables";
@@ -349,6 +349,7 @@ hr {
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	margin-bottom: 10px;
+	line-height: 25px;
 
 	&.emphasis {
 		width: 75%;
@@ -357,6 +358,13 @@ hr {
 
 	h3:first-child {
 		margin-top: 10px;
+	}
+
+	.buttons {
+		display: flex;
+		height: 25px;
+		margin-left: auto;
+		float: right;
 	}
 }
 

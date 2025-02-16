@@ -13,21 +13,21 @@
 				"name": "Open",
 				"shortcut": "command-O"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-info",
 				"icon": "fa fa-info-circle",
 				"name": "Show Info",
 				"shortcut": "command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "delete-accounts",
 				"icon": "fa fa-trash-alt",
 				"name": "Delete Accounts",
 				"shortcut": "delete"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-window",
 				"icon": "fa fa-circle-xmark",
@@ -43,7 +43,7 @@
 				"icon": "fa fa-info-circle",
 				"name": "About"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-app",
 				"icon": "fa fa-question-circle",
@@ -54,7 +54,7 @@
 				"icon": "fa fa-newspaper",
 				"name": "Search Community Help"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "contact-us",
 				"icon": "fa fa-envelope",
@@ -111,15 +111,15 @@
 				"name": "Invert",
 				"shortcut": "shift-command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-multiple",
 				"icon": "fa fa-ellipsis-h",
 				"name": "Multiple",
 				"shortcut": "shift-command-M",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-first",
 				"icon": "fa fa-fast-backward",
@@ -153,44 +153,44 @@
 				"group": "sort-by",
 				"icon": "fa fa-font",
 				"name": "By Name",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "sort-by-location",
 				"group": "sort-by",
 				"icon": "fa fa-globe-americas",
 				"name": "By Location",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "sort-by-occupation",
 				"group": "sort-by",
 				"icon": "fa fa-briefcase",
 				"name": "By Occupation",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "sort-by-gender",
 				"group": "sort-by",
 				"icon": "fa fa-transgender",
 				"name": "By Gender",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "sort-increasing",
 				"group": "sort-order",
 				"icon": "fa fa-sort-amount-up",
 				"name": "Increasing",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "sort-decreasing",
 				"group": "sort-order",
 				"icon": "fa fa-sort-amount-down",
 				"name": "Decreasing",
-				"select": true
+				"state": "unselected"
 			}
 		]
 	},
@@ -201,86 +201,86 @@
 				"group": "view-kind",
 				"icon": "fa fa-th",
 				"name": "Icons",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-names",
 				"group": "view-kind",
 				"icon": "fa fa-align-left",
 				"name": "Names",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-lists",
 				"group": "view-kind",
 				"icon": "fa fa-list",
 				"name": "Lists",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-cards",
 				"group": "view-kind",
 				"icon": "fa fa-id-card",
 				"name": "Cards",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-tiles",
 				"group": "view-kind",
 				"icon": "fa fa-th-large",
 				"name": "Tiles",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "view-maps",
 				"group": "view-kind",
 				"icon": "fa fa-map",
 				"name": "Maps",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-map",
 						"group": "map-mode",
 						"icon": "fa fa-map",
 						"name": "Map",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-satellite",
 						"group": "map-mode",
 						"icon": "fa fa-satellite",
 						"name": "Satellite",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-hybrid",
 						"group": "map-mode",
 						"icon": "fa fa-map-marked-alt",
 						"name": "Hybrid",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-streets",
 						"group": "map-mode",
 						"icon": "fa fa-road",
 						"name": "Streets",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-transportation",
 						"group": "map-mode",
 						"icon": "fa fa-bus",
 						"name": "Transportation",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-aeronautical",
 						"group": "map-mode",
 						"icon": "fa fa-plane",
 						"name": "Aeronautical",
-						"select": true
+						"state": "unselected"
 					},
-					"separator",
+					"divider",
 					{
 						"class": "pan-to",
 						"icon": "fa fa-arrows-alt",
@@ -339,46 +339,46 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-details",
 				"icon": "fa fa-tags",
 				"name": "Details",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "view-location",
 						"icon": "fa fa-globe-americas",
 						"name": "Location",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-occupation",
 						"icon": "fa fa-briefcase",
 						"name": "Occupation",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-gender",
 						"icon": "fa fa-transgender",
 						"name": "Gender",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-toolbars",
 				"icon": "fa fa-wrench",
 				"name": "Toolbars",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-nav-bar",
 						"group": "show-toolbar",
 						"icon": "fa fa-sitemap",
 						"name": "Nav",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -386,18 +386,18 @@
 				"class": "show-sidebar",
 				"icon": "fa fa-pause",
 				"name": "Sidebar",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-actions-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-play-circle",
 						"name": "Actions",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "window-size",
 				"icon": "far fa-window-maximize",
@@ -423,12 +423,12 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "spaces",
 				"icon": "far fa-window-maximize",
 				"name": "Spaces",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "prev-space",
@@ -448,7 +448,7 @@
 				"class": "windows",
 				"icon": "far fa-window-restore",
 				"name": "Windows",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "minimize-all",
@@ -467,9 +467,9 @@
 				"icon": "fa fa-desktop",
 				"name": "Full Screen",
 				"shortcut": "command-up arrow",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-preferences",
 				"icon": "fa fa-snowflake",

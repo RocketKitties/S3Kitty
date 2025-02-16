@@ -18,7 +18,7 @@
 			"name": "Open Topics",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "add-topics",
 			"icon": "fa fa-plus",
@@ -31,7 +31,7 @@
 			"name": "Remove Topics",
 			"shortcut": "command-delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",
@@ -44,7 +44,7 @@
 			"name": "Download",
 			"shortcut": "shift-command-D"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-topic",
 			"icon": "fa fa-xmark",
@@ -57,7 +57,7 @@
 			"name": "Close Post",
 			"shortcut": "command-L"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

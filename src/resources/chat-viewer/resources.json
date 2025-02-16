@@ -37,7 +37,7 @@
 				"name": "Open Chats",
 				"shortcut": "command-O"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-info",
 				"icon": "fa fa-info-circle",
@@ -50,21 +50,21 @@
 				"name": "Download",
 				"shortcut": "shift-command-D"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "end-chat",
 				"icon": "fa fa-minus",
 				"name": "End Chat",
 				"shortcut": "command-delete"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-tab",
 				"icon": "fa fa-xmark",
 				"name": "Close Tab",
 				"shortcut": "command-L"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "close-window",
 				"icon": "fa fa-circle-xmark",
@@ -80,7 +80,7 @@
 				"icon": "fa fa-info-circle",
 				"name": "About"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-app",
 				"icon": "fa fa-question-circle",
@@ -91,7 +91,7 @@
 				"icon": "fa fa-newspaper",
 				"name": "Search Community Help"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "contact-us",
 				"icon": "fa fa-envelope",
@@ -145,14 +145,14 @@
 				"group": "search-by",
 				"icon": "fa fa-quote-left",
 				"name": "By Message",
-				"select": true
+				"state": "unselected"
 			},
 			{
 				"class": "search-by-date",
 				"group": "search-by",
 				"icon": "fa fa-calendar-alt",
 				"name": "By Date",
-				"select": true
+				"state": "unselected"
 			}
 		]
 	},
@@ -176,15 +176,15 @@
 				"name": "Invert",
 				"shortcut": "shift-command-I"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-multiple",
 				"icon": "fa fa-ellipsis-h",
 				"name": "Multiple",
 				"shortcut": "shift-command-M",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "select-first",
 				"icon": "fa fa-fast-backward",
@@ -231,28 +231,28 @@
 				"class": "show-elapsed-time",
 				"icon": "fa fa-clock",
 				"name": "Elapsed Time",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "show-sidebar",
 				"icon": "fa fa-pause",
 				"name": "Sidebar",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "show-info-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-info-circle",
 						"name": "Chat Info",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "show-chats-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-comments",
 						"name": "Chats",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
@@ -260,39 +260,39 @@
 				"class": "sidebar-view-kind",
 				"icon": "fa fa-th",
 				"name": "Sidebar Items",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "view-sidebar-icons",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-th",
 						"name": "Icons",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-lists",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-list",
 						"name": "Lists",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-cards",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-id-card",
 						"name": "Cards",
-						"select": true
+						"state": "unselected"
 					},
 					{
 						"class": "view-sidebar-tiles",
 						"group": "sidebar-view-kind",
 						"icon": "fa fa-th-large",
 						"name": "Tiles",
-						"select": true
+						"state": "unselected"
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "window-size",
 				"icon": "far fa-window-maximize",
@@ -318,12 +318,12 @@
 					}
 				]
 			},
-			"separator",
+			"divider",
 			{
 				"class": "spaces",
 				"icon": "far fa-window-maximize",
 				"name": "Spaces",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "prev-space",
@@ -343,7 +343,7 @@
 				"class": "windows",
 				"icon": "far fa-window-restore",
 				"name": "Windows",
-				"select": true,
+				"state": "unselected",
 				"menu": [
 					{
 						"class": "minimize-all",
@@ -362,9 +362,9 @@
 				"icon": "fa fa-desktop",
 				"name": "Full Screen",
 				"shortcut": "command-up arrow",
-				"select": true
+				"state": "unselected"
 			},
-			"separator",
+			"divider",
 			{
 				"class": "view-preferences",
 				"icon": "fa fa-snowflake",

@@ -5,21 +5,21 @@
 			"group": "search-by",
 			"icon": "fa fa-home",
 			"name": "By Address",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "search-by-name",
 			"group": "search-by",
 			"icon": "fa fa-font",
 			"name": "By Place Name",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "search-by-coords",
 			"group": "search-by",
 			"icon": "fa fa-crosshairs",
 			"name": "By Coordinates",
-			"select": true
+			"state": "unselected"
 		}
 	]
 }

@@ -3,7 +3,4 @@
 .jupyter/
 log/
 private/
-backups/
-electron/
-presentations/
 *.swp

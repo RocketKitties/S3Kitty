@@ -6,7 +6,7 @@
 			"name": "Open",
 			"shortcut": "command-O"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "share",
 			"icon": "fa fa-share",
@@ -42,7 +42,7 @@
 					"icon": "fa fa-map",
 					"name": "Maps"
 				},
-				"separator",
+				"divider",
 				{
 					"class": "share-message",
 					"icon": "fa fa-comments",
@@ -55,7 +55,7 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",

@@ -12,7 +12,7 @@
 			"name": "New Event",
 			"shortcut": "command-E"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "open-date",
 			"icon": "fa fa-folder-open",
@@ -44,14 +44,14 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "delete-event",
 			"icon": "fa fa-trash-alt",
 			"name": "Delete Event",
 			"shortcut": "delete"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",

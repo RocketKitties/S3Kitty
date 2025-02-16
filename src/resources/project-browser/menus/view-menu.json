@@ -5,121 +5,121 @@
 			"group": "view-kind",
 			"icon": "fa fa-th",
 			"name": "Icons",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-names",
 			"group": "view-kind",
 			"icon": "fa fa-align-left",
 			"name": "Names",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-lists",
 			"group": "view-kind",
 			"icon": "fa fa-list",
 			"name": "Lists",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-cards",
 			"group": "view-kind",
 			"icon": "fa fa-id-card",
 			"name": "Cards",
-			"select": true
+			"state": "unselected"
 		},
 		{
 			"class": "view-tiles",
 			"group": "view-kind",
 			"icon": "fa fa-th-large",
 			"name": "Tiles",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "view-details",
 			"icon": "fa fa-tags",
 			"name": "Details",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "view-tasks",
 					"icon": "fa fa-check-circle",
 					"name": "Tasks",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "view-members",
 					"icon": "fa fa-users",
 					"name": "Members",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "view-date",
 					"icon": "fa fa-calendar-alt",
 					"name": "Date",
-					"select": true,
+					"state": "unselected",
 					"menu": [
 						{
 							"class": "view-create-date",
 							"icon": "fa fa-magic",
 							"name": "Create Date",
-							"select": true
+							"state": "unselected"
 						},
 						{
 							"class": "view-modify-date",
 							"icon": "fa fa-edit",
 							"name": "Modify Date",
-							"select": true
+							"state": "unselected"
 						},
-						"separator",
+						"divider",
 						{
 							"class": "view-date-only",
 							"icon": "fa fa-calendar-alt",
 							"name": "Date Only",
-							"select": true
+							"state": "unselected"
 						},
 						{
 							"class": "view-day-date",
 							"icon": "fa fa-calendar-plus",
 							"name": "Day, Date",
-							"select": true
+							"state": "unselected"
 						},
 						{
 							"class": "view-time-only",
 							"icon": "fa fa-clock",
 							"name": "Time Only",
-							"select": true
+							"state": "unselected"
 						},
 						{
 							"class": "view-date-time",
 							"icon": "fa fa-calendar-check",
 							"name": "Date, Time",
-							"select": true
+							"state": "unselected"
 						},
 						{
 							"class": "view-day-date-time",
 							"icon": "fa fa-calendar-alt",
 							"name": "Day, Date, Time",
-							"select": true
+							"state": "unselected"
 						}
 					]
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-toolbars",
 			"icon": "fa fa-wrench",
 			"name": "Toolbars",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "show-nav-bar",
 					"group": "show-toolbar",
 					"icon": "fa fa-sitemap",
 					"name": "Nav",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
@@ -127,18 +127,18 @@
 			"class": "show-sidebar",
 			"icon": "fa fa-pause",
 			"name": "Sidebar",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "show-actions-panel",
 					"group": "show-sidebar-panel",
 					"icon": "fa fa-play-circle",
 					"name": "Actions",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "window-size",
 			"icon": "far fa-window-maximize",
@@ -164,12 +164,12 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "spaces",
 			"icon": "far fa-window-maximize",
 			"name": "Spaces",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "prev-space",
@@ -189,7 +189,7 @@
 			"class": "windows",
 			"icon": "far fa-window-restore",
 			"name": "Windows",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "minimize-all",
@@ -208,9 +208,9 @@
 			"icon": "fa fa-desktop",
 			"name": "Full Screen",
 			"shortcut": "command-up arrow",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "view-preferences",
 			"icon": "fa fa-snowflake",

@@ -5,35 +5,35 @@
 			"group": "search-by",
 			"icon": "fa fa-font",
 			"name": "Name",
-			"select": true
+			"state": "unselected"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "search-by-date",
 			"icon": "fa fa-calendar-alt",
 			"name": "Date",
-			"select": true,
+			"state": "unselected",
 			"menu": [
 				{
 					"class": "search-by-create-date",
 					"group": "search-by",
 					"icon": "fa fa-magic",
 					"name": "Create Date",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "search-by-modify-date",
 					"group": "search-by",
 					"icon": "fa fa-edit",
 					"name": "Modify Date",
-					"select": true
+					"state": "unselected"
 				},
 				{
 					"class": "search-by-access-date",
 					"group": "search-by",
 					"icon": "fa fa-eye",
 					"name": "Access Date",
-					"select": true
+					"state": "unselected"
 				}
 			]
 		}

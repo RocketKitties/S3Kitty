@@ -30,14 +30,14 @@
 				}
 			]
 		},
-		"separator",
+		"divider",
 		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",
 			"name": "Show Info",
 			"shortcut": "command-I"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "save-contact",
 			"icon": "fa fa-save",
@@ -50,14 +50,14 @@
 			"name": "Save As",
 			"shortcut": "shift-command-S"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-tab",
 			"icon": "fa fa-xmark",
 			"name": "Close Tab",
 			"shortcut": "command-L"
 		},
-		"separator",
+		"divider",
 		{
 			"class": "close-window",
 			"icon": "fa fa-circle-xmark",
