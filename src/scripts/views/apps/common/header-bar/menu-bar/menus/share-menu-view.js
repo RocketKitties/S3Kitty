@@ -24,14 +24,15 @@ export default MenuView.extend({
 	//
 
 	visible: function() {
-		let hasConnectionManager = application.hasApp('connection_manager');
-		let hasTopicViewer = application.hasApp('topic_viewer');
-		let hasChatViewer = application.hasApp('chat_viewer');
+		let hasConnectionManager = application.hasVisibleApp('connection_manager');
+		let hasCommunicator = application.hasVisibleApp('communicator');
+		let hasTopicViewer = application.hasVisibleApp('topic_viewer');
+		let hasChatViewer = application.hasVisibleApp('chat_viewer');
 
 		return {
 			'share-by-invitation': hasConnectionManager,
-			'share-by-topic': hasTopicViewer,
-			'share-by-message': hasChatViewer,
+			'share-by-topic': hasTopicViewer || hasCommunicator,
+			'share-by-message': hasChatViewer || hasCommunicator,
 			'share-by-link': true,
 			'share-by-email': true
 		};

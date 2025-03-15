@@ -15,7 +15,7 @@
 |        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
-import ToggleButtonView from '../../../../../views/apps/common/toolbars/buttons/toggle-button-view.js';
+import ToggleButtonView from '../../../../../../views/apps/common/toolbars/buttons/toggle-button-view.js';
 
 export default ToggleButtonView.extend({
 

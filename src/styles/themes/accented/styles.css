@@ -1246,6 +1246,9 @@ button i {
   font-style: normal;
   pointer-events: none;
 }
+button:disabled {
+  pointer-events: none;
+}
 button:disabled:hover {
   cursor: not-allowed;
 }
@@ -2318,7 +2321,7 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 15px;
   height: 15px;
-  margin-top: -5px;
+  margin-top: -4px;
   border-radius: 50%;
   border-width: 1px;
   border-style: solid;
@@ -2327,7 +2330,7 @@ input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   width: 15px;
   height: 15px;
-  margin-top: -5px;
+  margin-top: -4px;
   border-radius: 50%;
   border-width: 1px;
   border-style: solid;
@@ -2336,28 +2339,28 @@ input[type=range]::-ms-thumb {
   -webkit-appearance: none;
   width: 14px;
   height: 14px;
-  margin-top: -5px;
+  margin-top: -4px;
   border-radius: 50%;
   border-width: 1px;
   border-style: solid;
 }
 input[type=range]::-webkit-slider-runnable-track {
-  height: 5px;
-  border-radius: 5px;
+  height: 7px;
+  border-radius: 7px;
   border-width: 0;
   border-style: solid;
   border-color: transparent;
 }
 input[type=range]::-moz-range-track {
-  height: 5px;
-  border-radius: 5px;
+  height: 7px;
+  border-radius: 7px;
   border-width: 0;
   border-style: solid;
   border-color: transparent;
 }
 input[type=range]::-ms-track {
-  height: 5px;
-  border-radius: 5px;
+  height: 7px;
+  border-radius: 7px;
   border-width: 0;
   background: transparent;
   border-color: transparent;
@@ -2372,7 +2375,7 @@ input[type=range]::-ms-fill-upper {
   border-radius: 10px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: lightgrey;
+  background: grey;
 }
 
 .round-sliders input[type=range]::-webkit-slider-thumb,
@@ -2464,20 +2467,20 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 body:not(.binary):not(.flat-sliders):not(.flat.auto-sliders) input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
 body:not(.binary):not(.flat-sliders):not(.flat.auto-sliders) input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
 body:not(.binary):not(.flat-sliders):not(.flat.auto-sliders) input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.33);
+  box-shadow: none;
 }
 input[type=range]::-moz-range-track {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.33);
+  box-shadow: none;
 }
 
 /******************************************************************************\
@@ -2521,7 +2524,7 @@ input[type=range]::-moz-range-track {
     background-color: var(--secondary-color);
     border-color: color-mix(in srgb, var(--ambient-color) 10%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.chalk-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover, body:not(.binary).colored.accented.chalk.auto-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 25%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
@@ -2533,7 +2536,7 @@ input[type=range]::-moz-range-track {
     background-color: var(--secondary-color);
     border-color: color-mix(in srgb, var(--ambient-color) 10%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.chalk-sliders input[type=range]::-moz-range-thumb:not(:active):hover, body:not(.binary).colored.accented.chalk.auto-sliders input[type=range]::-moz-range-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 25%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
@@ -2545,7 +2548,7 @@ input[type=range]::-moz-range-track {
     background-color: var(--secondary-color);
     border-color: color-mix(in srgb, var(--ambient-color) 10%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.chalk-sliders input[type=range]::-ms-thumb:not(:active):hover, body:not(.binary).colored.accented.chalk.auto-sliders input[type=range]::-ms-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 25%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
@@ -2562,7 +2565,7 @@ input[type=range]::-moz-range-track {
     background-color: hsl(200, 100%, 66%);
     border-color: #4ab1f2;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.chalk-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover, body:not(.binary).colored.accented.chalk.auto-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -2574,7 +2577,7 @@ input[type=range]::-moz-range-track {
     background-color: hsl(200, 100%, 66%);
     border-color: #4ab1f2;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.chalk-sliders input[type=range]::-moz-range-thumb:not(:active):hover, body:not(.binary).colored.accented.chalk.auto-sliders input[type=range]::-moz-range-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -2586,7 +2589,7 @@ input[type=range]::-moz-range-track {
     background-color: hsl(200, 100%, 66%);
     border-color: #4ab1f2;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.chalk-sliders input[type=range]::-ms-thumb:not(:active):hover, body:not(.binary).colored.accented.chalk.auto-sliders input[type=range]::-ms-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -2953,7 +2956,7 @@ input[type=range]::-moz-range-track {
     background-color: var(--secondary-color);
     border-color: color-mix(in srgb, var(--ambient-color) 10%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.plastic-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover, body:not(.binary).colored.accented.plastic.auto-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
@@ -2965,7 +2968,7 @@ input[type=range]::-moz-range-track {
     background-color: var(--secondary-color);
     border-color: color-mix(in srgb, var(--ambient-color) 10%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.plastic-sliders input[type=range]::-moz-range-thumb:not(:active):hover, body:not(.binary).colored.accented.plastic.auto-sliders input[type=range]::-moz-range-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
@@ -2977,7 +2980,7 @@ input[type=range]::-moz-range-track {
     background-color: var(--secondary-color);
     border-color: color-mix(in srgb, var(--ambient-color) 10%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.plastic-sliders input[type=range]::-ms-thumb:not(:active):hover, body:not(.binary).colored.accented.plastic.auto-sliders input[type=range]::-ms-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
@@ -2994,7 +2997,7 @@ input[type=range]::-moz-range-track {
     background-color: hsl(200, 100%, 66%);
     border-color: #4ab1f2;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.plastic-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover, body:not(.binary).colored.accented.plastic.auto-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -3006,7 +3009,7 @@ input[type=range]::-moz-range-track {
     background-color: hsl(200, 100%, 66%);
     border-color: #4ab1f2;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.plastic-sliders input[type=range]::-moz-range-thumb:not(:active):hover, body:not(.binary).colored.accented.plastic.auto-sliders input[type=range]::-moz-range-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -3018,7 +3021,7 @@ input[type=range]::-moz-range-track {
     background-color: hsl(200, 100%, 66%);
     border-color: #4ab1f2;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.plastic-sliders input[type=range]::-ms-thumb:not(:active):hover, body:not(.binary).colored.accented.plastic.auto-sliders input[type=range]::-ms-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -3385,7 +3388,7 @@ input[type=range]::-moz-range-track {
     background-color: color-mix(in srgb, var(--ambient-color) 30%, var(--secondary-color));
     border-color: color-mix(in srgb, var(--ambient-color) 30%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.glass-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover, body:not(.binary).colored.accented.glass.auto-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 80%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 100%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color)) 50%, transparent) 100%) no-repeat;
@@ -3397,7 +3400,7 @@ input[type=range]::-moz-range-track {
     background-color: color-mix(in srgb, var(--ambient-color) 30%, var(--secondary-color));
     border-color: color-mix(in srgb, var(--ambient-color) 30%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.glass-sliders input[type=range]::-moz-range-thumb:not(:active):hover, body:not(.binary).colored.accented.glass.auto-sliders input[type=range]::-moz-range-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 80%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 100%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color)) 50%, transparent) 100%) no-repeat;
@@ -3409,7 +3412,7 @@ input[type=range]::-moz-range-track {
     background-color: color-mix(in srgb, var(--ambient-color) 30%, var(--secondary-color));
     border-color: color-mix(in srgb, var(--ambient-color) 30%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.glass-sliders input[type=range]::-ms-thumb:not(:active):hover, body:not(.binary).colored.accented.glass.auto-sliders input[type=range]::-ms-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 80%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 100%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color)) 50%, transparent) 100%) no-repeat;
@@ -3426,7 +3429,7 @@ input[type=range]::-moz-range-track {
     background-color: #398ad9;
     border-color: #398ad9;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.glass-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover, body:not(.binary).colored.accented.glass.auto-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d2f0ff 0%, #35bcff 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(31, 180, 255, 0.5) 100%) no-repeat;
@@ -3438,7 +3441,7 @@ input[type=range]::-moz-range-track {
     background-color: #398ad9;
     border-color: #398ad9;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.glass-sliders input[type=range]::-moz-range-thumb:not(:active):hover, body:not(.binary).colored.accented.glass.auto-sliders input[type=range]::-moz-range-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d2f0ff 0%, #35bcff 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(31, 180, 255, 0.5) 100%) no-repeat;
@@ -3450,7 +3453,7 @@ input[type=range]::-moz-range-track {
     background-color: #398ad9;
     border-color: #398ad9;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.glass-sliders input[type=range]::-ms-thumb:not(:active):hover, body:not(.binary).colored.accented.glass.auto-sliders input[type=range]::-ms-thumb:not(:active):hover {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d2f0ff 0%, #35bcff 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(31, 180, 255, 0.5) 100%) no-repeat;
@@ -3817,7 +3820,7 @@ input[type=range]::-moz-range-track {
     background-color: color-mix(in srgb, var(--ambient-color) 50%, var(--secondary-color));
     border-color: color-mix(in srgb, var(--ambient-color) 30%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.metal-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover, body:not(.binary).colored.accented.metal.auto-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 75%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 75%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color)) 100%, transparent) 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color)) 50%, transparent) 66%, color-mix(in srgb, var(--light-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 100%) no-repeat;
@@ -3829,7 +3832,7 @@ input[type=range]::-moz-range-track {
     background-color: color-mix(in srgb, var(--ambient-color) 50%, var(--secondary-color));
     border-color: color-mix(in srgb, var(--ambient-color) 30%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.metal-sliders input[type=range]::-moz-range-thumb:not(:active):hover, body:not(.binary).colored.accented.metal.auto-sliders input[type=range]::-moz-range-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 75%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 75%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color)) 100%, transparent) 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color)) 50%, transparent) 66%, color-mix(in srgb, var(--light-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 100%) no-repeat;
@@ -3841,7 +3844,7 @@ input[type=range]::-moz-range-track {
     background-color: color-mix(in srgb, var(--ambient-color) 50%, var(--secondary-color));
     border-color: color-mix(in srgb, var(--ambient-color) 30%, var(--secondary-color));
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.metal-sliders input[type=range]::-ms-thumb:not(:active):hover, body:not(.binary).colored.accented.metal.auto-sliders input[type=range]::-ms-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 75%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 75%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color)) 100%, transparent) 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color)) 50%, transparent) 66%, color-mix(in srgb, var(--light-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 10%, var(--secondary-color))) 100%) no-repeat;
@@ -3858,7 +3861,7 @@ input[type=range]::-moz-range-track {
     background-color: #2963bf;
     border-color: #398ad9;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.metal-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover, body:not(.binary).colored.accented.metal.auto-sliders input[type=range]::-webkit-slider-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(76, 195, 255, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #1fb4ff 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(31, 180, 255, 0.5) 66%, #62cbff 100%) no-repeat;
@@ -3870,7 +3873,7 @@ input[type=range]::-moz-range-track {
     background-color: #2963bf;
     border-color: #398ad9;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.metal-sliders input[type=range]::-moz-range-thumb:not(:active):hover, body:not(.binary).colored.accented.metal.auto-sliders input[type=range]::-moz-range-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(76, 195, 255, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #1fb4ff 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(31, 180, 255, 0.5) 66%, #62cbff 100%) no-repeat;
@@ -3882,7 +3885,7 @@ input[type=range]::-moz-range-track {
     background-color: #2963bf;
     border-color: #398ad9;
     transform: scale(-1) rotate(var(--light-direction));
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   }
   body:not(.binary).colored.accented.metal-sliders input[type=range]::-ms-thumb:not(:active):hover, body:not(.binary).colored.accented.metal.auto-sliders input[type=range]::-ms-thumb:not(:active):hover {
     background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(76, 195, 255, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #1fb4ff 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(31, 180, 255, 0.5) 66%, #62cbff 100%) no-repeat;

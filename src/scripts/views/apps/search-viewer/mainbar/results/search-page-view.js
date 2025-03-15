@@ -1,10 +1,10 @@
 /******************************************************************************\
 |                                                                              |
-|                              not-found-view.js                               |
+|                            search-page-view.js                               |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines the 404 / file not found view of the application.        |
+|        This defines a view used for searching and displaying results.        |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -70,7 +70,6 @@ export default BaseView.extend({
 
 			// options
 			//
-			search_kind: config.defaults.search.kind,
 			view_kind: preferences.get('view_kind'),
 			items_per_page: preferences.get('items_per_page'),
 			detail_kind: preferences.get('detail_kind'),

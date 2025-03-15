@@ -63,7 +63,7 @@ export default PreferencesFormView.extend({
 	tabs: [],
 
 	//
-	// form queryimg methods
+	// querying methods
 	//
 
 	hasChanged: function() {
@@ -80,6 +80,10 @@ export default PreferencesFormView.extend({
 		return false;
 	},
 
+	//
+	// getting methods
+	//
+
 	getValues: function() {
 
 		// concatenate values from all child views
@@ -95,8 +99,13 @@ export default PreferencesFormView.extend({
 		return values;
 	},
 
+	getActiveTab: function() {
+		let className = this.$el.find('.nav-tabs li.active').attr('class');
+		return className.replace('active', '').replace('-tab', '').replace(/-/g, '_').trim();
+	},
+
 	//
-	// form methods
+	// setting methods
 	//
 
 	setOption: function(key, value) {

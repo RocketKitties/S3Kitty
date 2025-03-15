@@ -37,7 +37,7 @@ export default SplitView.extend({
 			
 			// mainbar options
 			//
-			case 'show_exif_info':
+			case 'show_pdf_info':
 				this.setSideBarVisibility(value);
 				break;
 			case 'info_bar_size':

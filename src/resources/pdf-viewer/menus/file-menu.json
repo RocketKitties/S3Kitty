@@ -14,6 +14,26 @@
 		},
 		"divider",
 		{
+			"class": "favorites",
+			"icon": "fa fa-star",
+			"name": "Favorites",
+			"menu": [
+				{
+					"class": "add-favorites",
+					"icon": "fa fa-star",
+					"name": "Add Favorites",
+					"shortcut": "shift-command-F"
+				},
+				{
+					"class": "remove-favorites",
+					"icon": "fa fa-trash-alt",
+					"name": "Remove Favorites",
+					"shortcut": "delete"
+				}
+			]
+		},
+		"divider",
+		{
 			"class": "show-info",
 			"icon": "fa fa-info-circle",
 			"name": "Show Info",

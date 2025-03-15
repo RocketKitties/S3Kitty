@@ -705,18 +705,30 @@ export default Backbone.Router.extend({
 			import('./models/storage/directories/directory.js'),
 			import('./models/storage/directories/volume.js'),
 		]).then(([File, Directory, Volume]) => {
-			let target = link.get('target');
+			let target = link.getTarget();
 
 			// folder links
 			//
 			if (target instanceof Directory.default) {
-				if (target.isImageAlbum()) {
-					this.showGalleryLink(link, options);
-				} else if (target.isAudioAlbum()) {
-					this.showAlbumLink(link, options);
-				} else {
-					this.showFolderLink(link, options);
-				}
+				target.load({
+
+					// callbacks
+					//
+					success: () => {
+						if (target.isImageAlbum()) {
+							this.showGalleryLink(link, options);
+						} else if (target.isAudioAlbum()) {
+							this.showAlbumLink(link, options);
+						} else {
+							this.showFolderLink(link, options);
+						}
+					},
+					error: () => {
+						application.error({
+							message: "Could not load link target directory."
+						});
+					}
+				});
 
 			// volume links
 			//
@@ -744,7 +756,7 @@ export default Backbone.Router.extend({
 		let appName = application.settings.associations.get(extension);
 
 		application.launch(appName, {
-			model: link.getFile()
+			model: link.getTarget()
 		}, options);
 	},
 

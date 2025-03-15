@@ -17,7 +17,7 @@
 
 import SplitView from '../../../../views/layout/split-view.js';
 import ImageView from '../../../../views/apps/image-viewer/mainbar/image-view.js';
-import ExifInfoView from '../../../../views/apps/image-viewer/mainbar/exif-info-view.js';
+import ImageInfoView from '../../../../views/apps/image-viewer/mainbar/image-info-view.js';
 
 export default SplitView.extend({
 
@@ -37,7 +37,7 @@ export default SplitView.extend({
 			
 			// mainbar options
 			//
-			case 'show_exif_info':
+			case 'show_image_info':
 				this.setSideBarVisibility(value);
 				break;
 			case 'info_bar_size':
@@ -54,7 +54,7 @@ export default SplitView.extend({
 	//
 
 	getSideBarView: function() {
-		return new ExifInfoView({
+		return new ImageInfoView({
 			model: this.model
 		});
 	},

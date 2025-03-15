@@ -34,8 +34,8 @@ export default PreferencesFormView.extend({
 					<label><input type="checkbox"<% if (show_sidebar) { %> checked<% } %>>Sidebar</label>
 				</div>
 
-				<div class="show-exif-info checkbox-inline">
-					<label><input type="checkbox"<% if (show_exif_info) { %> checked<% } %>>Exif Info</label>
+				<div class="show-pdf-info checkbox-inline">
+					<label><input type="checkbox"<% if (show_pdf_info) { %> checked<% } %>>Pdf Info</label>
 				</div>
 		
 				<i class="active fa fa-question-circle" data-toggle="popover" title="Sidebar Panes" data-content="This is which sidebar panes to display."></i>
@@ -67,7 +67,11 @@ export default PreferencesFormView.extend({
 		<div class="sidebar-panels form-group">
 			<label class="control-label"><i class="fa fa-pause"></i>Sidebar Panels</label>
 			<div class="controls">
-			
+
+				<div class="checkbox-inline">
+					<label><input type="checkbox" value="favorites"<% if (sidebar_panels.includes('favorites')) { %> checked<% } %>>Favorites</label>
+				</div>
+
 				<div class="checkbox-inline">
 					<label><input type="checkbox" value="pages"<% if (sidebar_panels.includes('pages')) { %> checked<% } %>>Pages</label>
 				</div>
@@ -84,7 +88,7 @@ export default PreferencesFormView.extend({
 
 	events: {
 		'change .show-sidebar input': 'onChangeShowSideBar',
-		'change .show-exif-info input': 'onChangeShowExifInfo',
+		'change .show-pdf-info input': 'onChangeShowPdfInfo',
 		'change .sidebar-panels input': 'onChangeSideBarPanels',
 	},
 
@@ -96,8 +100,8 @@ export default PreferencesFormView.extend({
 		switch (key) {
 			case 'show_sidebar':
 				return this.$el.find('.show-sidebar input').is(':checked');
-			case 'show_exif_info':
-				return this.$el.find('.show-exif-info input').is(':checked');
+			case 'show_pdf_info':
+				return this.$el.find('.show-pdf-info input').is(':checked');
 			case 'sidebar_size':
 				return this.getChildView('sidebar_size').getValue();
 			case 'sidebar_min_size':
@@ -110,7 +114,7 @@ export default PreferencesFormView.extend({
 	getValues: function() {
 		return {
 			show_sidebar: this.getValue('show_sidebar'),
-			show_exif_info: this.getValue('show_exif_info'),
+			show_pdf_info: this.getValue('show_pdf_info'),
 			sidebar_size: this.getValue('sidebar_size'),
 			sidebar_min_size: this.getValue('sidebar_min_size'),
 			sidebar_panels: this.getValue('sidebar_panels')
@@ -126,8 +130,8 @@ export default PreferencesFormView.extend({
 			case 'show_sidebar':
 				this.$el.find('.show-sidebar input[type="checkbox"]').prop('checked', value);
 				break;
-			case 'show_exif_info':
-				this.$el.find('.show-exif-info input[type="checkbox"]').prop('checked', value);
+			case 'show_pdf_info':
+				this.$el.find('.show-pdf-info input[type="checkbox"]').prop('checked', value);
 				break;
 			case 'sidebar_size':
 				this.getChildView('sidebar_size').setValue(value);
@@ -202,8 +206,8 @@ export default PreferencesFormView.extend({
 		this.onChangeValue('show_sidebar', this.getValue('show_sidebar'));
 	},
 
-	onChangeShowExifInfo: function() {
-		this.onChangeValue('show_exif_info', this.getValue('show_exif_info'));
+	onChangeShowPdfInfo: function() {
+		this.onChangeValue('show_pdf_info', this.getValue('show_pdf_info'));
 	},
 
 	onChangeSideBarSize: function() {

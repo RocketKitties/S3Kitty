@@ -27,18 +27,13 @@
 		.clip-bar {
 			.toolbar {
 
-				.elapsed-time {
+				.elapsed-time, .clip-duration {
 					min-width: 50px;
-					padding-left: 5px;
+					text-align: center;
 				}
 
 				.repeat {
 					margin-left: 10px;
-				}
-
-				.clip-duration {
-					min-width: 50px;
-					text-align: center;
 				}
 
 				input[type="range"] {

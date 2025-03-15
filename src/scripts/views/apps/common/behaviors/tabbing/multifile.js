@@ -156,7 +156,6 @@ export default _.extend({}, MultiDoc, {
 		//
 		if (file) {
 			this.model = file;
-			this.directory = file.parent;
 		}
 
 		// add to currently open list of files

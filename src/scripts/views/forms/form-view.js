@@ -96,10 +96,10 @@ export default BaseView.extend(_.extend({}, PopoverShowable, Validatable, UnitSe
 		//
 		let elements = [];
 		for (let i = 0; i < els.length; i++) {
-			let $el = $(els[i]);
-			let value = $el.val();
+			let el = els[i];
+			let value = $(el).val();
 			if (values.includes(value)) {
-				elements.push($el);
+				elements.push(el);
 			}
 		}
 
@@ -116,7 +116,9 @@ export default BaseView.extend(_.extend({}, PopoverShowable, Validatable, UnitSe
 		//
 		for (let key in values) {
 			let value = values[key];
-			this.setValue(key, value);
+			if (this.setValue) {
+				this.setValue(key, value);
+			}
 		}
 	},
 

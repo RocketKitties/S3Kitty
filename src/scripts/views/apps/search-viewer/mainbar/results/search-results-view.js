@@ -360,7 +360,7 @@ export default BaseView.extend({
 	//
 
 	templateContext: function() {
-		let search_kind = this.options.search_kind;
+		let search_kind = config.apps.search_viewer.search_kind;
 
 		return {
 			query: decodeURI(this.options.query),
@@ -371,6 +371,7 @@ export default BaseView.extend({
 	},
 
 	onRender: function() {
+		let options = config.apps.search_viewer.options;
 		this.fetchAndShowResults();
 
 		// set initial state
@@ -378,17 +379,17 @@ export default BaseView.extend({
 		if (this.options.search) {
 			this.setSearch(this.options.search);
 		}
-		if (!config.defaults.search.options || config.defaults.search.options == false || config.defaults.search.options.length == 0) {
+		if (!options || options == false || options.length == 0) {
 			this.$el.find('.options').hide();
 		}
-		if (config.defaults.search.options && config.defaults.search.options.length > 0) {
-			if (!config.defaults.search.options.includes('view_kind')) {
+		if (options && options.length > 0) {
+			if (!options.includes('view_kind')) {
 				this.$el.find('.options .view-kind').hide();
 			}
-			if (!config.defaults.search.options.includes('detail_kind')) {
+			if (!options.includes('detail_kind')) {
 				this.$el.find('.options .detail-kind').hide();
 			}
-			if (!config.defaults.search.options.includes('create_date')) {
+			if (!options.includes('create_date')) {
 				this.$el.find('.options .create-date').hide();
 			}
 		}
@@ -466,8 +467,14 @@ export default BaseView.extend({
 
 	fetchAndShowResults: function() {
 		let query = this.options.query;
-		let directory = config.defaults.search.directory;
-		let search_kind = this.options.search_kind;
+		let directory = config.apps.search_viewer.directory;
+		let search_kind = config.apps.search_viewer.search_kind;
+
+		// set default search directory
+		//
+		if (directory == undefined) {
+			directory = '/Shared'
+		}
 
 		// fetch and show results
 		//

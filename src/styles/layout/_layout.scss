@@ -349,7 +349,6 @@ hr {
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	margin-bottom: 10px;
-	line-height: 25px;
 
 	&.emphasis {
 		width: 75%;
@@ -358,13 +357,6 @@ hr {
 
 	h3:first-child {
 		margin-top: 10px;
-	}
-
-	.buttons {
-		display: flex;
-		height: 25px;
-		margin-left: auto;
-		float: right;
 	}
 }
 

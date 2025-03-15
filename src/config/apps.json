@@ -371,7 +371,10 @@
 		"disabled": false,
 		"hidden": false,
 		"args": false,
-		"color": "cyan"
+		"color": "cyan",
+		"placeholder": "Search for terms or text.",
+		"options": ["view_kind", "detail_kind", "create_date"],
+		"search_directory": "/Shared"
 	},
 
 	"settings_browser": {

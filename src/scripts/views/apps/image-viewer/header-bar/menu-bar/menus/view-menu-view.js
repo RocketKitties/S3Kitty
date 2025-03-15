@@ -56,7 +56,7 @@ export default ViewMenuView.extend({
 
 		// mainbar options
 		//
-		'click .show-exif-info': 'onClickOption',
+		'click .show-image-info': 'onClickOption',
 
 		// window options
 		//
@@ -129,7 +129,7 @@ export default ViewMenuView.extend({
 
 			// mainbar options
 			//
-			'show-exif-info': preferences.get('show_exif_info')
+			'show-image-info': preferences.get('show_image_info')
 		};
 	},
 

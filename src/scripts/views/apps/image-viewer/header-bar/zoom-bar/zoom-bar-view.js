@@ -249,9 +249,7 @@ export default ToolbarView.extend({
 			//
 			onchange: (zoom) => this.setZoom(zoom)
 		}));
-		this.showChildView('fill_screen', new FullScreenButtonView({
-			model: this.model
-		}));
+		this.showChildView('fill_screen', new FullScreenButtonView());
 
 		// set initial state
 		//

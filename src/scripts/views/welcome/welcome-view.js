@@ -90,10 +90,10 @@ export default BaseView.extend({
 						</div>
 						<% } %>
 
-						<% if (config.defaults.search && !config.defaults.search.hidden) { %>
+						<% if (branding.welcome.search) { %>
 						<div class="search row">
 							<div class="input-group">
-								<input type="text" class="form-control" placeholder="<%= config.defaults.search.placeholder || 'Search' %>">
+								<input type="text" class="form-control" placeholder="<%= config.apps.search_viewer.placeholder || 'Search' %>">
 								<div class="input-group-addon btn" data-toggle="tooltip" title="Search <%= application.name %>">
 									<i class="active fa fa-search"></i>
 								</div>

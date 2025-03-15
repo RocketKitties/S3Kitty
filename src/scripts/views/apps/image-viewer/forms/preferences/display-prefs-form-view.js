@@ -34,8 +34,8 @@ export default PreferencesFormView.extend({
 					<label><input type="checkbox"<% if (show_sidebar) { %> checked<% } %>>Sidebar</label>
 				</div>
 		
-				<div class="show-exif-info checkbox-inline">
-					<label><input type="checkbox"<% if (show_exif_info) { %> checked<% } %>>Exif Info</label>
+				<div class="show-image-info checkbox-inline">
+					<label><input type="checkbox"<% if (show_image_info) { %> checked<% } %>>Image Info</label>
 				</div>
 				
 				<i class="active fa fa-question-circle" data-toggle="popover" title="Sidebar Panes" data-content="This is which sidebar panes to display."></i>
@@ -69,9 +69,13 @@ export default PreferencesFormView.extend({
 			<div class="controls">
 		
 				<div class="checkbox-inline">
+					<label><input type="checkbox" value="favorites"<% if (sidebar_panels.includes('favorites')) { %> checked<% } %>>Favorites</label>
+				</div>
+
+				<div class="checkbox-inline">
 					<label><input type="checkbox" value="images"<% if (sidebar_panels.includes('images')) { %> checked<% } %>>Images</label>
 				</div>
-		
+
 				<i class="active fa fa-question-circle" data-toggle="popover" title="Sidebar Panels" data-content="This is which panels are shown in the sidebar window pane."></i>
 			</div>
 		</div>
@@ -120,7 +124,7 @@ export default PreferencesFormView.extend({
 
 	events: {
 		'change .show-sidebar input': 'onChangeShowSideBar',
-		'change .show-exif-info input': 'onChangeShowExifInfo',
+		'change .show-image-info input': 'onChangeShowImageInfo',
 		'change .sidebar-panels input': 'onChangeSideBarPanels',
 		'change .sidebar-view-kind input': 'onChangeSideBarViewKind'
 	},
@@ -133,8 +137,8 @@ export default PreferencesFormView.extend({
 		switch (key) {
 			case 'show_sidebar':
 				return this.$el.find('.show-sidebar input').is(':checked');
-			case 'show_exif_info':
-				return this.$el.find('.show-exif-info input').is(':checked');
+			case 'show_image_info':
+				return this.$el.find('.show-image-info input').is(':checked');
 			case 'sidebar_size':
 				return this.getChildView('sidebar_size').getValue();
 			case 'sidebar_min_size':
@@ -169,8 +173,8 @@ export default PreferencesFormView.extend({
 			case 'show_sidebar':
 				this.$el.find('.show-sidebar input[type="checkbox"]').prop('checked', value);
 				break;
-			case 'show_exif_info':
-				this.$el.find('.show-exif-info input[type="checkbox"]').prop('checked', value);
+			case 'show_image_info':
+				this.$el.find('.show-image-info input[type="checkbox"]').prop('checked', value);
 				break;
 			case 'sidebar_size':
 				this.getChildView('sidebar_size').setValue(value);

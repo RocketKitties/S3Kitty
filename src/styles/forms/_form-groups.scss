@@ -111,6 +111,10 @@ $controls-height: 30px;
 			}
 		}
 
+		.radio {
+			margin: 5px 0;
+		}
+
 		> i {
 			position: relative;
 			line-height: 30px;
@@ -255,6 +259,12 @@ form + form {
 
 	.radio, .checkbox, .radio-inline, .checkbox-inline, .color-inline {
 		padding-top: 0;
+	}
+
+	.checkbox-inline {
+		> input[type="checkbox"] {
+			margin-top: 0;
+		}
 	}
 }
 

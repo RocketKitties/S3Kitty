@@ -15,6 +15,26 @@
 			},
 			"divider",
 			{
+				"class": "favorites",
+				"icon": "fa fa-star",
+				"name": "Favorites",
+				"menu": [
+					{
+						"class": "add-favorites",
+						"icon": "fa fa-star",
+						"name": "Add Favorites",
+						"shortcut": "shift-command-F"
+					},
+					{
+						"class": "remove-favorites",
+						"icon": "fa fa-trash-alt",
+						"name": "Remove Favorites",
+						"shortcut": "delete"
+					}
+				]
+			},
+			"divider",
+			{
 				"class": "show-info",
 				"icon": "fa fa-info-circle",
 				"name": "Show Info",
@@ -266,10 +286,24 @@
 				"state": "unselected",
 				"menu": [
 					{
+						"class": "show-favorites-panel",
+						"group": "show-sidebar-panel",
+						"icon": "fa fa-star",
+						"name": "Favorites",
+						"state": "unselected"
+					},
+					{
 						"class": "show-pages-panel",
 						"group": "show-sidebar-panel",
 						"icon": "fa fa-file",
 						"name": "Pages",
+						"state": "unselected"
+					},
+					{
+						"class": "show-files-panel",
+						"group": "show-sidebar-panel",
+						"icon": "fa fa-folder",
+						"name": "Files",
 						"state": "unselected"
 					}
 				]
@@ -304,9 +338,9 @@
 				]
 			},
 			{
-				"class": "show-exif-info",
+				"class": "show-pdf-info",
 				"icon": "fa fa-table",
-				"name": "Exif Info",
+				"name": "Pdf Info",
 				"state": "unselected"
 			},
 			"divider",

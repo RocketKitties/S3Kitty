@@ -1,54 +1,40 @@
 /******************************************************************************\
 |                                                                              |
-|                              replay-button-view.js                           |
+|                           _dark-search-bars.scss                             |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines the view for a particular type of toolbar button.        |
+|        This defines the dom and svg visual styles for this application.      |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
 |        This file is subject to the terms and conditions defined in           |
-|        'LICENSE.md', which is part of this source code distribution.         |
+|        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
 |        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
-import ButtonView from '../../../../../views/apps/common/toolbars/buttons/button-view.js';
+@use "../../../../colors/colors";
 
-export default ButtonView.extend({
+//
+// variables
+//
 
-	//
-	// attributes
-	//
-	
-	template: '<i class="fa fa-redo"></i>',
+$placeholder-text-color: colors.$light-grey;
 
-	//
-	// rendering methods
-	//
+//
+// styles
+//
 
-	onRender: function() {
-		this.setDisabled(!this.parent.app.getClipNumber() || !this.parent.app.numClips() || this.parent.app.numClips() == 1);
-	},
-
-	//
-	// event handling methods
-	//
-
-	onLoad: function() {
-
-		// set initial state
-		//
-		this.setDisabled(false);
-	},
-
-	//
-	// mouse event handling methods
-	//
-
-	onClick: function() {
-		this.parent.replay();
+body:not(.binary).dark {
+	.body {
+		.search-bar {
+			.input {
+				[contenteditable="true"]:empty:before {
+					color: $placeholder-text-color;
+				}
+			}
+		}
 	}
-});
+}

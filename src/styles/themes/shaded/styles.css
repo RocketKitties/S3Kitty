@@ -272,6 +272,9 @@ button i {
   font-style: normal;
   pointer-events: none;
 }
+button:disabled {
+  pointer-events: none;
+}
 button:disabled:hover {
   cursor: not-allowed;
 }

@@ -25,6 +25,11 @@ export default ViewMenuView.extend({
 
 	events: {
 
+		// play options
+		//
+		'click .play-pause': 'onClickPlayPause',
+		'click .replay': 'onClickReplay',
+
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
@@ -80,8 +85,9 @@ export default ViewMenuView.extend({
 			// sidebar options
 			//
 			'show-sidebar': preferences.get('show_sidebar'),
+			'show-favorites-panel': sidebarPanels.includes('favorites'),
 			'show-videos-panel': sidebarPanels.includes('videos'),
-			'show-video-info': preferences.get('show_video_info'),
+			'show-files-panel': sidebarPanels.includes('files'),
 
 			// sidebar item options
 			//
@@ -96,5 +102,17 @@ export default ViewMenuView.extend({
 			'medium-tile-size': sidebarTileSize == 'medium',
 			'large-tile-size': sidebarTileSize == 'large'
 		};
+	},
+
+	//
+	// mouse event handling methods
+	//
+
+	onClickPlayPause: function() {
+		this.parent.app.toggle();
+	},
+
+	onClickReplay: function() {
+		this.parent.app.replay();
 	}
 });

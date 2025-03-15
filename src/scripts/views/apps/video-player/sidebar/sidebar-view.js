@@ -16,7 +16,9 @@
 \******************************************************************************/
 
 import SideBarView from '../../../../views/apps/common/sidebar/sidebar-view.js';
+import FavoritesPanelView from '../../../../views/apps/video-player/sidebar/panels/favorites-panel-view.js';
 import VideosPanelView from '../../../../views/apps/video-player/sidebar/panels/videos-panel-view.js';
+import FilesPanelView from '../../../../views/apps/video-player/sidebar/panels/files-panel-view.js';
 
 export default SideBarView.extend({
 
@@ -24,7 +26,21 @@ export default SideBarView.extend({
 	// attributes
 	//
 
-	panels: ['videos'],
+	panels: ['favorites', 'videos', 'files'],
+
+	//
+	// attribute methods
+	//
+
+	enabled: function() {
+		let isSignedIn = application.isSignedIn();
+
+		return {
+			'favorites': isSignedIn,
+			'videos': true,
+			'files': isSignedIn
+		};
+	},
 
 	//
 	// querying methods
@@ -59,6 +75,19 @@ export default SideBarView.extend({
 		this.model = model;
 	},
 
+	setCollection: function(collection) {
+
+		// update attributes
+		//
+		this.collection = collection;
+
+		// update view
+		//
+		if (this.hasChildView('videos')) {
+			this.showVideosPanel();
+		}
+	},
+
 	setSelected: function(model, options) {
 		this.getChildView('videos').setSelectedModel(model, options);
 
@@ -76,10 +105,31 @@ export default SideBarView.extend({
 		// show specified panel
 		//
 		switch (panel) {
+			case 'favorites':
+				this.showFavoritesPanel();
+				break;
 			case 'videos':
 				this.showVideosPanel();
 				break;
+			case 'files':
+				this.showFilesPanel();
+				break;
 		}
+	},
+
+	showFavoritesPanel: function() {
+		this.showChildView('favorites', new FavoritesPanelView({
+
+			// options
+			//
+			view_kind: this.options.view_kind,
+
+			// callback options
+			//
+			onchange: this.options.onchange,
+			onselect: this.options.onselect,
+			ondeselect: this.options.ondeselect
+		}));
 	},
 
 	showVideosPanel: function() {
@@ -94,11 +144,40 @@ export default SideBarView.extend({
 		}));		
 	},
 
+	showFilesPanel: function() {
+		this.showChildView('files', new FilesPanelView({
+			model: application.getDirectory(),
+
+			// options
+			//
+			view_kind: this.options.view_kind,
+
+			// callbacks
+			//
+			onchange: () => this.onChange(),
+			onselect: (item) => this.onOpen(item)
+		}));
+	},
+
 	//
 	// event handling methods
 	//
 
 	onChange: function() {
-		this.showVideosPanel();
+
+		// update panels
+		//
+		if (this.hasChildView('videos')) {
+			this.getChildView('videos').update();
+		}
+		if (this.hasChildView('files')) {
+			this.getChildView('files').update();
+		}
+
+		// perform callback
+		//
+		if (this.options.onchange) {
+			this.options.onchange();
+		}
 	}
 });

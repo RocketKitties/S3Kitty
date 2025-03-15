@@ -228,9 +228,9 @@
 			]
 		},
 		{
-			"class": "show-exif-info",
+			"class": "show-image-info",
 			"icon": "fa fa-table",
-			"name": "Exif Info",
+			"name": "Image Info",
 			"state": "unselected"
 		},
 		"divider",

@@ -119,10 +119,24 @@
 			"state": "unselected",
 			"menu": [
 				{
+					"class": "show-favorites-panel",
+					"group": "show-sidebar-panel",
+					"icon": "fa fa-star",
+					"name": "Favorites",
+					"state": "unselected"
+				},
+				{
 					"class": "show-pages-panel",
 					"group": "show-sidebar-panel",
 					"icon": "fa fa-file",
 					"name": "Pages",
+					"state": "unselected"
+				},
+				{
+					"class": "show-files-panel",
+					"group": "show-sidebar-panel",
+					"icon": "fa fa-folder",
+					"name": "Files",
 					"state": "unselected"
 				}
 			]
@@ -157,9 +171,9 @@
 			]
 		},
 		{
-			"class": "show-exif-info",
+			"class": "show-pdf-info",
 			"icon": "fa fa-table",
-			"name": "Exif Info",
+			"name": "Pdf Info",
 			"state": "unselected"
 		},
 		"divider",

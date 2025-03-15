@@ -20,6 +20,7 @@ import Directory from '../../../models/storage/directories/directory.js';
 import Items from '../../../collections/storage/items.js';
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import ItemShareable from '../../../views/apps/common/behaviors/sharing/item-shareable.js';
+import ItemFavorable from '../../../views/apps/common/behaviors/opening/item-favorable.js';
 import HeaderBarView from '../../../views/apps/video-player/header-bar/header-bar-view.js';
 import SideBarView from '../../../views/apps/video-player/sidebar/sidebar-view.js';
 import VideoSplitView from '../../../views/apps/video-player/mainbar/video-split-view.js';
@@ -27,7 +28,7 @@ import FooterBarView from '../../../views/apps/video-player/footer-bar/footer-ba
 import PreferencesFormView from '../../../views/apps/video-player/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
-export default AppSplitView.extend(_.extend({}, ItemShareable, {
+export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, {
 
 	//
 	// attributes
@@ -101,10 +102,6 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, {
 	//
 	// getting methods
 	//
-
-	getVideoView: function() {
-		return this.getChildView('mainbar mainbar');
-	},
 
 	getHomeDirectory: function() {
 		if (application.isSignedIn()) {
@@ -188,6 +185,10 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, {
 		} else {
 			return [];
 		}
+	},
+
+	getVideoView: function() {
+		return this.getChildView('mainbar mainbar');
 	},
 
 	getStatusBarView: function() {
@@ -294,6 +295,32 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, {
 		this.getChildView('header clip').pause();
 	},
 
+	toggle: function() {
+		if (!this.isPlaying()) {
+			this.play();
+		} else {
+			this.pause();
+		}
+	},
+
+	replay: function() {
+		this.setClipTime(0);
+	},
+
+	//
+	// full screen methods
+	//
+
+	toggleFullScreen: function() {
+
+		// request full screen
+		//
+		let videoView = this.getVideoView();
+		if (videoView) {
+			videoView.toggleFullScreen();
+		}
+	},
+
 	//
 	// file opening methods
 	//
@@ -310,8 +337,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, {
 
 		// update sidebar
 		//
-		this.getChildView('sidebar').collection = this.collection;
-		this.getChildView('sidebar').render();
+		this.getChildView('sidebar').setCollection(this.collection);
 
 		// load item
 		//
@@ -330,8 +356,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, {
 
 		// update sidebar
 		//
-		this.getChildView('sidebar').collection = this.collection;
-		this.getChildView('sidebar').render();
+		this.getChildView('sidebar').setCollection(this.collection);
 
 		// load first item
 		//
@@ -484,7 +509,12 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, {
 			//
 			panels: this.preferences.get('sidebar_panels'),
 			view_kind: this.preferences.get('sidebar_view_kind'),
-			tile_size: this.preferences.get('sidebar_tile_size')
+			tile_size: this.preferences.get('sidebar_tile_size'),
+
+			// callbacks
+			//
+			onselect: (item) => this.onSelect(item),
+			ondeselect: (item) => this.onDeselect(item)
 		});
 	},
 
@@ -501,7 +531,8 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, {
 			// callbacks
 			//
 			onload: () => this.onLoad(),
-			onclick: () => this.onClickVideo()
+			onclick: () => this.onClickVideo(),
+			onerror: () => this.onError()
 		});
 	},
 
@@ -613,28 +644,9 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, {
 		this.getChildView('header').onChange();
 	},
 
-	//
-	// selection event handling methods
-	//
-
-	onSelect: function() {
-		let selected = this.getSelected();
-		if (selected.length > 0) {
-
-			// set clip to selected
-			//
-			let model = selected[0].model;
-			let index = this.collection.indexOf(model) + 1;
-			this.setClipNumber(index);
-		}
-
-		if (!event) {
-			return;
-		}
-
-		// block event from parent
-		//
-		this.block(event);
+	onError: function() {
+		this.pause();
+		this.replay();
 	},
 
 	//
@@ -642,11 +654,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, {
 	//
 
 	onClickVideo: function() {
-		if (!this.isPlaying()) {
-			this.play();
-		} else {
-			this.pause();
-		}
+		this.toggle();
 	},
 
 	/*

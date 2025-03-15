@@ -30,6 +30,8 @@ export default FileMenuView.extend({
 		'click .open-prev': 'onClickOpenPrev',
 		'click .open-next': 'onClickOpenNext',
 		'click .open-last': 'onClickOpenLast',
+		'click .add-favorites': 'onClickAddFavorites',
+		'click .remove-favorites': 'onClickRemoveFavorites',
 		'click .show-info': 'onClickShowInfo',
 		'click .download-file': 'onClickDownloadFile',
 		'click .close-window': 'onClickCloseWindow'
@@ -40,8 +42,10 @@ export default FileMenuView.extend({
 	//
 
 	enabled: function() {
+		let isSignedIn = application.isSignedIn();
 		let isOpen = this.parent.app.model != undefined;
 		let isMultiple = this.parent.app.collection.length > 1;
+		let hasSelectedFavorites = this.parent.app.hasSelectedFavorites();
 
 		return {
 			'new-window': true,
@@ -51,6 +55,8 @@ export default FileMenuView.extend({
 			'open-prev': isMultiple,
 			'open-next': isMultiple,
 			'open-last': isMultiple,
+			'add-favorites': isSignedIn,
+			'remove-favorites': hasSelectedFavorites,
 			'show-info': isOpen,
 			'download-file': isOpen,
 			'close-window': true
@@ -83,6 +89,14 @@ export default FileMenuView.extend({
 
 	onClickOpenLast: function() {
 		this.parent.app.setClipNumber(this.parent.app.getClipNumber('last'));
+	},
+
+	onClickAddFavorites: function() {
+		this.parent.app.showAddFavoritesDialog();
+	},
+
+	onClickRemoveFavorites: function() {
+		this.parent.app.removeSelectedFavorites();
 	},
 
 	onClickShowInfo: function() {

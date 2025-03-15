@@ -667,11 +667,7 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFav
 		//
 		let imageView = this.getImageView();
 		if (imageView) {
-			if (!imageView.isFullScreen()) {
-				imageView.requestFullScreen();
-			} else {
-				imageView.exitFullScreen();
-			}
+			imageView.toggleFullScreen();
 		}
 	},
 
@@ -817,7 +813,7 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFav
 			// options
 			//
 			preferences: this.preferences,
-			show_sidebar: this.preferences.get('show_exif_info'),
+			show_sidebar: this.preferences.get('show_image_info'),
 			sidebar_size: this.preferences.get('info_bar_size'),
 
 			// callbacks

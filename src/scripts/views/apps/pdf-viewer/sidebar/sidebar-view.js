@@ -18,7 +18,9 @@
 import Page from '../../../../models/pages/page.js';
 import BaseCollection from '../../../../collections/base-collection.js';
 import SideBarView from '../../../../views/apps/common/sidebar/sidebar-view.js';
+import FavoritesPanelView from '../../../../views/apps/pdf-viewer/sidebar/panels/favorites-panel-view.js';
 import PagesPanelView from '../../../../views/apps/pdf-viewer/sidebar/panels/pages-panel-view.js';
+import FilesPanelView from '../../../../views/apps/image-viewer/sidebar/panels/files-panel-view.js';
 
 export default SideBarView.extend({
 
@@ -26,7 +28,7 @@ export default SideBarView.extend({
 	// attributes
 	//
 
-	panels: ['pages'],
+	panels: ['favorites', 'pages', 'files'],
 
 	//
 	// constructor
@@ -88,10 +90,31 @@ export default SideBarView.extend({
 		// show specified panel
 		//
 		switch (panel) {
+			case 'favorites':
+				this.showFavoritesPanel();
+				break;
 			case 'pages':
 				this.showPagesPanel();
 				break;
+			case 'files':
+				this.showFilesPanel();
+				break;
 		}
+	},
+
+	showFavoritesPanel: function() {
+		this.showChildView('favorites', new FavoritesPanelView({
+
+			// options
+			//
+			view_kind: this.options.view_kind,
+
+			// callback options
+			//
+			onchange: this.options.onchange,
+			onselect: this.options.onselect,
+			ondeselect: this.options.ondeselect
+		}));
 	},
 
 	showPagesPanel: function() {
@@ -104,6 +127,21 @@ export default SideBarView.extend({
 			view_kind: this.options.view_kind,
 			tile_size: this.options.tile_size
 		}));		
+	},
+
+	showFilesPanel: function() {
+		this.showChildView('files', new FilesPanelView({
+			model: application.getDirectory(),
+
+			// options
+			//
+			view_kind: this.options.view_kind,
+
+			// callbacks
+			//
+			onchange: () => this.onChange(),
+			onselect: (item) => this.onOpen(item)
+		}));
 	},
 	
 	//

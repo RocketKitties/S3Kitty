@@ -21,12 +21,6 @@ import UsersView from '../../../../views/apps/profile-browser/mainbar/users/user
 export default UsersView.extend({
 
 	//
-	// attributes
-	//
-
-	className: 'user connections panel',
-
-	//
 	// constructor
 	//
 

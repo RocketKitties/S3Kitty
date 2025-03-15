@@ -61,12 +61,6 @@
 		}
 	},
 
-	"search": {
-		"directory": "/Shared",
-		"placeholder": "Search",
-		"hidden": true
-	},
-
 	"settings": {
 		"enable_notifications": true,
 		"mute_sounds": false,

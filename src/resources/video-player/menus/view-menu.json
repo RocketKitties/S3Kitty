@@ -1,6 +1,19 @@
 {
 	"items": [
 		{
+			"class": "play-pause",
+			"icon": "fa fa-play",
+			"name": "Play / Pause",
+			"shortcut": "command-P"
+		},
+		{
+			"class": "replay",
+			"icon": "fa fa-redo",
+			"name": "Replay",
+			"shortcut": "command-S"
+		},
+		"divider",
+		{
 			"class": "show-toolbars",
 			"icon": "fa fa-wrench",
 			"name": "Toolbars",
@@ -36,10 +49,24 @@
 			"state": "unselected",
 			"menu": [
 				{
+					"class": "show-favorites-panel",
+					"group": "show-sidebar-panel",
+					"icon": "fa fa-star",
+					"name": "Favorites",
+					"state": "unselected"
+				},
+				{
 					"class": "show-videos-panel",
 					"group": "show-sidebar-panel",
 					"icon": "fa fa-video",
 					"name": "Videos",
+					"state": "unselected"
+				},
+				{
+					"class": "show-files-panel",
+					"group": "show-sidebar-panel",
+					"icon": "fa fa-folder",
+					"name": "Files",
 					"state": "unselected"
 				}
 			]

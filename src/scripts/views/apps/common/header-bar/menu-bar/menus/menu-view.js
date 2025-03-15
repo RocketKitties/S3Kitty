@@ -29,8 +29,8 @@ export default BaseView.extend({
 	className: 'dropdown-menu',
 
 	itemTemplate: template(`
-		<li role="presentation"<% if (itemClass || state == 'selected' || tags) { %> class="<%= itemClass %><% if (tags) { %> <%= tags %><% } %><% if (state == 'selected') { %> selected<% } %>"<% } %>>
-			<a class="<%= linkClass %><% if (menu) { %> dropdown-toggle<% } %>">
+		<li role="presentation"<% if (item_class || state == 'selected' || tags) { %> class="<%= item_class %><% if (tags) { %> <%= tags %><% } %><% if (state == 'selected') { %> selected<% } %>"<% } %>>
+			<a class="<%= link_class %><% if (menu) { %> dropdown-toggle<% } %>">
 				<% if (state == 'selected' || state == 'unselected') { %>
 				<i class="fa fa-check"></i>
 				<% } %>
@@ -50,7 +50,7 @@ export default BaseView.extend({
 				<% } %>
 
 				<% if (shortcut) { %>
-				<span class="<%= shortcutClass %>"><%= shortcut %></span>
+				<span class="<%= shortcut_class %>"><%= shortcut %></span>
 				<% } %>
 			</a>
 			<% if (menu) { %>
@@ -792,10 +792,10 @@ export default BaseView.extend({
 			name: item.name,
 			icon: item.icon,
 			state: item.state,
-			itemClass: className,
-			linkClass: item.class,
+			item_class: className,
+			link_class: item.class,
 			shortcut: this.getShortcutName(item.shortcut),
-			shortcutClass: this.getShortcutClass(item.shortcut),
+			shortcut_class: this.getShortcutClass(item.shortcut),
 			menu: item.menu? this.toHtml(item.menu) : undefined,
 			tags: item.tags? this.tagsToString(item.tags) : undefined,
 			icons: this.constructor.icons
@@ -1274,7 +1274,7 @@ export default BaseView.extend({
 				object.platform = platform;
 			}
 			if (dropdown.length > 0) {
-				object.menu = this.getDropdownObjects(dropdown);
+				object.menu = this.toObjects(dropdown);
 			}
 		} else {
 			object = "divider";
@@ -1283,18 +1283,14 @@ export default BaseView.extend({
 		return object;
 	},
 
-	getDropdownObjects: function(element) {
-		let elements = $(element).find('> li');
-		let items = [];
-		for (let i = 0; i < elements.length; i++) {
-			let item = elements[i];
-			items.push(this.dropdownToObject(item));
-		}
-		return items;
-	},
-
 	toObjects: function(element) {
-		return this.getDropdownObjects(element);
+		let dropdowns = $(element).find('> li');
+		let objects = [];
+		for (let i = 0; i < dropdowns.length; i++) {
+			let dropdown = dropdowns[i];
+			objects.push(this.dropdownToObject(dropdown));
+		}
+		return objects;
 	},
 
 	toJson: function(element) {

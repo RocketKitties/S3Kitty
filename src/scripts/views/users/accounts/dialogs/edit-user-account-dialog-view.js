@@ -101,6 +101,14 @@ export default FormModalView.extend({
 			success: () => {
 				this.close();
 
+				// show alert
+				//
+				if (this.model.hasChanged('email') && application.isEmailEnabled()) {
+					application.alert({
+						message: "Check your email for a link to change your account's email address."
+					})
+				}
+
 				// perform callback
 				//
 				if (this.options.onchange) {

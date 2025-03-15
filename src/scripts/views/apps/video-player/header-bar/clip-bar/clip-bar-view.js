@@ -17,8 +17,9 @@
 
 import ToolbarView from '../../../../../views/apps/common/toolbars/toolbar-view.js';
 import Timeable from '../../../../../views/behaviors/effects/timeable.js';
-import PlayButtonView from '../../../../../views/apps/video-player/header-bar/clip-bar/play-button-view.js';
-import ReplayButtonView from '../../../../../views/apps/video-player/header-bar/clip-bar/replay-button-view.js';
+import PlayButtonView from '../../../../../views/apps/video-player/header-bar/clip-bar/buttons/play-button-view.js';
+import ReplayButtonView from '../../../../../views/apps/video-player/header-bar/clip-bar/buttons/replay-button-view.js';
+import FullScreenButtonView from '../../../../../views/apps/video-player/header-bar/clip-bar/buttons/full-screen-button-view.js';
 import TimeUtils from '../../../../../utilities/time/time-utils.js';
 
 export default ToolbarView.extend(_.extend({}, Timeable, {
@@ -33,11 +34,13 @@ export default ToolbarView.extend(_.extend({}, Timeable, {
 		<input type="range"<% if (min != undefined) { %> min="<%= min %>"<% } %> max="<%= max %>" <% if (step != undefined) { %> step="<%= step %>"<% } %><% if (value != undefined) { %> value="<%= value %>"<% } %> data-toggle="tooltip" title="Current Clip" data-placement="bottom" />
 		<div class="clip-duration input-label"><%= duration %></div>
 		<div class="replay hidden-xs" data-toggle="tooltip" title="Replay" data-placement="bottom"></div>
+		<div class="fill-screen hidden-xxs" data-toggle="tooltip" title="Full Screen"></div>
 	`),
 
 	regions: {
 		play: '.play',
-		replay: '.replay'
+		replay: '.replay',
+		fill_screen: '.fill-screen'
 	},
 
 	events: {
@@ -114,7 +117,7 @@ export default ToolbarView.extend(_.extend({}, Timeable, {
 	},
 	
 	replay: function() {
-		this.parent.app.setClipTime(0);
+		this.parent.app.replay();
 	},
 
 	//
@@ -143,6 +146,7 @@ export default ToolbarView.extend(_.extend({}, Timeable, {
 		//
 		this.showChildView('play', new PlayButtonView());
 		this.showChildView('replay', new ReplayButtonView());
+		this.showChildView('fill_screen', new FullScreenButtonView());
 	},
 
 	update: function() {

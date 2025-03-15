@@ -16,10 +16,12 @@
 \******************************************************************************/
 
 import File from '../../../models/storage/files/file.js';
+import Directory from '../../../models/storage/directories/directory.js';
 import PdfFile from '../../../models/storage/files/pdf-file.js';
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import Findable from '../../../views/apps/common/behaviors/finding/findable.js';
 import ItemShareable from '../../../views/apps/common/behaviors/sharing/item-shareable.js';
+import ItemFavorable from '../../../views/apps/common/behaviors/opening/item-favorable.js';
 import ItemInfoShowable from '../../../views/apps/file-browser/dialogs/info/behaviors/item-info-showable.js';
 import HeaderBarView from '../../../views/apps/pdf-viewer/header-bar/header-bar-view.js';
 import SideBarView from '../../../views/apps/pdf-viewer/sidebar/sidebar-view.js';
@@ -29,7 +31,7 @@ import PreferencesFormView from '../../../views/apps/pdf-viewer/forms/preference
 import FileUtils from '../../../utilities/files/file-utils.js';
 import Browser from '../../../utilities/web/browser.js';
 
-export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInfoShowable, {
+export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemFavorable, ItemInfoShowable, {
 
 	//
 	// attributes
@@ -254,9 +256,41 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 
 	openItem: function(item, options) {
 
+		// open directory or file
+		//
+		if (item instanceof Directory) {
+			this.openDirectory(item, options);
+		} else if (item instanceof File) {
+			this.openFile(item, options);
+		}
+	},
+
+	openFile: function(file, options) {
+
 		// load item
 		//
-		this.loadFile(item, options);
+		this.loadFile(file, options);
+	},
+
+	openDirectory: function(directory, options) {
+		import(
+			'../../../views/apps/pdf-viewer/dialogs/files/open-pdf-file-dialog-view.js'
+		).then((OpenPdfFileDialogView) => {
+
+			// show open pdf files dialog
+			//
+			application.show(new OpenPdfFileDialogView.default(_.extend({
+				model: directory,
+
+				// callbacks
+				//
+				onopen: (items) => {
+					if (items) {
+						this.openFile(items[0]);
+					}
+				}
+			}, options)));
+		});
 	},
 
 	//
@@ -528,7 +562,12 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 			//
 			panels: this.preferences.get('sidebar_panels'),
 			view_kind: this.preferences.get('sidebar_view_kind'),
-			tile_size: this.preferences.get('sidebar_tile_size')
+			tile_size: this.preferences.get('sidebar_tile_size'),
+
+			// callbacks
+			//
+			onselect: (item) => this.onSelect(item),
+			ondeselect: (item) => this.onDeselect(item)
 		});
 	},
 
@@ -539,7 +578,7 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 			// options
 			//
 			preferences: this.preferences,
-			show_sidebar: this.preferences.get('show_exif_info'),
+			show_sidebar: this.preferences.get('show_pdf_info'),
 			sidebar_size: this.preferences.get('info_bar_size'),
 
 			// callbacks

@@ -195,6 +195,9 @@ export default SideBarView.extend({
 
 		// update panels
 		//
+		if (this.hasChildView('images')) {
+			this.getChildView('images').update();
+		}
 		if (this.hasChildView('files')) {
 			this.getChildView('files').update();
 		}

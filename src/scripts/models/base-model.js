@@ -38,6 +38,10 @@ export default Backbone.Model.extend({
 		return this.collection || this.has('index');
 	},
 
+	hasChanged: function(attribute) {
+		return this.changed[attribute];
+	},
+
 	//
 	// getting methods
 	//

@@ -107,6 +107,16 @@ export default LeafView.extend(_.extend({}, DirectoryTreeViewable, {
 			name += 'video';
 		}
 
+		// add extension
+		//
+		let extension = this.model.getFileExtension().toLowerCase();
+		if (extension != '' && extension != 'content') {
+			if (name != '') {
+				name += ' ';
+			}
+			name += extension;
+		}
+
 		// add 'file item'
 		//
 		if (name != '') {

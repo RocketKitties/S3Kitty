@@ -62,6 +62,14 @@ export default BaseView.extend({
 		}
 	},
 
+	setPlaceholder: function(text) {
+		if (text) {
+			this.$el.find('[contenteditable="true"]').attr('style', '--search-placeholder: "' + text + '"');
+		} else {
+			this.$el.find('[contenteditable="true"]').removeAttr('style');
+		}
+	},
+
 	//
 	// rendering methods
 	//
@@ -105,12 +113,12 @@ export default BaseView.extend({
 			case 'url':
 				this.$el.removeClass('name');
 				this.$el.addClass('url');
-				this.$el.find('[contenteditable="true"]').removeAttr('style');
+				this.setPlaceholder();
 				break;
 			default:
 				this.$el.removeClass('name');
 				this.$el.removeClass('url');
-				this.$el.find('[contenteditable="true"]').attr('style', '--search-placeholder: "' + config.defaults.search.placeholder + '"');
+				this.setPlaceholder(config.apps.search_viewer.placeholder);
 				break;
 		}
 	},

@@ -63,7 +63,11 @@ export default PreferencesFormView.extend({
 		<div class="sidebar-panels form-group">
 			<label class="control-label"><i class="fa fa-pause"></i>Sidebar Panels</label>
 			<div class="controls">
-			
+
+				<div class="checkbox-inline">
+					<label><input type="checkbox" value="favorites"<% if (sidebar_panels.includes('favorites')) { %> checked<% } %>>Favorites</label>
+				</div>
+
 				<div class="checkbox-inline">
 					<label><input type="checkbox" value="files"<% if (sidebar_panels.includes('files')) { %> checked<% } %>>Files</label>
 				</div>
