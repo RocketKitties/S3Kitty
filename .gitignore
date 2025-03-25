@@ -1,6 +1,6 @@
 .DS_Store
 .ipynb_checkpoints/
 .jupyter/
-log/
+storage/log/
 private/
 *.swp
