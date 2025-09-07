@@ -21,7 +21,7 @@ use PHPUnit\TextUI\Configuration\FilterNotConfiguredException;
  *
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
-final readonly class TestSuiteFilterProcessor
+final class TestSuiteFilterProcessor
 {
     /**
      * @throws Event\RuntimeException
@@ -34,7 +34,6 @@ final readonly class TestSuiteFilterProcessor
         if (!$configuration->hasFilter() &&
             !$configuration->hasGroups() &&
             !$configuration->hasExcludeGroups() &&
-            !$configuration->hasExcludeFilter() &&
             !$configuration->hasTestsCovering() &&
             !$configuration->hasTestsUsing()) {
             return;
@@ -70,14 +69,8 @@ final readonly class TestSuiteFilterProcessor
             );
         }
 
-        if ($configuration->hasExcludeFilter()) {
-            $factory->addExcludeNameFilter(
-                $configuration->excludeFilter(),
-            );
-        }
-
         if ($configuration->hasFilter()) {
-            $factory->addIncludeNameFilter(
+            $factory->addNameFilter(
                 $configuration->filter(),
             );
         }

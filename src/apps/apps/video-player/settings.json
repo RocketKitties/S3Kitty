@@ -1,0 +1,11 @@
+{
+	"name": "Videos",
+	"icon": "fa fa-video",
+	"category": "multimedia",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": false,
+	"args": true,
+	"color": "violet"
+}

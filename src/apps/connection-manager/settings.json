@@ -1,0 +1,13 @@
+{
+	"name": "Connections",
+	"icon": "fa fa-user-friends",
+	"category": "social",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": false,
+	"args": false,
+	"color": "blue",
+	"group_icon_selector_path": "/Shared/Pictures",
+	"connection_message": "Hi there!"
+}

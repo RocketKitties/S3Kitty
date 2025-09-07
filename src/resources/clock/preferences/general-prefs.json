@@ -1,0 +1,12 @@
+[
+	{
+		"name": "show-items",
+		"icon": "fa fa-eye",
+		"text": "Show",
+		"kind": "multiple-answer",
+		"options": {
+			"show-mode": "Mode Button"
+		},
+		"help": "This is whether or not to show the mode button."
+	}
+]

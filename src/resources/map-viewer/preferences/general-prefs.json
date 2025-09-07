@@ -1,0 +1,47 @@
+[
+	{
+		"name": "use-my-location",
+		"icon": "fa fa-crosshairs",
+		"text": "My Location",
+		"kind": "true-false",
+		"help": "This is whether or not to show the user's actual location as the initial map location."
+	},
+	{
+		"name": "location",
+		"icon": "fa fa-globe-americas",
+		"text": "Coordinates",
+		"kind": "coords",
+		"help": "This is the latitude/longitude coordinates to use for the inital map location."
+	},
+	{
+		"name": "zoom-level",
+		"icon": "fa fa-search",
+		"text": "Zoom Level",
+		"kind": "number",
+		"options": {
+			"length": 3
+		},
+		"help": "This is the initial map zoom level."
+	},
+	{
+		"name": "max-zoom-level",
+		"icon": "fa fa-search",
+		"text": "Max Zoom Level",
+		"kind": "number",
+		"options": {
+			"length": 3
+		},
+		"help": "This is the maxmimum map zoom level."
+	},
+	{
+		"name": "map-mode",
+		"icon": "fa fa-map",
+		"text": "Map Mode",
+		"kind": "select",
+		"options": {
+			"map": "Map",
+			"aerial": "Aerial",
+			"hybrid": "Hybrid"
+		}
+	}
+]

@@ -29,10 +29,11 @@ export default BaseView.extend({
 
 	className: 'status-bar',
 
-	topicsTemplate: template(`
+	template: template(`
+		<% if (typeof num_posts != 'undefined') { %>
 		<span class="info-bar">
 			<i class="fa fa-newspaper"></i>
-			<% if (num_selected > 0 && num_posts > 0) { %>
+			<% if (typeof num_selected != 'undefined' && num_selected > 0 && num_posts > 0) { %>
 			<% if (is_mobile) { %>
 			<%= num_selected %> selected
 			<% } else { %>
@@ -44,12 +45,12 @@ export default BaseView.extend({
 			Loading...
 			<% } %>
 		</span>
-	`),
+		<% } %>
 
-	chatsTemplate: template(`
+		<% if (typeof num_messages != 'undefined') { %>
 		<span class="info-bar">
 			<i class="fa fa-comments"></i>
-			<% if (num_selected > 0 && num_messages > 0) { %>
+			<% if (typeof num_selected != 'undefined' && num_selected > 0 && num_messages > 0) { %>
 			<% if (is_mobile) { %>
 			<%= num_selected %> selected
 			<% } else { %>
@@ -61,22 +62,12 @@ export default BaseView.extend({
 			Loading...
 			<% } %>
 		</span>
+		<% } %>
 	`),
 
 	//
 	// rendering methods
 	//
-
-	getTemplate: function() {
-		let model = this.parent.app.getActiveModel();
-		if (!model || model instanceof Topic) {
-			return this.topicsTemplate;
-		} else if (model instanceof Post) {
-			return this.topicsTemplate;
-		} else if (model instanceof Chat) {
-			return this.chatsTemplate;
-		}
-	},
 
 	topicsContext: function() {
 		return {

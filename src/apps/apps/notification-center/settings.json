@@ -1,0 +1,34 @@
+{
+	"name": "Notifications",
+	"icon": "fa fa-exclamation-triangle",
+	"category": "system",
+	"platform": "mobile",
+	"access": "all",
+	"disabled": false,
+	"hidden": false,
+	"args": false,
+	"color": "gold",
+	"sizes": {
+		"small": [
+			320,
+			480
+		],
+		"medium": [
+			400,
+			600
+		],
+		"large": [
+			600,
+			900
+		]
+	},
+	"channels": {
+		"connect_invitations": [],
+		"share_invitations": [],
+		"topic_invitations": [],
+		"chat_invitations": [],
+		"comments": [],
+		"replies": [],
+		"likes": []
+	}
+}

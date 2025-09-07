@@ -21,7 +21,7 @@
 // variables
 //
 
-$analyser-background-color: colors.$ultra-dark-grey;
+$analyzer-background-color: colors.$ultra-dark-grey;
 
 //
 // styles
@@ -60,7 +60,7 @@ $analyser-background-color: colors.$ultra-dark-grey;
 				}
 			}
 
-			.audio-analyser {
+			.audio-analyzer {
 				position: relative;
 				width: 100%;
 				height: 100%;
@@ -81,7 +81,7 @@ $analyser-background-color: colors.$ultra-dark-grey;
 
 				&.dark {
 					canvas {
-						background: $analyser-background-color;
+						background: $analyzer-background-color;
 					}
 				}
 			}

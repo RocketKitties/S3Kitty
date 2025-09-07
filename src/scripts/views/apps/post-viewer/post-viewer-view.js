@@ -27,7 +27,6 @@ import HeaderBarView from '../../../views/apps/post-viewer/header-bar/header-bar
 import SideBarView from '../../../views/apps/post-viewer/sidebar/sidebar-view.js';
 import PostView from '../../../views/apps/post-viewer/mainbar/posts/post-view.js';
 import FooterBarView from '../../../views/apps/post-viewer/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/post-viewer/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
 export default AppSplitView.extend(_.extend({}, ItemOpenable, LinkShareable, {
@@ -387,19 +386,6 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, LinkShareable, {
 		});
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/post-viewer/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	//
 	// event handling methods
 	//
@@ -500,10 +486,6 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, LinkShareable, {
 
 	getPreferences: function() {
 		return config.preferences.post_viewer || {};
-	},
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
 	},
 
 	getDefaultTopicName: function() {

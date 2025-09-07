@@ -96,7 +96,7 @@ export default ItemsMapView.extend({
 		//
 		ItemsMapView.prototype.onRender.call(this);
 
-		// hide icon names, geoorientations
+		// hide icon names, geo-orientations
 		//
 		if (!this.options.show_item_names) {
 			this.$el.addClass('hide-item-names');

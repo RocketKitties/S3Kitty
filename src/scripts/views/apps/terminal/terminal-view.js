@@ -19,7 +19,6 @@ import AppView from '../../../views/apps/common/app-view.js';
 import HeaderBarView from '../../../views/apps/terminal/header-bar/header-bar-view.js';
 import CommandLineView from '../../../views/apps/terminal/mainbar/command-line-view.js';
 import FooterBarView from '../../../views/apps/terminal/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/terminal/forms/preferences/preferences-form-view.js'
 
 export default AppView.extend({
 
@@ -121,14 +120,5 @@ export default AppView.extend({
 
 	onResize: function(event) {
 		this.getChildView('contents').onResize(event);
-	}
-}, {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
 	}
 });

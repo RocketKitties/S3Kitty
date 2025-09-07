@@ -1,14 +1,12 @@
-{
-	"items": [
-		{
-			"class": "share-chat",
-			"icon": "fa fa-comments",
-			"name": "Chat"
-		},
-		{
-			"class": "share-location",
-			"icon": "fa fa fa-map-marker-alt",
-			"name": "Location"
-		}
-	]
-}
+[
+	{
+		"name": "share-chat",
+		"icon": "fa fa-comments",
+		"text": "Chat"
+	},
+	{
+		"name": "share-location",
+		"icon": "fa fa fa-map-marker-alt",
+		"text": "Location"
+	}
+]

@@ -28,6 +28,7 @@ use League\Flysystem\UnableToWriteFile;
 use League\Flysystem\Visibility;
 use League\MimeTypeDetection\FinfoMimeTypeDetector;
 use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 use Throwable;
 
@@ -54,7 +55,7 @@ class GoogleDriveAdapter implements FilesystemAdapter
      *
      * @var string
      */
-    const FETCHFIELDS_LIST = 'files(id,mimeType,createdTime,modifiedTime,name,parents,permissions,size,webContentLink,shortcutDetails),nextPageToken';
+    const FETCHFIELDS_LIST = 'files(id,mimeType,createdTime,modifiedTime,name,parents,permissions,size,webContentLink,webViewLink,shortcutDetails),nextPageToken';
 
     /**
      * Fetch fields setting for get
@@ -550,7 +551,7 @@ class GoogleDriveAdapter implements FilesystemAdapter
             return;
         }
 
-        throw UnableToCopyFile::fromLocationTo($path, $newpath, 'Unable To Copy File');
+        throw UnableToCopyFile::fromLocationTo($path, $newpath);
     }
 
     /**
@@ -560,11 +561,71 @@ class GoogleDriveAdapter implements FilesystemAdapter
     public function move(string $source, string $destination, Config $config): void
     {
         if (!$this->fileExists($source)) {
-            throw UnableToMoveFile::fromLocationTo($source, $destination, new Exception("File {$source} not exist."));
+            throw UnableToMoveFile::fromLocationTo($source, $destination);
         }
         try {
-            $this->copy($source, $destination, $config);
-            $this->delete($source);
+            $this->refreshToken();
+            $path = $this->prefixer->prefixPath($source);
+            $newpath = $this->prefixer->prefixPath($destination);
+            if ($this->useDisplayPaths) {
+                $srcId = $this->toVirtualPath($path, false, true);
+                $newpathDir = self::dirname($newpath);
+                if ($this->fileExists($newpathDir)) {
+                    $this->delete($newpath);
+                }
+                $toPath = $this->toSingleVirtualPath($newpathDir, false, false, true, true);
+                if ($toPath === false) {
+                    throw UnableToMoveFile::fromLocationTo($path, $newpath);
+                }
+                if ($toPath === '') {
+                    $toPath = $this->root;
+                }
+                $newParentId = $toPath;
+                $fileName = basename($newpath);
+            } else {
+                [, $srcId] = $this->splitPath($path);
+                [$newParentId, $fileName] = $this->splitPath($newpath);
+            }
+
+            $params = [];
+            $origenFile = $this->getFileObject($srcId);
+            $parents = $origenFile->getParents();
+            if (!in_array($newParentId, $parents)) {
+                $params = array_merge($params, [
+                    'addParents' => [$newParentId],
+                    'removeParents' => $parents,
+                ]);
+            }
+
+            if (!empty($params) || $fileName !== $origenFile->getName()) {
+                $file = new DriveFile();
+                $file->setName($fileName);
+                $this->service->files->update(/** @scrutinizer ignore-type */ $srcId, $file, $this->applyDefaultParams($params, 'files.update'));
+            }
+
+            $newFile = $this->service->files->get($srcId, ['fields' => self::FETCHFIELDS_GET]);
+            if ($newFile instanceof DriveFile) {
+                $id = $newFile->getId();
+                $this->cacheFileObjects[$id] = $newFile;
+                $this->cacheObjects([$id => $newFile]);
+                if (isset($this->cacheHasDirs[$srcId])) {
+                    $this->cacheHasDirs[$id] = $this->cacheHasDirs[$srcId];
+                }
+                if ($this->useSinglePathTransaction && $this->useDisplayPaths) {
+                    $this->cachedPaths[trim($newpathDir.'/'.$fileName, '/')] = $id;
+                }
+
+                $srcFile = $this->cacheFileObjects[$srcId];
+                $visibility = $this->getRawVisibility($srcFile);
+
+                if ($config->get('visibility') === Visibility::PUBLIC || $visibility === Visibility::PUBLIC) {
+                    $this->publish($id);
+                } else {
+                    $this->unPublish($id);
+                }
+                $this->resetRequest([$id, $newParentId]);
+                return;
+            }
         } catch (Throwable $exception) {
             throw UnableToMoveFile::fromLocationTo($source, $destination, $exception);
         }
@@ -708,7 +769,7 @@ class GoogleDriveAdapter implements FilesystemAdapter
         } else {
             [, $fileId] = $this->splitPath($path);
         }
-        /** @var RequestInterface $response */
+        /** @var ResponseInterface $response */
         if (($response = $this->service->files->get(/** @scrutinizer ignore-type */ $fileId, $this->applyDefaultParams(['alt' => 'media'], 'files.get')))) {
             return (string)$response->getBody();
         }
@@ -890,7 +951,7 @@ class GoogleDriveAdapter implements FilesystemAdapter
 
         if (!isset($fileAttributes) || !$fileAttributes instanceof FileAttributes) {
             if (!$type) {
-                throw UnableToRetrieveMetadata::create($path, '', $exception);
+                throw UnableToRetrieveMetadata::create($path, '', '', $exception);
             } else {
                 throw UnableToRetrieveMetadata::$type($path, '', $exception);
             }
@@ -995,7 +1056,7 @@ class GoogleDriveAdapter implements FilesystemAdapter
                 return 'https://drive.google.com/drive/folders/'.$obj->id.'?usp=sharing';
             }
         }
-        return false;
+        return '';
     }
 
     /**

@@ -1,0 +1,43 @@
+{
+	"general": {
+		"open_connections_in_new_window": false
+	},
+	"display": {
+		"panes": {
+			"sidebar": true
+		},
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": {
+			"activity": true,
+			"status": true,
+			"actions": true,
+			"mutual_connections": true
+		},
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+		"photos_view_kind": {
+			"phone": "gallery",
+			"tablet": "gallery",
+			"desktop": "gallery"
+		}
+	},
+	"window": {
+		"window_size": "medium",
+		"window_state": {
+			"maximized": true,
+			"full_screen": false	
+		}
+	}
+}

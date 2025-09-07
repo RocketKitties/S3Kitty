@@ -1,0 +1,14 @@
+{
+	"general": {
+		"sensitivity": 100
+	},
+	"display": {
+		"display": "led"
+	},
+	"window": {
+		"window_state": {
+			"maximized": false,
+			"full_screen": false
+		}
+	}
+}

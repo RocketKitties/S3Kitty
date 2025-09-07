@@ -38,7 +38,6 @@ import HeaderBarView from '../../../views/apps/communicator/header-bar/header-ba
 import SideBarView from '../../../views/apps/communicator/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/communicator/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/communicator/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/communicator/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 import HtmlUtils from '../../../utilities/web/html-utils.js';
 
@@ -71,7 +70,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 		// set attributes
 		//
-		if (!this.model) {
+		if (!this.model || !(this.model instanceof Topic)) {
 			this.model = this.getDefaultTopic();
 		}
 		if (!this.collection) {
@@ -1223,20 +1222,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		});
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/communicator/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences,
-				collection: this.topics
-			}));
-		});
-	},
-
 	//
 	// item opening methods
 	//
@@ -1432,10 +1417,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	getPreferences: function() {
 		return config.preferences.communicator || {};
-	},
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
 	},
 
 	getDefaultTopicName: function() {

@@ -1,18 +1,16 @@
-{
-	"items": [
-		{
-			"class": "edit message",
-			"group": "chat option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Message",
-			"shortcut": "command-E"
-		},
-		{
-			"class": "delete message",
-			"group": "chat option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Message",
-			"shortcut": "delete"
-		}
-	]
-}
+[
+	{
+		"name": "edit message",
+		"group": "chat option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Message",
+		"shortcut": "command-E"
+	},
+	{
+		"name": "delete message",
+		"group": "chat option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Message",
+		"shortcut": "delete"
+	}
+]

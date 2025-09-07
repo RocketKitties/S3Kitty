@@ -17,7 +17,7 @@
 
 import Connection from '../../../../../models/connections/connection.js';
 import Items from '../../../../../collections/storage/items.js';
-import NotificationsListItemView from '../../../../../views/apps/notification-center/mainbar/notifications/lists/notifications-list-item-view.js';
+import NotificationsListItemView from '../../../../../views/apps/notification-center/mainbar/lists/notifications-list-item-view.js';
 import FileUtils from '../../../../../utilities/files/file-utils.js';
 
 export default NotificationsListItemView.extend({

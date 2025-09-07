@@ -66,7 +66,7 @@ export default InfoDialogView.extend({
 	`),
 
 	events: _.extend({}, InfoDialogView.prototype.events, {
-		'click .item + .nav-tabs a': 'onClickItemTab',
+		'click .item + .nav-tabs': 'onClickItemTab',
 		'click .save': 'onClickSave',
 
 		// share events

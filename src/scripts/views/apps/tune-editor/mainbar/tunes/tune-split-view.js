@@ -122,18 +122,15 @@ export default SplitView.extend({
 				this.options.preferences.set('notation_size', value);
 				this.update();
 				break;
-
 			case 'show_markup':
-				if (value) {
-					this.showSideBar();
-				} else {
-					this.hideSideBar();
-				}
+				this.setSideBarVisibility(value);
 				break;
-
 			case 'fit_width':
 				this.options.preferences.set('fit_width', value);
 				this.update();
+				break;
+			case 'panes':
+				this.setSideBarVisibility(value.includes('markup'));
 				break;
 		}
 	},

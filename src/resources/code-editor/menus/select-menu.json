@@ -1,47 +1,45 @@
-{
-	"items": [
-		{
-			"class": "select-all",
-			"icon": "fa fa-asterisk",
-			"name": "All",
-			"shortcut": "command-A"
-		},
-		"divider",
-		{
-			"class": "select-word",
-			"icon": "fa fa-text-width",
-			"name": "Word",
-			"shortcut": "command-1"
-		},
-		{
-			"class": "select-line",
-			"icon": "fa fa-arrows-alt-h",
-			"name": "Line",
-			"shortcut": "command-2"
-		},
-		{
-			"class": "select-block",
-			"icon": "fa fa-align-justify",
-			"name": "Block",
-			"shortcut": "command-3"
-		},
-		"divider",
-		{
-			"class": "select-before",
-			"icon": "fa fa-long-arrow-alt-up",
-			"name": "Before",
-			"shortcut": "command-["
-		},
-		{
-			"class": "select-after",
-			"icon": "fa fa-long-arrow-alt-down",
-			"name": "After",
-			"shortcut": "command-]"
-		},
-		{
-			"class": "select-range",
-			"icon": "fa fa-arrows-alt-v",
-			"name": "Range"
-		}
-	]
-}
+[
+	{
+		"name": "select-all",
+		"icon": "fa fa-asterisk",
+		"text": "All",
+		"shortcut": "command-A"
+	},
+	"divider",
+	{
+		"name": "select-word",
+		"icon": "fa fa-text-width",
+		"text": "Word",
+		"shortcut": "command-1"
+	},
+	{
+		"name": "select-line",
+		"icon": "fa fa-arrows-alt-h",
+		"text": "Line",
+		"shortcut": "command-2"
+	},
+	{
+		"name": "select-block",
+		"icon": "fa fa-align-justify",
+		"text": "Block",
+		"shortcut": "command-3"
+	},
+	"divider",
+	{
+		"name": "select-before",
+		"icon": "fa fa-long-arrow-alt-up",
+		"text": "Before",
+		"shortcut": "command-["
+	},
+	{
+		"name": "select-after",
+		"icon": "fa fa-long-arrow-alt-down",
+		"text": "After",
+		"shortcut": "command-]"
+	},
+	{
+		"name": "select-range",
+		"icon": "fa fa-arrows-alt-v",
+		"text": "Range"
+	}
+]

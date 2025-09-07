@@ -36,6 +36,8 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
   protected $customFineTuningSpecDataType = '';
   protected $dataStoreSpecsType = GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec::class;
   protected $dataStoreSpecsDataType = 'array';
+  protected $displaySpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestDisplaySpec::class;
+  protected $displaySpecDataType = '';
   protected $embeddingSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec::class;
   protected $embeddingSpecDataType = '';
   protected $facetSpecsType = GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec::class;
@@ -57,6 +59,10 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
    */
   public $offset;
   /**
+   * @var int
+   */
+  public $oneBoxPageSize;
+  /**
    * @var string
    */
   public $orderBy;
@@ -72,6 +78,8 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
    * @var array[]
    */
   public $params;
+  protected $personalizationSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestPersonalizationSpec::class;
+  protected $personalizationSpecDataType = '';
   /**
    * @var string
    */
@@ -82,6 +90,10 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
    * @var string
    */
   public $rankingExpression;
+  /**
+   * @var string
+   */
+  public $rankingExpressionBackend;
   /**
    * @var string
    */
@@ -204,6 +216,20 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
     return $this->dataStoreSpecs;
   }
   /**
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestDisplaySpec
+   */
+  public function setDisplaySpec(GoogleCloudDiscoveryengineV1alphaSearchRequestDisplaySpec $displaySpec)
+  {
+    $this->displaySpec = $displaySpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestDisplaySpec
+   */
+  public function getDisplaySpec()
+  {
+    return $this->displaySpec;
+  }
+  /**
    * @param GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec
    */
   public function setEmbeddingSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec $embeddingSpec)
@@ -302,6 +328,20 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
     return $this->offset;
   }
   /**
+   * @param int
+   */
+  public function setOneBoxPageSize($oneBoxPageSize)
+  {
+    $this->oneBoxPageSize = $oneBoxPageSize;
+  }
+  /**
+   * @return int
+   */
+  public function getOneBoxPageSize()
+  {
+    return $this->oneBoxPageSize;
+  }
+  /**
    * @param string
    */
   public function setOrderBy($orderBy)
@@ -358,6 +398,20 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
     return $this->params;
   }
   /**
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestPersonalizationSpec
+   */
+  public function setPersonalizationSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestPersonalizationSpec $personalizationSpec)
+  {
+    $this->personalizationSpec = $personalizationSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestPersonalizationSpec
+   */
+  public function getPersonalizationSpec()
+  {
+    return $this->personalizationSpec;
+  }
+  /**
    * @param string
    */
   public function setQuery($query)
@@ -398,6 +452,20 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
   public function getRankingExpression()
   {
     return $this->rankingExpression;
+  }
+  /**
+   * @param string
+   */
+  public function setRankingExpressionBackend($rankingExpressionBackend)
+  {
+    $this->rankingExpressionBackend = $rankingExpressionBackend;
+  }
+  /**
+   * @return string
+   */
+  public function getRankingExpressionBackend()
+  {
+    return $this->rankingExpressionBackend;
   }
   /**
    * @param string

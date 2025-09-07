@@ -34,7 +34,6 @@ import SideBarView from '../../../views/apps/chat-viewer/sidebar/sidebar-view.js
 import TabbedContentView from '../../../views/apps/chat-viewer/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/chat-viewer/footer-bar/footer-bar-view.js';
 import OpenChatsDialogView from '../../../views/apps/chat-viewer/dialogs/chats/open-chats-dialog-view.js';
-import PreferencesFormView from '../../../views/apps/chat-viewer/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, ItemOpenable, ItemInfoShowable, ChatInfoShowable, {
 
@@ -559,19 +558,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		});
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/chat-viewer/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	//
 	// event handling methods
 	//
@@ -679,14 +665,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		AppSplitView.prototype.onDeselect.call(this, item);
 	}
 }), {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	},
 
 	//
 	// static dialog rendering methods

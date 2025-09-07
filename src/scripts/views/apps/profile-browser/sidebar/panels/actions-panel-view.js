@@ -39,10 +39,10 @@ export default SideBarPanelView.extend({
 	`),
 
 	events: {
-		'click .invite-new-user a': 'onClickInviteNewUser',
-		'click .invite-google-contacts a': 'onClickInviteGoogleContacts',
-		'click .add-connections a': 'onClickAddConnections',
-		'click .view-connections a': 'onClickViewConnections'
+		'click .invite-new-user': 'onClickInviteNewUser',
+		'click .invite-google-contacts': 'onClickInviteGoogleContacts',
+		'click .add-connections': 'onClickAddConnections',
+		'click .view-connections': 'onClickViewConnections'
 	},	
 
 	//

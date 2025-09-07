@@ -1,0 +1,11 @@
+{
+	"name": "Text",
+	"icon": "fa fa-file-alt",
+	"category": "productivity",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": false,
+	"args": true,
+	"color": "teal"
+}

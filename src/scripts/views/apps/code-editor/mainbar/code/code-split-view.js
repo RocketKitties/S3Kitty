@@ -43,7 +43,9 @@ export default SplitView.extend({
 			case 'console_size':
 				this.setSideBarSize(value);
 				break;
-
+			case 'panes':
+				this.setSideBarVisibility(value.includes('console'));
+				break;
 			default:
 				this.getChildView('mainbar').setOption(key, value);
 		}

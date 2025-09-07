@@ -25,7 +25,6 @@ import HeaderBarView from '../../../views/apps/tune-editor/header-bar/header-bar
 import SideBarView from '../../../views/apps/tune-editor/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/tune-editor/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/tune-editor/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/tune-editor/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, Multifile, ItemShareable, FindReplaceable, {
 
@@ -392,7 +391,7 @@ export default AppSplitView.extend(_.extend({}, Multifile, ItemShareable, FindRe
 			// options
 			//
 			preferences: this.preferences,
-			show_sidebar: this.preferences.get('show_markup'),
+			show_sidebar: this.preferences.includes('panes', 'markup_bar'),
 			sidebar_size: this.preferences.get('markup_bar_size'),
 			sample: this.sample.trimLines(),
 
@@ -451,19 +450,6 @@ export default AppSplitView.extend(_.extend({}, Multifile, ItemShareable, FindRe
 		});	
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/tune-editor/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	//
 	// event handling methods
 	//
@@ -512,13 +498,5 @@ export default AppSplitView.extend(_.extend({}, Multifile, ItemShareable, FindRe
 	// static attributes
 	//
 
-	clipboard: undefined,
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	}
+	clipboard: undefined
 });

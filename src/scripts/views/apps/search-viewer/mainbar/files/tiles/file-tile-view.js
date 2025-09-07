@@ -28,8 +28,8 @@ export default FileTileView.extend({
 
 			<div class="icon">
 				<%= icon %>
-				<% if (geo_orientation != undefined) { %>
-				<div class="geoorientation marker" style="transform:rotate(<%= Math.round(geo_orientation.heading) %>deg)">
+				<% if (typeof geo_orientation != 'undefined') { %>
+				<div class="geo-orientation marker" style="transform:rotate(<%= Math.round(geo_orientation.heading) %>deg)">
 					<i class="fa fa-location-arrow"></i>
 				</div>
 				<% } %>

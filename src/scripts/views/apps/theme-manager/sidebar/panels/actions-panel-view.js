@@ -37,8 +37,8 @@ export default SideBarPanelView.extend({
 	`),
 
 	events: {
-		'click .save-as a': 'onClickSaveAs',
-		'click .reset a': 'onClickReset'
+		'click .save-as': 'onClickSaveAs',
+		'click .reset': 'onClickReset'
 	},
 
 	//

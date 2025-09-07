@@ -1,0 +1,61 @@
+{
+	"general": {
+		"default_topic": "What's New",
+		"posts_per_page": 10,
+		"posts_direction": "top_down",
+		"messages_per_page": 50,
+		"default_privacy": "connections",
+		"show_items": {
+			"comments": true,
+			"options": true,
+			"elapsed_time": true
+		}
+	},
+	"display": {
+		"panes": {
+			"sidebar": true
+		},
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 200,
+			"desktop": 200
+		},
+		"sidebar_panels": [
+			"info",
+			"topics",
+			"chats"
+		],
+		"sidebar_info_kind": {
+			"phone": "auto",
+			"tablet": "auto",
+			"desktop": "auto"
+		},
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+	},
+	"window": {
+		"window_size": "medium",
+		"window_state": {
+			"maximized": true,
+			"full_screen": false
+		}
+	},
+	"language": {
+		"translation": false,
+		"language": "english"
+	},
+	"storage": {
+		"copy_attachments": true,
+		"uploads_directory": "Uploads/",
+		"storage_directory": ".News/",
+		"messages_directory": ".Messages/"
+	}
+}

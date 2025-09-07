@@ -36,7 +36,7 @@ export default SideBarPanelView.extend({
 	`),
 
 	events: {
-		'click .new-topic a': 'onClickNewTopic'
+		'click .new-topic': 'onClickNewTopic'
 	},	
 
 	//

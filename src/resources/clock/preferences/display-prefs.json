@@ -1,0 +1,13 @@
+[
+	{
+		"name": "mode",
+		"icon": "fa fa-clock",
+		"text": "Mode",
+		"kind": "multiple-choice",
+		"options": {
+			"analog": "Analog",
+			"digital": "Digital"
+		},
+		"help": "This is the mode that the clock is in."
+	}
+]

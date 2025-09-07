@@ -73,7 +73,7 @@ export default FileMenuView.extend({
 		let isChat = this.parent.app.hasSelectedOpenChat();
 		let hasSelectedTopic = this.parent.app.hasSelectedTopic();
 		let hasSelectedPost = this.parent.app.hasSelectedPost();
-		let selectedTopic = this.parent.app.getSelectedTopics()[0];
+		let selectedTopic = hasSelectedTopic? this.parent.app.getSelectedTopics()[0] : null;
 		let isTopicRequired = selectedTopic && selectedTopic.isRequired();
 		let isTopicOwned = selectedTopic && selectedTopic.isOwnedBy(application.session.user);
 		let hasSelectedItem = this.parent.app.hasSelectedFileItem();

@@ -234,7 +234,15 @@ class UserController extends Controller
 
 		// perform query
 		//
-		return $query->get();
+		$all = $query->get();
+
+		// add check-in info
+		//
+		foreach ($all as $item) {
+			$item->append('check_in');
+		}
+
+		return $all;
 	}
 
 	//

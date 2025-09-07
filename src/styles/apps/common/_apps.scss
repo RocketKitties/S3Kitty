@@ -71,7 +71,7 @@ $rounded-message-border-radius: 10px;
 		}
 
 		.toolbar {
-			display: inline-flex !important;
+			display: inline-flex;
 			max-width: 100%;
 			background: none !important;
 			border: none;
@@ -137,9 +137,7 @@ $rounded-message-border-radius: 10px;
 		}
 
 		.nav-bar {
-			display: inline-block;
 			.toolbar {
-				display: inline-block;
 				> div {
 					display: inline-block;
 				}
@@ -257,7 +255,7 @@ $rounded-message-border-radius: 10px;
 					pointer-events: none;
 
 					i {
-						display: block;
+						display: inline-block;
 						font-size: 200%;
 						margin-bottom: 10px;
 					}
@@ -334,7 +332,6 @@ $rounded-message-border-radius: 10px;
 		}
 
 		.address-bar, .info-bar, .nav-bar, .toolbar {
-			display: block;
 			height: 30px;
 
 			.icon-size {
@@ -514,7 +511,7 @@ body[device="desktop"] {
 
 			.address-bar, .search-bar {
 				width: 25%;
-				min-width: 350px;
+				min-width: 300px;
 			}
 
 			.status-bar {

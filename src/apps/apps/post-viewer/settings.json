@@ -1,0 +1,11 @@
+{
+	"name": "Comments",
+	"icon": "fa fa-newspaper",
+	"category": "social",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "blue"
+}

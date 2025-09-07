@@ -1,0 +1,39 @@
+[
+	{
+		"name": "view-kind",
+		"icon": "fa fa-paint-brush",
+		"text": "Appearance",
+		"kind": "select",
+		"options": {
+			"icons": "Icons",
+			"lists": "Lists",
+			"cards": "Cards",
+			"tiles": "Tiles"
+		},
+		"help": "This is how files and folders are to be visually displayed."
+	},
+	{
+		"name": "min-score",
+		"icon": "fa fa-arrow-down-wide-short",
+		"text": "Min Score",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 100,
+			"step": 5
+		},
+		"help": "This is the minimum matching score."
+	},
+	{
+		"name": "max-results",
+		"icon": "fa fa-arrow-down-1-9",
+		"text": "Max Results",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 500,
+			"step": 10
+		},
+		"help": "This is the maximum number of results to return."
+	}
+]

@@ -27,23 +27,23 @@ export default ViewMenuView.extend({
 
 		// view options
 		//
-		'click .view-kind > a': 'onClickViewKind',
-		'click .map-mode > a': 'onClickMapMode',
+		'click .view-kind': 'onClickViewKind',
+		'click .map-mode': 'onClickMapMode',
 
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// details options
 		//
 		'click .view-details': 'onClickViewDetails',
-		'click .detail-kind > a': 'onClickDetailKind',
-		'click .date-format > a': 'onClickDateFormat',
+		'click .detail-kind': 'onClickDetailKind',
+		'click .date-format': 'onClickDateFormat',
 
 		// map options
 		//
-		'click .map-view-kind > a': 'onClickMapViewKind',
+		'click .map-view-kind': 'onClickMapViewKind',
 		'click .show-item-names': 'onClickOption',
 		'click .pan-north': 'onClickPanNorth',
 		'click .pan-south': 'onClickPanSouth',
@@ -56,9 +56,9 @@ export default ViewMenuView.extend({
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
-		'click .sidebar-tile-size > a': 'onClickSideBarTileSize',
+		'click .sidebar-panels': 'onClickSideBarPanel',
+		'click .sidebar-view-kind': 'onClickSideBarViewKind',
+		'click .sidebar-tile-size': 'onClickSideBarTileSize',
 
 		// window options
 		//
@@ -90,8 +90,7 @@ export default ViewMenuView.extend({
 	},
 
 	disabled: function() {
-		let preferences = this.parent.app.preferences;
-		let showingMap = preferences.get('view_kind') == 'maps';
+		let showingMap = this.parent.app.getMapView() != null;
 
 		return {
 			'pan-to': !showingMap,
@@ -108,84 +107,76 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let mapMode = preferences.get('map_mode');
-		let viewKind = preferences.get('view_kind');
-		let toolbars = preferences.get('toolbars') || [];
-		let detailKind = preferences.get('detail_kind');
-		let dateFormat = preferences.get('date_format');
-		let mapViewKind = preferences.get('map_view_kind');
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
-		let sidebarViewKind = preferences.get('sidebar_view_kind');
 
 		return {
 
 			// view options
 			//
-			'view-icons': !viewKind || viewKind == 'icons',
-			'view-names': viewKind == 'names',
-			'view-lists': viewKind == 'lists',
-			'view-trees': viewKind == 'trees',
-			'view-cards': viewKind == 'cards',
-			'view-tiles': viewKind == 'tiles',
-			'view-maps': viewKind == 'maps',
+			'view-kind icons': preferences.matches('view_kind', 'icons'),
+			'view-kind names': preferences.matches('view_kind', 'names'),
+			'view-kind lists': preferences.matches('view_kind', 'lists'),
+			'view-kind trees': preferences.matches('view_kind', 'trees'),
+			'view-kind cards': preferences.matches('view_kind', 'cards'),
+			'view-kind tiles': preferences.matches('view_kind', 'tiles'),
+			'view-kind maps': preferences.matches('view_kind', 'maps'),
 
 			// map options
 			//
-			'show-map': mapMode == 'map',
-			'show-satellite': mapMode == 'satellite',
-			'show-hybrid': mapMode == 'hybrid',
-			'show-streets': mapMode == 'streets',
-			'show-transportation': mapMode == 'transportation',
-			'show-sectional': mapMode == 'sectional',
-			'show-ifrlo': mapMode == 'ifrlo',
-			'show-ifrhi': mapMode == 'ifrhi',
+			'map-mode map': preferences.matches('map_mode', 'map'),
+			'map-mode satellite': preferences.matches('map_mode', 'satellite'),
+			'map-mode hybrid': preferences.matches('map_mode', 'hybrid'),
+			'map-mode streets': preferences.matches('map_mode', 'streets'),
+			'map-mode transportation': preferences.matches('map_mode', 'transportation'),
+			'map-mode sectional': preferences.matches('map_mode', 'sectional'),
+			'map-mode ifrlo': preferences.matches('map_mode', 'ifrlo'),
+			'map-mode ifrhi': preferences.matches('map_mode', 'ifrhi'),
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-nav-bar': toolbars.includes('nav'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolbars nav': preferences.includes('toolbars', 'nav'),
 
 			// detail options
 			//
-			'view-details': typeof detailKind == 'string' && detailKind != '',
-			'view-location': detailKind == 'location',
-			'view-occupation': detailKind == 'occupation',
-			'view-age': detailKind == 'age',
-			'view-gender': detailKind == 'gender',
-			'view-birth-date': detailKind == 'birth_date',
-			'view-join-date': detailKind == 'join_date',
-			'view-connect-date': detailKind == 'connect_date',
+			'view-details': preferences.has('view_details'),
+			'detail-kind location': preferences.matches('detail_kind', 'location'),
+			'detail-kind occupation': preferences.matches('detail_kind', 'occupation'),
+			'detail-kind age': preferences.matches('detail_kind', 'age'),
+			'detail-kind gender': preferences.matches('detail_kind', 'gender'),
+			'detail-kind birth-date': preferences.matches('detail_kind', 'birth_date'),
+			'detail-kind join-date': preferences.matches('detail_kind', 'join_date'),
+			'detail-kind connect-date': preferences.matches('detail_kind', 'connect_date'),
 
 			// date options
 			//
-			'view-date-only': dateFormat == 'date_only',
-			'view-day-date': dateFormat == 'day_date',
-			'view-time-only': dateFormat == 'time_only',
-			'view-date-time': dateFormat == 'date_time',
-			'view-day-date-time': dateFormat == 'day_date_time' || !dateFormat,
+			'date-format date-only': preferences.matches('date_format', 'date_only'),
+			'date-format day-date': preferences.matches('date_format', 'day_date'),
+			'date-format time-only': preferences.matches('date_format', 'time_only'),
+			'date-format date-time': preferences.matches('date_format', 'date_time'),
+			'date-format day-date-time': preferences.matches('date_format', 'day_date_time'),
 
 			// map item options
 			//
-			'view-map-icons': mapViewKind == 'icons',
-			'view-map-lists': mapViewKind == 'lists',
-			'view-map-cards': mapViewKind == 'cards',
-			'view-map-tiles': mapViewKind == 'tiles',
-			'view-map-pages': mapViewKind == 'pages',
+			'map-view-kind icons': preferences.matches('map_view_kind', 'icons'),
+			'map-view-kind lists': preferences.matches('map_view_kind', 'lists'),
+			'map-view-kind cards': preferences.matches('map_view_kind', 'cards'),
+			'map-view-kind tiles': preferences.matches('map_view_kind', 'tiles'),
+			'map-view-kind pages': preferences.matches('map_view_kind', 'pages'),
 			'show-item-names': preferences.get('show_item_names'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-actions-panel': sidebarPanels.includes('actions'),
-			'show-groups-panel': sidebarPanels.includes('groups'),
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels actions': preferences.includes('sidebar_panels', 'actions'),
+			'sidebar-panels groups': preferences.includes('sidebar_panels', 'groups'),
 
 			// sidebar item options
 			//
-			'view-sidebar-icons': sidebarViewKind == 'icons',
-			'view-sidebar-lists': sidebarViewKind == 'lists',
-			'view-sidebar-trees': sidebarViewKind == 'trees',
-			'view-sidebar-cards': sidebarViewKind == 'cards',
-			'view-sidebar-tiles': sidebarViewKind == 'tiles'
+			'sidebar-view-kind icons': preferences.matches('sidebar_view_kind', 'icons'),
+			'sidebar-view-kind lists': preferences.matches('sidebar_view_kind', 'lists'),
+			'sidebar-view-kind trees': preferences.matches('sidebar_view_kind', 'trees'),
+			'sidebar-view-kind cards': preferences.matches('sidebar_view_kind', 'cards'),
+			'sidebar-view-kind tiles': preferences.matches('sidebar_view_kind', 'tiles')
 		};	
 	},
 
@@ -209,9 +200,6 @@ export default ViewMenuView.extend({
 		// update menu
 		//
 		this.setMapMode(mapMode);
-		if (!this.isItemSelected('view-maps')) {
-			this.setViewKind('maps');
-		}
 		
 		// update parent
 		//
@@ -227,36 +215,36 @@ export default ViewMenuView.extend({
 	//
 
 	onClickPanNorth: function() {
-		let itemsView = this.parent.app.getChildView('content').getChildView('items');
-		if (itemsView && itemsView.hasChildView('map')) {
-			itemsView.getChildView('map').panToDirection('north', {
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.panToDirection('north', {
 				duration: 1000
 			});
 		}
 	},
 
 	onClickPanSouth: function() {
-		let itemsView = this.parent.app.getChildView('content').getChildView('items');
-		if (itemsView && itemsView.hasChildView('map')) {
-			itemsView.getChildView('map').panToDirection('south', {
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.panToDirection('south', {
 				duration: 1000
 			});
 		}
 	},
 
 	onClickPanEast: function() {
-		let itemsView = this.parent.app.getChildView('content').getChildView('items');
-		if (itemsView && itemsView.hasChildView('map')) {
-			itemsView.getChildView('map').panToDirection('east', {
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.panToDirection('east', {
 				duration: 1000
 			});
 		}
 	},
 	
 	onClickPanWest: function() {
-		let itemsView = this.parent.app.getChildView('content').getChildView('items');
-		if (itemsView && itemsView.hasChildView('map')) {
-			itemsView.getChildView('map').panToDirection('west', {
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.panToDirection('west', {
 				duration: 1000
 			});
 		}
@@ -267,18 +255,18 @@ export default ViewMenuView.extend({
 	//
 
 	onClickZoomIn: function() {
-		let itemsView = this.parent.app.getChildView('content').getChildView('items');
-		if (itemsView && itemsView.hasChildView('map')) {
-			itemsView.getChildView('map').zoomIn({
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.zoomIn({
 				duration: 1000
 			});
 		}
 	},
 
 	onClickZoomOut: function() {
-		let itemsView = this.parent.app.getChildView('content').getChildView('items');
-		if (itemsView && itemsView.hasChildView('map')) {
-			itemsView.getChildView('map').zoomOut({
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.zoomOut({
 				duration: 1000
 			});
 		}

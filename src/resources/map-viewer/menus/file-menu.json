@@ -1,82 +1,80 @@
-{
-	"items": [
-		{
-			"class": "new",
-			"icon": "fa fa-magic",
-			"name": "New",
-			"menu": [
-				{
-					"class": "new-map",
-					"icon": "fa fa-map",
-					"name": "New Map",
-					"shortcut": "command-M"
-				},
-				{
-					"class": "new-folder",
-					"icon": "fa fa-folder",
-					"name": "New Folder",
-					"shortcut": "command-enter"
-				},
-				{
-					"class": "new-window",
-					"icon": "far fa-window-maximize",
-					"name": "New Window",
-					"shortcut": "shift-command-enter"
-				}
-			]
-		},
-		{
-			"class": "open-item",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"divider",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		"divider",
-		{
-			"class": "save-map",
-			"icon": "fa fa-save",
-			"name": "Save",
-			"shortcut": "command-S"
-		},
-		{
-			"class": "save-as",
-			"icon": "fa fa-save",
-			"name": "Save As",
-			"shortcut": "shift-command-S"
-		},
-		{
-			"class": "download-items",
-			"icon": "fa fa-download",
-			"name": "Download",
-			"shortcut": "shift-command-D"
-		},
-		"divider",
-		{
-			"class": "delete-items",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete",
-			"shortcut": "command-delete"
-		},
-		"divider",
-		{
-			"class": "close-tab",
-			"icon": "fa fa-xmark",
-			"name": "Close Tab",
-			"shortcut": "command-L"
-		},
-		"divider",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	]
-}
+[
+	{
+		"name": "new",
+		"icon": "fa fa-magic",
+		"text": "New",
+		"menu": [
+			{
+				"name": "new-map",
+				"icon": "fa fa-map",
+				"text": "New Map",
+				"shortcut": "command-M"
+			},
+			{
+				"name": "new-folder",
+				"icon": "fa fa-folder",
+				"text": "New Folder",
+				"shortcut": "command-enter"
+			},
+			{
+				"name": "new-window",
+				"icon": "far fa-window-maximize",
+				"text": "New Window",
+				"shortcut": "shift-command-enter"
+			}
+		]
+	},
+	{
+		"name": "open-item",
+		"icon": "fa fa-folder-open",
+		"text": "Open",
+		"shortcut": "command-O"
+	},
+	"divider",
+	{
+		"name": "show-info",
+		"icon": "fa fa-info-circle",
+		"text": "Show Info",
+		"shortcut": "command-I"
+	},
+	"divider",
+	{
+		"name": "save-map",
+		"icon": "fa fa-save",
+		"text": "Save",
+		"shortcut": "command-S"
+	},
+	{
+		"name": "save-as",
+		"icon": "fa fa-save",
+		"text": "Save As",
+		"shortcut": "shift-command-S"
+	},
+	{
+		"name": "download-items",
+		"icon": "fa fa-download",
+		"text": "Download",
+		"shortcut": "shift-command-D"
+	},
+	"divider",
+	{
+		"name": "delete-items",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete",
+		"shortcut": "command-delete"
+	},
+	"divider",
+	{
+		"name": "close-tab",
+		"icon": "fa fa-xmark",
+		"text": "Close Tab",
+		"shortcut": "command-L"
+	},
+	"divider",
+	{
+		"name": "close-window",
+		"icon": "fa fa-circle-xmark",
+		"text": "Close",
+		"shortcut": "command-L"
+	}
+]

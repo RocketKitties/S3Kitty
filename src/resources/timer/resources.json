@@ -1,0 +1,76 @@
+{
+	"display_prefs": [
+		{
+			"name": "display",
+			"icon": "fa fa-display",
+			"text": "Display",
+			"kind": "multiple-choice",
+			"options": {
+				"led": "LED",
+				"lcd": "LCD"
+			},
+			"help": "This is the type of display to use."
+		}
+	],
+	"general_prefs": [
+		{
+			"name": "options",
+			"icon": "fa fa-check",
+			"text": "Show",
+			"kind": "multiple-answer",
+			"options": {
+				"hours": "Hours",
+				"hundredths": "Hundredths"
+			},
+			"help": "This is which display options to show."
+		},
+		{
+			"name": "direction",
+			"icon": "fa fa-arrows-up-down",
+			"text": "Direction",
+			"kind": "multiple-choice",
+			"options": {
+				"down": "Down",
+				"up": "Up"
+			},
+			"help": "This is direction that the timer advances."
+		},
+		{
+			"name": "time",
+			"icon": "fa fa-clock",
+			"text": "Time",
+			"kind": "elapsed-time",
+			"help": "This is amount of time (hours : minutes : seconds) to count down or up."
+		}
+	],
+	"preferences": [
+		{
+			"name": "general",
+			"icon": "fa fa-check",
+			"text": "General"
+		},
+		{
+			"name": "display",
+			"icon": "fa fa-desktop",
+			"text": "Display"
+		},
+		{
+			"name": "window",
+			"icon": "fa fa-window-maximize",
+			"text": "Window"
+		}
+	],
+	"window_prefs": [
+		{
+			"name": "window-state",
+			"icon": "fa fa-window-maximize",
+			"text": "Window State",
+			"kind": "multiple-answer",
+			"options": {
+				"maximized": "Maximized",
+				"full-screen": "Full Screen"
+			},
+			"help": "This is the initial state of the application window."
+		}
+	]
+}

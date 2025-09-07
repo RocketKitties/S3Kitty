@@ -1,0 +1,9 @@
+[
+	{
+		"name": "home-directory",
+		"icon": "fa fa-folder",
+		"text": "Home Folder",
+		"kind": "directory",
+		"help": "This is the initial directory to use when opening files."
+	}
+]

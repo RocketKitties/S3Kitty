@@ -25,8 +25,8 @@ export default EditableTabPaneView.extend({
 	//
 
 	getLanguage: function(extension) {
-		if (window.config.files.languages.extensions[extension]) {
-			return window.config.files.languages.extensions[extension];
+		if (window.config.settings.files.languages.extensions[extension]) {
+			return window.config.settings.files.languages.extensions[extension];
 		} else {
 			return extension;
 		}

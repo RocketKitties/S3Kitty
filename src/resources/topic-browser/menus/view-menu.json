@@ -1,230 +1,228 @@
-{
-	"items": [
-		{
-			"class": "view-icons",
-			"group": "view-kind",
-			"icon": "fa fa-th",
-			"name": "Icons",
-			"state": "unselected"
-		},
-		{
-			"class": "view-names",
-			"group": "view-kind",
-			"icon": "fa fa-align-left",
-			"name": "Names",
-			"state": "unselected"
-		},
-		{
-			"class": "view-lists",
-			"group": "view-kind",
-			"icon": "fa fa-list",
-			"name": "Lists",
-			"state": "unselected"
-		},
-		{
-			"class": "view-cards",
-			"group": "view-kind",
-			"icon": "fa fa-id-card",
-			"name": "Cards",
-			"state": "unselected"
-		},
-		{
-			"class": "view-tiles",
-			"group": "view-kind",
-			"icon": "fa fa-th-large",
-			"name": "Tiles",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "view-details",
-			"icon": "fa fa-tags",
-			"name": "Details",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "view-members",
-					"group": "detail-kind",
-					"icon": "fa fa-users",
-					"name": "Members",
-					"state": "unselected"
-				},
-				{
-					"class": "view-posts",
-					"group": "detail-kind",
-					"icon": "fa fa-newspaper",
-					"name": "Posts",
-					"state": "unselected"
-				},
-				{
-					"class": "view-date",
-					"group": "detail-kind",
-					"icon": "fa fa-calendar-alt",
-					"name": "Date",
-					"state": "unselected",
-					"menu": [
-						{
-							"class": "view-create-date",
-							"group": "detail-kind",
-							"icon": "fa fa-magic",
-							"name": "Create Date",
-							"state": "unselected"
-						},
-						{
-							"class": "view-modify-date",
-							"group": "detail-kind",
-							"icon": "fa fa-edit",
-							"name": "Modify Date",
-							"state": "unselected"
-						},
-						"divider",
-						{
-							"class": "view-date-only",
-							"group": "detail-kind",
-							"icon": "fa fa-calendar-alt",
-							"name": "Date Only",
-							"state": "unselected"
-						},
-						{
-							"class": "view-day-date",
-							"group": "detail-kind",
-							"icon": "fa fa-calendar-plus",
-							"name": "Day, Date",
-							"state": "unselected"
-						},
-						{
-							"class": "view-time-only",
-							"group": "detail-kind",
-							"icon": "fa fa-clock",
-							"name": "Time Only",
-							"state": "unselected"
-						},
-						{
-							"class": "view-date-time",
-							"group": "detail-kind",
-							"icon": "fa fa-calendar-check",
-							"name": "Date, Time",
-							"state": "unselected"
-						},
-						{
-							"class": "view-day-date-time",
-							"group": "detail-kind",
-							"icon": "fa fa-calendar-alt",
-							"name": "Day, Date, Time",
-							"state": "unselected"
-						}
-					]
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "show-toolbars",
-			"icon": "fa fa-wrench",
-			"name": "Toolbars",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "show-nav-bar",
-					"group": "show-toolbar",
-					"icon": "fa fa-sitemap",
-					"name": "Nav",
-					"state": "unselected"
-				}
-			]
-		},
-		{
-			"class": "show-sidebar",
-			"icon": "fa fa-pause",
-			"name": "Sidebar",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "show-actions-panel",
-					"group": "show-sidebar-panel",
-					"icon": "fa fa-play-circle",
-					"name": "Actions",
-					"state": "unselected"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "window-size",
-			"icon": "far fa-window-maximize",
-			"name": "Window Size",
-			"menu": [
-				{
-					"class": "shrink-window",
-					"icon": "fa fa-minus",
-					"name": "Shrink",
-					"shortcut": "command-["
-				},
-				{
-					"class": "grow-window",
-					"icon": "fa fa-plus",
-					"name": "Grow",
-					"shortcut": "command-]"
-				},
-				{
-					"class": "expand-window",
-					"icon": "fa fa-expand",
-					"name": "Expand",
-					"shortcut": "command-\\"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "spaces",
-			"icon": "far fa-window-maximize",
-			"name": "Spaces",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "prev-space",
-					"icon": "fa fa-chevron-left",
-					"name": "Prev",
-					"shortcut": "command-left arrow"
-				},
-				{
-					"class": "next-space",
-					"icon": "fa fa-chevron-right",
-					"name": "Next",
-					"shortcut": "command-right arrow"
-				}
-			]
-		},
-		{
-			"class": "windows",
-			"icon": "far fa-window-restore",
-			"name": "Windows",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "minimize-all",
-					"icon": "fa fa-window-minimize",
-					"name": "Minimize All"
-				},
-				{
-					"class": "unminimize-all",
-					"icon": "fa fa-window-restore",
-					"name": "Unminimize All"
-				}
-			]
-		},
-		{
-			"class": "view-full-screen",
-			"icon": "fa fa-desktop",
-			"name": "Full Screen",
-			"shortcut": "command-up arrow",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "view-preferences",
-			"icon": "fa fa-snowflake",
-			"name": "Preferences"
-		}
-	]
-}
+[
+	{
+		"name": "icons",
+		"group": "view-kind",
+		"icon": "fa fa-th",
+		"text": "Icons",
+		"state": "unselected"
+	},
+	{
+		"name": "names",
+		"group": "view-kind",
+		"icon": "fa fa-align-left",
+		"text": "Names",
+		"state": "unselected"
+	},
+	{
+		"name": "lists",
+		"group": "view-kind",
+		"icon": "fa fa-list",
+		"text": "Lists",
+		"state": "unselected"
+	},
+	{
+		"name": "cards",
+		"group": "view-kind",
+		"icon": "fa fa-id-card",
+		"text": "Cards",
+		"state": "unselected"
+	},
+	{
+		"name": "tiles",
+		"group": "view-kind",
+		"icon": "fa fa-th-large",
+		"text": "Tiles",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "view-details",
+		"icon": "fa fa-tags",
+		"text": "Details",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "members",
+				"group": "detail-kind",
+				"icon": "fa fa-users",
+				"text": "Members",
+				"state": "unselected"
+			},
+			{
+				"name": "posts",
+				"group": "detail-kind",
+				"icon": "fa fa-newspaper",
+				"text": "Posts",
+				"state": "unselected"
+			},
+			{
+				"name": "date",
+				"group": "detail-kind",
+				"icon": "fa fa-calendar-alt",
+				"text": "Date",
+				"state": "unselected",
+				"menu": [
+					{
+						"name": "create-date",
+						"group": "detail-kind",
+						"icon": "fa fa-magic",
+						"text": "Create Date",
+						"state": "unselected"
+					},
+					{
+						"name": "modify-date",
+						"group": "detail-kind",
+						"icon": "fa fa-edit",
+						"text": "Modify Date",
+						"state": "unselected"
+					},
+					"divider",
+					{
+						"name": "date-only",
+						"group": "date-format",
+						"icon": "fa fa-calendar-alt",
+						"text": "Date Only",
+						"state": "unselected"
+					},
+					{
+						"name": "day-date",
+						"group": "date-format",
+						"icon": "fa fa-calendar-plus",
+						"text": "Day, Date",
+						"state": "unselected"
+					},
+					{
+						"name": "time-only",
+						"group": "date-format",
+						"icon": "fa fa-clock",
+						"text": "Time Only",
+						"state": "unselected"
+					},
+					{
+						"name": "date-time",
+						"group": "date-format",
+						"icon": "fa fa-calendar-check",
+						"text": "Date, Time",
+						"state": "unselected"
+					},
+					{
+						"name": "day-date-time",
+						"group": "date-format",
+						"icon": "fa fa-calendar-alt",
+						"text": "Day, Date, Time",
+						"state": "unselected"
+					}
+				]
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "show-toolbars",
+		"icon": "fa fa-wrench",
+		"text": "Toolbars",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "nav",
+				"group": "toolbars",
+				"icon": "fa fa-sitemap",
+				"text": "Nav",
+				"state": "unselected"
+			}
+		]
+	},
+	{
+		"name": "show-sidebar",
+		"icon": "fa fa-pause",
+		"text": "Sidebar",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "actions",
+				"group": "sidebar-panels",
+				"icon": "fa fa-play-circle",
+				"text": "Actions",
+				"state": "unselected"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "window-size",
+		"icon": "far fa-window-maximize",
+		"text": "Window Size",
+		"menu": [
+			{
+				"name": "shrink-window",
+				"icon": "fa fa-minus",
+				"text": "Shrink",
+				"shortcut": "command-["
+			},
+			{
+				"name": "grow-window",
+				"icon": "fa fa-plus",
+				"text": "Grow",
+				"shortcut": "command-]"
+			},
+			{
+				"name": "expand-window",
+				"icon": "fa fa-expand",
+				"text": "Expand",
+				"shortcut": "command-\\"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "spaces",
+		"icon": "far fa-window-maximize",
+		"text": "Spaces",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "prev-space",
+				"icon": "fa fa-chevron-left",
+				"text": "Prev",
+				"shortcut": "command-left arrow"
+			},
+			{
+				"name": "next-space",
+				"icon": "fa fa-chevron-right",
+				"text": "Next",
+				"shortcut": "command-right arrow"
+			}
+		]
+	},
+	{
+		"name": "windows",
+		"icon": "far fa-window-restore",
+		"text": "Windows",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "minimize-all",
+				"icon": "fa fa-window-minimize",
+				"text": "Minimize All"
+			},
+			{
+				"name": "unminimize-all",
+				"icon": "fa fa-window-restore",
+				"text": "Unminimize All"
+			}
+		]
+	},
+	{
+		"name": "view-full-screen",
+		"icon": "fa fa-desktop",
+		"text": "Full Screen",
+		"shortcut": "command-up arrow",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "view-preferences",
+		"icon": "fa fa-snowflake",
+		"text": "Preferences"
+	}
+]

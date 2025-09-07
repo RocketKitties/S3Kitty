@@ -1,0 +1,11 @@
+{
+	"name": "Calendar",
+	"icon": "fa fa-calendar-alt",
+	"category": "utility",
+	"platform": "all",
+	"access": "all",
+	"disabled": false,
+	"hidden": false,
+	"args": false,
+	"color": "cyan"
+}

@@ -24,8 +24,8 @@ export default SortMenuView.extend({
 	//
 
 	events: {
-		'click .sort-by a': 'onClickSortBy',
-		'click .sort-order a': 'onClickSortOrder'
+		'click .sort-kind': 'onClickSortKind',
+		'click .sort-order': 'onClickSortOrder'
 	},
 
 	//
@@ -34,18 +34,16 @@ export default SortMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let sortKind = preferences.get('sort_kind');
-		let sortOrder = preferences.get('sort_order');
 
 		return {
-			'sort-by-title': sortKind == 'title',
-			'sort-by-priority': sortKind == 'priority',
-			'sort-by-kind': sortKind == 'kind',
-			'sort-by-create-date': sortKind == 'create_date',
-			'sort-by-modify-date': sortKind == 'modify_date',
-			'sort-by-due-date': sortKind == 'due_date',
-			'sort-increasing': sortOrder == 'increasing',
-			'sort-decreasing': sortOrder == 'decreasing'
+			'sort-kind title': preferences.matches('sort_kind', 'title'),
+			'sort-kind priority': preferences.matches('sort_kind', 'priority'),
+			'sort-kind kind': preferences.matches('sort_kind', 'kind'),
+			'sort-kind create-date': preferences.matches('sort_kind', 'create_date'),
+			'sort-kind modify-date': preferences.matches('sort_kind', 'modify_date'),
+			'sort-kind due-date': preferences.matches('sort_kind', 'due_date'),
+			'sort-order increasing': preferences.matches('sort_order', 'increasing'),
+			'sort-order decreasing': preferences.matches('sort_order', 'decreasing')
 		};
 	}
 });

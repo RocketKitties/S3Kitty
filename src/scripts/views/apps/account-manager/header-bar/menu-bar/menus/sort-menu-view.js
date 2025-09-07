@@ -24,8 +24,8 @@ export default SortMenuView.extend({
 	//
 
 	events: {
-		'click .sort-by a': 'onClickSortBy',
-		'click .sort-order a': 'onClickSortOrder'
+		'click .sort-kind': 'onClickSortKind',
+		'click .sort-order': 'onClickSortOrder'
 	},
 
 	//
@@ -34,22 +34,20 @@ export default SortMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let sortKind = preferences.get('sort_kind');
-		let sortOrder = preferences.get('sort_order');
 
 		// set initial menu state
 		//
 		return {
-			'sort-by-name': sortKind == 'name',
-			'sort-by-location': sortKind == 'location',
-			'sort-by-occupation': sortKind == 'occupation',
-			'sort-by-age': sortKind == 'age',
-			'sort-by-gender': sortKind == 'gender',
-			'sort-by-birth-date': sortKind == 'birth_date',
-			'sort-by-join-date': sortKind == 'join_date',
-			'sort-by-connect-date': sortKind == 'connect_date',
-			'sort-increasing': sortOrder == 'increasing',
-			'sort-decreasing': sortOrder == 'decreasing'
+			'sort-kind name': preferences.matches('sort_kind', 'name'),
+			'sort-kind location': preferences.matches('sort_kind', 'location'),
+			'sort-kind occupation': preferences.matches('sort_kind', 'occupation'),
+			'sort-kind age': preferences.matches('sort_kind', 'age'),
+			'sort-kind gender': preferences.matches('sort_kind', 'gender'),
+			'sort-kind birth-date': preferences.matches('sort_kind', 'birth_date'),
+			'sort-kind join-date': preferences.matches('sort_kind', 'join_date'),
+			'sort-kind connect-date': preferences.matches('sort_kind', 'connect_date'),
+			'sort-order increasing': preferences.matches('sort_order', 'increasing'),
+			'sort-order decreasing': preferences.matches('sort_order', 'decreasing')
 		};
 	}
 });

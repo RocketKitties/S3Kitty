@@ -1,0 +1,19 @@
+{
+	"general": {
+		"options": {
+			"hours": true,
+			"hundredths": true
+		},
+		"direction": "up",
+		"time": [0, 0, 0]
+	},
+	"display": {
+		"display": "led"
+	},
+	"window": {
+		"window_state": {
+			"maximized": false,
+			"full_screen": false
+		}
+	}
+}

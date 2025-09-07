@@ -1,0 +1,65 @@
+{
+	"general": {
+		"show_gutter": true,
+		"show_indent_guides": true,
+		"show_print_margin": false,
+		"show_invisibles": false,
+		"toolbars": {
+			"nav": true,
+			"run": false
+		}
+	},
+	"display": {
+		"panes": {
+			"sidebar": true,
+			"console": false
+		},
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 30,
+			"desktop": 30
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"favorites",
+			"files"
+		],
+		"sidebar_view_kind": {
+			"phone": "trees",
+			"tablet": "trees",
+			"desktop": "trees"
+		},
+		"console_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+	"window": {
+		"window_size": "medium",
+		"window_state": {
+			"maximized": true,
+			"full_screen": false
+		}
+	},
+	"text": {
+		"font_size": 12,
+		"tab_size": 4,
+		"indenting": "tabs",
+		"wrapping": "off"
+	},
+	"behavior": {
+		"key_binding": "default",
+		"highlight_active_line": false,
+		"highlight_selected": true,
+		"select_full_line": true,
+		"animated_scroll": true
+	},
+	"storage": {
+		"home_directory": "Code/"
+	}
+}

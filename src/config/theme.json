@@ -12,7 +12,7 @@
 		},
 
 		"color_scheme": "colored",
-		"highlight_color": "red",
+		"highlight_color": "hsl(10, 100%, 66%)",
 		"accent_color": "none",
 		"material": "none",
 		"transparency": "translucent",

@@ -54,13 +54,13 @@ export default MultiLayerMapView.extend(_.extend({}, SelectableContainable, {
 		// set attributes
 		//
 		this.map = this.options.map;
-		if (this.map === undefined && this.options.place) {
+		if (!this.map && this.options.place) {
 			this.map = this.getPlaceMap(this.options.place, preferences.get('map_mode'));
 		}
-		if (this.map === undefined && this.collection) {
+		if (!this.map && this.collection && this.collection.hasGeolocation()) {
 			this.map = this.getItemsMap(this.collection, preferences.get('map_mode'));
 		}
-		if (this.map === undefined) {
+		if (!this.map) {
 			this.map = this.getDefaultMap(preferences);
 		}
 
@@ -163,6 +163,12 @@ export default MultiLayerMapView.extend(_.extend({}, SelectableContainable, {
 		switch (key) {
 			case 'map_mode':
 				this.setMapMode(value);
+				break;
+			case 'show_grid':
+				this.setShowGrid(value);
+				break;
+			case 'show_smoothing':
+				this.setSmoothing(value);
 				break;
 			case 'show_item_names':
 				this.setShowItemNames(value);

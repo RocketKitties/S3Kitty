@@ -1,49 +1,47 @@
-{
-	"items": [
-		{
-			"class": "new-file",
-			"icon": "fa fa-file-alt",
-			"name": "New File",
-			"shortcut": "command-F"
-		},
-		{
-			"class": "new-window",
-			"icon": "far fa-window-maximize",
-			"name": "New Window",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "open-file",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"divider",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		"divider",
-		{
-			"class": "save-file",
-			"icon": "fa fa-save",
-			"name": "Save",
-			"shortcut": "command-S"
-		},
-		{
-			"class": "save-as",
-			"icon": "fa fa-save",
-			"name": "Save As",
-			"shortcut": "shift-command-S"
-		},
-		"divider",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	]
-}
+[
+	{
+		"name": "new-file",
+		"icon": "fa fa-file-alt",
+		"text": "New File",
+		"shortcut": "command-F"
+	},
+	{
+		"name": "new-window",
+		"icon": "far fa-window-maximize",
+		"text": "New Window",
+		"shortcut": "command-enter"
+	},
+	{
+		"name": "open-file",
+		"icon": "fa fa-folder-open",
+		"text": "Open",
+		"shortcut": "command-O"
+	},
+	"divider",
+	{
+		"name": "show-info",
+		"icon": "fa fa-info-circle",
+		"text": "Show Info",
+		"shortcut": "command-I"
+	},
+	"divider",
+	{
+		"name": "save-file",
+		"icon": "fa fa-save",
+		"text": "Save",
+		"shortcut": "command-S"
+	},
+	{
+		"name": "save-as",
+		"icon": "fa fa-save",
+		"text": "Save As",
+		"shortcut": "shift-command-S"
+	},
+	"divider",
+	{
+		"name": "close-window",
+		"icon": "fa fa-circle-xmark",
+		"text": "Close",
+		"shortcut": "command-L"
+	}
+]

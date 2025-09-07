@@ -45,14 +45,14 @@ export default ViewMenuView.extend({
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
-		'click .sidebar-tile-size > a': 'onClickSideBarTileSize',
+		'click .sidebar-panels': 'onClickSideBarPanel',
+		'click .sidebar-view-kind': 'onClickSideBarViewKind',
+		'click .sidebar-tile-size': 'onClickSideBarTileSize',
 
 		// mainbar options
 		//
@@ -83,10 +83,6 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let toolbars = preferences.get('toolbars') || [];
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
-		let sidebarViewKind = preferences.get('sidebar_view_kind');
-		let sidebarTileSize = preferences.get('sidebar_tile_size');
 
 		return {
 
@@ -99,37 +95,37 @@ export default ViewMenuView.extend({
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-nav-bar': toolbars.includes('nav'),
-			'show-mouse-mode-bar': toolbars.includes('mouse_mode'),
-			'show-zoom-mode-bar': toolbars.includes('zoom_mode'),
-			'show-zoom-bar': toolbars.includes('zoom'),
-			'show-rotate-bar': toolbars.includes('rotate'),
-			'show-image-bar': toolbars.includes('image'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolbars nav': preferences.includes('toolbars', 'nav'),
+			'toolbars mouse-mode': preferences.includes('toolbars', 'mouse_mode'),
+			'toolbars zoom-mode': preferences.includes('toolbars', 'zoom_mode'),
+			'toolbars zoom': preferences.includes('toolbars', 'zoom'),
+			'toolbars rotate': preferences.includes('toolbars', 'rotate'),
+			'toolbars image': preferences.includes('toolbars', 'image'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-favorites-panel': sidebarPanels.includes('favorites'),
-			'show-images-panel': sidebarPanels.includes('images'),
-			'show-files-panel': sidebarPanels.includes('files'),
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels favorites': preferences.includes('sidebar_panels', 'favorites'),
+			'sidebar-panels images': preferences.includes('sidebar_panels', 'images'),
+			'sidebar-panels files': preferences.includes('sidebar_panels', 'files'),
 
 			// sidebar item options
 			//
-			'view-sidebar-icons': sidebarViewKind == 'icons',
-			'view-sidebar-lists': sidebarViewKind == 'lists',
-			'view-sidebar-cards': sidebarViewKind == 'cards',
-			'view-sidebar-tiles': sidebarViewKind == 'tiles',
+			'sidebar-view-kind icons': preferences.matches('sidebar_view_kind', 'icons'),
+			'sidebar-view-kind lists': preferences.matches('sidebar_view_kind', 'lists'),
+			'sidebar-view-kind cards': preferences.matches('sidebar_view_kind', 'cards'),
+			'sidebar-view-kind tiles': preferences.matches('sidebar_view_kind', 'tiles'),
 
 			// sidebar tile sizes
 			//
-			'small-tile-size': sidebarTileSize == 'small',
-			'medium-tile-size': sidebarTileSize == 'medium',
-			'large-tile-size': sidebarTileSize == 'large',
+			'sidebar-tile-size small': preferences.matches('sidebar_tile_size', 'small'),
+			'sidebar-tile-size medium': preferences.matches('sidebar_tile_size', 'medium'),
+			'sidebar-tile-size large': preferences.matches('sidebar_tile_size', 'large'),
 
 			// mainbar options
 			//
-			'show-image-info': preferences.get('show_image_info')
+			'show-image-info': preferences.includes('panes', 'image_info')
 		};
 	},
 
@@ -155,19 +151,6 @@ export default ViewMenuView.extend({
 		this.parent.app.options.smoothing = smoothing;
 		this.setItemSelected('show-smoothing', smoothing);
 	},
-
-	//
-	// rendering methods
-	//
-
-	/*
-	templateContext: function() {
-		return {
-			zoom: this.parent.app.zoom,
-			zoomLevels: this.parent.app.zoomLevels,
-		};
-	},
-	*/
 	
 	//
 	// fit mouse event handling methods

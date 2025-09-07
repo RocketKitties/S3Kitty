@@ -24,7 +24,7 @@ export default SearchMenuView.extend({
 	//
 
 	events: {
-		'click .search-by > a': 'onClickSearchBy'
+		'click .search-kind': 'onClickSearchKind'
 	},
 
 	//
@@ -33,19 +33,18 @@ export default SearchMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let searchKind = preferences.get('search_kind');
 
 		// set initial menu state
 		//
 		return {
-			'search-by-name': searchKind == 'name',
-			'search-by-location': searchKind == 'location',
-			'search-by-occupation': searchKind == 'occupation',
-			'search-by-age': searchKind == 'age',
-			'search-by-gender': searchKind == 'gender',
-			'search-by-birth-date': searchKind == 'birth-date',
-			'search-by-join-date': searchKind == 'join-date',
-			'search-by-connect-date': searchKind == 'connect-date'
+			'search-kind name': preferences.matches('search_kind', 'name'),
+			'search-kind location': preferences.matches('search_kind', 'location'),
+			'search-kind occupation': preferences.matches('search_kind', 'occupation'),
+			'search-kind age': preferences.matches('search_kind', 'age'),
+			'search-kind gender': preferences.matches('search_kind', 'gender'),
+			'search-kind birth-date': preferences.matches('search_kind', 'birth-date'),
+			'search-kind join-date': preferences.matches('search_kind', 'join-date'),
+			'search-kind connect-date': preferences.matches('search_kind', 'connect-date')
 		};
 	}
 });

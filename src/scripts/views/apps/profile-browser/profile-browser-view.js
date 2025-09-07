@@ -26,7 +26,6 @@ import HeaderBarView from '../../../views/apps/profile-browser/header-bar/header
 import SideBarView from '../../../views/apps/profile-browser/sidebar/sidebar-view.js';
 import UsersView from '../../../views/apps/profile-browser/mainbar/users/users-view.js';
 import FooterBarView from '../../../views/apps/profile-browser/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/clock/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, ConnectionShareable, GoogleContactsImportable, {
 
@@ -334,19 +333,6 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 	// dialog rendering methods
 	//
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/profile-browser/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	showConnectionRequestDialog: function(users) {
 		import(
 			'../../../views/apps/connection-manager/dialogs/connections/connection-request-dialog-view.js'
@@ -384,10 +370,6 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 	//
 	// static getting methods
 	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	},
 
 	getUsersView: function(options) {
 		return new UsersView(options);

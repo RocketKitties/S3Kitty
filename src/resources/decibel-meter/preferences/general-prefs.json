@@ -1,0 +1,14 @@
+[
+	{
+		"name": "sensitivity",
+		"icon": "fa fa-volume-up",
+		"text": "Sensitivity (%)",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 200,
+			"step": 5
+		},
+		"help": "This is the sensitivity of the microphone input."
+	}
+]

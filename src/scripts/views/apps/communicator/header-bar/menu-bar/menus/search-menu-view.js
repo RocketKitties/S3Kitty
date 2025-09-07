@@ -26,7 +26,7 @@ export default SearchMenuView.extend({
 	//
 
 	events: {
-		'click .search-by > a': 'onClickSearchBy'
+		'click .search-kind': 'onClickSearchKind'
 	},
 
 	//
@@ -38,22 +38,21 @@ export default SearchMenuView.extend({
 		let isChat = this.parent.app.model instanceof Chat;
 
 		return {
-			'search-by-message': isTopic || isChat,
-			'search-by-date': isTopic || isChat,
-			'search-by-num-links': isTopic,
-			'search-by-num-comments': isTopic
+			'search-kind message': isTopic || isChat,
+			'search-kind date': isTopic || isChat,
+			'search-kind num-links': isTopic,
+			'search-kind num-comments': isTopic
 		};
 	},
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let searchKind = preferences.get('search_kind');
 
 		return {
-			'search-by-message': searchKind == 'message',
-			'search-by-date': searchKind == 'date',
-			'search-by-num-links': searchKind == 'num_links',
-			'search-by-num-comments': searchKind == 'num_comments'
+			'search-kind message': preferences.matches('search_kind', 'message'),
+			'search-kind date': preferences.matches('search_kind', 'date'),
+			'search-kind num-links': preferences.matches('search_kind', 'num_links'),
+			'search-kind num-comments': preferences.matches('search_kind', 'num_comments')
 		};
 	}
 });

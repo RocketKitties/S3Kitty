@@ -1,0 +1,20 @@
+{
+	"name": "Discussions",
+	"icon": "fa fa-hashtag",
+	"category": "social",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "blue",
+	"defaults": {
+		"topic": {
+			"name": "What's New",
+			"description": "This is the default topic.",
+			"required": true
+		}
+	},
+	"topic_icon_selector_path": "/Shared/Pictures",
+	"topic_invitation_message": "I thought you might be interested in this!"
+}

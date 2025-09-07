@@ -1,0 +1,35 @@
+[
+	{
+		"name": "notation-size",
+		"icon": "fa fa-arrows-alt",
+		"text": "Notation Size (%)",
+		"kind": "range",
+		"options": {
+			"min": 50,
+			"max": 150,
+			"step": 10
+		},
+		"help": "This is the size of the musical notation."
+	},
+	{
+		"name": "fit-width",
+		"icon": "fa fa-arrows-alt-h",
+		"text": "Fit Width",
+		"kind": "true-false",
+		"help": "This is whether or not to rescale the tune to fit the available width."
+	},
+	{
+		"name": "tune-looping",
+		"icon": "fa fa-redo",
+		"text": "Tune Looping",
+		"kind": "true-false",
+		"help": "This is whether or not to play the tune in a repeating loop."
+	},
+	{
+		"name": "home-directory",
+		"icon": "fa fa-folder",
+		"text": "Home Folder",
+		"kind": "directory",
+		"help": "This is the initial directory to use when opening files."
+	}
+]

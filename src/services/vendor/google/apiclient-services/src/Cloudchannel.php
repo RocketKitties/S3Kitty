@@ -999,40 +999,24 @@ class Cloudchannel extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'register' => [
-              'path' => 'v1/{+integrator}:register',
+            ],'registerSubscriber' => [
+              'path' => 'v1/{+integrator}:registerSubscriber',
               'httpMethod' => 'POST',
               'parameters' => [
                 'integrator' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-                'account' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'serviceAccount' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
-            ],'unregister' => [
-              'path' => 'v1/{+integrator}:unregister',
+            ],'unregisterSubscriber' => [
+              'path' => 'v1/{+integrator}:unregisterSubscriber',
               'httpMethod' => 'POST',
               'parameters' => [
                 'integrator' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-                'account' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'serviceAccount' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],

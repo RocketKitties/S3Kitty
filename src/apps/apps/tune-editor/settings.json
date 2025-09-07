@@ -1,0 +1,11 @@
+{
+	"name": "Tunes",
+	"icon": "fa fa-music",
+	"category": "multimedia",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": true,
+	"color": "magenta"
+}

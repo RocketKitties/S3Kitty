@@ -1,0 +1,27 @@
+{
+	"name": "Themes",
+	"icon": "fa fa-paint-roller",
+	"category": "configuration",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": false,
+	"args": false,
+	"color": "grey",
+	"colors": [
+		"red",
+		"orange",
+		"gold",
+		"yellow",
+		"green",
+		"teal",
+		"aqua",
+		"cyan",
+		"blue",
+		"violet",
+		"magenta",
+		"brown",
+		"grey"
+	],
+	"backgrounds_directory": "/Shared/Pictures/Desktops"
+}

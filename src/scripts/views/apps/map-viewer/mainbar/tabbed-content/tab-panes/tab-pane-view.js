@@ -332,9 +332,10 @@ export default EditableTabPaneView.extend(_.extend({}, FullScreenable, {
 		// get place from preferences
 		//
 		} else {
+			let location = this.options.preferences.get('location')
 			return new Place({
-				latitude: this.options.preferences.get('latitude'),
-				longitude: this.options.preferences.get('longitude'),
+				latitude: location[0],
+				longitude: location[1],
 				zoom_level: this.options.preferences.get('zoom_level')
 			});
 		}
@@ -524,13 +525,13 @@ export default EditableTabPaneView.extend(_.extend({}, FullScreenable, {
 			// preferences
 			//
 			preferences: this.options.preferences,
-			show_grid: this.options.preferences.get('show_grid'),
-			show_smoothing: this.options.preferences.get('show_smoothing'),
+			show_grid: this.options.preferences.includes('map_options', 'grid'),
+			show_smoothing: this.options.preferences.includes('map_options', 'smoothing'),
+			show_item_names: this.options.preferences.includes('map_options', 'item_names'),
+			show_geo_orientations: this.options.preferences.includes('map_options', 'geo_orientations'),
 			map_layers: this.options.preferences.get('map_layers') || [],
 			weather_layers: this.options.preferences.get('weather_layers') || [],
 			view_kind: this.options.preferences.get('view_kind'),
-			show_item_names: this.options.preferences.get('show_item_names'),
-			show_geo_orientations: this.options.preferences.get('show_geo_orientations'),
 			label_style: 'diagonal',
 
 			// callbacks

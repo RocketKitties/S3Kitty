@@ -1,64 +1,62 @@
-{
-	"items": [
-		{
-			"class": "new-window",
-			"icon": "far fa-window-maximize",
-			"name": "New Window",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "open-file",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"divider",
-		{
-			"class": "favorites",
-			"icon": "fa fa-star",
-			"name": "Favorites",
-			"menu": [
-				{
-					"class": "add-favorites",
-					"icon": "fa fa-star",
-					"name": "Add Favorites",
-					"shortcut": "shift-command-F"
-				},
-				{
-					"class": "remove-favorites",
-					"icon": "fa fa-trash-alt",
-					"name": "Remove Favorites",
-					"shortcut": "delete"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		"divider",
-		{
-			"class": "save-as",
-			"icon": "fa fa-save",
-			"name": "Save As",
-			"shortcut": "shift-command-S"
-		},
-		"divider",
-		{
-			"class": "download-file",
-			"icon": "fa fa-download",
-			"name": "Download",
-			"shortcut": "shift-command-D"
-		},
-		"divider",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	]
-}
+[
+	{
+		"name": "new-window",
+		"icon": "far fa-window-maximize",
+		"text": "New Window",
+		"shortcut": "command-enter"
+	},
+	{
+		"name": "open-file",
+		"icon": "fa fa-folder-open",
+		"text": "Open",
+		"shortcut": "command-O"
+	},
+	"divider",
+	{
+		"name": "favorites",
+		"icon": "fa fa-star",
+		"text": "Favorites",
+		"menu": [
+			{
+				"name": "add-favorites",
+				"icon": "fa fa-star",
+				"text": "Add Favorites",
+				"shortcut": "shift-command-F"
+			},
+			{
+				"name": "remove-favorites",
+				"icon": "fa fa-trash-alt",
+				"text": "Remove Favorites",
+				"shortcut": "delete"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "show-info",
+		"icon": "fa fa-info-circle",
+		"text": "Show Info",
+		"shortcut": "command-I"
+	},
+	"divider",
+	{
+		"name": "save-as",
+		"icon": "fa fa-save",
+		"text": "Save As",
+		"shortcut": "shift-command-S"
+	},
+	"divider",
+	{
+		"name": "download-file",
+		"icon": "fa fa-download",
+		"text": "Download",
+		"shortcut": "shift-command-D"
+	},
+	"divider",
+	{
+		"name": "close-window",
+		"icon": "fa fa-circle-xmark",
+		"text": "Close",
+		"shortcut": "command-L"
+	}
+]

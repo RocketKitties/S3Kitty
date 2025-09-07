@@ -144,7 +144,7 @@ final class Help
     }
 
     /**
-     * @return array<non-empty-string, non-empty-list<array{arg: non-empty-string, desc: non-empty-string}|array{spacer: ''}|array{text: non-empty-string}>>
+     * @psalm-return array<non-empty-string, non-empty-list<array{text: non-empty-string}|array{arg: non-empty-string, desc: non-empty-string}|array{spacer: ''}>>
      */
     private function elements(): array
     {
@@ -157,8 +157,7 @@ final class Help
                 ['arg' => '--bootstrap <file>', 'desc' => 'A PHP script that is included before the tests run'],
                 ['arg' => '-c|--configuration <file>', 'desc' => 'Read configuration from XML file'],
                 ['arg' => '--no-configuration', 'desc' => 'Ignore default configuration file (phpunit.xml)'],
-                ['arg' => '--extension <class>', 'desc' => 'Register test runner extension with bootstrap <class>'],
-                ['arg' => '--no-extensions', 'desc' => 'Do not register test runner extensions'],
+                ['arg' => '--no-extensions', 'desc' => 'Do not load PHPUnit extensions'],
                 ['arg' => '--include-path <path(s)>', 'desc' => 'Prepend PHP\'s include_path with given path(s)'],
                 ['arg' => '-d <key[=value]>', 'desc' => 'Sets a php.ini value'],
                 ['arg' => '--cache-directory <dir>', 'desc' => 'Specify cache directory'],
@@ -178,11 +177,9 @@ final class Help
                 ['arg' => '--exclude-group <name>', 'desc' => 'Exclude tests from the specified group(s)'],
                 ['arg' => '--covers <name>', 'desc' => 'Only run tests that intend to cover <name>'],
                 ['arg' => '--uses <name>', 'desc' => 'Only run tests that intend to use <name>'],
-                ['arg' => '--list-test-files', 'desc' => 'List available test files'],
                 ['arg' => '--list-tests', 'desc' => 'List available tests'],
                 ['arg' => '--list-tests-xml <file>', 'desc' => 'List available tests in XML format'],
                 ['arg' => '--filter <pattern>', 'desc' => 'Filter which tests to run'],
-                ['arg' => '--exclude-filter <pattern>', 'desc' => 'Exclude tests for the specified filter pattern'],
                 ['arg' => '--test-suffix <suffixes>', 'desc' => 'Only search for test in files with specified suffix(es). Default: Test.php,.phpt'],
             ],
 
@@ -215,6 +212,7 @@ final class Help
                 ['arg'    => '--fail-on-warning', 'desc' => 'Signal failure using shell exit code when a warning was triggered'],
                 ['arg'    => '--fail-on-risky', 'desc' => 'Signal failure using shell exit code when a test was considered risky'],
                 ['arg'    => '--fail-on-deprecation', 'desc' => 'Signal failure using shell exit code when a deprecation was triggered'],
+                ['arg'    => '--fail-on-phpunit-deprecation', 'desc' => 'Signal failure using shell exit code when a PHPUnit deprecation was triggered'],
                 ['arg'    => '--fail-on-notice', 'desc' => 'Signal failure using shell exit code when a notice was triggered'],
                 ['arg'    => '--fail-on-skipped', 'desc' => 'Signal failure using shell exit code when a test was skipped'],
                 ['arg'    => '--fail-on-incomplete', 'desc' => 'Signal failure using shell exit code when a test was marked incomplete'],
@@ -243,6 +241,7 @@ final class Help
                 ['arg'    => '--display-incomplete', 'desc' => 'Display details for incomplete tests'],
                 ['arg'    => '--display-skipped', 'desc' => 'Display details for skipped tests'],
                 ['arg'    => '--display-deprecations', 'desc' => 'Display details for deprecations triggered by tests'],
+                ['arg'    => '--display-phpunit-deprecations', 'desc' => 'Display details for PHPUnit deprecations'],
                 ['arg'    => '--display-errors', 'desc' => 'Display details for errors triggered by tests'],
                 ['arg'    => '--display-notices', 'desc' => 'Display details for notices triggered by tests'],
                 ['arg'    => '--display-warnings', 'desc' => 'Display details for warnings triggered by tests'],
@@ -251,7 +250,6 @@ final class Help
 
                 ['arg'    => '--teamcity', 'desc' => 'Replace default progress and result output with TeamCity format'],
                 ['arg'    => '--testdox', 'desc' => 'Replace default result output with TestDox format'],
-                ['arg'    => '--testdox-summary', 'desc' => 'Repeat TestDox output for tests with errors, failures, or issues'],
                 ['spacer' => ''],
 
                 ['arg' => '--debug', 'desc' => 'Replace default progress and result output with debugging information'],

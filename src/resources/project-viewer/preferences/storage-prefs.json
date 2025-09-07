@@ -1,0 +1,23 @@
+[
+	{
+		"name": "copy-attachments",
+		"icon": "fa fa-copy",
+		"text": "Copy Attachments",
+		"kind": "true-false",
+		"help": "This is whether or not to copy attached files and images from their original location to the storage directory.  If they are copied, then if you delete the original files, then you will still be able to view the attachments."
+	},
+	{
+		"name": "uploads-directory",
+		"icon": "fa fa-folder",
+		"text": "Uploads Folder",
+		"kind": "directory",
+		"help": "This is the directory to use when uploading files."
+	},
+	{
+		"name": "storage-directory",
+		"icon": "fa fa-folder",
+		"text": "Storage Folder",
+		"kind": "directory",
+		"help": "This is the directory to use when storing files."
+	}
+]

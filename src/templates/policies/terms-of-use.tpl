@@ -7,6 +7,7 @@
 </ol>
 
 <div class="content">
+	<h2><i class="fa fa-gavel"></i>Terms and Conditions</h2>
 	<p>These Terms of Service cover your use of and access to the service, your rights when using the service, and your responsibilities when uploading content to the service. </p>
 
 	<div class="group">

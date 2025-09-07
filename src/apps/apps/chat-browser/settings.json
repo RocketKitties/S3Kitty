@@ -1,0 +1,11 @@
+{
+	"name": "Chats",
+	"icon": "fa fa-comments",
+	"category": "social",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "blue"
+}

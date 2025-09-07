@@ -30,16 +30,16 @@ export default BaseView.extend({
 		<h1><i class="fa fa-search"></i>Search Results</h1>
 		<div class="search-results"></div>
 
-		<% if (config.defaults.search.credits) { %>
+		<% if (config.settings.defaults.search && config.settings.defaults.search.credits) { %>
 		<div class="credits well">
-			<% if (config.defaults.search.credits.text) { %>
-			<div style="margin-bottom: 10px"><%= config.defaults.search.credits.text %></div>
+			<% if (config.settings.defaults.search.credits.text) { %>
+			<div style="margin-bottom: 10px"><%= config.settings.defaults.search.credits.text %></div>
 			<% } %>
 
-			<% if (config.defaults.search.credits.list) { %>
+			<% if (config.settings.defaults.search.credits.list) { %>
 			<ul>
-			<% for (let i = 0; i < config.defaults.search.credits.list.length; i++) { %>
-				<li><%= config.defaults.search.credits.list[i] %></li>
+			<% for (let i = 0; i < config.settings.defaults.search.credits.list.length; i++) { %>
+				<li><%= config.settings.defaults.search.credits.list[i] %></li>
 			<% } %>
 			</ul>
 			<% } %>

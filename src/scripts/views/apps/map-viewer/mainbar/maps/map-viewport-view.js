@@ -376,12 +376,18 @@ export default AnnotatedViewportView.extend({
 
 	zoomIn: function(options) {
 		let zoomLevel = this.getZoomLevel() + 1;
-		this.zoomTo(Math.clamp(zoomLevel, this.minZoom, this.maxZoom), options);
+		if (this.minZoom && this.maxZoom) {
+			zoomLevel = Math.clamp(zoomLevel, this.minZoom, this.maxZoom);
+		}
+		this.zoomTo(zoomLevel, options);
 	},
 
 	zoomOut: function(options) {
 		let zoomLevel = this.getZoomLevel() - 1;
-		this.zoomTo(Math.clamp(zoomLevel, this.minZoom, this.maxZoom), options);
+		if (this.minZoom && this.maxZoom) {
+			zoomLevel = Math.clamp(zoomLevel, this.minZoom, this.maxZoom);
+		}
+		this.zoomTo(zoomLevel, options);
 	},
 
 	zoomTo: function(zoomLevel, options) {

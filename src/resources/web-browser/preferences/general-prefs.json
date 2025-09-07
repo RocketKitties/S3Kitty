@@ -1,0 +1,16 @@
+[
+	{
+		"name": "homepage",
+		"icon": "fa fa-home",
+		"text": "Homepage",
+		"kind": "short-answer",
+		"help": "This is the web page initially loaded by the web browser."
+	},
+	{
+		"name": "home-directory",
+		"icon": "fa fa-folder",
+		"text": "Home Folder",
+		"kind": "directory",
+		"help": "This is the initial directory to use when opening files."
+	}
+]

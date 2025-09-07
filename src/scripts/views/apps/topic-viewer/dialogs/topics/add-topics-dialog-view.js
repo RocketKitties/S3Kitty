@@ -72,7 +72,7 @@ export default DialogView.extend({
 	// dialog attributes
 	//
 
-	size: config.defaults.dialogs.sizes.small,
+	size: config.settings.defaults.dialogs.sizes.small,
 	icon: '<i class="fa fa-plus"></i>',
 	title: "Add Topics",
 

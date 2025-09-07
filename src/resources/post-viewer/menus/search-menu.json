@@ -1,41 +1,39 @@
-{
-	"items": [
-		{
-			"class": "search-by-name",
-			"group": "search-by",
-			"icon": "fa fa-font",
-			"name": "Name",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "search-by-date",
-			"icon": "fa fa-calendar-alt",
-			"name": "Date",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "search-by-create-date",
-					"group": "search-by",
-					"icon": "fa fa-magic",
-					"name": "Create Date",
-					"state": "unselected"
-				},
-				{
-					"class": "search-by-modify-date",
-					"group": "search-by",
-					"icon": "fa fa-edit",
-					"name": "Modify Date",
-					"state": "unselected"
-				},
-				{
-					"class": "search-by-access-date",
-					"group": "search-by",
-					"icon": "fa fa-eye",
-					"name": "Access Date",
-					"state": "unselected"
-				}
-			]
-		}
-	]
-}
+[
+	{
+		"name": "name",
+		"group": "search-kind",
+		"icon": "fa fa-font",
+		"text": "Name",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "date",
+		"icon": "fa fa-calendar-alt",
+		"text": "Date",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "create-date",
+				"group": "search-kind",
+				"icon": "fa fa-magic",
+				"text": "Create Date",
+				"state": "unselected"
+			},
+			{
+				"name": "modify-date",
+				"group": "search-kind",
+				"icon": "fa fa-edit",
+				"text": "Modify Date",
+				"state": "unselected"
+			},
+			{
+				"name": "access-date",
+				"group": "search-kind",
+				"icon": "fa fa-eye",
+				"text": "Access Date",
+				"state": "unselected"
+			}
+		]
+	}
+]

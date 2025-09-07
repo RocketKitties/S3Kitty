@@ -1,151 +1,149 @@
-{
-	"items": [
-		{
-			"class": "new-map",
-			"icon": "fa fa-map",
-			"name": "New Map",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "open-item",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"divider",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		"divider",
-		{
-			"class": "share",
-			"icon": "fa fa-share",
-			"name": "Share",
-			"menu": [
-				{
-					"class": "share-with-connections",
-					"icon": "fa fa-user-friends",
-					"name": "With Connections"
-				},
-				"divider",
-				{
-					"class": "share-by-topic",
-					"icon": "fa fa-newspaper",
-					"name": "By Discussion Topic"
-				},
-				{
-					"class": "share-by-message",
-					"icon": "fa fa-comments",
-					"name": "By Chat Messsage"
-				},
-				"divider",
-				{
-					"class": "share-by-link",
-					"icon": "fa fa-link",
-					"name": "By Link"
-				},
-				{
-					"class": "share-by-email",
-					"icon": "fa fa-envelope",
-					"name": "By Email"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "zoom-to",
-			"icon": "fa fa-search",
-			"name": "Zoom To",
-			"shortcut": "command-Z"
-		},
-		"divider",
-		{
-			"class": "add-photos",
-			"icon": "fa fa-camera",
-			"name": "Add Photos",
-			"shortcut": "shift-command-O"
-		},
-		{
-			"class": "remove-photos",
-			"icon": "fa fa-minus",
-			"name": "Remove Photos",
-			"shortcut": "delete"
-		},
-		{
-			"class": "add-videos",
-			"icon": "fa fa-video",
-			"name": "Add Videos",
-			"shortcut": "shift-command-O"
-		},
-		{
-			"class": "remove-videos",
-			"icon": "fa fa-minus",
-			"name": "Remove Videos",
-			"shortcut": "delete"
-		},
-		{
-			"class": "add-people",
-			"icon": "fa fa-user-friends",
-			"name": "Add People",
-			"shortcut": "shift-command-F"
-		},
-		{
-			"class": "remove-people",
-			"icon": "fa fa-minus",
-			"name": "Remove People",
-			"shortcut": "delete"
-		},
-		{
-			"class": "add-place",
-			"icon": "fa fa-map-marker-alt",
-			"name": "Add Place",
-			"shortcut": "command-P"
-		},
-		{
-			"class": "edit-place",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Place",
-			"shortcut": "command-E"
-		},
-		{
-			"class": "delete-place",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Place",
-			"shortcut": "delete"
-		},
-		{
-			"class": "add-favorite",
-			"icon": "fa fa-map-pin",
-			"name": "Add Favorite",
-			"shortcut": "command-1"
-		},
-		{
-			"class": "edit-favorite",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Favorite",
-			"shortcut": "command-E"
-		},
-		{
-			"class": "delete-favorite",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Favorite",
-			"shortcut": "delete"
-		},
-		"divider",
-		{
-			"class": "save-map",
-			"icon": "fa fa-save",
-			"name": "Save",
-			"shortcut": "command-S"
-		},
-		{
-			"class": "save-as",
-			"icon": "fa fa-save",
-			"name": "Save As",
-			"shortcut": "shift-command-S"
-		}
-	]
-}
+[
+	{
+		"name": "new-map",
+		"icon": "fa fa-map",
+		"text": "New Map",
+		"shortcut": "command-enter"
+	},
+	{
+		"name": "open-item",
+		"icon": "fa fa-folder-open",
+		"text": "Open",
+		"shortcut": "command-O"
+	},
+	"divider",
+	{
+		"name": "show-info",
+		"icon": "fa fa-info-circle",
+		"text": "Show Info",
+		"shortcut": "command-I"
+	},
+	"divider",
+	{
+		"name": "share",
+		"icon": "fa fa-share",
+		"text": "Share",
+		"menu": [
+			{
+				"name": "share-with-connections",
+				"icon": "fa fa-user-friends",
+				"text": "With Connections"
+			},
+			"divider",
+			{
+				"name": "share-by-topic",
+				"icon": "fa fa-newspaper",
+				"text": "By Discussion Topic"
+			},
+			{
+				"name": "share-by-message",
+				"icon": "fa fa-comments",
+				"text": "By Chat Messsage"
+			},
+			"divider",
+			{
+				"name": "share-by-link",
+				"icon": "fa fa-link",
+				"text": "By Link"
+			},
+			{
+				"name": "share-by-email",
+				"icon": "fa fa-envelope",
+				"text": "By Email"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "zoom-to",
+		"icon": "fa fa-search",
+		"text": "Zoom To",
+		"shortcut": "command-Z"
+	},
+	"divider",
+	{
+		"name": "add-photos",
+		"icon": "fa fa-camera",
+		"text": "Add Photos",
+		"shortcut": "shift-command-O"
+	},
+	{
+		"name": "remove-photos",
+		"icon": "fa fa-minus",
+		"text": "Remove Photos",
+		"shortcut": "delete"
+	},
+	{
+		"name": "add-videos",
+		"icon": "fa fa-video",
+		"text": "Add Videos",
+		"shortcut": "shift-command-O"
+	},
+	{
+		"name": "remove-videos",
+		"icon": "fa fa-minus",
+		"text": "Remove Videos",
+		"shortcut": "delete"
+	},
+	{
+		"name": "add-people",
+		"icon": "fa fa-user-friends",
+		"text": "Add People",
+		"shortcut": "shift-command-F"
+	},
+	{
+		"name": "remove-people",
+		"icon": "fa fa-minus",
+		"text": "Remove People",
+		"shortcut": "delete"
+	},
+	{
+		"name": "add-place",
+		"icon": "fa fa-map-marker-alt",
+		"text": "Add Place",
+		"shortcut": "command-P"
+	},
+	{
+		"name": "edit-place",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Place",
+		"shortcut": "command-E"
+	},
+	{
+		"name": "delete-place",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Place",
+		"shortcut": "delete"
+	},
+	{
+		"name": "add-favorite",
+		"icon": "fa fa-map-pin",
+		"text": "Add Favorite",
+		"shortcut": "command-1"
+	},
+	{
+		"name": "edit-favorite",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Favorite",
+		"shortcut": "command-E"
+	},
+	{
+		"name": "delete-favorite",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Favorite",
+		"shortcut": "delete"
+	},
+	"divider",
+	{
+		"name": "save-map",
+		"icon": "fa fa-save",
+		"text": "Save",
+		"shortcut": "command-S"
+	},
+	{
+		"name": "save-as",
+		"icon": "fa fa-save",
+		"text": "Save As",
+		"shortcut": "shift-command-S"
+	}
+]

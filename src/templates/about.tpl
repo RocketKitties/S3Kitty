@@ -38,12 +38,14 @@
 		</div>
 	</div>
 
-	<br />
-
-	<h2><i class="fa fa-cloud"></i>CloudKitty</h2>
-	<p><%= application.name %> is part of the <a href="http://www.cloudkitty.org">CloudKitty</a> family of self-hostable cloud-based sharing platforms. </p>
-
-	<br />
+	<h2><i class="fa fa-cloud"></i>RocketKitty</h2>
+	<p><%= application.name %> is part of the <a href="http://www.rocketkitty.org">RockettKitty</a> family of self-hostable cloud-based sharing platforms. </p>
+	<div class="figure">
+		<a class="attention" href="http://rocketkitty.org">
+			<img src="images/logos/rocketkitty-icon.svg" />
+		</a>
+		<div class="caption">RocketKitty</div>
+	</div>
 
 	<h2><i class="fa fa-desktop"></i>Screen Shots</h2>
 	<div class="figure">
@@ -53,7 +55,7 @@
 
 	<div class="figure row">
 		<div class="figure col-sm-6">
-			<a href="images/info/desktop/iphone-desktop.png" target="_blank" class="smooth lightbox" title="<%= application.name %> Mobile"><img src="images/info/desktop/iphone-desktop.png" style="width:300px" /></a>
+			<a href="images/info/mobile/iphone.png" target="_blank" class="smooth lightbox" title="<%= application.name %> Mobile"><img src="images/info/mobile/iphone.png" style="width:300px" /></a>
 			<div class="caption"><%= application.name %> Mobile</div>
 		</div>
 	</div>

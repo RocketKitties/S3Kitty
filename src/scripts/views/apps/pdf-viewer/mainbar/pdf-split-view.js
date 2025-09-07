@@ -43,7 +43,9 @@ export default SplitView.extend({
 			case 'info_bar_size':
 				this.setSideBarSize(value);
 				break;
-
+			case 'panes':
+				this.setSideBarVisibility(value.includes('pdf_info'));
+				break;
 			default:
 				this.getChildView('mainbar').setOption(key, value);
 		}

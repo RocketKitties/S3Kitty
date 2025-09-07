@@ -11,7 +11,6 @@ namespace PHPUnit\TextUI\Command;
 
 use const PHP_EOL;
 use const STDIN;
-use function assert;
 use function fgets;
 use function file_put_contents;
 use function getcwd;
@@ -25,7 +24,7 @@ use PHPUnit\TextUI\XmlConfiguration\Generator;
  *
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
-final readonly class GenerateConfigurationCommand implements Command
+final class GenerateConfigurationCommand implements Command
 {
     public function execute(): Result
     {
@@ -99,10 +98,6 @@ final readonly class GenerateConfigurationCommand implements Command
 
     private function read(): string
     {
-        $buffer = fgets(STDIN);
-
-        assert($buffer !== false);
-
-        return trim($buffer);
+        return trim(fgets(STDIN));
     }
 }

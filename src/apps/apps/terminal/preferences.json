@@ -1,0 +1,12 @@
+{
+	"general": {
+		"font_size": 13
+	},
+	"window": {
+		"window_size": "medium",
+		"window_state": {
+			"maximized": false,
+			"full_screen": false
+		}
+	}
+}

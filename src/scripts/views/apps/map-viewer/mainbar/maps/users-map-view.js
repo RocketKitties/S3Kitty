@@ -30,7 +30,6 @@ export default ItemsMapView.extend({
 
 			// options
 			//
-			preferences: this.options.preferences,
 			view_kind: this.options.preferences.get('map_view_kind'),
 			tile_size: this.options.tile_size,
 

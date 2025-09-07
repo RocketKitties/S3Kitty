@@ -26,6 +26,13 @@ export default BaseView.extend({
 	className: 'week',
 
 	template: template(`
+		<div class="heading">
+			<h1>
+				<span class="month"><%= month %></span>
+				<span class="year"><%= year %></span>
+			</h1>
+		</div>
+
 		<table class="outlined">
 			<thead>
 				<tr><th>Day</th></tr>

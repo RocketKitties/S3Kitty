@@ -28,14 +28,14 @@ export default ViewMenuView.extend({
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
-		'click .sidebar-tile-size > a': 'onClickSideBarTileSize',
+		'click .sidebar-panels': 'onClickSideBarPanel',
+		'click .sidebar-view-kind': 'onClickSideBarViewKind',
+		'click .sidebar-tile-size': 'onClickSideBarTileSize',
 		'click .show-markup': 'onClickOption',
 
 		// window options
@@ -69,22 +69,20 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let toolbars = preferences.get('toolbars') || [];
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
 
 		return {
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-nav-bar': toolbars.includes('nav'),
-			'show-track-bar': toolbars.includes('track'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolbars nav': preferences.includes('toolbars', 'nav'),
+			'toolbars track': preferences.includes('toolbars', 'track'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-tunes-panel': sidebarPanels.includes('tunes'),
-			'show-markup': preferences.get('show_markup'),
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels tunes': preferences.includes('sidebar_panels', 'tunes'),
+			'show-markup': preferences.includes('panes', 'markup_bar'),
 		};
 	}
 });

@@ -19,7 +19,6 @@ import File from '../../../models/storage/files/file.js';
 import Items from '../../../collections/storage/items.js';
 import AppView from '../../../views/apps/common/app-view.js';
 import FilesView from '../../../views/apps/file-browser/mainbar/files/files-view.js';
-import PreferencesFormView from '../../../views/apps/theme-picker/forms/preferences/preferences-form-view.js'
 
 export default AppView.extend({
 
@@ -189,23 +188,6 @@ export default AppView.extend({
 	},
 
 	//
-	// dialog rendering methods
-	//
-
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/theme-picker/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
-	//
 	// closing methods
 	//
 
@@ -308,14 +290,5 @@ export default AppView.extend({
 		// clear static attributes
 		//
 		this.constructor.current = null;
-	}
-}, {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
 	}
 });

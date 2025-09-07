@@ -136,7 +136,7 @@ export default ModelView.extend(_.extend({}, Selectable, {
 		'mousedown .comment-bubble': 'onMouseDown',
 		'click > .tile a.user': 'onClickUser',
 		'dblclick .comment-bubble': 'onDoubleClickComment',
-		'click .comment-bubble a': 'onClickLink',
+		'click .comment-bubble': 'onClickLink',
 		'click .gallery > img': 'onClickGalleryImage',
 		'click .when': 'onClickWhen',
 		'click .where': 'onClickWhere',

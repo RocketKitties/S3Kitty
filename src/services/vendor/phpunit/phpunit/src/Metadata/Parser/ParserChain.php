@@ -9,6 +9,9 @@
  */
 namespace PHPUnit\Metadata\Parser;
 
+use function assert;
+use function class_exists;
+use function method_exists;
 use PHPUnit\Metadata\MetadataCollection;
 
 /**
@@ -16,10 +19,10 @@ use PHPUnit\Metadata\MetadataCollection;
  *
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
-final readonly class ParserChain implements Parser
+final class ParserChain implements Parser
 {
-    private Parser $attributeReader;
-    private Parser $annotationReader;
+    private readonly Parser $attributeReader;
+    private readonly Parser $annotationReader;
 
     public function __construct(Parser $attributeReader, Parser $annotationReader)
     {
@@ -28,10 +31,12 @@ final readonly class ParserChain implements Parser
     }
 
     /**
-     * @param class-string $className
+     * @psalm-param class-string $className
      */
     public function forClass(string $className): MetadataCollection
     {
+        assert(class_exists($className));
+
         $metadata = $this->attributeReader->forClass($className);
 
         if (!$metadata->isEmpty()) {
@@ -42,11 +47,14 @@ final readonly class ParserChain implements Parser
     }
 
     /**
-     * @param class-string     $className
-     * @param non-empty-string $methodName
+     * @psalm-param class-string $className
+     * @psalm-param non-empty-string $methodName
      */
     public function forMethod(string $className, string $methodName): MetadataCollection
     {
+        assert(class_exists($className));
+        assert(method_exists($className, $methodName));
+
         $metadata = $this->attributeReader->forMethod($className, $methodName);
 
         if (!$metadata->isEmpty()) {
@@ -57,8 +65,8 @@ final readonly class ParserChain implements Parser
     }
 
     /**
-     * @param class-string     $className
-     * @param non-empty-string $methodName
+     * @psalm-param class-string $className
+     * @psalm-param non-empty-string $methodName
      */
     public function forClassAndMethod(string $className, string $methodName): MetadataCollection
     {

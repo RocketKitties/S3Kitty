@@ -63,15 +63,15 @@ $image-shadow: drop-shadow(10px 10px 20px rgba(black, 50%));
 					//
 					// background-color: $very-very-very-light-grey;
 
+					// shadow effects
+					//
+					filter: $image-shadow;
+
 					// fit size
 					//
 					&[width="100%"][height="100%"] {
 						object-fit: contain;
 					}
-
-					// shadow effects
-					//
-					filter: $image-shadow;
 				}
 
 				.caption {

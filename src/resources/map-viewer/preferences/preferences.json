@@ -1,0 +1,32 @@
+[
+	{
+		"name": "general",
+		"icon": "fa fa-check",
+		"text": "General"
+	},
+	{
+		"name": "display",
+		"icon": "fa fa-desktop",
+		"text": "Display"
+	},
+	{
+		"name": "window",
+		"icon": "fa fa-window-maximize",
+		"text": "Window"
+	},
+	{
+		"name": "map",
+		"icon": "fa fa-map",
+		"text": "Map"
+	},
+	{
+		"name": "effects",
+		"icon": "fa fa-video",
+		"text": "Effects"
+	},
+	{
+		"name": "storage",
+		"icon": "fa fa-database",
+		"text": "Storage"
+	}
+]

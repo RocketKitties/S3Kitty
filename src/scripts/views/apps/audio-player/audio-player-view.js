@@ -28,7 +28,6 @@ import HeaderBarView from '../../../views/apps/audio-player/header-bar/header-ba
 import SideBarView from '../../../views/apps/audio-player/sidebar/sidebar-view.js';
 import AudioSplitView from '../../../views/apps/audio-player/mainbar/audio-split-view.js';
 import FooterBarView from '../../../views/apps/audio-player/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/audio-player/forms/preferences/preferences-form-view.js'
 import Audio from '../../../utilities/multimedia/audio.js';
 import Browser from '../../../utilities/web/browser.js';
 
@@ -74,7 +73,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, Fi
 			this.directory = this.collection.at(0).collection.directory;
 		}
 
-		// for embedded apps, allow analyser to take up a majority of the space
+		// for embedded apps, allow analyzer to take up a majority of the space
 		//
 		if (application.isEmbedded()) {
 			this.preferences.set('analyzer_size', 70);
@@ -310,15 +309,13 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, Fi
 				}
 				break;
 
-			// analyser options
+			// sidebar options
 			//
-			case 'show_analyser':
-				if (this.hasChildView('content') && this.getChildView('content').setSideBarVisibility) {
-					this.getChildView('content').setSideBarVisibility(value);
-				}
+			case 'show_sidebar':
+				this.setSideBarVisibility(value);
 				break;
-			case 'analyzer_size':
-				this.getChildView('content').setSideBarSize(value);
+			case 'sidebar_size':
+				this.setSideBarSize(value);
 				break;
 
 			// other options
@@ -545,7 +542,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, Fi
 
 		// show split view
 		//
-		if (this.preferences.get('show_sidebar')) {
+		if (this.preferences.includes('panes', 'sidebar')) {
 			this.getChildView('contents').showSideBar();
 		}
 
@@ -822,7 +819,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, Fi
 			audio: this.audio,
 			filter: this.options.filter,
 			preferences: this.preferences,
-			show_sidebar: this.preferences.get('show_analyser'),
+			show_sidebar: this.preferences.includes('panes', 'analyzer'),
 			sidebar_size: this.preferences.get('analyzer_size'),
 
 			// callbacks
@@ -900,19 +897,6 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, Fi
 				model: this.model
 			}, options)));				
 		});	
-	},
-	
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/audio-player/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
 	},
 
 	//
@@ -1085,13 +1069,4 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, Fi
 	onBeforeDestroy: function() {
 		this.pause();
 	}
-}), {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	}
-});
+}));

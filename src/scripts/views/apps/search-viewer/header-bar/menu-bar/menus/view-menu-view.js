@@ -27,25 +27,25 @@ export default ViewMenuView.extend({
 
 		// view options
 		//
-		'click .view-kind > a': 'onClickViewKind',
+		'click .view-kind': 'onClickViewKind',
 
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// details options
 		//
 		'click .view-details': 'onClickViewDetails',
-		'click .detail-kind > a': 'onClickDetailKind',
-		'click .date-format > a': 'onClickDateFormat',
+		'click .detail-kind': 'onClickDetailKind',
+		'click .date-format': 'onClickDateFormat',
 
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
-		'click .sidebar-tile-size > a': 'onClickSideBarTileSize',
+		'click .sidebar-panels': 'onClickSideBarPanel',
+		'click .sidebar-view-kind': 'onClickSideBarViewKind',
+		'click .sidebar-tile-size': 'onClickSideBarTileSize',
 
 		// window options
 		//
@@ -78,43 +78,38 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let viewKind = preferences.get('view_kind');
-		let toolbars = preferences.get('toolbars') || [];
-		let detailKind = preferences.get('detail_kind');
-		let dateFormat = preferences.get('date_format');
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
 
 		return {
 
 			// viewing options
 			//
-			'view-icons': viewKind == 'icons',
-			'view-lists': viewKind == 'lists',
-			'view-cards': viewKind == 'cards',
-			'view-tiles': viewKind == 'tiles',
+			'view-kind icons': preferences.matches('view_kind', 'icons'),
+			'view-kind lists': preferences.matches('view_kind', 'lists'),
+			'view-kind cards': preferences.matches('view_kind', 'cards'),
+			'view-kind tiles': preferences.matches('view_kind', 'tiles'),
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-nav-bar': toolbars.includes('nav'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolbars nav': preferences.includes('toolbars', 'nav'),
 
 			// detail options
 			//
-			'view-details': typeof detailKind == 'string' && detailKind != '',
-			'view-size': detailKind == 'size',
-			'view-create-date': detailKind == 'create_date',
-			'view-modify-date': detailKind == 'modify_date',
-			'view-access-date': detailKind == 'access_date',
-			'view-date-only': dateFormat == 'date_only',
-			'view-day-date': dateFormat == 'day_date',
-			'view-time-only': dateFormat == 'time_only',
-			'view-date-time': dateFormat == 'date_time',
-			'view-day-date-time': dateFormat == 'day_date_time' || !dateFormat,
+			'view-details': preferences.has('view_details'),
+			'detail-kind size': preferences.matches('detail_kind', 'size'),
+			'detail-kind create_date': preferences.matches('detail_kind', 'create_date'),
+			'detail-kind modify_date': preferences.matches('detail_kind', 'modify_date'),
+			'detail-kind access_date': preferences.matches('detail_kind', 'access_date'),
+			'detail-kind date_only': preferences.matches('detail_kind', 'date_only'),
+			'detail-kind day_date': preferences.matches('detail_kind', 'day_date'),
+			'detail-kind time_only': preferences.matches('detail_kind', 'time_only'),
+			'detail-kind date_time': preferences.matches('detail_kind', 'date_time'),
+			'detail-kind day_date_time': preferences.matches('detail_kind', 'day_date_time'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-params-panel': sidebarPanels.includes('params')
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels params': preferences.includes('sidebar_panels', 'params')
 		};	
 	}
 });

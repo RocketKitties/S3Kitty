@@ -24,7 +24,6 @@ import HeaderBarView from '../../../views/apps/chat-browser/header-bar/header-ba
 import SideBarView from '../../../views/apps/chat-browser/sidebar/sidebar-view.js';
 import ChatsView from '../../../views/apps/chat-browser/mainbar/chats/chats-view.js';
 import FooterBarView from '../../../views/apps/chat-browser/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/chat-browser/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, ChatInfoShowable, {
 
@@ -86,11 +85,9 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// update main bar
 		//
 		if (this.collection.length == 0) {
-			this.showMessage("No chats found.", {
-				icon: '<i class="fa fa-comments"></i>'
-			});
+			this.showEmptyMessage();
 		} else {
-			this.hideMessage();	
+			this.hideMessage();
 		}
 
 		// update footer bar
@@ -99,7 +96,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 			this.getChildView('info').update();
 		}
 	},
-	
+
 	//
 	// selecting methods
 	//
@@ -187,7 +184,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// call superclass method
 		//
 		AppSplitView.prototype.onRender.call(this);
-		
+
 		// show child views
 		//
 		this.showHeaderBar();
@@ -198,6 +195,17 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 			success: (collection) => {
 				this.setChats(collection.models);
 				this.onLoad();
+			},
+
+			error: (model, response) => {
+
+				// show error message
+				//
+				application.error({
+					message: "Could not find chats.",
+					response: response
+				});
+				this.showEmptyMessage();
 			}
 		});
 
@@ -210,12 +218,10 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		} else {
 			this.$el.find('.footer-bar').remove();
 		}
-		
+
 		// show initial help message
 		//
-		this.showMessage("Loading chats...", {
-			icon: '<i class="fa fa-spin fa-spinner"></i>',
-		});
+		this.showLoadingMessage();
 	},
 
 	showChats: function(chats) {
@@ -226,6 +232,22 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 
 	showSelectedChats: function() {
 		this.showChats(this.getSelectedModels());
+	},
+
+	//
+	// message rendering methods
+	//
+
+	showLoadingMessage: function() {
+		this.showMessage("Loading chats...", {
+			icon: '<i class="fa fa-spin fa-spinner"></i>',
+		});
+	},
+
+	showEmptyMessage: function() {
+		this.showMessage("No chats found.", {
+			icon: '<i class="fa fa-comments"></i>'
+		});
 	},
 
 	//
@@ -310,19 +332,6 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		});		
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/chat-browser/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	showInfoDialog: function(options) {
 		let items = this.getSelectedModels();
 		let effect = application.settings.theme.get('icon_open_effect');
@@ -385,13 +394,4 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		//
 		this.$el.find('.search-bar input').focus();
 	}
-}), {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	}
-});
+}));

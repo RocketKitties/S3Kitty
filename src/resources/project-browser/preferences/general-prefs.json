@@ -1,0 +1,41 @@
+[
+	{
+		"name": "view-kind",
+		"icon": "fa fa-paint-brush",
+		"text": "Appearance",
+		"kind": "select",
+		"options": {
+			"icons": "Icons",
+			"names": "Names",
+			"lists": "Lists",
+			"tiles": "Tiles",
+			"cards": "Cards"
+		},
+		"help": "This is how topics are to be visually displayed."
+	},
+	{
+		"name": "detail-kind",
+		"icon": "fa fa-search",
+		"text": "Details",
+		"kind": "select",
+		"options": {
+			"none": "None",
+			"members": "Members",
+			"create-date": "Create Date",
+			"update-date": "Update Date"
+		},
+		"help": "This is what details to include about topics."
+	},
+	{
+		"name": "tile-size",
+		"icon": "fa fa-th-large",
+		"text": "Tile Size",
+		"kind": "multiple-choice",
+		"options": {
+			"small": "Small",
+			"medium": "Med",
+			"large": "Large"
+		},
+		"help": "This is what size tiles to display when the appearance is set to tiles."
+	}
+]

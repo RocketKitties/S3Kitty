@@ -24,7 +24,6 @@ import HeaderBarView from '../../../views/apps/project-browser/header-bar/header
 import SideBarView from '../../../views/apps/project-browser/sidebar/sidebar-view.js';
 import ProjectsView from '../../../views/apps/project-browser/mainbar/projects/projects-view.js';
 import FooterBarView from '../../../views/apps/project-browser/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/project-browser/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, ProjectInfoShowable, {
 
@@ -306,12 +305,9 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		//
 		AppSplitView.prototype.onRender.call(this);
 		
-		// show child views
+		// show contents
 		//
-		this.showHeaderBar();
 		this.showCurrent();
-
-		// this.showContents();
 
 		// show / hide footer bar
 		//
@@ -441,19 +437,6 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		});
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/project-browser/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	showInfoDialog: function(options) {
 		let items = this.getSelectedModels();
 		let effect = application.settings.theme.get('icon_open_effect');
@@ -513,7 +496,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// perform callback
 		//
 		if (this.options.onopen) {
-			this.options.onopen(item);
+			this.options.onopen([item.model]);
 		}
 	},
 
@@ -531,13 +514,4 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		//
 		this.getChildView('sidebar').setNumSelected(this.numSelected());
 	}
-}), {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	}
-});
+}));

@@ -1,0 +1,25 @@
+{
+	"name": "Theme Picker",
+	"icon": "fa fa-mouse-pointer",
+	"category": "configuration",
+	"platform": "mobile",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "grey",
+	"themes": [
+		"/Shared/Documents/Themes/Common/Colorful.thme",
+		"/Shared/Documents/Themes/Common/Dark.thme",
+		"/Shared/Documents/Themes/Common/Light.thme",
+		"/Shared/Documents/Themes/Common/Standard.thme",
+		"/Shared/Documents/Themes/Mac/System 1X.thme",
+		"/Shared/Documents/Themes/Mac/X Monterey.thme",
+		"/Shared/Documents/Themes/Linux/Linux Penguin.thme",
+		"/Shared/Documents/Themes/Linux/Ubuntu Beaver.thme",
+		"/Shared/Documents/Themes/Windows/Windows XP.thme",
+		"/Shared/Documents/Themes/Windows/Windows 10.thme",
+		"/Shared/Documents/Themes/Windows/Windows 11.thme",
+		"/Shared/Documents/Themes/Windows/Windows 11 Dark.thme"
+	]
+}

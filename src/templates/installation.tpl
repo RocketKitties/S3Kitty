@@ -1,28 +1,25 @@
-<h1><i class="fa fa-rocket"></i>Launchpad</h1>
+<h1><i class="fa fa-computer"></i>Installation</h1>
 
 <ol class="breadcrumb">
 	<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-	<li><i class="fa fa-rocket"></i>Launchpad</li>
+	<li><i class="fa fa-computer"></i>Installation</li>
 </ol>
 
 <div class="content">
-	<div class="well">
-		<b>launchpad</b> (noun): something that sets a particular activity, enterprise, etc. in motion.
-	</div>
-
-	<p>Welcome to the beginning of your journey into <%= application.name %> self-hosting. To launch <%= application.name %> on your own desktop computer or web server, follow the instructions below. </p>
+	<p>Welcome to the beginning of your journey into <%= application.name %> self-hosting. To install <%= application.name %> on your own desktop computer or web server, follow the instructions below. </p>
 
 	<div class="attention">
-		<img src="images/logos/rocketkitty-icon.svg" />
-		<div class="emphasis">
-			Launch Me!
-		</div>
+		<div class="emphasis">Easy to Install and Configure</div>
 	</div>
 
 	<ol>
 		<li>
+			<h2><i class="fa fa-download"></i>Download the Software</h2>
+			<p>First, <a href="#downloads">download</a> the <%= application.name %> software. </p>
+		</li>
+		<li>
 			<h2><i class="fa fa-computer"></i>Install the Software</h2>
-			<p>Once you have <a href="#downloads">downloaded</a> the <%= application.name %> software, then you will need to install it on your system.  <%= application.name %> can be installed in two different ways: </p>
+			<p>Once you have downloaded the <%= application.name %> software, then you will need to install it on your web server.  <%= application.name %> can be installed in two different ways: </p>
 
 			<div class="row">
 				<div class="col-sm-6">

@@ -293,6 +293,10 @@ Route::get('test/s3', function() {
 		'region' => 'us-east-2'
 	));
 
+	if (!$s3Client->doesBucketExist('easybucket')) {
+		return 'Bucket not found.';
+	}
+
 	$objects = $s3Client->getIterator('ListObjects', [
 		'Bucket' => 'amegahed', 
 		'MaxKeys' => 1000, 

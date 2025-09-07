@@ -24,7 +24,7 @@ export default SearchMenuView.extend({
 	//
 
 	events: {
-		'click .search-by > a': 'onClickSearchBy'
+		'click .search-kind': 'onClickSearchKind'
 	},
 
 	//
@@ -33,18 +33,17 @@ export default SearchMenuView.extend({
 
 	hidden: function() {
 		return {
-			'search-by-name': true
+			'search-kind name': true
 		};
 	},
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let searchKind = preferences.get('search_kind');
 
 		return {
-			'search-by-address': searchKind == 'address',
-			'search-by-name': searchKind == 'name',
-			'search-by-coords': searchKind == 'coords'
+			'search-kind address': preferences.matches('search_kind', 'address'),
+			'search-kind name': preferences.matches('search_kind', 'name'),
+			'search-kind coords': preferences.matches('search_kind', 'coords')
 		};
 	}
 });

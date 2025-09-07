@@ -22,11 +22,8 @@
 						"font_size": "125%",
 						"color": "var(--primary-color)"
 					},
-					"K": {
-						"font_size": "125%",
-						"color": "#a0a0c0"
-					},
-					"itty": {
+					"Kitty": {
+						"first_letter": "125%",
 						"color": "#a0a0c0"
 					}
 				}
@@ -37,6 +34,11 @@
 			"About": {
 				"icon": "fa fa-info-circle",
 				"href": "#about"
+			},
+			"Users": {
+				"icon": "fa fa-users",
+				"href": "#users",
+				"platform": "desktop-only"
 			},
 			"Features": {
 				"icon": "fa fa-lightbulb",
@@ -75,37 +77,171 @@
 	},
 
 	"welcome": {
-		"background": "linear-gradient(to bottom, hsla(0, 100%, 50%, 0%) 0%, hsla(0, 100%, 50%, 25%) 100%)",
-		"template": "templates/welcome.tpl",
+		"background": "linear-gradient(to bottom, hsla(10, 100%, 60%, 0%) 0%, hsla(10, 100%, 60%, 50%) 100%)",
+		"template": "welcome.tpl",
+
+		"ribbons": [{
+			"text": "Open Source",
+			"font_weight": "bold",
+			"height": 40,
+			"line_height": 40,
+			"corner": "bottom right",
+			"offset": 60,
+			"url": "#downloads"
+		}, {
+			"text": "Free",
+			"font_weight": "bold",
+			"height": 40,
+			"line_height": 40,
+			"corner": "bottom right",
+			"offset": 20,
+			"color": "black",
+			"background": "white",
+			"shadow": "none",
+			"url": "#installation"
+		}, {
+			"text": "&nbsp;",
+			"font_weight": "bold",
+			"height": 40,
+			"line_height": 40,
+			"corner": "bottom right",
+			"offset": -20,
+			"shadow": "none"
+		}],
 
 		"carousel": {
-			"template": "templates/welcome/carousel.tpl"
-		},
+			"template": "welcome/carousel.tpl",
 
+			"scroller": {
+				"speed": 0.05,
+				"images": {
+					"sun": {
+						"class": "sun",
+						"src": "images/welcome/scroller/sunrise.svg",
+						"width": 1,
+						"top": 0,
+						"left": 0
+					},
+					"moon": {
+						"class": "moon",
+						"src": "images/welcome/scroller/moonrise.svg",
+						"width": 1,
+						"top": 0,
+						"left": 0
+					},
+					"cloud1": {
+						"class": "cloud",
+						"src": "images/welcome/scroller/clouds.svg",
+						"width": 0.5,
+						"top": 0.075,
+						"left": 0.085,
+						"speed": 0.25
+					},
+					"cloud2": {
+						"class": "cloud",
+						"src": "images/welcome/scroller/clouds.svg",
+						"width": 0.75,
+						"top": 0.1,
+						"left": -0.125,
+						"speed": -0.33
+					},
+					"cloud3": {
+						"class": "cloud",
+						"src": "images/welcome/scroller/clouds.svg",
+						"width": 0.75,
+						"bottom": 0.4,
+						"left": 0.65, 
+						"speed": 0.5
+					},
+					"cloud4": {
+						"class": "cloud",
+						"src": "images/welcome/scroller/clouds2.svg",
+						"width": 1,
+						"bottom": 0.1,
+						"left": -0.1,
+						"speed": -0.75
+					},
+					"cloud5": {
+						"class": "cloud",
+						"src": "images/welcome/scroller/clouds2.svg",
+						"width": 1.25,
+						"bottom": -0.2,
+						"left": 0.5, 
+						"speed": 1
+					},
+					"jet": {
+						"class": "jet",
+						"src": "images/welcome/scroller/flying-jet.svg",
+						"width": 1,
+						"skip": 15,
+						"top": 0,
+						"left": -2,
+						"speed": -5
+					},
+					"jet-lights": {
+						"class": "lights",
+						"src": "images/welcome/scroller/flying-jet-lights.svg",
+						"width": 1,
+						"skip": 15,
+						"top": 0,
+						"left": -2,
+						"speed": -5
+					},
+					"kite": {
+						"class": "kite",
+						"src": "images/welcome/scroller/flying-kite.svg",
+						"width": 1,
+						"skip": 2,
+						"top": 0.25,
+						"left": 0,
+						"speed": 1
+					},
+					"ufo": {
+						"class": "ufo",
+						"src": "images/welcome/scroller/flying-ufo.svg",
+						"width": 1,
+						"skip": 10,
+						"top": 0.8,
+						"left": 0,
+						"speed": 2
+					},
+					"ufo-lights": {
+						"class": "lights",
+						"src": "images/welcome/scroller/flying-ufo-lights.svg",
+						"width": 1,
+						"skip": 10,
+						"top": 0.8,
+						"left": 0,
+						"speed": 2
+					}
+				}
+			}
+		},
+		
 		"splash": {
 			"background": "transparent",
+
 			"brand": {
 				"logo": {
 					"src": "images/logos/cloud-icon.svg",
 					"border": "rounded",
-					"transform": "scale(1.5)",
-					"filter": "drop-shadow(5px 5px 10px rgba(0,0,0,0.2))"
+					"size": "large",
+					"filter": "drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25))"
 				},
 
 				"logotype": {
 					"font": "Varela Round",
+					"text_shadow": "5px 5px 15px rgba(0, 0, 0, 0.25)",
+					"platform": "mobile",
 					"short": false,
 
 					"names": {
 						"S3": {
-							"font_size": "150%",
+							"first_letter": "150%",
 							"color": "var(--primary-color)"
 						},
-						"K": {
-							"font_size": "150%",
-							"color": "#a0a0c0"
-						},
-						"itty": {
+						"Kitty": {
+							"first_letter": "150%",
 							"color": "#a0a0c0"
 						},
 						".org": {
@@ -148,7 +284,7 @@
 		},
 
 		"footer": {
-			"background": "hsla(0, 100%, 50%, 15%)",
+			"background": "hsla(10, 100%, 50%, 15%)",
 			
 			"brand": {
 				"logo": {
@@ -166,11 +302,8 @@
 							"font_size": "125%",
 							"color": "var(--primary-color)"
 						},
-						"K": {
-							"font_size": "125%",
-							"color": "#a0a0c0"
-						},
-						"itty": {
+						"Kitty": {
+							"first_letter": "125%",
 							"color": "#a0a0c0"
 						},
 						".org": {
@@ -188,6 +321,10 @@
 							"icon": "fa fa-info-circle",
 							"href": "#about"
 						},
+						"Users": {
+							"icon": "fa fa-users",
+							"href": "#users"
+						},
 						"Features": {
 							"icon": "fa fa-lightbulb",
 							"href": "#features"
@@ -195,10 +332,6 @@
 						"Apps": {
 							"icon": "fa fa-rocket",
 							"href": "#apps"
-						},
-						"Downloads": {
-							"icon": "fa fa-download",
-							"href": "#downloads"
 						}
 					}
 				},
@@ -254,7 +387,7 @@
 		"background": "var(--primary-color)",
 		"color": "white",
 		"copyright": {
-			"year": "2024",
+			"year": "2025",
 			"logo": "images/logos/rocketkitty-icon-white.svg",
 			"url": "http://www.rocketkitty.org",
 			"entity": "RocketKitty.org"

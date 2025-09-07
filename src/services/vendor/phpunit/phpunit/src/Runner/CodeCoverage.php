@@ -12,6 +12,7 @@ namespace PHPUnit\Runner;
 use function file_put_contents;
 use function sprintf;
 use PHPUnit\Event\Facade as EventFacade;
+use PHPUnit\Event\TestData\MoreThanOneDataSetFromDataProviderException;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\TextUI\Configuration\CodeCoverageFilterRegistry;
 use PHPUnit\TextUI\Configuration\Configuration;
@@ -53,7 +54,7 @@ final class CodeCoverage
     private ?Timer $timer                                               = null;
 
     /**
-     * @var array<string,list<int>>
+     * @psalm-var array<string,list<int>>
      */
     private array $linesToBeIgnored = [];
 
@@ -124,7 +125,7 @@ final class CodeCoverage
     }
 
     /**
-     * @phpstan-assert-if-true !null $this->instance
+     * @psalm-assert-if-true !null $this->instance
      */
     public function isActive(): bool
     {
@@ -141,6 +142,9 @@ final class CodeCoverage
         return $this->driver;
     }
 
+    /**
+     * @throws MoreThanOneDataSetFromDataProviderException
+     */
     public function start(TestCase $test): void
     {
         if ($this->collecting) {
@@ -167,11 +171,7 @@ final class CodeCoverage
         $this->collecting = true;
     }
 
-    /**
-     * @param array<string,list<int>>|false $linesToBeCovered
-     * @param array<string,list<int>>       $linesToBeUsed
-     */
-    public function stop(bool $append = true, array|false $linesToBeCovered = [], array $linesToBeUsed = []): void
+    public function stop(bool $append, array|false $linesToBeCovered = [], array $linesToBeUsed = []): void
     {
         if (!$this->collecting) {
             return;
@@ -316,7 +316,9 @@ final class CodeCoverage
             $textReport = $processor->process($this->codeCoverage(), $configuration->colors());
 
             if ($configuration->coverageText() === 'php://stdout') {
-                $printer->print($textReport);
+                if (!$configuration->noOutput() && !$configuration->debug()) {
+                    $printer->print($textReport);
+                }
             } else {
                 file_put_contents($configuration->coverageText(), $textReport);
             }
@@ -339,7 +341,7 @@ final class CodeCoverage
     }
 
     /**
-     * @param array<string,list<int>> $linesToBeIgnored
+     * @psalm-param array<string,list<int>> $linesToBeIgnored
      */
     public function ignoreLines(array $linesToBeIgnored): void
     {
@@ -347,7 +349,7 @@ final class CodeCoverage
     }
 
     /**
-     * @return array<string,list<int>>
+     * @psalm-return array<string,list<int>>
      */
     public function linesToBeIgnored(): array
     {

@@ -40,13 +40,13 @@ export default ViewMenuView.extend({
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
+		'click .sidebar-panels': 'onClickSideBarPanel',
+		'click .sidebar-view-kind': 'onClickSideBarViewKind',
 		'click .show-console': 'onClickOption',
 
 		// window options
@@ -80,25 +80,21 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let fontSize = preferences.get('font_size');
-		let toolbars = preferences.get('toolbars') || [];
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
-		let sidebarViewKind = preferences.get('sidebar_view_kind');
 
 		return {
 
 			// font options
 			//
-			'font-size-10': fontSize == 10,
-			'font-size-11': fontSize == 11,
-			'font-size-12': fontSize == 12,
-			'font-size-13': fontSize == 13,
-			'font-size-14': fontSize == 14,
-			'font-size-15': fontSize == 15,
-			'font-size-16': fontSize == 16,
-			'font-size-18': fontSize == 18,
-			'font-size-20': fontSize == 20,
-			'font-size-24': fontSize == 24,
+			'font-size-10': preferences.matches('font_size', 10),
+			'font-size-11': preferences.matches('font_size', 11),
+			'font-size-12': preferences.matches('font_size', 12),
+			'font-size-13': preferences.matches('font_size', 13),
+			'font-size-14': preferences.matches('font_size', 14),
+			'font-size-15': preferences.matches('font_size', 15),
+			'font-size-16': preferences.matches('font_size', 16),
+			'font-size-18': preferences.matches('font_size', 18),
+			'font-size-20': preferences.matches('font_size', 20),
+			'font-size-24': preferences.matches('font_size', 24),
 
 			// editing options
 			//
@@ -109,25 +105,75 @@ export default ViewMenuView.extend({
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-nav-bar': toolbars.includes('nav'),
-			'show-run-bar': toolbars.includes('run'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolbars nav': preferences.includes('toolbars', 'nav'),
+			'toolbars run': preferences.includes('toolbars', 'run'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-files-panel': sidebarPanels.includes('files'),
-			'show-favorites-panel': sidebarPanels.includes('favorites'),
-			'show-console': preferences.get('show_console'),
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels files': preferences.includes('sidebar_panels', 'files'),
+			'sidebar-panels favorites': preferences.includes('sidebar_panels', 'favorites'),
+			'sidebar-panels console': preferences.includes('panes', 'console'),
 
 			// sidebar item options
 			//
-			'view-sidebar-icons': sidebarViewKind == 'icons',
-			'view-sidebar-lists': sidebarViewKind == 'lists',
-			'view-sidebar-trees': sidebarViewKind == 'trees',
-			'view-sidebar-cards': sidebarViewKind == 'cards',
-			'view-sidebar-tiles': sidebarViewKind == 'tiles'
+			'sidebar-view-kind icons': preferences.matches('sidebar_view_kind', 'icons'),
+			'sidebar-view-kind lists': preferences.matches('sidebar_view_kind', 'lists'),
+			'sidebar-view-kind trees': preferences.matches('sidebar_view_kind', 'trees'),
+			'sidebar-view-kind cards': preferences.matches('sidebar_view_kind', 'cards'),
+			'sidebar-view-kind tiles': preferences.matches('sidebar_view_kind', 'tiles')
 		};
+	},
+
+	//
+	// converting methods
+	//
+
+	itemToFontSize: function(className) {
+		return parseInt(className.replace('font_size_', ''));
+	},
+
+	fontSizeToItem: function(fontSize) {
+		return 'font_size_' + fontSize;
+	},
+
+	//
+	// getting methods
+	//
+
+	getSelectedFontSize: function() {
+		return this.itemToFontSize(this.getSelectedGroupItem('font-size'));
+	},
+
+	getFontSizes: function() {
+		let fontSizes = [];
+		let items = this.getGroupItems('font-size');
+		for (let i = 0; i < items.length; i++) {
+			let item = items[i];
+			fontSizes.push(this.itemToFontSize(item));
+		}
+		return fontSizes;
+	},
+
+	getPrevFontSize: function(fontSize) {
+		let fontSizes = this.getFontSizes();
+		for (let i = 1; i < fontSizes.length; i++) {
+			if (fontSizes[i] == fontSize) {
+				return fontSizes[i - 1];
+			}
+		}
+		return fontSizes[0];
+	},
+
+	getNextFontSize: function(fontSize) {
+		let fontSizes = this.getFontSizes();
+		for (let i = 0; i < fontSizes.length - 1; i++) {
+			if (fontSizes[i] == fontSize) {
+				return fontSizes[i + 1];
+			}
+		}
+		return fontSizes[fontSizes.length - 1];
 	},
 
 	//
@@ -135,59 +181,63 @@ export default ViewMenuView.extend({
 	//
 
 	onClickFontSize: function(event) {
-		let className = $(event.target).closest('a').attr('class')
-			.replace('dropdown-toggle', '').trim();
-		let fontSize = parseInt(className.replace('font-size-', ''));
-		this.$el.find('.font-size').removeClass('selected');
-		this.setItemSelected('font-size-' + fontSize, true);
-		this.parent.app.setOption('font_size', fontSize);
+		let fontName = this.getItemName(event.target);
+		let fontSize = this.itemToFontSize(fontName);
+
+		// update menu
+		//
+		this.setGroupItemSelected('font_size', fontName);
+
+		// update app
+		//
+		this.parent.app.setOption('font_size', parseInt(fontSize));
 	},
 
 	onClickDecreaseFontSize: function() {
-		let items = this.$el.find('.font-size');
-		for (let i = 0; i < items.length; i++) {
-			let item = items[i];
-			if ($(item).hasClass('selected')) {
-				if (i > 0) {
-					let prevItem = items[i - 1];
-					let className = $(prevItem).find('a').attr('class');
-					let fontSize = parseInt(className.replace('font-size-', ''));
-					$(item).removeClass('selected');
-					this.setItemSelected('font-size-' + fontSize, true);
-					this.parent.app.setOption('font_size', fontSize);
-					return;
-				}
-			}
-		}
+		let fontSize = this.getPrevFontSize(this.getSelectedFontSize());
+
+		// update menu
+		//
+		this.setGroupItemSelected('font_size', this.fontSizeToItem(fontSize));
+
+		// update app
+		//
+		this.parent.app.setOption('font_size', parseInt(fontSize));
 	},
 
 	onClickIncreaseFontSize: function() {
-		let items = this.$el.find('.font-size');
-		for (let i = 0; i < items.length; i++) {
-			let item = items[i];
-			if ($(item).hasClass('selected')) {
-				if (i < items.length - 1) {
-					let prevItem = items[i + 1];
-					let className = $(prevItem).find('a').attr('class');
-					let fontSize = parseInt(className.replace('font-size-', ''));
-					$(item).removeClass('selected');
-					this.setItemSelected('font-size-' + fontSize, true);
-					this.parent.app.setOption('font_size', fontSize);
-					return;
-				}
-			}
-		}
+		let fontSize = this.getNextFontSize(this.getSelectedFontSize());
+
+		// update menu
+		//
+		this.setGroupItemSelected('font_size', this.fontSizeToItem(fontSize));
+
+		// update app
+		//
+		this.parent.app.setOption('font_size', parseInt(fontSize));
 	},
 
 	onClickTabify: function() {
 		this.parent.app.tabify();
+
+		// update menu
+		//
 		this.setItemSelected('show-invisibles');
+
+		// update app
+		//
 		this.parent.app.setOption('show_invisibles', true);
 	},
 
 	onClickUntabify: function() {
 		this.parent.app.untabify();
+
+		// update menu
+		//
 		this.setItemSelected('show-invisibles');
+
+		// update app
+		//
 		this.parent.app.setOption('show_invisibles', true);
 	}
 });

@@ -178,7 +178,7 @@ export default SideBarPanelView.extend({
 			//
 			preferences: UserPreferences.create('file_browser', {
 				view_kind: this.options.view_kind,
-				show_file_extensions: true
+				options: ['file_extensions', 'thumbnails', 'image_names']
 			}),
 
 			// state

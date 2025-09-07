@@ -1,19 +1,17 @@
-{
-	"items": [
-		{
-			"class": "edit-group",
-			"group": "delete group-option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Group",
-			"shortcut": "command-E"
-		},
-		"divider",
-		{
-			"class": "delete-members",
-			"group": "delete member-option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Members",
-			"shortcut": "delete"
-		}
-	]
-}
+[
+	{
+		"name": "edit-group",
+		"group": "delete group-option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Group",
+		"shortcut": "command-E"
+	},
+	"divider",
+	{
+		"name": "delete-members",
+		"group": "delete member-option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Members",
+		"shortcut": "delete"
+	}
+]

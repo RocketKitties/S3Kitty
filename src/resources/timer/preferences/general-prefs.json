@@ -1,0 +1,31 @@
+[
+	{
+		"name": "options",
+		"icon": "fa fa-check",
+		"text": "Show",
+		"kind": "multiple-answer",
+		"options": {
+			"hours": "Hours",
+			"hundredths": "Hundredths"
+		},
+		"help": "This is which display options to show."
+	},
+	{
+		"name": "direction",
+		"icon": "fa fa-arrows-up-down",
+		"text": "Direction",
+		"kind": "multiple-choice",
+		"options": {
+			"down": "Down",
+			"up": "Up"
+		},
+		"help": "This is direction that the timer advances."
+	},
+	{
+		"name": "time",
+		"icon": "fa fa-clock",
+		"text": "Time",
+		"kind": "elapsed-time",
+		"help": "This is amount of time (hours : minutes : seconds) to count down or up."
+	}
+]

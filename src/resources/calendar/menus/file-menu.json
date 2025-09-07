@@ -1,62 +1,60 @@
-{
-	"items": [
-		{
-			"class": "new-window",
-			"icon": "far fa-window-maximize",
-			"name": "New Window",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "new-event",
-			"icon": "fa fa-file",
-			"name": "New Event",
-			"shortcut": "command-E"
-		},
-		"divider",
-		{
-			"class": "open-date",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"menu": [
-				{
-					"class": "open-prev",
-					"icon": "fa fa-arrow-left",
-					"name": "Prev",
-					"shortcut": "left arrow"
-				},
-				{
-					"class": "open-next",
-					"icon": "fa fa-arrow-right",
-					"name": "Next",
-					"shortcut": "right arrow"
-				},
-				{
-					"class": "open-up",
-					"icon": "fa fa-arrow-up",
-					"name": "Up",
-					"shortcut": "up arrow"
-				},
-				{
-					"class": "open-current",
-					"icon": "fa fa-redo",
-					"name": "Current",
-					"shortcut": "down arrow"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "delete-event",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Event",
-			"shortcut": "delete"
-		},
-		"divider",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	]
-}
+[
+	{
+		"name": "new-window",
+		"icon": "far fa-window-maximize",
+		"text": "New Window",
+		"shortcut": "command-enter"
+	},
+	{
+		"name": "new-event",
+		"icon": "fa fa-file",
+		"text": "New Event",
+		"shortcut": "command-E"
+	},
+	"divider",
+	{
+		"name": "open-date",
+		"icon": "fa fa-folder-open",
+		"text": "Open",
+		"menu": [
+			{
+				"name": "open-prev",
+				"icon": "fa fa-arrow-left",
+				"text": "Prev",
+				"shortcut": "left arrow"
+			},
+			{
+				"name": "open-next",
+				"icon": "fa fa-arrow-right",
+				"text": "Next",
+				"shortcut": "right arrow"
+			},
+			{
+				"name": "open-up",
+				"icon": "fa fa-arrow-up",
+				"text": "Up",
+				"shortcut": "up arrow"
+			},
+			{
+				"name": "open-current",
+				"icon": "fa fa-redo",
+				"text": "Current",
+				"shortcut": "down arrow"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "delete-event",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Event",
+		"shortcut": "delete"
+	},
+	"divider",
+	{
+		"name": "close-window",
+		"icon": "fa fa-circle-xmark",
+		"text": "Close",
+		"shortcut": "command-L"
+	}
+]

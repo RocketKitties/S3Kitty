@@ -1,25 +1,23 @@
-{
-	"items": [
-		{
-			"class": "search-by-name",
-			"group": "search-by",
-			"icon": "fa fa-font",
-			"name": "By Name",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-kind",
-			"group": "search-by",
-			"icon": "fa fa-exclamation-triangle",
-			"name": "By Kind",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-date",
-			"group": "search-by",
-			"icon": "fa fa-calendar-alt",
-			"name": "Date",
-			"state": "unselected"
-		}
-	]
-}
+[
+	{
+		"name": "name",
+		"group": "search-kind",
+		"icon": "fa fa-font",
+		"text": "By Name",
+		"state": "unselected"
+	},
+	{
+		"name": "kind",
+		"group": "search-kind",
+		"icon": "fa fa-exclamation-triangle",
+		"text": "By Kind",
+		"state": "unselected"
+	},
+	{
+		"name": "date",
+		"group": "search-kind",
+		"icon": "fa fa-calendar-alt",
+		"text": "Date",
+		"state": "unselected"
+	}
+]

@@ -20,7 +20,9 @@ namespace Google\Service\Storage\Resource;
 use Google\Service\Storage\Bucket;
 use Google\Service\Storage\BucketStorageLayout;
 use Google\Service\Storage\Buckets as BucketsModel;
+use Google\Service\Storage\GoogleLongrunningOperation;
 use Google\Service\Storage\Policy;
+use Google\Service\Storage\RelocateBucketRequest;
 use Google\Service\Storage\TestIamPermissionsResponse;
 
 /**
@@ -227,21 +229,39 @@ class Buckets extends \Google\Service\Resource
     return $this->call('patch', [$params], Bucket::class);
   }
   /**
+   * Initiates a long-running Relocate Bucket operation on the specified bucket.
+   * (buckets.relocate)
+   *
+   * @param string $bucket Name of the bucket to be moved.
+   * @param RelocateBucketRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function relocate($bucket, RelocateBucketRequest $postBody, $optParams = [])
+  {
+    $params = ['bucket' => $bucket, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('relocate', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
    * Restores a soft-deleted bucket. (buckets.restore)
    *
    * @param string $bucket Name of a bucket.
    * @param string $generation Generation of a bucket.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string projection Set of properties to return. Defaults to full.
    * @opt_param string userProject The project to be billed for this request.
    * Required for Requester Pays buckets.
+   * @return Bucket
    * @throws \Google\Service\Exception
    */
   public function restore($bucket, $generation, $optParams = [])
   {
     $params = ['bucket' => $bucket, 'generation' => $generation];
     $params = array_merge($params, $optParams);
-    return $this->call('restore', [$params]);
+    return $this->call('restore', [$params], Bucket::class);
   }
   /**
    * Updates an IAM policy for the specified bucket. (buckets.setIamPolicy)

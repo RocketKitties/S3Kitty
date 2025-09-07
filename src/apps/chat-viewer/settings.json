@@ -1,0 +1,13 @@
+{
+	"name": "Messages",
+	"icon": "fa fa-comment",
+	"category": "social",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "blue",
+	"new_chat_invitation_message": "Hi. Let's chat!",
+	"join_chat_invitation_message": "Hi. You're invited to join a chat!"
+}

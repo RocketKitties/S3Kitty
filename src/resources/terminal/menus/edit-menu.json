@@ -1,28 +1,26 @@
-{
-	"items": [
-		{
-			"class": "cut",
-			"icon": "fa fa-cut",
-			"name": "Cut",
-			"shortcut": "command-X"
-		},
-		{
-			"class": "copy",
-			"icon": "fa fa-copy",
-			"name": "Copy",
-			"shortcut": "command-C"
-		},
-		{
-			"class": "paste",
-			"icon": "fa fa-paste",
-			"name": "Paste",
-			"shortcut": "command-V"
-		},
-		{
-			"class": "delete",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete",
-			"shortcut": ""
-		}
-	]
-}
+[
+	{
+		"name": "cut",
+		"icon": "fa fa-cut",
+		"text": "Cut",
+		"shortcut": "command-X"
+	},
+	{
+		"name": "copy",
+		"icon": "fa fa-copy",
+		"text": "Copy",
+		"shortcut": "command-C"
+	},
+	{
+		"name": "paste",
+		"icon": "fa fa-paste",
+		"text": "Paste",
+		"shortcut": "command-V"
+	},
+	{
+		"name": "delete",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete",
+		"shortcut": ""
+	}
+]

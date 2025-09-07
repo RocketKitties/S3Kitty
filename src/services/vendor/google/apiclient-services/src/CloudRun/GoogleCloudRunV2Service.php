@@ -26,6 +26,8 @@ class GoogleCloudRunV2Service extends \Google\Collection
   public $annotations;
   protected $binaryAuthorizationType = GoogleCloudRunV2BinaryAuthorization::class;
   protected $binaryAuthorizationDataType = '';
+  protected $buildConfigType = GoogleCloudRunV2BuildConfig::class;
+  protected $buildConfigDataType = '';
   /**
    * @var string
    */
@@ -76,6 +78,10 @@ class GoogleCloudRunV2Service extends \Google\Collection
    * @var string
    */
   public $ingress;
+  /**
+   * @var bool
+   */
+  public $invokerIamDisabled;
   /**
    * @var string[]
    */
@@ -166,6 +172,20 @@ class GoogleCloudRunV2Service extends \Google\Collection
   public function getBinaryAuthorization()
   {
     return $this->binaryAuthorization;
+  }
+  /**
+   * @param GoogleCloudRunV2BuildConfig
+   */
+  public function setBuildConfig(GoogleCloudRunV2BuildConfig $buildConfig)
+  {
+    $this->buildConfig = $buildConfig;
+  }
+  /**
+   * @return GoogleCloudRunV2BuildConfig
+   */
+  public function getBuildConfig()
+  {
+    return $this->buildConfig;
   }
   /**
    * @param string
@@ -348,6 +368,20 @@ class GoogleCloudRunV2Service extends \Google\Collection
   public function getIngress()
   {
     return $this->ingress;
+  }
+  /**
+   * @param bool
+   */
+  public function setInvokerIamDisabled($invokerIamDisabled)
+  {
+    $this->invokerIamDisabled = $invokerIamDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getInvokerIamDisabled()
+  {
+    return $this->invokerIamDisabled;
   }
   /**
    * @param string[]

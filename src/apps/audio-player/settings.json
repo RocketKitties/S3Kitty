@@ -1,0 +1,15 @@
+{
+	"name": "Audio",
+	"icon": "fa fa-volume-up",
+	"category": "multimedia",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": false,
+	"args": false,
+	"color": "plum",
+	"favorites": {
+		"#1": "Music/",
+		"#2": "Audio/"
+	}
+}

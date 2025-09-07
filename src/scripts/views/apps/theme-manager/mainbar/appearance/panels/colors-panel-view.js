@@ -274,7 +274,7 @@ export default FormPanelView.extend({
 			accent_color: application.settings.theme.get('accent_color'),
 			accent_hex_color: this.toHexColor(application.settings.theme.get('accent_color')),
 			custom_accent_color: this.isCustomColor(application.settings.theme.get('accent_color')),
-			colors: config.defaults.colors
+			colors: config.settings.defaults.colors
 		};
 	},
 

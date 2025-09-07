@@ -1,69 +1,67 @@
-{
-	"items": [
-		{
-			"class": "search-by-name",
-			"group": "search-by",
-			"icon": "fa fa-font",
-			"name": "By Name",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "search-by-location",
-			"group": "search-by",
-			"icon": "fa fa-globe-americas",
-			"name": "By Location",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-occupation",
-			"group": "search-by",
-			"icon": "fa fa-briefcase",
-			"name": "By Occupation",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-gender",
-			"group": "search-by",
-			"icon": "fa fa-transgender",
-			"name": "By Gender",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-age",
-			"group": "search-by",
-			"icon": "fa fa-hourglass-half",
-			"name": "By Age",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-date",
-			"icon": "fa fa-calendar-alt",
-			"name": "By Date",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "search-by-birth-date",
-					"group": "search-by",
-					"icon": "fa fa-birthday-cake",
-					"name": "Birth Date",
-					"state": "unselected"
-				},
-				{
-					"class": "search-by-join-date",
-					"group": "search-by",
-					"icon": "fa fa-user-circle",
-					"name": "Join Date",
-					"state": "unselected"
-				},
-				{
-					"class": "search-by-connect-date",
-					"group": "search-by",
-					"icon": "fa fa-user-friends",
-					"name": "Connect Date",
-					"state": "unselected"
-				}
-			]
-		}
-	]
-}
+[
+	{
+		"name": "name",
+		"group": "search-kind",
+		"icon": "fa fa-font",
+		"text": "By Name",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "location",
+		"group": "search-kind",
+		"icon": "fa fa-globe-americas",
+		"text": "By Location",
+		"state": "unselected"
+	},
+	{
+		"name": "occupation",
+		"group": "search-kind",
+		"icon": "fa fa-briefcase",
+		"text": "By Occupation",
+		"state": "unselected"
+	},
+	{
+		"name": "gender",
+		"group": "search-kind",
+		"icon": "fa fa-transgender",
+		"text": "By Gender",
+		"state": "unselected"
+	},
+	{
+		"name": "age",
+		"group": "search-kind",
+		"icon": "fa fa-hourglass-half",
+		"text": "By Age",
+		"state": "unselected"
+	},
+	{
+		"name": "date",
+		"icon": "fa fa-calendar-alt",
+		"text": "By Date",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "birth-date",
+				"group": "search-kind",
+				"icon": "fa fa-birthday-cake",
+				"text": "Birth Date",
+				"state": "unselected"
+			},
+			{
+				"name": "join-date",
+				"group": "search-kind",
+				"icon": "fa fa-user-circle",
+				"text": "Join Date",
+				"state": "unselected"
+			},
+			{
+				"name": "connect-date",
+				"group": "search-kind",
+				"icon": "fa fa-user-friends",
+				"text": "Connect Date",
+				"state": "unselected"
+			}
+		]
+	}
+]

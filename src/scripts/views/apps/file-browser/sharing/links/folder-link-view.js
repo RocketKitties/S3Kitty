@@ -154,7 +154,7 @@ export default LinkView.extend({
 		application.launch('file_browser', {
 			model: directory,
 			defaults: {
-				show_sidebar: false
+				panes: []
 			}
 		}, {
 			maximized: true

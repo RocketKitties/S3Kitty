@@ -25,7 +25,6 @@ import HeaderBarView from '../../../views/apps/video-player/header-bar/header-ba
 import SideBarView from '../../../views/apps/video-player/sidebar/sidebar-view.js';
 import VideoSplitView from '../../../views/apps/video-player/mainbar/video-split-view.js';
 import FooterBarView from '../../../views/apps/video-player/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/video-player/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
 export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, {
@@ -450,7 +449,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, {
 
 		// show split view
 		//
-		if (this.preferences.get('show_sidebar')) {
+		if (this.preferences.includes('panes', 'sidebar')) {
 			this.getChildView('contents').showSideBar();
 		}
 
@@ -525,7 +524,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, {
 			// options
 			//
 			preferences: this.preferences,
-			show_sidebar: this.preferences.get('show_video_info'),
+			show_sidebar: this.preferences.includes('panes', 'info_bar'),
 			sidebar_size: this.preferences.get('info_bar_size'),
 
 			// callbacks
@@ -595,19 +594,6 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, {
 				model: this.model
 			}, options)));				
 		});	
-	},
-	
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/video-player/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
 	},
 
 	//
@@ -731,13 +717,4 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, {
 			this.play();
 		}
 	}
-}), {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	}
-});
+}));

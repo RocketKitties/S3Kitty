@@ -27,7 +27,6 @@ import HeaderBarView from '../../../views/apps/theme-manager/header-bar/header-b
 import SideBarView from '../../../views/apps/theme-manager/sidebar/sidebar-view.js';
 import ThemeSettingsView from '../../../views/apps/theme-manager/mainbar/theme-settings-view.js';
 import FooterBarView from '../../../views/apps/theme-manager/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/theme-manager/forms/preferences/preferences-form-view.js';
 import Browser from '../../../utilities/web/browser.js';
 
 export default AppSplitView.extend({
@@ -726,19 +725,6 @@ export default AppSplitView.extend({
 			}));
 		});
 	},
-	
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/theme-manager/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
 
 	//
 	// event handling methods
@@ -778,14 +764,6 @@ export default AppSplitView.extend({
 		this.constructor.current = null;
 	}
 }, {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	},
 
 	//
 	// static theming methods

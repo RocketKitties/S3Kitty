@@ -1,0 +1,13 @@
+[
+	{
+		"name": "display",
+		"icon": "fa fa-display",
+		"text": "Display",
+		"kind": "multiple-choice",
+		"options": {
+			"led": "LED",
+			"lcd": "LCD"
+		},
+		"help": "This is the type of display to use."
+	}
+]

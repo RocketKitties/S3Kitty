@@ -104,11 +104,22 @@ export default LayersView.extend({
 	},
 
 	getDefaultMap: function(preferences) {
+		let location = preferences.get('location');
+		let zoom_level = this.default_zoom_level;
+		let mapMode = preferences.get('map_mode');
+
+		// use default location
+		//
+		if (!location) {
+			location = config.preferences.map_viewer.location;
+			zoom_level = config.preferences.map_viewer.zoom_level;
+		}
+
 		return MapView.getMap({
-			latitude: preferences.get('latitude'),
-			longitude: preferences.get('longitude'),
-			zoom_level: this.default_zoom_level,
-			mode: preferences.get('map_mode')
+			latitude: location? location[0] : undefined,
+			longitude: location? location[1] : undefined,
+			zoom_level: zoom_level,
+			mode: mapMode
 		});
 	},
 
@@ -137,6 +148,14 @@ export default LayersView.extend({
 		} else {
 			this.$el.find('.map.layer').attr('class', 'map layer');		
 		}
+	},
+
+	setShowGrid: function(showGrid) {
+		this.getLayerView('map').setShowGrid(showGrid);
+	},
+
+	setSmoothing: function(smoothing) {
+		this.getLayerView('map').setSmoothing(smoothing);
 	},
 
 	setLayersOption: function(key, value) {

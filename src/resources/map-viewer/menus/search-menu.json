@@ -1,25 +1,23 @@
-{
-	"items": [
-		{
-			"class": "search-by-address",
-			"group": "search-by",
-			"icon": "fa fa-home",
-			"name": "By Address",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-name",
-			"group": "search-by",
-			"icon": "fa fa-font",
-			"name": "By Place Name",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-coords",
-			"group": "search-by",
-			"icon": "fa fa-crosshairs",
-			"name": "By Coordinates",
-			"state": "unselected"
-		}
-	]
-}
+[
+	{
+		"name": "address",
+		"group": "search-kind",
+		"icon": "fa fa-home",
+		"text": "By Address",
+		"state": "unselected"
+	},
+	{
+		"name": "name",
+		"group": "search-kind",
+		"icon": "fa fa-font",
+		"text": "By Place Name",
+		"state": "unselected"
+	},
+	{
+		"name": "coords",
+		"group": "search-kind",
+		"icon": "fa fa-crosshairs",
+		"text": "By Coordinates",
+		"state": "unselected"
+	}
+]

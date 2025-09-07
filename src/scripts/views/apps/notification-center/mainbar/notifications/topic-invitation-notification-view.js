@@ -15,7 +15,7 @@
 |        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
-import NotificationsListItemView from '../../../../../views/apps/notification-center/mainbar/notifications/lists/notifications-list-item-view.js';
+import NotificationsListItemView from '../../../../../views/apps/notification-center/mainbar/lists/notifications-list-item-view.js';
 
 export default NotificationsListItemView.extend({
 

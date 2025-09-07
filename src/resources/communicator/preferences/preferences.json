@@ -1,0 +1,27 @@
+[
+	{
+		"name": "general",
+		"icon": "fa fa-check",
+		"text": "General"
+	},
+	{
+		"name": "display",
+		"icon": "fa fa-desktop",
+		"text": "Display"
+	},
+	{
+		"name": "window",
+		"icon": "fa fa-window-maximize",
+		"text": "Window"
+	},
+	{
+		"name": "language",
+		"icon": "fa fa-language",
+		"text": "Language"
+	},
+	{
+		"name": "storage",
+		"icon": "fa fa-database",
+		"text": "Storage"
+	}
+]

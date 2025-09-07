@@ -41,6 +41,10 @@ class NodeConfig extends \Google\Collection
    */
   public $diskType;
   /**
+   * @var string
+   */
+  public $effectiveCgroupMode;
+  /**
    * @var bool
    */
   public $enableConfidentialStorage;
@@ -70,12 +74,20 @@ class NodeConfig extends \Google\Collection
    * @var int
    */
   public $localSsdCount;
+  /**
+   * @var string
+   */
+  public $localSsdEncryptionMode;
   protected $loggingConfigType = NodePoolLoggingConfig::class;
   protected $loggingConfigDataType = '';
   /**
    * @var string
    */
   public $machineType;
+  /**
+   * @var string
+   */
+  public $maxRunDuration;
   /**
    * @var string[]
    */
@@ -236,6 +248,20 @@ class NodeConfig extends \Google\Collection
     return $this->diskType;
   }
   /**
+   * @param string
+   */
+  public function setEffectiveCgroupMode($effectiveCgroupMode)
+  {
+    $this->effectiveCgroupMode = $effectiveCgroupMode;
+  }
+  /**
+   * @return string
+   */
+  public function getEffectiveCgroupMode()
+  {
+    return $this->effectiveCgroupMode;
+  }
+  /**
    * @param bool
    */
   public function setEnableConfidentialStorage($enableConfidentialStorage)
@@ -390,6 +416,20 @@ class NodeConfig extends \Google\Collection
     return $this->localSsdCount;
   }
   /**
+   * @param string
+   */
+  public function setLocalSsdEncryptionMode($localSsdEncryptionMode)
+  {
+    $this->localSsdEncryptionMode = $localSsdEncryptionMode;
+  }
+  /**
+   * @return string
+   */
+  public function getLocalSsdEncryptionMode()
+  {
+    return $this->localSsdEncryptionMode;
+  }
+  /**
    * @param NodePoolLoggingConfig
    */
   public function setLoggingConfig(NodePoolLoggingConfig $loggingConfig)
@@ -416,6 +456,20 @@ class NodeConfig extends \Google\Collection
   public function getMachineType()
   {
     return $this->machineType;
+  }
+  /**
+   * @param string
+   */
+  public function setMaxRunDuration($maxRunDuration)
+  {
+    $this->maxRunDuration = $maxRunDuration;
+  }
+  /**
+   * @return string
+   */
+  public function getMaxRunDuration()
+  {
+    return $this->maxRunDuration;
   }
   /**
    * @param string[]

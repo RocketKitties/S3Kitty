@@ -1,0 +1,13 @@
+{
+	"general": {
+		"font": "Open Sans",
+		"font_size": 14
+	},
+	"window": {
+		"window_size": "medium",
+		"window_state": {
+			"maximized": true,
+			"full_screen": false
+		}
+	}
+}

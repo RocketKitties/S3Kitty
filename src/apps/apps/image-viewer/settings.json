@@ -1,0 +1,14 @@
+{
+	"name": "Images",
+	"icon": "fa fa-image",
+	"category": "multimedia",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": false,
+	"args": true,
+	"color": "gold",
+	"favorites": {
+		"#1": "Pictures/"
+	}
+}

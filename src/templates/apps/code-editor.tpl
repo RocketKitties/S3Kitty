@@ -1,18 +1,18 @@
-<h1><i class="<%= config.apps['code_editor'].icon %>"></i><%= config.apps['code_editor'].name %></h1>
+<h1><i class="<%= config.apps.code_editor.icon %>"></i><%= config.apps.code_editor.name %></h1>
 
 <ol class="breadcrumb">
 	<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
 	<li><a href="#apps"><i class="fa fa-rocket"></i>Apps</a></li>
-	<li><i class="fa fa-code"></i><%= config.apps['code_editor'].name %></li>
+	<li><i class="fa fa-code"></i><%= config.apps.code_editor.name %></li>
 </ol>
 
 <div class="content">
-	<div class="attention icon colored <%= config.apps['code_editor'].color %>">
-		<img src="images/icons/apps/<%= config.apps['code_editor'].image || config.apps['code_editor'].app + '.svg' %>" />
+	<div class="attention icon colored <%= config.apps.code_editor.color %>">
+		<img src="images/icons/apps/<%= config.apps.code_editor.image || config.apps.code_editor.app + '.svg' %>" />
 	</div>
 
 	<div class="description section">
-		<p>The <%= config.apps['code_editor'].name %> app lets you read and write computer programming source code. </p>
+		<p>The <%= config.apps.code_editor.name %> app lets you read and write computer programming source code. </p>
 	</div>
 
 	<div class="details section">
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 		<h2><i class="fa fa-file"></i>File Types</h2>
-		<p>The <%= config.apps['code_editor'].name %> can be used to edit code files written in your programming language of choice: </p>
+		<p>The <%= config.apps.code_editor.name %> can be used to edit code files written in your programming language of choice: </p>
 		<div class="icon-grid" style="white-space:nowrap; overflow-x:auto">
 		<% let associations = application.settings.associations.attributes; %>
 		<% let extensions = Object.keys(associations); %>
@@ -60,11 +60,11 @@
 
 	<h2><i class="fa fa-desktop"></i>Screen Shots</h2>
 	<div class="figure desktop-only">
-		<a href="images/info/apps/code-editor/code-editor.png" target="_blank" class="lightbox" title="<%= config.apps['code_editor'].name %>"><img class="dialog" src="images/info/apps/code-editor/code-editor.png" /></a>
-		<div class="caption"><%= config.apps['code_editor'].name %></div>
+		<a href="images/info/apps/code-editor/code-editor.png" target="_blank" class="lightbox" title="<%= config.apps.code_editor.name %>"><img class="dialog" src="images/info/apps/code-editor/code-editor.png" /></a>
+		<div class="caption"><%= config.apps.code_editor.name %></div>
 	</div>
 	<div class="figure mobile-only">
-		<a href="images/info/apps/code-editor/mobile/mobile-code-editor.png" target="_blank" class="lightbox" title="<%= config.apps['code_editor'].name %>"><img src="images/info/apps/code-editor/mobile/mobile-code-editor.png" /></a>
-		<div class="caption"><%= config.apps['code_editor'].name %></div>
+		<a href="images/info/apps/code-editor/mobile/mobile-code-editor.png" target="_blank" class="lightbox" title="<%= config.apps.code_editor.name %>"><img src="images/info/apps/code-editor/mobile/mobile-code-editor.png" /></a>
+		<div class="caption"><%= config.apps.code_editor.name %></div>
 	</div>
 </div>

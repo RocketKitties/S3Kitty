@@ -32,9 +32,9 @@ use Throwable;
 final class ReturnValueGenerator
 {
     /**
-     * @param class-string     $className
-     * @param non-empty-string $methodName
-     * @param class-string     $stubClassName
+     * @psalm-param class-string $className
+     * @psalm-param non-empty-string $methodName
+     * @psalm-param class-string $stubClassName
      *
      * @throws Exception
      */
@@ -160,7 +160,7 @@ final class ReturnValueGenerator
     }
 
     /**
-     * @param non-empty-list<string> $types
+     * @psalm-param non-empty-list<string> $types
      */
     private function onlyInterfaces(array $types): bool
     {
@@ -174,9 +174,9 @@ final class ReturnValueGenerator
     }
 
     /**
-     * @param class-string     $stubClassName
-     * @param class-string     $className
-     * @param non-empty-string $methodName
+     * @psalm-param class-string $stubClassName
+     * @psalm-param class-string $className
+     * @psalm-param non-empty-string $methodName
      *
      * @throws RuntimeException
      */
@@ -199,16 +199,16 @@ final class ReturnValueGenerator
     }
 
     /**
-     * @param class-string     $type
-     * @param class-string     $className
-     * @param non-empty-string $methodName
+     * @psalm-param class-string $type
+     * @psalm-param class-string $className
+     * @psalm-param non-empty-string $methodName
      *
      * @throws RuntimeException
      */
     private function testDoubleFor(string $type, string $className, string $methodName): Stub
     {
         try {
-            return (new Generator)->testDouble($type, false, false, [], [], '', false);
+            return (new Generator)->testDouble($type, false, [], [], '', false);
             // @codeCoverageIgnoreStart
         } catch (Throwable $t) {
             throw new RuntimeException(
@@ -224,9 +224,9 @@ final class ReturnValueGenerator
     }
 
     /**
-     * @param non-empty-list<string> $types
-     * @param class-string           $className
-     * @param non-empty-string       $methodName
+     * @psalm-param non-empty-list<string> $types
+     * @psalm-param class-string $className
+     * @psalm-param non-empty-string $methodName
      *
      * @throws RuntimeException
      */

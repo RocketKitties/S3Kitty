@@ -30,8 +30,8 @@ export default DirectoryIconView.extend(_.extend({}, Mappable, {
 			<div class="icon">
 				<%= icon %>
 
-				<% if (geo_orientation != undefined) { %>
-				<div class="geoorientation marker" style="transform:rotate(<%= Math.round(geo_orientation.heading) %>deg)" data-toggle="tooltip" title="orientation: <%= Math.round(geo_orientation.heading) %> &deg; N">
+				<% if (typeof geo_orientation != 'undefined') { %>
+				<div class="geo-orientation marker" style="transform:rotate(<%= Math.round(geo_orientation.heading) %>deg)" data-toggle="tooltip" title="orientation: <%= Math.round(geo_orientation.heading) %> &deg; N">
 					<i class="fa fa-location-arrow"></i>
 				</div>
 				<% } %>

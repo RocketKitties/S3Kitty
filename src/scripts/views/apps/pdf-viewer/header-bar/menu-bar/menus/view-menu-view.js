@@ -46,14 +46,14 @@ export default ViewMenuView.extend({
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
-		'click .sidebar-tile-size > a': 'onClickSideBarTileSize',
+		'click .sidebar-panels': 'onClickSideBarPanel',
+		'click .sidebar-view-kind': 'onClickSideBarViewKind',
+		'click .sidebar-tile-size': 'onClickSideBarTileSize',
 
 		// mainbar options
 		//
@@ -80,34 +80,32 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let toolbars = preferences.get('toolbars') || [];
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
-		let sidebarTileSize = preferences.get('sidebar_tile_size');
 
 		return {
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-zoom-mode-bar': toolbars.includes('zoom_mode'),
-			'show-zoom-bar': toolbars.includes('zoom'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolblars zoom-mode': preferences.includes('toolblars', 'zoom_mode'),
+			'toolblars zoom': preferences.includes('toolblars', 'zoom'),
+			'toolblars page': preferences.includes('toolblars', 'page'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-favorites-panel': sidebarPanels.includes('favorites'),
-			'show-pages-panel': sidebarPanels.includes('pages'),
-			'show-files-panel': sidebarPanels.includes('files'),
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels favorites': preferences.includes('sidebar_panels', 'favorites'),
+			'sidebar-panels pages': preferences.includes('sidebar_panels', 'pages'),
+			'sidebar-panels files': preferences.includes('sidebar_panels', 'files'),
 
 			// sidebar tile sizes
 			//
-			'small-tile-size': sidebarTileSize == 'small',
-			'medium-tile-size': sidebarTileSize == 'medium',
-			'large-tile-size': sidebarTileSize == 'large',
+			'sidebar-tile-size small': preferences.matches('sidebar_tile_size', 'small'),
+			'sidebar-tile-size medium': preferences.matches('sidebar_tile_size', 'medium'),
+			'sidebar-tile-size large': preferences.matches('sidebar_tile_size', 'large'),
 
 			// info bar options
 			//
-			'show-pdf-info': preferences.get('show_pdf_info')
+			'show-pdf-info': preferences.includes('panes', 'info_bar')
 		};
 	},
 

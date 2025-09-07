@@ -1,0 +1,12 @@
+[
+	{
+		"name": "show-items",
+		"icon": "fa fa-eye",
+		"text": "Show",
+		"kind": "multiple-answer",
+		"options": {
+			"show-options": "Options Buttons"
+		},
+		"help": "This determines if the option buttons (like, comment, reply) are shown. These functions are also available via the menu so these buttons are provided as a convenience."
+	}
+]

@@ -40,7 +40,6 @@ import SelectConnectionsDialogView from '../../../views/apps/connection-manager/
 import ConnectionInfoDialogView from '../../../views/apps/connection-manager/dialogs/info/connection-info-dialog-view.js';
 import ShareWithConnectionsDialogView from '../../../views/apps/connection-manager/dialogs/sharing/share-with-connections-dialog-view.js';
 import ConnectionRequestDialogView from '../../../views/apps/connection-manager/dialogs/connections/connection-request-dialog-view.js';
-import PreferencesFormView from '../../../views/apps/connection-manager/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, LinkShareable, ConnectionShareable, ConnectionInfoShowable, {
 
@@ -64,7 +63,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// call superclass constructor
 		//
 		AppSplitView.prototype.initialize.call(this);
-		
+
 		// set optional parameters
 		//
 		if (this.options.hidden) {
@@ -80,7 +79,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 				}
 			}
 		}
-		
+
 		// set attributes
 		//
 		if (!this.model) {
@@ -154,7 +153,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 			return this.getChildView('content').getSelected();
 		}
 	},
-	
+
 	getSelectedGroup: function() {
 		if (this.hasChildView('sidebar')) {
 			return this.getChildView('sidebar').getSelectedModel();
@@ -171,6 +170,10 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		if (this.hasChildView('content')) {
 			return this.getChildView('content').getSelectedModels();
 		}
+	},
+
+	getMapView: function() {
+		return this.getChildView('mainbar items map')
 	},
 
 	getStatusBarView: function() {
@@ -591,36 +594,17 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		});
 	},
 
-	load: function() {
-
-		// fetch user connections
-		//
+	fetchConnections: function(options) {
 		this.collection.fetchByUser(this.model, {
 
 			// callbacks
 			//
-			success: (collection) => {
+			success: () => {
 
-				// show content
+				// perform callback
 				//
-				this.setConnections(collection.toArray());
-				if (!this.options.hidden || !this.options.hidden['footer-bar']) {
-					this.showFooterBar();
-				}
-				this.onLoad();
-
-				// show message
-				//
-				if (!this.options.search_kind && collection.length == 0) {
-					this.showMessage("No connections.", {
-						icon: '<i class="fa fa-user-friends"></i>',
-						
-						// callbacks
-						//
-						onclick: () => {
-							this.showFindConnectionsDialog();
-						}
-					});
+				if (options && options.success) {
+					options.success();
 				}
 			},
 
@@ -634,6 +618,24 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 				});
 			}
 		});
+	},
+
+	load: function() {
+		if (application.isSignedIn()) {
+
+			// fetch user connections
+			//
+			this.fetchConnections({
+
+				// callbacks
+				//
+				success: () => {
+					this.onLoad();
+				}
+			});
+		} else {
+			this.onLoad();
+		}
 	},
 	
 	//
@@ -847,19 +849,6 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		});
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/connection-manager/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	//
 	// item event handling methods
 	//
@@ -881,6 +870,33 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 	//
 	// event handling methods
 	//
+
+	onLoad: function() {
+		if (this.collection) {
+			this.setConnections(this.collection.toArray());
+		}
+		if (!this.options.hidden || !this.options.hidden['footer-bar']) {
+			this.showFooterBar();
+		}
+
+		// call superclass method
+		//
+		AppSplitView.prototype.onLoad.call(this);
+
+		// show message
+		//
+		if (!this.options.search_kind && (this.connections.length == 0)) {
+			this.showMessage("No connections.", {
+				icon: '<i class="fa fa-user-friends"></i>',
+
+				// callbacks
+				//
+				onclick: () => {
+					this.showFindConnectionsDialog();
+				}
+			});
+		}
+	},
 
 	onChange: function() {
 
@@ -963,10 +979,6 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 	//
 	// static getting methods
 	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	},
 
 	getConnectionRequestsDropdownView: function(model) {
 		return new ConnectionRequestsDropdownView({

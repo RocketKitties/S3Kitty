@@ -228,7 +228,7 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 		'click > .info .buttons .edit': 'onClickEdit',
 		'click > .info .buttons .comment': 'onClickComment',
 		'click > .info .buttons .delete': 'onClickDelete',
-		'click > .info .comment-bubble a': 'onClickLink',
+		'click > .info .comment-bubble': 'onClickLink',
 		'click > .image-attachments > .gallery > .images > img': 'onClickGalleryImage',
 
 		'dblclick > .info': 'onDoubleClick',
@@ -381,12 +381,7 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 	openImage: function(imageFile) {
 		application.launch('image_viewer', {
 			model: imageFile,
-			collection: new Items([imageFile]),
-			/*
-			defaults: {
-				show_sidebar: false
-			}
-			*/
+			collection: new Items([imageFile])
 		});
 	},
 

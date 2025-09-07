@@ -47,37 +47,39 @@
 
 	// crosshairs overlay
 	//
-	.crosshairs {
-		position: absolute;
-		text-align: center;
-		left: 50%;
-		top: 50%;
-		width: 25px;
-		height: 25px;
-		margin-left: -12px;
-		margin-top: -12px;
-		pointer-events: none;
-		background: rgba(white, 50%);
-
-		img {
-			width: 25px;
-			height: 25px;
-		}
-
-		/*
-		&::after {
-			display: inline-block;
-			width: 25px;
-			height: 25px;
-			content: "+";
-			font-family: "Font Awesome";
-			font-size: 25px;
-			line-height: 25px;
-			color: black;
+	.layer {
+		.crosshairs {
+			position: absolute;
 			text-align: center;
-			box-shadow: none;
+			left: 50%;
+			top: 50%;
+			width: 25px;
+			height: 25px;
+			margin-left: -12px;
+			margin-top: -12px;
+			pointer-events: none;
+			background: rgba(white, 50%);
+
+			img {
+				width: 25px;
+				height: 25px;
+			}
+
+			/*
+			&::after {
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				content: "+";
+				font-family: "Font Awesome";
+				font-size: 25px;
+				line-height: 25px;
+				color: black;
+				text-align: center;
+				box-shadow: none;
+			}
+			*/
 		}
-		*/
 	}
 }
 

@@ -1,70 +1,68 @@
-{
-	"items": [
-		{
-			"class": "sort-by-title",
-			"group": "sort-by",
-			"icon": "fa fa-font",
-			"name": "By Title",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-by-priority",
-			"group": "sort-by",
-			"icon": "fa fa-star",
-			"name": "By Priority",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-by-kind",
-			"group": "sort-by",
-			"icon": "fa fa-bug",
-			"name": "By Kind",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "sort-by-date",
-			"icon": "fa fa-calendar-alt",
-			"name": "By Date",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "sort-by-create-date",
-					"group": "sort-by",
-					"icon": "fa fa-magic",
-					"name": "Create Date",
-					"state": "unselected"
-				},
-				{
-					"class": "sort-by-modify-date",
-					"group": "sort-by",
-					"icon": "fa fa-edit",
-					"name": "Modify Date",
-					"state": "unselected"
-				},
-				{
-					"class": "sort-by-due-date",
-					"group": "sort-by",
-					"icon": "fa fa-calendar",
-					"name": "Due Date",
-					"state": "unselected"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "sort-increasing",
-			"group": "sort-order",
-			"icon": "fa fa-sort-amount-up",
-			"name": "Increasing",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-decreasing",
-			"group": "sort-order",
-			"icon": "fa fa-sort-amount-down",
-			"name": "Decreasing",
-			"state": "unselected"
-		}
-	]
-}
+[
+	{
+		"name": "title",
+		"group": "sort-kind",
+		"icon": "fa fa-font",
+		"text": "By Title",
+		"state": "unselected"
+	},
+	{
+		"name": "priority",
+		"group": "sort-kind",
+		"icon": "fa fa-star",
+		"text": "By Priority",
+		"state": "unselected"
+	},
+	{
+		"name": "kind",
+		"group": "sort-kind",
+		"icon": "fa fa-bug",
+		"text": "By Kind",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "date",
+		"icon": "fa fa-calendar-alt",
+		"text": "By Date",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "create-date",
+				"group": "sort-kind",
+				"icon": "fa fa-magic",
+				"text": "Create Date",
+				"state": "unselected"
+			},
+			{
+				"name": "modify-date",
+				"group": "sort-kind",
+				"icon": "fa fa-edit",
+				"text": "Modify Date",
+				"state": "unselected"
+			},
+			{
+				"name": "due-date",
+				"group": "sort-kind",
+				"icon": "fa fa-calendar",
+				"text": "Due Date",
+				"state": "unselected"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "increasing",
+		"group": "sort-order",
+		"icon": "fa fa-sort-amount-up",
+		"text": "Increasing",
+		"state": "unselected"
+	},
+	{
+		"name": "decreasing",
+		"group": "sort-order",
+		"icon": "fa fa-sort-amount-down",
+		"text": "Decreasing",
+		"state": "unselected"
+	}
+]

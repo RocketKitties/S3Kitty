@@ -1,0 +1,45 @@
+[
+	{
+		"name": "key-binding",
+		"icon": "fa fa-keyboard",
+		"text": "Key Binding",
+		"kind": "multiple-choice",
+		"options": {
+			"default": "Default",
+			"vim": "Vim",
+			"emacs": "Emacs"
+		},
+		"help": "This what type of keyboard controls are used by the editor."
+	},
+	{
+		"name": "highlighting",
+		"icon": "fa fa-long-arrow-alt-right",
+		"text": "Highlighting",
+		"kind": "multiple-answer",
+		"options": {
+			"highlight-active-line": "Active Line",
+			"highlight-selected": "Selected"
+		},
+		"help": "This is how to display the currently active / highlighted line."
+	},
+	{
+		"name": "selecting",
+		"icon": "fa fa-mouse-pointer",
+		"text": "Selecting",
+		"kind": "multiple-answer",
+		"options": {
+			"select-full-line": "Full Line"
+		},
+		"help": "This is whether to allow full or partial lines of code to be selected."
+	},
+	{
+		"name": "scrolling",
+		"icon": "fa fa-arrows-alt-v",
+		"text": "Scrolling",
+		"kind": "multiple-answer",
+		"options": {
+			"animated-scroll": "Animated"
+		},
+		"help": "This is whether or not to instantly jump or to use a brief animation effect when scrolling to a new location in the code."
+	}
+]

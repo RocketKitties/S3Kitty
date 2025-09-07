@@ -1,6 +1,22 @@
 /******************************************************************************\
 |                                                                              |
-|                                _colors.scss                                  |
+|                                 styles.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -17,6 +33,22 @@
 /******************************************************************************\
 |                                                                              |
 |                            _colorful-apps.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                _colors.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -47,6 +79,22 @@ body:not(.binary).colored.colorful:not(.dark).translucent.sidebar-panels .modal 
 
 /******************************************************************************\
 |                                                                              |
+|                           _colorful-desktop.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
 |                               _branding.scss                                 |
 |                                                                              |
 |******************************************************************************|
@@ -68,22 +116,6 @@ body:not(.binary).colored.colorful:not(.dark).translucent.sidebar-panels .modal 
 |******************************************************************************|
 |                                                                              |
 |        This defines the dom and svg visual styles for this application.      |
-|                                                                              |
-|        Author(s): Abe Megahed                                                |
-|                                                                              |
-|        This file is subject to the terms and conditions defined in           |
-|        'LICENSE.txt', which is part of this source code distribution.        |
-|                                                                              |
-|******************************************************************************|
-|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
-\******************************************************************************/
-/******************************************************************************\
-|                                                                              |
-|                           _colorful-desktop.scss                             |
-|                                                                              |
-|******************************************************************************|
-|                                                                              |
-|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -339,7 +371,23 @@ body:not(.binary).colored.colorful:not(.dark) .panel .selected .content a, body:
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                                 _lighting.scss                               |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                        _colorful-flat-desktops.scss                          |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -369,6 +417,22 @@ body:not(.binary).colored.colorful:not(.dark) .panel .selected .content a, body:
 |******************************************************************************|
 |        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _lighting.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .flat .shaded, .flat.flat.shaded {
     background-color: var(--primary-color);
@@ -431,6 +495,22 @@ body:not(.binary).colored.colorful:not(.dark) .panel .selected .content a, body:
   }
   .flat .shaded.textured.long.round, .flat.flat.shaded.textured.long.round {
     background-color: var(--primary-color);
+  }
+}
+@supports (color: color-mix(in srgb, white, black)) {
+  body:not(.binary).colored.colorful.flat #desktop .desktop.app > .footer-bar,
+  body:not(.binary).colored.colorful.flat #desktop.auto .desktop.app > .footer-bar,
+  body:not(.binary).colored.colorful.flat #desktop.medium .desktop.app > .footer-bar {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+}
+@supports not (color: color-mix(in srgb, white, black)) {
+  body:not(.binary).colored.colorful.flat #desktop .desktop.app > .footer-bar,
+  body:not(.binary).colored.colorful.flat #desktop.auto .desktop.app > .footer-bar,
+  body:not(.binary).colored.colorful.flat #desktop.medium .desktop.app > .footer-bar {
+    background-color: hsl(220, 100%, 66%);
+    border-color: hsl(220, 100%, 66%);
   }
 }
 /******************************************************************************\
@@ -449,22 +529,22 @@ body:not(.binary).colored.colorful:not(.dark) .panel .selected .content a, body:
 |******************************************************************************|
 |        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
-@supports (color: color-mix(in srgb, white, black)) {
-  body:not(.binary).colored.colorful.flat #desktop .desktop.app > .footer-bar,
-  body:not(.binary).colored.colorful.flat #desktop.auto .desktop.app > .footer-bar,
-  body:not(.binary).colored.colorful.flat #desktop.medium .desktop.app > .footer-bar {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-  }
-}
-@supports not (color: color-mix(in srgb, white, black)) {
-  body:not(.binary).colored.colorful.flat #desktop .desktop.app > .footer-bar,
-  body:not(.binary).colored.colorful.flat #desktop.auto .desktop.app > .footer-bar,
-  body:not(.binary).colored.colorful.flat #desktop.medium .desktop.app > .footer-bar {
-    background-color: hsl(220, 100%, 66%);
-    border-color: hsl(220, 100%, 66%);
-  }
-}
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
 /******************************************************************************\
 |                                                                              |
 |                          _colorful-flat-dialogs.scss                         |
@@ -501,6 +581,54 @@ body:not(.binary).colored.colorful:not(.dark) .panel .selected .content a, body:
     border-color: #1f69ff;
   }
 }
+/******************************************************************************\
+|                                                                              |
+|                        _colorful-flat-desktops.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                        _colorful-flat-task-bars.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
 /******************************************************************************\
 |                                                                              |
 |                          _colorful-task-bars.scss                            |
@@ -551,22 +679,6 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
   border-color: var(--primary-color);
 }
 
-/******************************************************************************\
-|                                                                              |
-|                        _colorful-flat-task-bars.scss                         |
-|                                                                              |
-|******************************************************************************|
-|                                                                              |
-|        This defines various CSS styles used in this application.             |
-|                                                                              |
-|        Author(s): Abe Megahed                                                |
-|                                                                              |
-|        This file is subject to the terms and conditions defined in           |
-|        'LICENSE.txt', which is part of this source code distribution.        |
-|                                                                              |
-|******************************************************************************|
-|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
-\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   body:not(.binary).colored.colorful.flat #desktop:not(.task-bar-minimized):not(.colorful) .task-bar .task-list li {
     background-color: var(--primary-color);
@@ -613,11 +725,11 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                                 _chalk.scss                                  |
+|                        _colorful-chalk-desktops.scss                         |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines the dom and svg visual styles for this application.      |
+|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -629,11 +741,27 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                        _colorful-chalk-desktops.scss                         |
+|                                 _flat.scss                                   |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _chalk.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -661,6 +789,38 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
     border-color: #4a7df2;
   }
 }
+/******************************************************************************\
+|                                                                              |
+|                        _colorful-chalk-desktops.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
 /******************************************************************************\
 |                                                                              |
 |                         _colorful-chalk-dialogs.scss                         |
@@ -703,6 +863,38 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 }
 /******************************************************************************\
 |                                                                              |
+|                       _colorful-chalk-task-bars.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _flat.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
 |                               _round-chalk.scss                              |
 |                                                                              |
 |******************************************************************************|
@@ -719,7 +911,7 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                       _colorful-chalk-task-bars.scss                         |
+|                        _colorful-flat-task-bars.scss                         |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -785,11 +977,11 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                             _flat-plastic.scss                               |
+|                       _colorful-plastic-desktops.scss                        |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines the dom and svg visual styles for this application.      |
+|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -801,11 +993,27 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                       _colorful-plastic-desktops.scss                        |
+|                                 _flat.scss                                   |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _flat-plastic.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -833,6 +1041,38 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
     border-color: #4a7df2;
   }
 }
+/******************************************************************************\
+|                                                                              |
+|                       _colorful-plastic-desktops.scss                        |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
 /******************************************************************************\
 |                                                                              |
 |                        _colorful-plastic-dialogs.scss                        |
@@ -875,6 +1115,38 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 }
 /******************************************************************************\
 |                                                                              |
+|                      _colorful-plastic-task-bars.scss                        |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _flat.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
 |                             _round-plastic.scss                              |
 |                                                                              |
 |******************************************************************************|
@@ -891,7 +1163,7 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                      _colorful-plastic-task-bars.scss                        |
+|                        _colorful-flat-task-bars.scss                         |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -957,11 +1229,11 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                               _flat-glass.scss                               |
+|                        _colorful-glass-desktops.scss                         |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines the dom and svg visual styles for this application.      |
+|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -973,11 +1245,27 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                        _colorful-glass-desktops.scss                         |
+|                                 _flat.scss                                   |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _flat-glass.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -1007,11 +1295,11 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 }
 /******************************************************************************\
 |                                                                              |
-|                             _frosted-glass.scss                              |
+|                        _colorful-glass-desktops.scss                         |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines the dom and svg visual styles for this application.      |
+|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -1028,6 +1316,54 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 |******************************************************************************|
 |                                                                              |
 |        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                        _colorful-glass-desktops.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _frosted-glass.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -1111,6 +1447,38 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 }
 /******************************************************************************\
 |                                                                              |
+|                       _colorful-glass-task-bars.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _flat.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
 |                               _round-glass.scss                              |
 |                                                                              |
 |******************************************************************************|
@@ -1127,7 +1495,7 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                       _colorful-glass-task-bars.scss                         |
+|                        _colorful-flat-task-bars.scss                         |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -1193,11 +1561,11 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                               _flat-metal.scss                               |
+|                        _colorful-metal-desktops.scss                         |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines the dom and svg visual styles for this application.      |
+|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -1209,11 +1577,27 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                        _colorful-metal-desktops.scss                         |
+|                                 _flat.scss                                   |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _flat-metal.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -1239,6 +1623,38 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
     border-color: #4a7df2;
   }
 }
+/******************************************************************************\
+|                                                                              |
+|                        _colorful-metal-desktops.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
 /******************************************************************************\
 |                                                                              |
 |                         _colorful-metal-dialogs.scss                         |
@@ -1277,6 +1693,38 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 }
 /******************************************************************************\
 |                                                                              |
+|                       _colorful-metal-task-bars.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _flat.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
 |                              _round-metal.scss                               |
 |                                                                              |
 |******************************************************************************|
@@ -1293,7 +1741,7 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                       _colorful-metal-task-bars.scss                         |
+|                        _colorful-flat-task-bars.scss                         |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -1341,22 +1789,6 @@ body:not(.binary).colored.colorful #desktop.task-bar-minimized:not(.colorful) .t
     border-color: #3961d9;
   }
 }
-/******************************************************************************\
-|                                                                              |
-|                                 _index.scss                                  |
-|                                                                              |
-|******************************************************************************|
-|                                                                              |
-|        This defines various CSS styles used in this application.             |
-|                                                                              |
-|        Author(s): Abe Megahed                                                |
-|                                                                              |
-|        This file is subject to the terms and conditions defined in           |
-|        'LICENSE.txt', which is part of this source code distribution.        |
-|                                                                              |
-|******************************************************************************|
-|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
-\******************************************************************************/
 /******************************************************************************\
 |                                                                              |
 |                                 _index.scss                                  |
@@ -1427,23 +1859,7 @@ body:not(.binary).colored.colorful:not(.dark).tabs-minimal ul.nav-tabs > li:not(
 
 /******************************************************************************\
 |                                                                              |
-|                                 _index.scss                                  |
-|                                                                              |
-|******************************************************************************|
-|                                                                              |
-|        This defines various CSS styles used in this application.             |
-|                                                                              |
-|        Author(s): Abe Megahed                                                |
-|                                                                              |
-|        This file is subject to the terms and conditions defined in           |
-|        'LICENSE.txt', which is part of this source code distribution.        |
-|                                                                              |
-|******************************************************************************|
-|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
-\******************************************************************************/
-/******************************************************************************\
-|                                                                              |
-|                                 styles.scss                                  |
+|                        _colorful-flat-task-bars.scss                         |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |

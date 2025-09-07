@@ -2,6 +2,8 @@
 
 namespace Spatie\PdfToText;
 
+use Closure;
+use Spatie\PdfToText\Exceptions\BinaryNotFoundException;
 use Spatie\PdfToText\Exceptions\CouldNotExtractText;
 use Spatie\PdfToText\Exceptions\PdfNotFound;
 use Symfony\Component\Process\Process;
@@ -16,9 +18,30 @@ class Pdf
 
     protected int $timeout = 60;
 
+    protected array $env = [];
+
     public function __construct(?string $binPath = null)
     {
-        $this->binPath = $binPath ?? '/usr/bin/pdftotext';
+        $this->binPath = $binPath ?? $this->findPdfToText();
+    }
+
+    protected function findPdfToText(): string
+    {
+        $commonPaths = [
+            '/usr/bin/pdftotext',          // Common on Linux
+            '/usr/local/bin/pdftotext',    // Common on Linux
+            '/opt/homebrew/bin/pdftotext', // Homebrew on macOS (Apple Silicon)
+            '/opt/local/bin/pdftotext',    // MacPorts on macOS
+            '/usr/local/bin/pdftotext',    // Homebrew on macOS (Intel)
+        ];
+
+        foreach ($commonPaths as $path) {
+            if (is_executable($path)) {
+                return $path;
+            }
+        }
+
+        throw new BinaryNotFoundException("The required binary was not found or is not executable.");
     }
 
     public function setPdf(string $pdf): self
@@ -70,10 +93,11 @@ class Pdf
         return $this;
     }
 
-    public function text(): string
+    public function text(?Closure $callback = null): string
     {
         $process = new Process(array_merge([$this->binPath], $this->options, [$this->pdf, '-']));
         $process->setTimeout($this->timeout);
+        $process = $callback ? $callback($process) : $process;
         $process->run();
         if (!$process->isSuccessful()) {
             throw new CouldNotExtractText($process);
@@ -82,13 +106,13 @@ class Pdf
         return trim($process->getOutput(), " \t\n\r\0\x0B\x0C");
     }
 
-    public static function getText(string $pdf, ?string $binPath = null, array $options = [], $timeout = 60): string
+    public static function getText(string $pdf, ?string $binPath = null, array $options = [], $timeout = 60, ?Closure $callback = null): string
     {
         return (new static($binPath))
             ->setOptions($options)
             ->setTimeout($timeout)
             ->setPdf($pdf)
-            ->text()
+            ->text($callback)
         ;
     }
 }

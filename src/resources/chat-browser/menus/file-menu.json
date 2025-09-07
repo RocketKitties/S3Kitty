@@ -1,43 +1,41 @@
-{
-	"items": [
-		{
-			"class": "new-window",
-			"icon": "far fa-window-maximize",
-			"name": "New Window",
-			"shortcut": "command-enter"
-		},
-		{
-			"class": "new-chat",
-			"icon": "fa fa-plus",
-			"name": "New Chat",
-			"shortcut": "shift-command-enter"
-		},
-		{
-			"class": "open-chats",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"divider",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		"divider",
-		{
-			"class": "end-chat",
-			"icon": "fa fa-minus",
-			"name": "End Chat",
-			"shortcut": "delete"
-		},
-		"divider",
-		{
-			"class": "close-window",
-			"icon": "fa fa-circle-xmark",
-			"name": "Close",
-			"shortcut": "command-L"
-		}
-	]
-}
+[
+	{
+		"name": "new-window",
+		"icon": "far fa-window-maximize",
+		"text": "New Window",
+		"shortcut": "command-enter"
+	},
+	{
+		"name": "new-chat",
+		"icon": "fa fa-plus",
+		"text": "New Chat",
+		"shortcut": "shift-command-enter"
+	},
+	{
+		"name": "open-chats",
+		"icon": "fa fa-folder-open",
+		"text": "Open",
+		"shortcut": "command-O"
+	},
+	"divider",
+	{
+		"name": "show-info",
+		"icon": "fa fa-info-circle",
+		"text": "Show Info",
+		"shortcut": "command-I"
+	},
+	"divider",
+	{
+		"name": "end-chat",
+		"icon": "fa fa-minus",
+		"text": "End Chat",
+		"shortcut": "delete"
+	},
+	"divider",
+	{
+		"name": "close-window",
+		"icon": "fa fa-circle-xmark",
+		"text": "Close",
+		"shortcut": "command-L"
+	}
+]

@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import BaseView from '../../../../views/base-view.js';
-import NotificationsListView from '../../../../views/apps/notification-center/mainbar/notifications/lists/notifications-list-view.js';
+import NotificationsListView from '../../../../views/apps/notification-center/mainbar/lists/notifications-list-view.js';
 import ConnectionRequestsListView from '../../../../views/apps/connection-manager/connection-requests/lists/connection-requests-list-view.js';
 
 export default BaseView.extend({

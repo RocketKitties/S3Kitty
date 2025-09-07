@@ -52,19 +52,18 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let fontSize = preferences.get('font_size');
 
 		return {
 
 			// font options
 			//
-			'font-size-10': fontSize == 10,
-			'font-size-11': fontSize == 11,
-			'font-size-12': fontSize == 12,
-			'font-size-13': fontSize == 13,
-			'font-size-14': fontSize == 14,
-			'font-size-15': fontSize == 15,
-			'font-size-16': fontSize == 16
+			'font-size-10': preferences.matches('font_size', 10),
+			'font-size-11': preferences.matches('font_size', 11),
+			'font-size-12': preferences.matches('font_size', 12),
+			'font-size-13': preferences.matches('font_size', 13),
+			'font-size-14': preferences.matches('font_size', 14),
+			'font-size-15': preferences.matches('font_size', 15),
+			'font-size-16': preferences.matches('font_size', 16)
 		};
 	},
 

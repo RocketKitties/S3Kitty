@@ -177,7 +177,7 @@ export default BaseView.extend({
 	//
 
 	loadFont: function(fontName) {
-		let font = config.fonts[fontName];
+		let font = config.settings.fonts[fontName];
 
 		if (font && font.url) {
 			application.loadFont(fontName, font.url);

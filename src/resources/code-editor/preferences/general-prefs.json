@@ -1,0 +1,30 @@
+[
+	{
+		"name": "show-gutter",
+		"icon": "fa fa-ellipsis-v",
+		"text": "Gutter",
+		"kind": "true-false",
+		"help": "This is whether or not to show the gutter contining line numbers."
+	},
+	{
+		"name": "show-indent-guides",
+		"icon": "fa fa-indent",
+		"text": "Indent Guides",
+		"kind": "true-false",
+		"help": "This is whether or not to show guide lines to show indentation."
+	},
+	{
+		"name": "show-print-margin",
+		"icon": "fa fa-print",
+		"text": "Print Margin",
+		"kind": "true-false",
+		"help": "This is whether or not to show the limits to the printable area."
+	},
+	{
+		"name": "show-invisibles",
+		"icon": "fa fa-blind",
+		"text": "Invisibles",
+		"kind": "true-false",
+		"help": "This is whether or not to show invisible characters."
+	}
+]

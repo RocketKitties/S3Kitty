@@ -23,7 +23,6 @@ import DayView from '../../../views/apps/calendar/mainbar/grids/day-view.js';
 import WeekView from '../../../views/apps/calendar/mainbar/grids/week-view.js';
 import MonthView from '../../../views/apps/calendar/mainbar/grids/month-view.js';
 import FooterBarView from '../../../views/apps/calendar/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/calendar/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend({
 
@@ -377,19 +376,6 @@ export default AppSplitView.extend({
 		});
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/calendar/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	onChange: function(date) {
 
 		// update date
@@ -429,14 +415,5 @@ export default AppSplitView.extend({
 		// update
 		//
 		this.onChange(date);
-	}
-}, {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
 	}
 });

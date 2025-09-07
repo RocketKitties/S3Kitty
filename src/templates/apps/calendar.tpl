@@ -1,18 +1,18 @@
-<h1><i class="<%= config.apps['calendar'].icon %>"></i><%= config.apps['calendar'].name %></h1>
+<h1><i class="<%= config.apps.calendar.icon %>"></i><%= config.apps.calendar.name %></h1>
 
 <ol class="breadcrumb">
 	<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
 	<li><a href="#apps"><i class="fa fa-rocket"></i>Apps</a></li>
-	<li><i class="fa fa-calendar-alt"></i><%= config.apps['calendar'].name %></li>
+	<li><i class="fa fa-calendar-alt"></i><%= config.apps.calendar.name %></li>
 </ol>
 
 <div class="content">
-	<div class="attention icon colored <%= config.apps['calendar'].color %>">
-		<img src="images/icons/apps/<%= config.apps['calendar'].image || config.apps['calendar'].app + '.svg' %>" />
+	<div class="attention icon colored <%= config.apps.calendar.color %>">
+		<img src="images/icons/apps/<%= config.apps.calendar.image || config.apps.calendar.app + '.svg' %>" />
 	</div>
 
 	<div class="description section">
-		<p>The <%= config.apps['calendar'].name %> app allows you to keep track of your appointments. </p>
+		<p>The <%= config.apps.calendar.name %> app allows you to keep track of your appointments. </p>
 	</div>
 
 	<div class="details section">
@@ -37,11 +37,11 @@
 
 	<h2><i class="fa fa-desktop"></i>Screen Shots</h2>
 	<div class="figure desktop-only">
-		<a href="images/info/apps/calendar/calendar.png" target="_blank" class="lightbox" title="<%= config.apps['calendar'].name %>"><img class="dialog" src="images/info/apps/calendar/calendar.png" /></a>
-		<div class="caption"><%= config.apps['calendar'].name %></div>
+		<a href="images/info/apps/calendar/calendar.png" target="_blank" class="lightbox" title="<%= config.apps.calendar.name %>"><img class="dialog" src="images/info/apps/calendar/calendar.png" /></a>
+		<div class="caption"><%= config.apps.calendar.name %></div>
 	</div>
 	<div class="figure mobile-only">
-		<a href="images/info/apps/calendar/mobile/mobile-calendar.png" target="_blank" class="lightbox" title="<%= config.apps['calendar'].name %>"><img src="images/info/apps/calendar/mobile/mobile-calendar.png" /></a>
-		<div class="caption"><%= config.apps['calendar'].name %></div>
+		<a href="images/info/apps/calendar/mobile/mobile-calendar.png" target="_blank" class="lightbox" title="<%= config.apps.calendar.name %>"><img src="images/info/apps/calendar/mobile/mobile-calendar.png" /></a>
+		<div class="caption"><%= config.apps.calendar.name %></div>
 	</div>
 </div>

@@ -1,0 +1,44 @@
+[
+	{
+		"name": "home-directory",
+		"icon": "fa fa-folder",
+		"text": "Home Folder",
+		"kind": "directory",
+		"help": "This is the initial folder to use when opening map files."
+	},
+	{
+		"name": "photos-directory",
+		"icon": "fa fa-folder",
+		"text": "Photos Folder",
+		"kind": "directory",
+		"help": "This is the initial folder to use when opening local photos."
+	},
+	{
+		"name": "videos-directory",
+		"icon": "fa fa-folder",
+		"text": "Videos Folder",
+		"kind": "directory",
+		"help": "This is the initial folder to use when opening local videos."
+	},
+	{
+		"name": "uploads-directory",
+		"icon": "fa fa-folder",
+		"text": "Uploads Folder",
+		"kind": "directory",
+		"help": "This is the directory to use when uploading files."
+	},
+	{
+		"name": "dropbox-directory",
+		"icon": "fa fa-folder",
+		"text": "Dropbox Folder",
+		"kind": "directory",
+		"help": "This is the directory to use when uploading files from Dropbox."
+	},
+	{
+		"name": "google-directory",
+		"icon": "fa fa-folder",
+		"text": "Google Folder",
+		"kind": "directory",
+		"help": "This is the directory to use when uploading files from Google."
+	}
+]

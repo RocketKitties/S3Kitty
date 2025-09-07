@@ -1,0 +1,23 @@
+[
+	{
+		"name": "translation",
+		"icon": "fa fa-exchange-alt",
+		"text": "Translation",
+		"kind": "true-false",
+		"help": "This determines if the messages are auto-translated to your language."
+	},
+	{
+		"name": "language",
+		"icon": "fa fa-language",
+		"text": "Language",
+		"kind": "select",
+		"options": {
+			"english": "English",
+			"french": "French",
+			"german": "German",
+			"spanish": "Spanish",
+			"arabic": "Arabic"
+		},
+		"help": "This is your preferred language."
+	}
+]

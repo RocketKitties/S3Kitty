@@ -1,0 +1,38 @@
+[
+	{
+		"name": "pan-duration",
+		"icon": "fa fa-clock",
+		"text": "Pan Duration (ms)",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 1000,
+			"step": 100
+		},
+		"help": "This is how long to take when panning a map side to side."
+	},
+	{
+		"name": "zoom-duration",
+		"icon": "fa fa-clock",
+		"text": "Zoom Duration (ms)",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 1000,
+			"step": 100
+		},
+		"help": "This is how long to take when zooming a map in or out."
+	},
+	{
+		"name": "zoom-to-duration",
+		"icon": "fa fa-clock",
+		"text": "Zoom To Duration (s)",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 10,
+			"step": 1
+		},
+		"help": "This is how long to take when zooming a map to a particular place."
+	}
+]

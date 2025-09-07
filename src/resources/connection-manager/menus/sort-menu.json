@@ -1,84 +1,82 @@
-{
-	"items": [
-		{
-			"class": "sort-by-name",
-			"group": "sort-by",
-			"icon": "fa fa-font",
-			"name": "By Name",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "sort-by-location",
-			"group": "sort-by",
-			"icon": "fa fa-globe-americas",
-			"name": "By Location",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-by-occupation",
-			"group": "sort-by",
-			"icon": "fa fa-briefcase",
-			"name": "By Occupation",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-by-gender",
-			"group": "sort-by",
-			"icon": "fa fa-transgender",
-			"name": "By Gender",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-by-age",
-			"group": "sort-by",
-			"icon": "fa fa-hourglass-half",
-			"name": "By Age",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-by-date",
-			"icon": "fa fa-calendar-alt",
-			"name": "By Date",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "sort-by-birth-date",
-					"group": "sort-by",
-					"icon": "fa fa-birthday-cake",
-					"name": "Birth Date",
-					"state": "unselected"
-				},
-				{
-					"class": "sort-by-join-date",
-					"group": "sort-by",
-					"icon": "fa fa-user-circle",
-					"name": "Join Date",
-					"state": "unselected"
-				},
-				{
-					"class": "sort-by-connect-date",
-					"group": "sort-by",
-					"icon": "fa fa-user-friends",
-					"name": "Connect Date",
-					"state": "unselected"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "sort-increasing",
-			"group": "sort-order",
-			"icon": "fa fa-sort-amount-up",
-			"name": "Increasing",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-decreasing",
-			"group": "sort-order",
-			"icon": "fa fa-sort-amount-down",
-			"name": "Decreasing",
-			"state": "unselected"
-		}
-	]
-}
+[
+	{
+		"name": "name",
+		"group": "sort-kind",
+		"icon": "fa fa-font",
+		"text": "By Name",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "location",
+		"group": "sort-kind",
+		"icon": "fa fa-globe-americas",
+		"text": "By Location",
+		"state": "unselected"
+	},
+	{
+		"name": "occupation",
+		"group": "sort-kind",
+		"icon": "fa fa-briefcase",
+		"text": "By Occupation",
+		"state": "unselected"
+	},
+	{
+		"name": "gender",
+		"group": "sort-kind",
+		"icon": "fa fa-transgender",
+		"text": "By Gender",
+		"state": "unselected"
+	},
+	{
+		"name": "age",
+		"group": "sort-kind",
+		"icon": "fa fa-hourglass-half",
+		"text": "By Age",
+		"state": "unselected"
+	},
+	{
+		"name": "date",
+		"icon": "fa fa-calendar-alt",
+		"text": "By Date",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "birth-date",
+				"group": "sort-kind",
+				"icon": "fa fa-birthday-cake",
+				"text": "Birth Date",
+				"state": "unselected"
+			},
+			{
+				"name": "join-date",
+				"group": "sort-kind",
+				"icon": "fa fa-user-circle",
+				"text": "Join Date",
+				"state": "unselected"
+			},
+			{
+				"name": "connect-date",
+				"group": "sort-kind",
+				"icon": "fa fa-user-friends",
+				"text": "Connect Date",
+				"state": "unselected"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "increasing",
+		"group": "sort-order",
+		"icon": "fa fa-sort-amount-up",
+		"text": "Increasing",
+		"state": "unselected"
+	},
+	{
+		"name": "decreasing",
+		"group": "sort-order",
+		"icon": "fa fa-sort-amount-down",
+		"text": "Decreasing",
+		"state": "unselected"
+	}
+]

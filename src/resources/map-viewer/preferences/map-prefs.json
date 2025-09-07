@@ -1,0 +1,76 @@
+[
+	{
+		"name": "map-view-kind",
+		"icon": "fa fa-image",
+		"text": "View Kind",
+		"kind": "multiple-choice",
+		"options": {
+			"icons": "Icons",
+			"lists": "Lists",
+			"tiles": "Tiles"
+		},
+		"help": "This is how items are displayed on the map."
+	},
+	{
+		"name": "map-layers",
+		"icon": "fa fa-align-justify",
+		"text": "Layers",
+		"kind": "multiple-answer",
+		"options": {
+			"crosshairs": "Crosshairs",
+			"photos": "Photos",
+			"videos": "Videos",
+			"places": "Places",
+			"favorites": "Favorites",
+			"people": "People",
+			"annotations": "Annotations",
+			"weather": "Weather"
+		}
+	},
+	{
+		"name": "map-options",
+		"icon": "fa fa-eye",
+		"text": "Show",
+		"kind": "multiple-answer",
+		"options": {
+			"grid": "Grid",
+			"smoothing": "Smoothing",
+			"item-names": "Names",
+			"geo-orientations": "Orientations"
+		},
+		"help": "This is whether or not to these items."
+	},
+	{
+		"name": "measuring-units",
+		"icon": "fa fa-calculator",
+		"text": "Units",
+		"kind": "multiple-choice",
+		"options": {
+			"imperial": "Imperial",
+			"metric": "Metric"
+		},
+		"help": "These are the units to use for measuring."
+	},
+	{
+		"name": "arrow-style",
+		"icon": "fa fa-arrows-alt-h",
+		"text": "Arrows",
+		"kind": "multiple-choice",
+		"options": {
+			"filled": "Filled",
+			"stroked": "Stroked"
+		},
+		"help": "This determines how annotation arrows are displayed."
+	},
+	{
+		"name": "label-style",
+		"icon": "fa fa-font",
+		"text": "Labels",
+		"kind": "multiple-choice",
+		"options": {
+			"rotated": "Rotated",
+			"horizontal": "Horizontal"
+		},
+		"help": "This determines how annotation labels are displayed."
+	}
+]

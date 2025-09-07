@@ -1,0 +1,12 @@
+[
+	{
+		"name": "open-connections-in-new-window",
+		"icon": "fa fa-folder-open",
+		"text": "Open Connections",
+		"kind": "multiple-choice",
+		"options": {
+			"same-window": "Same Window",
+			"new-window": "New Window"
+		}
+	}
+]

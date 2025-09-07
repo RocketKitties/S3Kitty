@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import FooterBarView from '../../../../views/apps/common/footer-bar/footer-bar-view.js';
-import AudioBarView from '../../../../views/apps/audio-player/footer-bar/audio-bar/audio-bar-view.js';
+import TrackBarView from '../../../../views/apps/audio-player/footer-bar/track-bar/track-bar-view.js';
 import StatusBarView from '../../../../views/apps/audio-player/footer-bar/status-bar/status-bar-view.js';
 
 export default FooterBarView.extend({
@@ -25,14 +25,14 @@ export default FooterBarView.extend({
 	// attributes
 	//
 
-	toolbars: ['window', 'audio', 'status'],
+	toolbars: ['window', 'track', 'status'],
 
 	//
 	// getting methods
 	//
 
-	getAudioBarView: function() {
-		return new AudioBarView({
+	getTrackBarView: function() {
+		return new TrackBarView({
 			trackNumber: this.collection? this.collection.indexOf(this.model) + 1 : undefined,
 			numTracks: 	this.collection? this.collection.length : undefined
 		});
@@ -54,8 +54,8 @@ export default FooterBarView.extend({
 			case 'window':
 				this.showWindowBar();
 				break;
-			case 'audio':
-				this.showAudioBar();
+			case 'track':
+				this.showTrackBar();
 				break;
 			case 'status':
 				this.showStatusBar();
@@ -67,9 +67,9 @@ export default FooterBarView.extend({
 		this.showChildView('window', this.getWindowBarView());
 	},
 
-	showAudioBar: function() {
-		this.showChildView('audio', this.getAudioBarView());
-		this.getChildView('audio').$el.addClass('windowed-app-only');
+	showTrackBar: function() {
+		this.showChildView('track', this.getTrackBarView());
+		this.getChildView('track').$el.addClass('windowed-app-only');
 	},
 
 	showStatusBar: function() {

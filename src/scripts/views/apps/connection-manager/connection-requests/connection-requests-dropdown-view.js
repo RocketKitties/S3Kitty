@@ -38,6 +38,10 @@ export default ConnectionRequestsView.extend({
 		<div class="connection-requests dropdown-menu"></div>
 	`),
 
+	regions: {
+		connection_requests: '.connection-requests'
+	},
+
 	events: {
 		'mouseover .dropdown-toggle': 'onMouseOverDropdownToggle'
 	},
@@ -173,9 +177,11 @@ export default ConnectionRequestsView.extend({
 	},
 
 	showConnectionRequestsList: function(collection) {
-		this.showChildView('connection_requests', new ConnectionRequestsListView({
-			collection: collection
-		}));
+		if (this.hasRegion('connection_requests')) {
+			this.showChildView('connection_requests', new ConnectionRequestsListView({
+				collection: collection
+			}));
+		}
 	},
 
 	addBadge: function(element, number) {

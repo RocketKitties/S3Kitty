@@ -1,0 +1,57 @@
+{
+	"display_prefs": [
+		{
+			"name": "mode",
+			"icon": "fa fa-clock",
+			"text": "Mode",
+			"kind": "multiple-choice",
+			"options": {
+				"analog": "Analog",
+				"digital": "Digital"
+			},
+			"help": "This is the mode that the clock is in."
+		}
+	],
+	"general_prefs": [
+		{
+			"name": "show-items",
+			"icon": "fa fa-eye",
+			"text": "Show",
+			"kind": "multiple-answer",
+			"options": {
+				"show-mode": "Mode Button"
+			},
+			"help": "This is whether or not to show the mode button."
+		}
+	],
+	"preferences": [
+		{
+			"name": "general",
+			"icon": "fa fa-check",
+			"text": "General"
+		},
+		{
+			"name": "display",
+			"icon": "fa fa-desktop",
+			"text": "Display"
+		},
+		{
+			"name": "window",
+			"icon": "fa fa-window-maximize",
+			"text": "Window"
+		}
+	],
+	"window_prefs": [
+		{
+			"name": "window-state",
+			"icon": "fa fa-window-maximize",
+			"text": "Window State",
+			"kind": "multiple-answer",
+			"options": {
+				"maximized": "Maximized",
+				"full-screen": "Full Screen"
+			},
+			"help": "This is the initial state of the application window."
+		}
+	]
+}

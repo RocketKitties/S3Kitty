@@ -1,18 +1,18 @@
-<h1><i class="<%= config.apps['contact_editor'].icon %>"></i><%= config.apps['contact_editor'].name %></h1>
+<h1><i class="<%= config.apps.contact_editor.icon %>"></i><%= config.apps.contact_editor.name %></h1>
 
 <ol class="breadcrumb">
 	<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
 	<li><a href="#apps"><i class="fa fa-rocket"></i>Apps</a></li>
-	<li><i class="fa fa-address-book"></i><%= config.apps['contact_editor'].name %></li>
+	<li><i class="fa fa-address-book"></i><%= config.apps.contact_editor.name %></li>
 </ol>
 
 <div class="content">
-	<div class="attention icon colored <%= config.apps['contact_editor'].color %>">
-		<img src="images/icons/apps/<%= config.apps['contact_editor'].image || config.apps['contact_editor'].app + '.svg' %>" />
+	<div class="attention icon colored <%= config.apps.contact_editor.color %>">
+		<img src="images/icons/apps/<%= config.apps.contact_editor.image || config.apps.contact_editor.app + '.svg' %>" />
 	</div>
 
 	<div class="description section">
-		<p>The <%= config.apps['contact_editor'].name %> app lets you store, view, and share your contact information. </p>
+		<p>The <%= config.apps.contact_editor.name %> app lets you store, view, and share your contact information. </p>
 	</div>
 
 	<div class="details section">
@@ -30,7 +30,7 @@
 				<ul>
 					<li>Create, edit, and manage your contact information. </li>
 					<li>Manage your contact information across all of your devices. </li>
-					<li>A safer way of storing your contact information because you don't have to worry about losing your mobile device. </p>
+					<li>A safer way of storing your contact information because you don't have to worry about losing your mobile device. </li>
 				</ul>
 			</div>
 		</div>
@@ -38,11 +38,11 @@
 
 	<h2><i class="fa fa-desktop"></i>Screen Shots</h2>
 	<div class="figure desktop-only">
-		<a href="images/info/apps/contact-editor/contact-editor.png" target="_blank" class="lightbox" title="<%= config.apps['contact_editor'].name %>"><img class="dialog" src="images/info/apps/contact-editor/contact-editor.png" /></a>
-		<div class="caption"><%= config.apps['contact_editor'].name %></div>
+		<a href="images/info/apps/contact-editor/contact-editor.png" target="_blank" class="lightbox" title="<%= config.apps.contact_editor.name %>"><img class="dialog" src="images/info/apps/contact-editor/contact-editor.png" /></a>
+		<div class="caption"><%= config.apps.contact_editor.name %></div>
 	</div>
 	<div class="figure mobile-only">
-		<a href="images/info/apps/contact-editor/mobile/mobile-contact-editor.png" target="_blank" class="lightbox" title="<%= config.apps['contact_editor'].name %>"><img src="images/info/apps/contact-editor/mobile/mobile-contact-editor.png" /></a>
-		<div class="caption"><%= config.apps['contact_editor'].name %></div>
+		<a href="images/info/apps/contact-editor/mobile/mobile-contact-editor.png" target="_blank" class="lightbox" title="<%= config.apps.contact_editor.name %>"><img src="images/info/apps/contact-editor/mobile/mobile-contact-editor.png" /></a>
+		<div class="caption"><%= config.apps.contact_editor.name %></div>
 	</div>
 </div>

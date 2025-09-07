@@ -1,72 +1,70 @@
-{
-	"items": [
-		{
-			"class": "open-item",
-			"icon": "fa fa-folder-open",
-			"name": "Open",
-			"shortcut": "command-O"
-		},
-		"divider",
-		{
-			"class": "share",
-			"icon": "fa fa-share",
-			"name": "Share",
-			"menu": [
-				{
-					"class": "share-files",
-					"icon": "fa fa-file",
-					"name": "Files"
-				},
-				{
-					"class": "share-audio",
-					"icon": "fa fa-volume-up",
-					"name": "Audio"
-				},
-				{
-					"class": "share-music",
-					"icon": "fa fa-music",
-					"name": "Music"
-				},
-				{
-					"class": "share-pictures",
-					"icon": "fa fa-image",
-					"name": "Pictures"
-				},
-				{
-					"class": "share-videos",
-					"icon": "fa fa-video",
-					"name": "Videos"
-				},
-				{
-					"class": "share-maps",
-					"icon": "fa fa-map",
-					"name": "Maps"
-				},
-				"divider",
-				{
-					"class": "share-message",
-					"icon": "fa fa-comments",
-					"name": "Message"
-				},
-				{
-					"class": "share-gesture",
-					"icon": "fa fa-hand-pointer",
-					"name": "Gesture"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "show-info",
-			"icon": "fa fa-info-circle",
-			"name": "Show Info",
-			"shortcut": "command-I"
-		},
-		{
-			"class": "show-on-map",
-			"icon": "fa fa-map",
-			"name": "Show on Map",
-			"shortcut": "command-M"
-		}
-	]
-}
+[
+	{
+		"name": "open-item",
+		"icon": "fa fa-folder-open",
+		"text": "Open",
+		"shortcut": "command-O"
+	},
+	"divider",
+	{
+		"name": "share",
+		"icon": "fa fa-share",
+		"text": "Share",
+		"menu": [
+			{
+				"name": "share-files",
+				"icon": "fa fa-file",
+				"text": "Files"
+			},
+			{
+				"name": "share-audio",
+				"icon": "fa fa-volume-up",
+				"text": "Audio"
+			},
+			{
+				"name": "share-music",
+				"icon": "fa fa-music",
+				"text": "Music"
+			},
+			{
+				"name": "share-pictures",
+				"icon": "fa fa-image",
+				"text": "Pictures"
+			},
+			{
+				"name": "share-videos",
+				"icon": "fa fa-video",
+				"text": "Videos"
+			},
+			{
+				"name": "share-maps",
+				"icon": "fa fa-map",
+				"text": "Maps"
+			},
+			"divider",
+			{
+				"name": "share-message",
+				"icon": "fa fa-comments",
+				"text": "Message"
+			},
+			{
+				"name": "share-gesture",
+				"icon": "fa fa-hand-pointer",
+				"text": "Gesture"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "show-info",
+		"icon": "fa fa-info-circle",
+		"text": "Show Info",
+		"shortcut": "command-I"
+	},
+	{
+		"name": "show-on-map",
+		"icon": "fa fa-map",
+		"text": "Show on Map",
+		"shortcut": "command-M"
+	}
+]

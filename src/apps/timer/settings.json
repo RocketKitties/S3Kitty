@@ -1,0 +1,11 @@
+{
+	"name": "Timer",
+	"icon": "fa fa-hourglass",
+	"category": "utility",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "cyan"
+}

@@ -24,7 +24,7 @@ export default SearchMenuView.extend({
 	//
 
 	events: {
-		'click .search-by > a': 'onClickSearchBy'
+		'click .search-kind': 'onClickSearchKind'
 	},
 
 	//
@@ -33,14 +33,13 @@ export default SearchMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let searchKind = preferences.get('search_kind');
 
 		return {
-			'search-by-message': searchKind == 'message',
-			'search-by-date': searchKind == 'date',
-			'search-by-num-likes': searchKind == 'num_likes',
-			'search-by-num-comments': searchKind == 'num_comments',
-			'search-by-num-attachments': searchKind == 'num_attachments'
+			'search-kind message': preferences.matches('search_kind', 'message'),
+			'search-kind date': preferences.matches('search_kind', 'date'),
+			'search-kind num-likes': preferences.matches('search_kind', 'num_likes'),
+			'search-kind num-comments': preferences.matches('search_kind', 'num_comments'),
+			'search-kind num-attachments': preferences.matches('search_kind', 'num_attachments')
 		};
 	}
 });

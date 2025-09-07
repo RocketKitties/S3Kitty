@@ -1,18 +1,47 @@
 <div class="primary colored section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><img class="icon" src="images/logos/icon.svg" />What is <%= application.name %>?</h2>
+			<h1><img class="icon" src="images/logos/cloud-icon.svg" />What is <%= application.name %>?</h1>
 
 			<div class="well">
-				<b>kitty</b> (noun): a collection of goods often made up of small contributions
+				<b>kitty</b> (noun): a collection of goods often made up of small contributions, comes from the idea of a container or "kit".
 			</div>
 
 			<p><%= application.name %> is a cloud-based web interface for managing S3 data.  It combines the capacity of S3 with the familiar look and feel of your desktop or mobile OS. Best of all, you can run it on your own server. </p>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
-				<a href="images/info/desktop/desktop.png" target="_blank" class="lightbox" title="<%= application.name %>"><img src="images/info/desktop/desktop.png" /></a>
-				<div class="caption"><%= application.name %></div>
+				<a href="images/info/desktop/desktop.png" target="_blank" class="lightbox" title="Desktop"><img src="images/info/desktop/desktop.png" /></a>
+				<div class="caption">Desktop</div>
+			</div>
+			<div class="figure" style="margin-right:-100px; margin-top:-250px">
+				<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="Mobile"><img src="images/info/mobile/iphone.png" /></a>
+				<div class="caption">Mobile</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-circle-check"></i><%= application.name %> Advantages</h2>
+			<ul>
+				<li>Self-hostable (on-prem or in the cloud)</li>
+				<li>Free</li>
+				<li>Easy to use and install</li>
+				<li>Platform independent</li>
+				<li>Open Source</li>
+				<li>Secure</li>
+				<li>Private</li>
+			</ul>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<a href="#downloads">
+					<img src="images/logos/icon.svg" />
+				</a>
+				<div class="caption"><i class="fa fa-heart" style="color:hotpink; margin-right:5px"></i>Adopt Me!</div>
 			</div>
 		</div>
 	</div>
@@ -22,14 +51,13 @@
 	<div class="row">
 		<div class="col-sm-6">
 			<h2><i class="fa fa-dollar-sign"></i>It's Free!</h2>
-			<p><%= application.name %> is <a href="#policies/terms-of-use">free to use</a> for non-commmercial applications.  It's also <a href="#downloads">free to download</a> and run on your own server. </p>
+			<p><%= application.name %> is 100% completely free to <a href="#installation">download and run</a> on your own server. </p>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
 				<a href="#downloads">
-					<img style="width:150px" src="images/logos/icon.svg" />
+					<img src="images/welcome/free-icon.svg" />
 				</a>
-				<div class="caption"><i class="fa fa-heart" style="color:hotpink; margin-right:5px"></i>Adopt Me!</div>
 			</div>
 		</div>
 	</div>
@@ -44,7 +72,7 @@
 		<div class="col-sm-6">
 			<div class="figure">
 				<a href="#downloads">
-					<img height="175px" src="images/logos/rocketkitty-icon.svg" />
+					<img src="images/logos/rocketkitty-icon.svg" />
 				</a>
 				<div class="caption">
 					Launch Me!
@@ -116,7 +144,7 @@
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
-				<img width="150px" src="images/welcome/camera.svg" />
+				<img src="images/welcome/camera.svg" />
 			</div>
 		</div>
 	</div>
@@ -129,13 +157,13 @@
 			<p>Use <%= application.name %> to share your bucket files with your friends, family, and colleagues. <%= application.name %> lets you share your S3 data without having to give out your bucket credentials. </p>
 		</div>
 		<div class="col-sm-6">
-			<div class="figure" style="width:400px">
-				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F46E.svg" />
-				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F468.svg" />
-				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F469.svg" />
-				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F471.svg" />
-				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F474.svg" />
-				<img width="75px" style="margin:15px" src="images/welcome/sharing/1F477.svg" />
+			<div class="small icons figure">
+				<img src="images/welcome/sharing/1F46E.svg" />
+				<img src="images/welcome/sharing/1F468.svg" />
+				<img src="images/welcome/sharing/1F469.svg" />
+				<img src="images/welcome/sharing/1F471.svg" />
+				<img src="images/welcome/sharing/1F474.svg" />
+				<img src="images/welcome/sharing/1F477.svg" />
 			</div>
 		</div>
 	</div>
@@ -149,7 +177,7 @@
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
-				<a href="images/info/desktop/iphone-desktop.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/desktop/iphone-desktop.png" /></a>
+				<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/mobile/iphone.png" /></a>
 				<div class="caption"><%= application.name %> Mobile</div>
 			</div>
 		</div>
@@ -164,7 +192,7 @@
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
-				<img height="200px" src="images/welcome/safe.svg" />
+				<img height="175px" src="images/welcome/safe.svg" />
 			</div>
 		</div>
 	</div>

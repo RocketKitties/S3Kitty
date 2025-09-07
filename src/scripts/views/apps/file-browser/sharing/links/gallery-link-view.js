@@ -140,7 +140,7 @@ export default FolderLinkView.extend({
 		application.launch('image_viewer', {
 			model: imageFile,
 			defaults: {
-				show_sidebar: false
+				panes: []
 			},
 			slide_show: true
 		}, {
@@ -153,7 +153,7 @@ export default FolderLinkView.extend({
 		application.launch('file_browser', {
 			model: directory,
 			defaults: {
-				show_sidebar: false
+				panes: []
 			}
 		}, {
 			maximized: true

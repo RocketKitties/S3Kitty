@@ -1,0 +1,11 @@
+{
+	"name": "Contacts",
+	"icon": "fa fa-address-book",
+	"category": "productivity",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "raspberry"
+}

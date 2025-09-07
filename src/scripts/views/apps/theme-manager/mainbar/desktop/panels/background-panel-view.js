@@ -184,7 +184,7 @@ export default FormPanelView.extend({
 			background_size: application.settings.desktop.get('background_size') || 'cover',
 			background_repeats: application.settings.desktop.get('background_repeats'),
 			background_color: application.settings.desktop.get('background_color'),
-			colors: config.defaults.colors
+			colors: config.settings.defaults.colors
 		};
 	},
 

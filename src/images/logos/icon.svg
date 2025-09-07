@@ -36,8 +36,6 @@
 		</style>
 	</defs>
 
-	<rect width="512" height="512" fill="red" style="display:none" />
-
 	<g id="bucket" transform="scale(0.9) translate(30, 10)" stroke="black" stroke-width="0">
 		<path style="fill:#F95428;" d="M454.246,63.473H57.759l50.548,434.584c0.925,7.947,7.657,13.941,15.658,13.941h132.038h132.038
 			c8.001,0,14.733-5.994,15.658-13.941L454.246,63.473z" />

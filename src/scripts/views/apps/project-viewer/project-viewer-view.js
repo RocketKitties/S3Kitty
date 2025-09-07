@@ -30,7 +30,6 @@ import HeaderBarView from '../../../views/apps/project-viewer/header-bar/header-
 import SideBarView from '../../../views/apps/project-viewer/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/project-viewer/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/project-viewer/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/project-viewer/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, ItemOpenable, ItemInfoShowable, ProjectInfoShowable, {
 
@@ -732,19 +731,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		}
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/project-viewer/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	//
 	// event handling methods
 	//
@@ -849,10 +835,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	getPreferences: function() {
 		return config.preferences.project_viewer || {};
-	},
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
 	},
 
 	getDefaultProjectName: function() {

@@ -1,0 +1,20 @@
+{
+	"name": "Tasks",
+	"icon": "fa fa-check",
+	"category": "productivity",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "green",
+	"defaults": {
+		"project": {
+			"name": "To Do List",
+			"description": "This is the default project.",
+			"required": true
+		}
+	},
+	"project_icon_selector_path": "/Shared/Pictures",
+	"project_invitation_message": "I thought you might be interested in this!"
+}

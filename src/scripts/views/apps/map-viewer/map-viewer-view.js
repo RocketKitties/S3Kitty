@@ -55,7 +55,6 @@ import ItemsMapView from '../../../views/apps/map-viewer/mainbar/maps/items-map-
 import DirectoryMapView from '../../../views/apps/map-viewer/mainbar/maps/directory-map-view.js';
 import SelectPlaceDialogView from '../../../views/apps/map-viewer/dialogs/places/select-place-dialog-view.js';
 import CheckInDialogView from '../../../views/apps/map-viewer/dialogs/places/check-in-dialog-view.js';
-import PreferencesFormView from '../../../views/apps/map-viewer/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable, FileDisposable, ItemOpenable, Multifile, SelectableContainable, MultiSelectable, ItemShareable, ItemInfoShowable, ConnectionInfoShowable, PhotoMappable, VideoMappable, OverlayMappable, PersonMappable, PlaceMappable, FavoriteMappable, DropboxUploadable, GDriveUploadable, {
 
@@ -122,9 +121,7 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 
 		// set attributes
 		//
-		this.directory = this.model.parent || new Directory({
-			path: this.preferences.get('home_directory')
-		});
+		this.directory = this.model.parent || application.getDirectory(this.preferences.get('home_directory'));
 	},
 
 
@@ -482,11 +479,8 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 
 			// map options
 			//
-			case 'show_grid':
-			case 'show_smoothing':
-			case 'show_item_names':
-			case 'show_geo_orientations':
-				this.getActivePaneView().getChildView('content').setOption(key, value);
+			case 'map_options':
+				this.setMapOptions(value);
 				this.preferences.set(key, value);
 				break;
 
@@ -533,6 +527,17 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 		} else {
 			this.setMainToolbarVisible(false);
 		}
+	},
+
+	//
+	// map option setting methods
+	//
+
+	setMapOptions: function(options) {
+		this.getActivePaneView().getChildView('content').setOption('show_grid', options.includes('grid'));
+		this.getActivePaneView().getChildView('content').setOption('show_smoothing', options.includes('smoothing'));
+		this.getActivePaneView().getChildView('content').setOption('show_item_names', options.includes('item_names'));
+		this.getActivePaneView().getChildView('content').setOption('show_geo_orientations', options.includes('geo_orientations'));
 	},
 
 	//
@@ -1812,19 +1817,6 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 		this.showMapItemsInfoDialog(selected, options);
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/map-viewer/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	showPlaceNameDialog: function(options) {
 		import(
 			'../../../views/apps/map-viewer/dialogs/places/place-name-dialog-view.js'
@@ -2168,10 +2160,6 @@ export default AppSplitView.extend(_.extend({}, FileDownloadable, FileUploadable
 	//
 	// static getting methods
 	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	},
 
 	getItemsMapView: function(options) {
 		return new ItemsMapView(options);

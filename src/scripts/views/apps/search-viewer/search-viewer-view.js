@@ -22,7 +22,6 @@ import HeaderBarView from '../../../views/apps/search-viewer/header-bar/header-b
 import SideBarView from '../../../views/apps/search-viewer/sidebar/sidebar-view.js';
 import SearchView from '../../../views/apps/search-viewer/mainbar/search-view.js';
 import FooterBarView from '../../../views/apps/search-viewer/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/search-viewer/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, ItemOpenable, ItemInfoShowable, {
 
@@ -173,19 +172,6 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, ItemInfoShowable, 
 		}, delay);
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/search-viewer/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	//
 	// event handling methods
 	//
@@ -199,14 +185,6 @@ export default AppSplitView.extend(_.extend({}, ItemOpenable, ItemInfoShowable, 
 		this.updateStatusBar();
 	}
 }), {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	},
 
 	//
 	// static rendering methods

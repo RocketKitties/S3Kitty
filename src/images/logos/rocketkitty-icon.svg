@@ -47,8 +47,6 @@
 		</style>
 	</defs>
 
-	<rect width="512" height="512" fill="hsl(200, 100%, 66%)" style="display:none" />
-
 	<g id="flame" transform="translate(256, 256) scale(1, 0.5) translate(0, 180) translate(-256, -256)">
 		<g transform="translate(-196, 275) scale(1.25, 0.75) rotate(-45)">
 			<path style="fill:#FFCE54;" d="M17.25,493.132c3.625-10.188,8.344-23.141,13.625-36.563c19.875-50.642,30.407-65.782,34.938-70.298

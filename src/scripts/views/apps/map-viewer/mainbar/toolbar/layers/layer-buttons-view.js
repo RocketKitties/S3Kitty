@@ -82,18 +82,17 @@ export default BaseView.extend({
 
 	selected: function() {
 		let preferences = this.app.preferences;
-		let mapLayers = preferences.get('map_layers');
 
 		return {
-			'show-crosshairs': mapLayers.includes('crosshairs'),				
-			'show-photos': mapLayers.includes('photos'),
-			'show-videos': mapLayers.includes('videos'),
-			'show-overlays': mapLayers.includes('overlays'),
-			'show-people': mapLayers.includes('people'),
-			'show-places': mapLayers.includes('places'),
-			'show-favorites': mapLayers.includes('favorites'),
-			'show-annotations': mapLayers.includes('annotations'),
-			'show-weather': mapLayers.includes('weather')
+			'show-crosshairs': preferences.includes('map_layers', 'crosshairs'),
+			'show-photos': preferences.includes('map_layers', 'photos'),
+			'show-videos': preferences.includes('map_layers', 'videos'),
+			'show-overlays': preferences.includes('map_layers', 'overlays'),
+			'show-people': preferences.includes('map_layers', 'people'),
+			'show-places': preferences.includes('map_layers', 'places'),
+			'show-favorites': preferences.includes('map_layers', 'favorites'),
+			'show-annotations': preferences.includes('map_layers', 'annotations'),
+			'show-weather': preferences.includes('map_layers', 'weather')
 		};
 	},
 

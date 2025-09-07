@@ -36,7 +36,7 @@ export default SideBarPanelView.extend({
 	`),
 
 	events: {
-		'click .delete-account a': 'onClickDeleteAccount'
+		'click .delete-account': 'onClickDeleteAccount'
 	},	
 
 	//

@@ -103,6 +103,7 @@ class File extends Item
 		//
 		'size',
 		'place',
+		'geocoords',
 
 		// timestamps
 		//

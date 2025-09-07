@@ -1,0 +1,113 @@
+{
+	"general": {
+		"use_my_location": false,
+		"location": [39.8283, 98.5795],
+		"zoom_level": 2,
+		"max_zoom_level": 11,
+		"map_mode": "hybrid",
+		"aero_mode": "vfr",
+		"search_kind": null
+	},
+	"display": {
+		"toolbars": {
+			"phone": [
+				"nav",
+				"mouse_mode",
+				"nav_mode"
+			],
+			"tablet": [
+				"nav",
+				"mouse_mode",
+				"nav_mode",
+				"map"
+			],
+			"desktop": [
+				"nav",
+				"mouse_mode",
+				"nav_mode",
+				"map"
+			]		
+		},
+		"panes": {
+			"sidebar": true
+		},
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 35,
+			"desktop": 35
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"maps",
+			"photos",
+			"videos",
+			"overlays",
+			"people",
+			"places",
+			"favorites"
+		],
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+	},
+	"window": {
+		"window_size": "medium",
+		"window_state": {
+			"maximized": true,
+			"full_screen": false
+		}
+	},
+	"map": {
+		"map_view_kind": {
+			"phone": "icons",
+			"tablet": "icons",
+			"desktop": "icons"
+		},
+		"map_layers": {
+			"crosshairs": true,
+			"photos": true,
+			"videos": true,
+			"overlays": true,
+			"people": true,
+			"places": true,
+			"favorites": true,
+			"annotation": true,
+			"weather": false
+		},
+		"weather_layers": {
+			"satellite": true,
+			"radar": true,
+			"temperature": false,
+			"metar": false,
+			"wind": false
+		},
+		"map_options": {
+			"grid": true,
+			"smoothing": true,
+			"item_names": true,
+			"geo_orientations": true	
+		},
+		"measuring_units": "metric",
+		"arrow_style": "filled",
+		"label_style": "rotated"
+	},
+	"effects": {
+		"pan_duration": 500,
+		"zoom_duration": 500,
+		"zoom_to_duration": 5
+	},
+	"storage": {
+		"home_directory": "Maps/",
+		"photos_directory": "Pictures/",
+		"videos_directory": "Videos/",
+		"uploads_directory": "Uploads/",
+		"dropbox_directory": "Pictures/Dropbox/",
+		"google_directory": "Pictures/Google/"
+	}
+}

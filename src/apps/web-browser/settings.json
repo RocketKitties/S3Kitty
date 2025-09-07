@@ -1,0 +1,16 @@
+{
+	"name": "Web",
+	"icon": "fa fa-cloud",
+	"category": "multimedia",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": true,
+	"color": "violet",
+	"favorites": {
+		"Google": "https://www.google.com/webhp?igu=1",
+		"Bing": "https://www.bing.com",
+		"Wikipedia": "https://www.wikipedia.org"
+	}
+}

@@ -1,0 +1,26 @@
+[
+	{
+		"name": "zoom-duration",
+		"icon": "fa fa-clock",
+		"text": "Zoom Duration (ms)",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 1000,
+			"step": 100
+		},
+		"help": "This is how long to take when zooming an image in or out."
+	},
+	{
+		"name": "rotate-duration",
+		"icon": "fa fa-clock",
+		"text": "Rotate Duration (ms)",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 1000,
+			"step": 100
+		},
+		"help": "This is how long to take when rotating an image."
+	}
+]

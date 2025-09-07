@@ -27,7 +27,6 @@ import HeaderBarView from '../../../views/apps/pdf-viewer/header-bar/header-bar-
 import SideBarView from '../../../views/apps/pdf-viewer/sidebar/sidebar-view.js';
 import PdfSplitView from '../../../views/apps/pdf-viewer/mainbar/pdf-split-view.js';
 import FooterBarView from '../../../views/apps/pdf-viewer/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/pdf-viewer/forms/preferences/preferences-form-view.js'
 import FileUtils from '../../../utilities/files/file-utils.js';
 import Browser from '../../../utilities/web/browser.js';
 
@@ -578,7 +577,7 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemFav
 			// options
 			//
 			preferences: this.preferences,
-			show_sidebar: this.preferences.get('show_pdf_info'),
+			show_sidebar: this.preferences.includes('panes', 'info_bar'),
 			sidebar_size: this.preferences.get('info_bar_size'),
 
 			// callbacks
@@ -667,19 +666,6 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemFav
 		});	
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/pdf-viewer/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	//
 	// text extraction methods
 	//
@@ -695,7 +681,7 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemFav
 
 			// callbacks
 			//
-			success: function(text) {
+			success: (text) => {
 				this.showTextFile(new File({
 					contents: text
 				}));
@@ -725,7 +711,7 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemFav
 
 			// show split view
 			//
-			if (this.preferences.get('show_sidebar')) {
+			if (this.preferences.includes('panes', 'sidebar')) {
 				this.getChildView('contents sidebar').onLoad();
 			}
 		}
@@ -791,13 +777,4 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemFav
 			}
 		}
 	}
-}), {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	}
-});
+}));

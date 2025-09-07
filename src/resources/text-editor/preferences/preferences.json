@@ -1,0 +1,12 @@
+[
+	{
+		"name": "general",
+		"icon": "fa fa-check",
+		"text": "General"
+	},
+	{
+		"name": "window",
+		"icon": "fa fa-window-maximize",
+		"text": "Window"
+	}
+]

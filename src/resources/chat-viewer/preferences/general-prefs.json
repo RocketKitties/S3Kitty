@@ -1,0 +1,24 @@
+[
+	{
+		"name": "messages-per-page",
+		"icon": "fa fa-long-arrow-alt-down",
+		"text": "Messages / Page",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 100,
+			"step": 5
+		},
+		"help": "This is the number of messages to display per page."
+	},
+	{
+		"name": "show-items",
+		"icon": "fa fa-eye",
+		"text": "Show",
+		"kind": "multiple-answer",
+		"options": {
+			"elapsed-time": "Elapsed Time"
+		},
+		"help": "This determines if the elapsed time since messages were posted is shown."
+	}
+]

@@ -1,48 +1,46 @@
-{
-	"items": [
-		{
-			"class": "sort-by-name",
-			"group": "sort-by",
-			"icon": "fa fa-font",
-			"name": "By Name",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "sort-by-location",
-			"group": "sort-by",
-			"icon": "fa fa-globe-americas",
-			"name": "By Location",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-by-occupation",
-			"group": "sort-by",
-			"icon": "fa fa-briefcase",
-			"name": "By Occupation",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-by-gender",
-			"group": "sort-by",
-			"icon": "fa fa-transgender",
-			"name": "By Gender",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "sort-increasing",
-			"group": "sort-order",
-			"icon": "fa fa-sort-amount-up",
-			"name": "Increasing",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-decreasing",
-			"group": "sort-order",
-			"icon": "fa fa-sort-amount-down",
-			"name": "Decreasing",
-			"state": "unselected"
-		}
-	]
-}
+[
+	{
+		"name": "name",
+		"group": "sort-kind",
+		"icon": "fa fa-font",
+		"text": "By Name",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "location",
+		"group": "sort-kind",
+		"icon": "fa fa-globe-americas",
+		"text": "By Location",
+		"state": "unselected"
+	},
+	{
+		"name": "occupation",
+		"group": "sort-kind",
+		"icon": "fa fa-briefcase",
+		"text": "By Occupation",
+		"state": "unselected"
+	},
+	{
+		"name": "gender",
+		"group": "sort-kind",
+		"icon": "fa fa-transgender",
+		"text": "By Gender",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "increasing",
+		"group": "sort-order",
+		"icon": "fa fa-sort-amount-up",
+		"text": "Increasing",
+		"state": "unselected"
+	},
+	{
+		"name": "decreasing",
+		"group": "sort-order",
+		"icon": "fa fa-sort-amount-down",
+		"text": "Decreasing",
+		"state": "unselected"
+	}
+]

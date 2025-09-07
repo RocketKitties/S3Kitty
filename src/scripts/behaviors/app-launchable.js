@@ -184,7 +184,7 @@ export default {
 		// display app in app region
 		//
 		this.show(new AppView(_.extend({}, options, launchOptions, {
-			show_sidebar: false,
+			panes: [],
 			show_tabs: false
 		})));
 

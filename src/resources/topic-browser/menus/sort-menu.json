@@ -1,50 +1,61 @@
-{
-	"items": [
-		{
-			"class": "sort-by-name",
-			"icon": "fa fa-font",
-			"name": "By Name",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "sort-by-members",
-			"icon": "fa fa-users",
-			"name": "By Members",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-by-date",
-			"icon": "fa fa-calendar-alt",
-			"name": "By Date",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "sort-by-create-date",
-					"icon": "fa fa-magic",
-					"name": "Create Date",
-					"state": "unselected"
-				},
-				{
-					"class": "sort-by-modify-date",
-					"icon": "fa fa-edit",
-					"name": "Modify Date",
-					"state": "unselected"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "sort-increasing",
-			"icon": "fa fa-sort-amount-up",
-			"name": "Increasing",
-			"state": "unselected"
-		},
-		{
-			"class": "sort-decreasing",
-			"icon": "fa fa-sort-amount-down",
-			"name": "Decreasing",
-			"state": "unselected"
-		}
-	]
-}
+[
+	{
+		"name": "name",
+		"group": "sort-kind",
+		"icon": "fa fa-font",
+		"text": "By Name",
+		"state": "unselected"
+	},
+	{
+		"name": "members",
+		"group": "sort-kind",
+		"icon": "fa fa-users",
+		"text": "By Members",
+		"state": "unselected"
+	},
+	{
+		"name": "posts",
+		"group": "sort-kind",
+		"icon": "fa fa-newspaper",
+		"text": "By Posts",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "date",
+		"icon": "fa fa-calendar-alt",
+		"text": "By Date",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "create-date",
+				"group": "sort-kind",
+				"icon": "fa fa-magic",
+				"text": "Create Date",
+				"state": "unselected"
+			},
+			{
+				"name": "modify-date",
+				"group": "sort-kind",
+				"icon": "fa fa-edit",
+				"text": "Modify Date",
+				"state": "unselected"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "increasing",
+		"group": "sort-order",
+		"icon": "fa fa-sort-amount-up",
+		"text": "Increasing",
+		"state": "unselected"
+	},
+	{
+		"name": "decreasing",
+		"group": "sort-order",
+		"icon": "fa fa-sort-amount-down",
+		"text": "Decreasing",
+		"state": "unselected"
+	}
+]

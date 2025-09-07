@@ -1,0 +1,28 @@
+[
+	{
+		"name": "background-color",
+		"icon": "fa fa-paint-brush",
+		"text": "Background",
+		"kind": "color",
+		"help": "This is the color used for the viewer background."
+	},
+	{
+		"name": "zoom-duration",
+		"icon": "fa fa-clock",
+		"text": "Zoom Duration (ms)",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 1000,
+			"step": 100
+		},
+		"help": "This is how long to take when zooming a page in or out."
+	},
+	{
+		"name": "home-directory",
+		"icon": "fa fa-folder",
+		"text": "Home Folder",
+		"kind": "directory",
+		"help": "This is the initial directory to use when opening files."
+	}
+]

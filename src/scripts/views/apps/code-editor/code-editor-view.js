@@ -31,7 +31,6 @@ import HeaderBarView from '../../../views/apps/code-editor/header-bar/header-bar
 import SideBarView from '../../../views/apps/code-editor/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/code-editor/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/code-editor/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/code-editor/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable, FindReplaceable, ItemShareable, ItemFavorable, FileDownloadable, FileUploadable, FileDisposable, {
 
@@ -77,9 +76,7 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 		// hide sidebar if not signed in and no directory
 		//
 		if (!application.session.user && !this.model.parent) {
-			this.preferences.set({
-				'show_sidebar': false
-			});
+			this.preferences.removeItem('panes', 'sidebar');
 		}
 	},
 
@@ -155,6 +152,12 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 			// use home directory
 			//
 			return application.getDirectory();
+		}
+	},
+
+	getSelectedText: function() {
+		if (this.hasActiveView()) {
+			return this.getActiveView().getSelectedText();
 		}
 	},
 
@@ -558,7 +561,7 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 			// options
 			//
 			preferences: this.preferences,
-			show_sidebar: this.preferences.get('show_console'),
+			show_sidebar: this.preferences.includes('panes', 'console'),
 			sidebar_size: this.preferences.get('console_size'),
 
 			// callbacks
@@ -616,19 +619,6 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 				model: this.getActiveView().model
 			}, options)));				
 		});	
-	},
-
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/code-editor/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
 	},
 
 	//
@@ -743,13 +733,5 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 	//
 
 	defaultName: 'Untitled.txt',
-	clipboard: undefined,
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	}
+	clipboard: undefined
 });

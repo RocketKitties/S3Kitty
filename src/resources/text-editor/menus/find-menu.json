@@ -1,29 +1,27 @@
-{
-	"items": [
-		{
-			"class": "find",
-			"icon": "fa fa-search",
-			"name": "Find",
-			"shortcut": "command-F"
-		},
-		{
-			"class": "find-next",
-			"icon": "fa fa-search",
-			"name": "Find Next",
-			"shortcut": "shift-command-F"
-		},
-		"divider",
-		{
-			"class": "find-replace",
-			"icon": "fa fa-search-plus",
-			"name": "Find & Replace",
-			"shortcut": "command-G"
-		},
-		{
-			"class": "replace-next",
-			"icon": "fa fa-search",
-			"name": "Replace Next",
-			"shortcut": "shift-command-G"
-		}
-	]
-}
+[
+	{
+		"name": "find",
+		"icon": "fa fa-search",
+		"text": "Find",
+		"shortcut": "command-F"
+	},
+	{
+		"name": "find-next",
+		"icon": "fa fa-search",
+		"text": "Find Next",
+		"shortcut": "shift-command-F"
+	},
+	"divider",
+	{
+		"name": "find-replace",
+		"icon": "fa fa-search-plus",
+		"text": "Find & Replace",
+		"shortcut": "command-G"
+	},
+	{
+		"name": "replace-next",
+		"icon": "fa fa-search",
+		"text": "Replace Next",
+		"shortcut": "shift-command-G"
+	}
+]

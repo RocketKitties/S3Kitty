@@ -50,16 +50,14 @@ export default ToolbarView.extend({
 
 	selected: function() {
 		let preferences = this.app.preferences;
-		let mapLayers = preferences.get('map_layers');
-		let weatherLayers = preferences.get('weather_layers');
 
 		return {
-			'show-weather': mapLayers.includes('weather'),
-			'show-satellite': weatherLayers.includes('satellite'),		
-			'show-radar': weatherLayers.includes('radar'),
-			'show-temperature': weatherLayers.includes('temperature'),
-			'show-metar': weatherLayers.includes('metar'),
-			'show-wind': weatherLayers.includes('wind')
+			'show-weather': preferences.includes('map_layers', 'weather'),
+			'show-satellite': preferences.includes('weather_layers', 'satellite'),
+			'show-radar': preferences.includes('weather_layers', 'radar'),
+			'show-temperature': preferences.includes('weather_layers', 'temperature'),
+			'show-metar': preferences.includes('weather_layers', 'metar'),
+			'show-wind': preferences.includes('weather_layers', 'wind')
 		};
 	},
 

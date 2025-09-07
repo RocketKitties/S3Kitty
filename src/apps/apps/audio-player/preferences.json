@@ -1,0 +1,53 @@
+{
+	"general": {
+		"detail_kind": "artist",
+		"volume": 5,
+		"looping": {
+			"track": false,
+			"album": false
+		},
+		"toolbars": {
+			"play": true,
+			"volume": true,
+			"track": false
+		},
+		"home_directory": "Music/"
+	},
+	"display": {
+		"panes": {
+			"sidebar": true,
+			"analyzer": true
+		},
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 35,
+			"desktop": 35
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": {
+			"favorites": true,
+			"track_info": true
+		},
+		"sidebar_view_kind": {
+			"phone": "trees",
+			"tablet": "trees",
+			"desktop": "trees"
+		},
+		"analyzer_size": {
+			"phone": 25,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+	"window": {
+		"window_size": "medium",
+		"window_state": {
+			"maximized": false,
+			"full_screen": false
+		}
+	}
+}

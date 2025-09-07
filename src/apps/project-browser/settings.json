@@ -1,0 +1,11 @@
+{
+	"name": "Projects",
+	"icon": "fa fa-clipboard",
+	"category": "productivity",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": true,
+	"color": "brown"
+}

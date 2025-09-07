@@ -36,7 +36,6 @@ import TabbedContentView from '../../../views/apps/topic-viewer/mainbar/tabbed-c
 import FooterBarView from '../../../views/apps/topic-viewer/footer-bar/footer-bar-view.js';
 import OpenTopicsDialogView from '../../../views/apps/topic-viewer/dialogs/topics/open-topics-dialog-view.js';
 import UserTopicView from '../../../views/apps/topic-viewer/mainbar/topics/user-topic-view.js';
-import PreferencesFormView from '../../../views/apps/topic-viewer/forms/preferences/preferences-form-view.js';
 
 export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, ItemOpenable, LinkShareable, ItemInfoShowable, TopicInfoShowable, {
 
@@ -67,7 +66,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 		// set attributes
 		//
-		if (!this.model) {
+		if (!this.model || !(this.model instanceof Topic)) {
 			this.model = this.getDefaultTopic();
 		}
 		if (!this.collection) {
@@ -939,19 +938,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		});
 	},
 
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/topic-viewer/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
-	},
-
 	//
 	// item opening methods
 	//
@@ -1121,10 +1107,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	getPreferences: function() {
 		return config.preferences.topic_viewer || {};
-	},
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
 	},
 
 	getDefaultTopicName: function() {

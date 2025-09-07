@@ -1,0 +1,14 @@
+[
+	{
+		"name": "tasks-per-page",
+		"icon": "fa fa-long-arrow-alt-down",
+		"text": "Task / Page",
+		"kind": "range",
+		"options": {
+			"min": 1,
+			"max": 100,
+			"step": 1
+		},
+		"help": "This is the number of tasks to display per page."
+	}
+]

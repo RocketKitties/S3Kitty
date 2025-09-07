@@ -18,7 +18,6 @@
 import AppView from '../../../views/apps/common/app-view.js';
 import FaceView from '../../../views/apps/timer/panels/face-view.js';
 import ButtonsView from '../../../views/apps/timer/panels/buttons-view.js';
-import PreferencesFormView from '../../../views/apps/timer/forms/preferences/preferences-form-view.js'
 import TimeUtils from '../../../utilities/time/time-utils.js';
 
 export default AppView.extend({
@@ -254,29 +253,6 @@ export default AppView.extend({
 	},
 
 	//
-	// dialog rendering methods
-	//
-
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/timer/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences,
-
-				// updating method
-				//
-				onclose: () => {
-					this.render();
-				}
-			}));
-		});
-	},
-
-	//
 	// window event handling methods
 	//
 
@@ -300,14 +276,5 @@ export default AppView.extend({
 
 	onBeforeDestroy: function() {
 		this.stopBlinking();
-	}
-}, {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
 	}
 });

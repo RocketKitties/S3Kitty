@@ -160,7 +160,7 @@
 			</div>
 			<div class="col-sm-6">
 				<div class="figure">
-					<img width="150px" src="images/info/features/lock-icon.svg" />
+					<img src="images/info/features/lock-icon.svg" />
 				</div>
 			</div>
 		</div>
@@ -215,7 +215,7 @@
 			</div>
 			<div class="col-sm-6">
 				<div class="figure">
-					<a href="images/info/desktop/iphone-desktop.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/desktop/iphone-desktop.png" /></a>
+					<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/mobile/iphone.png" /></a>
 					<div class="caption"><%= application.name %> Mobile</div>
 				</div>
 			</div>

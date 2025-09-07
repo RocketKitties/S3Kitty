@@ -99,7 +99,7 @@ export default FormView.extend({
 		return {
 			protocol: pair && pair.length == 2? pair[0] : 'http',
 			url: pair && pair.length == 2? pair[1] : url,
-			website_kinds: config.defaults.websites || {}
+			website_kinds: config.settings.defaults.websites || {}
 		};
 	}
 });

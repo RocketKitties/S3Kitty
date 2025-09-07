@@ -1,18 +1,18 @@
-<h1><i class="<%= config.apps['audio_player'].icon %>"></i><%= config.apps['audio_player'].name %></h1>
+<h1><i class="<%= config.apps.audio_player.icon %>"></i><%= config.apps.audio_player.name %></h1>
 
 <ol class="breadcrumb">
 	<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
 	<li><a href="#apps"><i class="fa fa-rocket"></i>Apps</a></li>
-	<li><i class="fa fa-volume-up"></i><%= config.apps['audio_player'].name %></li>
+	<li><i class="fa fa-volume-up"></i><%= config.apps.audio_player.name %></li>
 </ol>
 
 <div class="content">
-	<div class="attention icon colored <%= config.apps['audio_player'].color %>">
-		<img src="images/icons/apps/<%= config.apps['audio_player'].image || config.apps['audio_player'].app + '.svg' %>" />
+	<div class="attention icon colored <%= config.apps.audio_player.color %>">
+		<img src="images/icons/apps/<%= config.apps.audio_player.image || config.apps.audio_player.app + '.svg' %>" />
 	</div>
 
 	<div class="description section">
-		<p>The <%= config.apps['audio_player'].name %> app is used to play music and audio files (audiobooks, podcasts etc). </p>
+		<p>The <%= config.apps.audio_player.name %> app is used to play music and audio files (audiobooks, podcasts etc). </p>
 	</div>
 
 	<div class="details section">
@@ -51,11 +51,11 @@
 
 	<h2><i class="fa fa-desktop"></i>Screen Shots</h2>
 	<div class="figure desktop-only">
-		<a href="images/info/apps/audio-player/audio-player.png" target="_blank" class="lightbox" title="<%= config.apps['audio_player'].name %>"><img class="dialog" src="images/info/apps/audio-player/audio-player.png" /></a>
-		<div class="caption"><%= config.apps['audio_player'].name %></div>
+		<a href="images/info/apps/audio-player/audio-player.png" target="_blank" class="lightbox" title="<%= config.apps.audio_player.name %>"><img class="dialog" src="images/info/apps/audio-player/audio-player.png" /></a>
+		<div class="caption"><%= config.apps.audio_player.name %></div>
 	</div>
 	<div class="figure mobile-only">
-		<a href="images/info/apps/audio-player/mobile/mobile-audio-player.png" target="_blank" class="lightbox" title="<%= config.apps['audio_player'].name %>"><img src="images/info/apps/audio-player/mobile/mobile-audio-player.png" /></a>
-		<div class="caption"><%= config.apps['audio_player'].name %></div>
+		<a href="images/info/apps/audio-player/mobile/mobile-audio-player.png" target="_blank" class="lightbox" title="<%= config.apps.audio_player.name %>"><img src="images/info/apps/audio-player/mobile/mobile-audio-player.png" /></a>
+		<div class="caption"><%= config.apps.audio_player.name %></div>
 	</div>
 </div>

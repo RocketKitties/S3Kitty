@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import SplitView from '../../../../views/layout/split-view.js';
-import AudioAnalyserView from '../../../../views/apps/audio-player/mainbar/audio-analyser-view.js';
+import AudioAnalyzerView from '../../../../views/apps/audio-player/mainbar/audio-analyzer-view.js';
 import AudioFilesView from '../../../../views/apps/audio-player/mainbar/audio-files-view.js';
 
 export default SplitView.extend({
@@ -59,8 +59,20 @@ export default SplitView.extend({
 	//
 
 	setOption: function(key, value) {
-		if (this.hasChildView('mainbar')) {
-			this.getChildView('mainbar').setOption(key, value);
+		switch (key) {
+			case 'show_analyzer':
+				this.setSideBarVisibility(value);
+				break;
+			case 'analyzer_size':
+				this.getChildView('mainbar').setSideBarSize(value);
+				break;
+			case 'panes':
+				this.setSideBarVisibility(value.includes('analyzer'));
+				break;
+			default:
+				if (this.hasChildView('mainbar')) {
+					this.getChildView('mainbar').setOption(key, value);
+				}
 		}
 	},
 
@@ -69,7 +81,7 @@ export default SplitView.extend({
 	//
 
 	getSideBarView: function() {
-		return new AudioAnalyserView({
+		return new AudioAnalyzerView({
 			model: this.model
 		});
 	},

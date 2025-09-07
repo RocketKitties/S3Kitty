@@ -1,0 +1,21 @@
+{
+	"name": "Maps",
+	"icon": "fa fa-map",
+	"category": "multimedia",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "green",
+	"markers": {
+		"Places": {
+			"Home": "/Shared/Pictures/Twemoji/Travel/Buildings/1f3e0.svg",
+			"Building": "/Shared/Pictures/Twemoji/Travel/Buildings/1f3e2.svg",
+			"Hospital": "/Shared/Pictures/Twemoji/Travel/Buildings/1f3e5.svg",
+			"Institute": "/Shared/Pictures/Twemoji/Travel/Buildings/1f3db.svg",
+			"Church": "/Shared/Pictures/Twemoji/Travel/Buildings/26ea.svg"
+		}
+	},
+	"maps_directory": "/Shared/Documents/Maps/"
+}

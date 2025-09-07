@@ -21,8 +21,7 @@ import AppView from '../../../views/apps/common/app-view.js';
 import HeaderBarView from '../../../views/apps/notification-center/header-bar/header-bar-view.js';
 import NotificationsView from '../../../views/apps/notification-center/mainbar/notifications-view.js';
 import FooterBarView from '../../../views/apps/notification-center/footer-bar/footer-bar-view.js';
-import NotificationsDropdownView from '../../../views/apps/notification-center/mainbar/notifications/notifications-dropdown-view.js';
-import PreferencesFormView from '../../../views/apps/clock/forms/preferences/preferences-form-view.js'
+import NotificationsDropdownView from '../../../views/apps/notification-center/dropdowns/notifications-dropdown-view.js';
 
 export default AppView.extend({
 
@@ -202,10 +201,6 @@ export default AppView.extend({
 	//
 	// static getting methods
 	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	},
 
 	getNotificationsDropdownView: function(model) {
 		return new NotificationsDropdownView({

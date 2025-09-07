@@ -27,23 +27,37 @@ export default ViewMenuView.extend({
 
 		// view options
 		//
-		'click .view-kind > a': 'onClickViewKind',
+		'click .view-kind': 'onClickViewKind',
 
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// details options
 		//
 		'click .view-details': 'onClickViewDetails',
-		'click .detail-kind > a': 'onClickDetailKind',
-		'click .date-format > a': 'onClickDateFormat',
+		'click .detail-kind': 'onClickDetailKind',
+		'click .date-format': 'onClickDateFormat',
+
+		// map options
+		//
+		'click .map-mode': 'onClickMapMode',
+		'click .pan-north': 'onClickPanNorth',
+		'click .pan-south': 'onClickPanSouth',
+		'click .pan-east': 'onClickPanEast',
+		'click .pan-west': 'onClickPanWest',
+		'click .zoom-in': 'onClickZoomIn',
+		'click .zoom-out': 'onClickZoomOut',
+		'click .reset-view': 'onClickResetView',
+		'click .map-item-kind': 'onClickMapItemKind',
+		'click .show-item-names': 'onClickOption',
+		'click .show-geo-orientations': 'onClickOption',
 
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
+		'click .sidebar-panels': 'onClickSideBarPanel',
 
 		// window options
 		//
@@ -70,59 +84,135 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let viewKind = preferences.get('view_kind');
-		let toolbars = preferences.get('toolbars') || [];
-		let mapMode = preferences.get('map_mode') || 'hybrid';
-		let detailKind = preferences.get('detail_kind');
-		let dateFormat = preferences.get('date_format');
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
 
 		return {
 
 			// item options
 			//
-			'view-icons': !viewKind || viewKind == 'icons',
-			'view-names': viewKind == 'names',
-			'view-lists': viewKind == 'lists',
-			'view-trees': viewKind == 'trees',
-			'view-cards': viewKind == 'cards',
-			'view-tiles': viewKind == 'tiles',
-			'view-maps': viewKind == 'maps',
+			'view-kind icons': preferences.matches('view_kind', 'icons'),
+			'view-kind names': preferences.matches('view_kind', 'names'),
+			'view-kind lists': preferences.matches('view_kind', 'lists'),
+			'view-kind trees': preferences.matches('view_kind', 'trees'),
+			'view-kind cards': preferences.matches('view_kind', 'cards'),
+			'view-kind tiles': preferences.matches('view_kind', 'tiles'),
+			'view-kind maps': preferences.matches('view_kind', 'maps'),
 
 			// mapping options
 			//
-			'show-map': mapMode == 'map',
-			'show-satellite': mapMode == 'satellite',
-			'show-hybrid': mapMode == 'hybrid',
+			'map-mode map': preferences.matches('map_mode', 'map'),
+			'map-mode satellite': preferences.matches('map_mode', 'satellite'),
+			'map-mode hybrid': preferences.matches('map_mode', 'hybrid'),
 
 			// detail options
 			//
-			'view-details': typeof detailKind == 'string' && detailKind != '',
-			'view-location': detailKind == 'location',
-			'view-occupation': detailKind == 'occupation',
-			'view-age': detailKind == 'age',
-			'view-gender': detailKind == 'gender',
-			'view-birth-date': detailKind == 'birth_date',
-			'view-join-date': detailKind == 'join_date',
-			'view-connect-date': detailKind == 'connect_date',
+			'view-details': preferences.has('detail_kind'),
+			'detail-kind location': preferences.matches('detail_kind', 'location'),
+			'detail-kind occupation': preferences.matches('detail_kind', 'occupation'),
+			'detail-kind age': preferences.matches('detail_kind', 'age'),
+			'detail-kind gender': preferences.matches('detail_kind', 'gender'),
+			'detail-kind birth-date': preferences.matches('detail_kind', 'birth_date'),
+			'detail-kind join-date': preferences.matches('detail_kind', 'join_date'),
+			'detail-kind connect-date': preferences.matches('detail_kind', 'connect_date'),
 
 			// date options
 			//
-			'view-date-only': dateFormat == 'date_only',
-			'view-day-date': dateFormat == 'day_date',
-			'view-time-only': dateFormat == 'time_only',
-			'view-date-time': dateFormat == 'date_time',
-			'view-day-date-time': dateFormat == 'day_date_time' || !dateFormat,
+			'date-format date-only': preferences.matches('date_format', 'date_only'),
+			'date-format day-date': preferences.matches('date_format', 'day_date'),
+			'date-format time-only': preferences.matches('date_format', 'time_only'),
+			'date-format date-time': preferences.matches('date_format', 'date_time'),
+			'date-format day-date-time': preferences.matches('date_format', 'day_date_time'),
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-nav-bar': toolbars.includes('nav'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolbars nav': preferences.includes('toolbars', 'nav'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-actions-panel': sidebarPanels.includes('actions')
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels actions': preferences.includes('sidebar_panels', 'actions')
 		};	
+	},
+
+	//
+	// map event handling methods
+	//
+
+	onClickMapMode: function(event) {
+		let mapMode = this.getItemName(event.target)
+
+		// update menu
+		//
+		this.setGroupItemSelected('map_mode', mapMode);
+
+		// update app
+		//
+		this.parent.app.setOption('map_mode', mapMode);
+	},
+
+	onClickResetView: function() {
+		this.parent.app.getActiveView().getChildView('items').resetView();
+	},
+
+	//
+	// pan event handling methods
+	//
+
+	onClickPanNorth: function() {
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.panToDirection('north', {
+				duration: 1000
+			});
+		}
+	},
+
+	onClickPanSouth: function() {
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.panToDirection('south', {
+				duration: 1000
+			});
+		}
+	},
+
+	onClickPanEast: function() {
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.panToDirection('east', {
+				duration: 1000
+			});
+		}
+	},
+
+	onClickPanWest: function() {
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.panToDirection('west', {
+				duration: 1000
+			});
+		}
+	},
+
+	//
+	// zoom event handling methods
+	//
+
+	onClickZoomIn: function() {
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.zoomIn({
+				duration: 1000
+			});
+		}
+	},
+
+	onClickZoomOut: function() {
+		let mapView = this.parent.app.getMapView();
+		if (mapView) {
+			mapView.zoomOut({
+				duration: 1000
+			});
+		}
 	}
 });

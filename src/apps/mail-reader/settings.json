@@ -1,0 +1,11 @@
+{
+	"name": "Mail",
+	"icon": "fa fa-envelope",
+	"category": "productivity",
+	"platform": "all",
+	"access": "user",
+	"disabled": true,
+	"hidden": true,
+	"args": false,
+	"color": "cyan"
+}

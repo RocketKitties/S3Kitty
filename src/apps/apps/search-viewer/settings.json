@@ -1,0 +1,14 @@
+{
+	"name": "Search",
+	"icon": "fa fa-search",
+	"category": "system",
+	"platform": "all",
+	"access": "all",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "cyan",
+	"placeholder": "Search for terms or text.",
+	"options": ["view_kind", "detail_kind", "create_date"],
+	"directory": "/Shared"
+}

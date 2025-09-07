@@ -1,0 +1,14 @@
+{
+	"name": "Code",
+	"icon": "fa fa-code",
+	"category": "productivity",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": true,
+	"color": "teal",
+	"favorites": {
+		"#1": "Code/"
+	}
+}

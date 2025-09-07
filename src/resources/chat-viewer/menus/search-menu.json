@@ -1,18 +1,16 @@
-{
-	"items": [
-		{
-			"class": "search-by-message",
-			"group": "search-by",
-			"icon": "fa fa-quote-left",
-			"name": "By Message",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-date",
-			"group": "search-by",
-			"icon": "fa fa-calendar-alt",
-			"name": "By Date",
-			"state": "unselected"
-		}
-	]
-}
+[
+	{
+		"name": "message",
+		"group": "search-kind",
+		"icon": "fa fa-quote-left",
+		"text": "By Message",
+		"state": "unselected"
+	},
+	{
+		"name": "date",
+		"group": "search-kind",
+		"icon": "fa fa-calendar-alt",
+		"text": "By Date",
+		"state": "unselected"
+	}
+]

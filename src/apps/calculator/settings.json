@@ -1,0 +1,11 @@
+{
+	"name": "Calculator",
+	"icon": "fa fa-calculator",
+	"category": "utility",
+	"platform": "all",
+	"access": "all",
+	"disabled": false,
+	"hidden": false,
+	"args": false,
+	"color": "green"
+}

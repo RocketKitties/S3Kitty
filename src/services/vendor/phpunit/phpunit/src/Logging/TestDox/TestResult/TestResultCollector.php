@@ -41,6 +41,8 @@ use PHPUnit\Event\Test\WarningTriggered;
 use PHPUnit\Event\UnknownSubscriberTypeException;
 use PHPUnit\Framework\TestStatus\TestStatus;
 use PHPUnit\Logging\TestDox\TestResult as TestDoxTestMethod;
+use PHPUnit\TextUI\Configuration\Source;
+use PHPUnit\TextUI\Configuration\SourceFilter;
 use ReflectionMethod;
 
 /**
@@ -50,8 +52,10 @@ use ReflectionMethod;
  */
 final class TestResultCollector
 {
+    private readonly Source $source;
+
     /**
-     * @var array<string, list<TestDoxTestMethod>>
+     * @psalm-var array<string, list<TestDoxTestMethod>>
      */
     private array $tests          = [];
     private ?TestStatus $status   = null;
@@ -62,13 +66,15 @@ final class TestResultCollector
      * @throws EventFacadeIsSealedException
      * @throws UnknownSubscriberTypeException
      */
-    public function __construct(Facade $facade)
+    public function __construct(Facade $facade, Source $source)
     {
+        $this->source = $source;
+
         $this->registerSubscribers($facade);
     }
 
     /**
-     * @return array<string, TestResultCollection>
+     * @psalm-return array<string, TestResultCollection>
      */
     public function testMethodsGroupedByClass(): array
     {
@@ -100,8 +106,8 @@ final class TestResultCollector
             uksort(
                 $testsByDeclaringClass,
                 /**
-                 * @param class-string $a
-                 * @param class-string $b
+                 * @psalm-param class-string $a
+                 * @psalm-param class-string $b
                  */
                 static function (string $a, string $b): int
                 {
@@ -214,12 +220,40 @@ final class TestResultCollector
             return;
         }
 
+        if ($event->ignoredByTest()) {
+            return;
+        }
+
+        if ($event->ignoredByBaseline()) {
+            return;
+        }
+
+        if (!$this->source->ignoreSuppressionOfDeprecations() && $event->wasSuppressed()) {
+            return;
+        }
+
+        if ($this->source->restrictDeprecations() && !SourceFilter::instance()->includes($event->file())) {
+            return;
+        }
+
         $this->updateTestStatus(TestStatus::deprecation());
     }
 
     public function testTriggeredNotice(NoticeTriggered $event): void
     {
         if (!$event->test()->isTestMethod()) {
+            return;
+        }
+
+        if ($event->ignoredByBaseline()) {
+            return;
+        }
+
+        if (!$this->source->ignoreSuppressionOfNotices() && $event->wasSuppressed()) {
+            return;
+        }
+
+        if ($this->source->restrictNotices() && !SourceFilter::instance()->includes($event->file())) {
             return;
         }
 
@@ -232,12 +266,40 @@ final class TestResultCollector
             return;
         }
 
+        if ($event->ignoredByBaseline()) {
+            return;
+        }
+
+        if (!$this->source->ignoreSuppressionOfWarnings() && $event->wasSuppressed()) {
+            return;
+        }
+
+        if ($this->source->restrictWarnings() && !SourceFilter::instance()->includes($event->file())) {
+            return;
+        }
+
         $this->updateTestStatus(TestStatus::warning());
     }
 
     public function testTriggeredPhpDeprecation(PhpDeprecationTriggered $event): void
     {
         if (!$event->test()->isTestMethod()) {
+            return;
+        }
+
+        if ($event->ignoredByTest()) {
+            return;
+        }
+
+        if ($event->ignoredByBaseline()) {
+            return;
+        }
+
+        if (!$this->source->ignoreSuppressionOfPhpDeprecations() && $event->wasSuppressed()) {
+            return;
+        }
+
+        if ($this->source->restrictDeprecations() && !SourceFilter::instance()->includes($event->file())) {
             return;
         }
 
@@ -250,12 +312,36 @@ final class TestResultCollector
             return;
         }
 
+        if ($event->ignoredByBaseline()) {
+            return;
+        }
+
+        if (!$this->source->ignoreSuppressionOfPhpNotices() && $event->wasSuppressed()) {
+            return;
+        }
+
+        if ($this->source->restrictNotices() && !SourceFilter::instance()->includes($event->file())) {
+            return;
+        }
+
         $this->updateTestStatus(TestStatus::notice());
     }
 
     public function testTriggeredPhpWarning(PhpWarningTriggered $event): void
     {
         if (!$event->test()->isTestMethod()) {
+            return;
+        }
+
+        if ($event->ignoredByBaseline()) {
+            return;
+        }
+
+        if (!$this->source->ignoreSuppressionOfPhpWarnings() && $event->wasSuppressed()) {
+            return;
+        }
+
+        if ($this->source->restrictWarnings() && !SourceFilter::instance()->includes($event->file())) {
             return;
         }
 

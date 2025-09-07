@@ -1,0 +1,11 @@
+{
+	"name": "PDF",
+	"icon": "fa fa-file-pdf",
+	"category": "productivity",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": true,
+	"color": "white"
+}

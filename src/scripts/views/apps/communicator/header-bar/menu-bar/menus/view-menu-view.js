@@ -36,8 +36,8 @@ export default ViewMenuView.extend({
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
+		'click .sidebar-panels': 'onClickSideBarPanel',
+		'click .sidebar-view-kind': 'onClickSideBarViewKind',
 
 		// window options
 		//
@@ -81,8 +81,6 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
-		let sidebarViewKind = preferences.get('sidebar_view_kind');
 
 		return {
 
@@ -94,32 +92,23 @@ export default ViewMenuView.extend({
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-info-panel': sidebarPanels.includes('info'),
-			'show-topics-panel': sidebarPanels.includes('topics'),
-			'show-chats-panel': sidebarPanels.includes('chats'),
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels info': preferences.includes('sidebar_panels', 'info'),
+			'sidebar-panels topics':  preferences.includes('sidebar_panels', 'topics'),
+			'sidebar-panels chats':  preferences.includes('sidebar_panels', 'chats'),
 
 			// sidebar item options
 			//
-			'view-sidebar-icons': sidebarViewKind == 'icons',
-			'view-sidebar-lists': sidebarViewKind == 'lists',
-			'view-sidebar-cards': sidebarViewKind == 'cards',
-			'view-sidebar-tiles': sidebarViewKind == 'tiles'
+			'sidebar-view-kind icons': preferences.matches('sidebar_view_kind', 'icons'),
+			'sidebar-view-kind lists': preferences.matches('sidebar_view_kind', 'lists'),
+			'sidebar-view-kind cards': preferences.matches('sidebar_view_kind', 'cards'),
+			'sidebar-view-kind tiles': preferences.matches('sidebar_view_kind', 'tiles')
 		};	
 	},
 
 	//
 	// rendering methods
 	//
-
-	/*
-	templateContext: function() {
-		return {
-			language: this.parent.app.preferences.get('language'),
-			languages: application.session.get('config').languages
-		};
-	},
-	*/
 
 	onRender: function() {
 

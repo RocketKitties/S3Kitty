@@ -418,7 +418,7 @@ export default FormPanelView.extend({
 			icon_highlight_effect: application.settings.theme.get('icon_highlight_effect'),
 			icon_unhighlight_effect: application.settings.theme.get('icon_unhighlight_effect'),
 			icon_open_effect: application.settings.theme.get('icon_open_effect'),
-			colors: config.defaults.colors
+			colors: config.settings.defaults.colors
 		};
 	},
 

@@ -25,6 +25,13 @@ export default UsersView.extend({
 	//
 
 	initialize: function() {
+
+		// call superclass constructor
+		//
+		UsersView.prototype.initialize.call(this);
+
+		// set attributes
+		//
 		if (!this.collection) {
 			this.collection = new Connections();
 		}

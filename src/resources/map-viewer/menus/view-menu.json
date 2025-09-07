@@ -1,527 +1,530 @@
-{
-	"items": [
-		{
-			"class": "show-map",
-			"group": "map-mode",
-			"icon": "fa fa-map",
-			"name": "Map",
-			"state": "unselected"
-		},
-		{
-			"class": "show-satellite",
-			"group": "map-mode",
-			"icon": "fa fa-satellite",
-			"name": "Satellite",
-			"state": "unselected"
-		},
-		{
-			"class": "show-hybrid",
-			"group": "map-mode",
-			"icon": "fa fa-map-marked-alt",
-			"name": "Hybrid",
-			"state": "unselected"
-		},
-		{
-			"class": "show-streets",
-			"group": "map-mode",
-			"icon": "fa fa-road",
-			"name": "Streets",
-			"state": "unselected"
-		},
-		{
-			"class": "show-transportation",
-			"group": "map-mode",
-			"icon": "fa fa-bus",
-			"name": "Transportation",
-			"state": "unselected"
-		},
-		{
-			"class": "show-elevation",
-			"group": "map-mode",
-			"icon": "fa fa-mountain",
-			"name": "Elevation",
-			"state": "unselected"
-		},
-		{
-			"class": "show-aeronautical",
-			"group": "map-mode",
-			"icon": "fa fa-plane",
-			"name": "Aeronautical",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "show-vfr",
-					"group": "aero-mode",
-					"icon": "fa fa-eye",
-					"name": "VFR (Sectional)",
-					"state": "unselected"
-				},
-				{
-					"class": "show-ifrlo",
-					"group": "aero-mode",
-					"icon": "fa fa-arrow-up",
-					"name": "IFR / Low",
-					"state": "unselected"
-				},
-				{
-					"class": "show-ifrhi",
-					"group": "aero-mode",
-					"icon": "fa fa-arrow-down",
-					"name": "IFR / High",
-					"state": "unselected"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "navigation",
-			"group": "left",
-			"icon": "fa fa-arrows-alt",
-			"name": "Navigation",
-			"menu": [
-				{
-					"class": "zoom-to-location",
-					"icon": "fa fa-crosshairs",
-					"name": "Current Location",
-					"shortcut": "command-H"
-				},
-				"divider",
-				{
-					"class": "zoom-to",
-					"icon": "fa fa-search",
-					"name": "Zoom To",
-					"shortcut": "command-Z"
-				},
-				{
-					"class": "zoom-in",
-					"icon": "fa fa-search-plus",
-					"name": "Zoom In",
-					"shortcut": "="
-				},
-				{
-					"class": "zoom-out",
-					"icon": "fa fa-search-minus",
-					"name": "Zoom Out",
-					"shortcut": "-"
-				},
-				"divider",
-				{
-					"class": "pan-north",
-					"icon": "fa fa-arrow-up",
-					"name": "North",
-					"shortcut": "up arrow"
-				},
-				{
-					"class": "pan-south",
-					"icon": "fa fa-arrow-down",
-					"name": "South",
-					"shortcut": "down arrow"
-				},
-				{
-					"class": "pan-east",
-					"icon": "fa fa-arrow-right",
-					"name": "East",
-					"shortcut": "right arrow"
-				},
-				{
-					"class": "pan-west",
-					"icon": "fa fa-arrow-left",
-					"name": "West",
-					"shortcut": "left arrow"
-				},
-				"divider",
-				{
-					"class": "reset-view",
-					"icon": "fa fa-undo",
-					"name": "Reset",
-					"shortcut": "shift-command-R"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "show-toolbars",
-			"icon": "fa fa-wrench",
-			"name": "Toolbars",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "show-nav-bar",
-					"group": "show-toolbar",
-					"icon": "fa fa-sitemap",
-					"name": "Nav",
-					"state": "unselected"
-				},
-				{
-					"class": "show-mouse-mode-bar",
-					"group": "show-toolbar",
-					"icon": "fa fa-mouse-pointer",
-					"name": "Mouse Mode",
-					"state": "unselected"
-				},
-				{
-					"class": "show-nav-mode-bar",
-					"group": "show-toolbar",
-					"icon": "fa fa-arrows-alt",
-					"name": "Nav Mode",
-					"state": "unselected"
-				},
-				{
-					"class": "show-annotations-bar",
-					"group": "show-toolbar",
-					"icon": "fa fa-pencil",
-					"name": "Annotations",
-					"state": "unselected"
-				},
-				{
-					"class": "show-zoom-bar",
-					"group": "show-toolbar",
-					"icon": "fa fa-search",
-					"name": "Zoom",
-					"state": "unselected"
-				},
-				{
-					"class": "show-map-bar",
-					"group": "show-toolbar",
-					"icon": "fa fa-map",
-					"name": "Map",
-					"state": "unselected"
-				}
-			]
-		},
-		{
-			"class": "layers",
-			"icon": "fa fa-layer-group",
-			"name": "Layers",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "show-crosshairs-layer",
-					"group": "show-layer",
-					"icon": "fa fa-crosshairs",
-					"name": "Crosshairs",
-					"state": "unselected"
-				},
-				{
-					"class": "show-photos-layer",
-					"group": "show-layer",
-					"icon": "fa fa-camera",
-					"name": "Photos",
-					"state": "unselected"
-				},
-				{
-					"class": "show-videos-layer",
-					"group": "show-layer",
-					"icon": "fa fa-camera",
-					"name": "Videos",
-					"state": "unselected"
-				},
-				{
-					"class": "show-overlays-layer",
-					"group": "show-layer",
-					"icon": "fa fa-grip-lines",
-					"name": "Overlays",
-					"state": "unselected"
-				},
-				{
-					"class": "show-people-layer",
-					"group": "show-layer",
-					"icon": "fa fa-user-friends",
-					"name": "People",
-					"state": "unselected"
-				},
-				{
-					"class": "show-places-layer",
-					"group": "show-layer",
-					"icon": "fa fa-map-marker-alt",
-					"name": "Places",
-					"state": "unselected"
-				},
-				{
-					"class": "show-favorites-layer",
-					"group": "show-layer",
-					"icon": "fa fa-map-pin",
-					"name": "Favorites",
-					"state": "unselected"
-				},
-				{
-					"class": "show-annotations-layer",
-					"group": "show-layer",
-					"icon": "fa fa-pencil",
-					"name": "Annotations",
-					"state": "unselected"
-				},
-				{
-					"class": "show-weather-layer",
-					"group": "show-layer",
-					"icon": "fa fa-cloud-sun-rain",
-					"name": "Weather",
-					"state": "unselected"
-				},
-				"divider",
-				{
-					"class": "show-all-layers",
-					"icon": "fa fa-plus",
-					"name": "All"
-				},
-				{
-					"class": "show-no-layers",
-					"icon": "fa fa-minus",
-					"name": "None"
-				}
-			]
-		},
-		{
-			"class": "show-map-options",
-			"icon": "fa fa-map",
-			"name": "Map",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "show-grid",
-					"icon": "fa fa-border-none",
-					"name": "Grid",
-					"state": "unselected"
-				},
-				{
-					"class": "show-smoothing",
-					"icon": "fa fa-wave-square",
-					"name": "Smoothing",
-					"state": "unselected"
-				}
-			]
-		},
-		{
-			"class": "view-map-items",
-			"icon": "fa fa-map-location",
-			"name": "Map Items",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "view-map-icons",
-					"icon": "fa fa-th",
-					"name": "Icons",
-					"state": "unselected"
-				},
-				{
-					"class": "view-map-lists",
-					"icon": "fa fa-list",
-					"name": "Lists",
-					"state": "unselected"
-				},
-				{
-					"class": "view-map-cards",
-					"icon": "fa fa-id-card",
-					"name": "Cards",
-					"state": "unselected"
-				},
-				{
-					"class": "view-map-tiles",
-					"icon": "fa fa-th-large",
-					"name": "Tiles",
-					"state": "unselected"
-				},
-				"divider",
-				{
-					"class": "show-item-names",
-					"group": "show-toolbar",
-					"icon": "fa fa-font",
-					"name": "Names",
-					"state": "unselected"
-				},
-				{
-					"class": "show-geo-orientations",
-					"group": "show-toolbar",
-					"icon": "fa fa-location-arrow",
-					"name": "Orientations",
-					"state": "unselected"
-				}
-			]
-		},
-		{
-			"class": "show-sidebar",
-			"icon": "fa fa-pause",
-			"name": "Sidebar",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "show-maps-panel",
-					"group": "show-sidebar-panel",
-					"icon": "fa fa-map",
-					"name": "Maps",
-					"state": "unselected"
-				},
-				{
-					"class": "show-photos-panel",
-					"group": "show-sidebar-panel",
-					"icon": "fa fa-camera",
-					"name": "Photos",
-					"state": "unselected"
-				},
-				{
-					"class": "show-videos-panel",
-					"group": "show-sidebar-panel",
-					"icon": "fa fa-video",
-					"name": "Videos",
-					"state": "unselected"
-				},
-				{
-					"class": "show-overlays-panel",
-					"group": "show-sidebar-panel",
-					"icon": "fa fa-grip-lines",
-					"name": "Overlays",
-					"state": "unselected"
-				},
-				{
-					"class": "show-people-panel",
-					"group": "show-sidebar-panel",
-					"icon": "fa fa-user-friends",
-					"name": "People",
-					"state": "unselected"
-				},
-				{
-					"class": "show-places-panel",
-					"group": "show-sidebar-panel",
-					"icon": "fa fa-map-marker-alt",
-					"name": "Places",
-					"state": "unselected"
-				},
-				{
-					"class": "show-favorites-panel",
-					"group": "show-sidebar-panel",
-					"icon": "fa fa-map-pin",
-					"name": "Favorites",
-					"state": "unselected"
-				},
-				{
-					"class": "show-shared-panel",
-					"group": "show-sidebar-panel",
-					"icon": "fa fa-share",
-					"name": "Shared",
-					"state": "unselected"
-				}
-			]
-		},
-		{
-			"class": "view-sidebar-items",
-			"icon": "fa fa-th",
-			"name": "Sidebar Items",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "view-sidebar-icons",
-					"group": "sidebar-view-kind",
-					"icon": "fa fa-th",
-					"name": "Icons",
-					"state": "unselected"
-				},
-				{
-					"class": "view-sidebar-lists",
-					"group": "sidebar-view-kind",
-					"icon": "fa fa-list",
-					"name": "Lists",
-					"state": "unselected"
-				},
-				{
-					"class": "view-sidebar-trees",
-					"group": "sidebar-view-kind",
-					"icon": "fa fa-tree",
-					"name": "Trees",
-					"state": "unselected"
-				},
-				{
-					"class": "view-sidebar-cards",
-					"group": "sidebar-view-kind",
-					"icon": "fa fa-id-card",
-					"name": "Cards",
-					"state": "unselected"
-				},
-				{
-					"class": "view-sidebar-tiles",
-					"group": "sidebar-view-kind",
-					"icon": "fa fa-th-large",
-					"name": "Tiles",
-					"state": "unselected"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "window-size",
-			"icon": "far fa-window-maximize",
-			"name": "Window Size",
-			"menu": [
-				{
-					"class": "shrink-window",
-					"icon": "fa fa-minus",
-					"name": "Shrink",
-					"shortcut": "command-["
-				},
-				{
-					"class": "grow-window",
-					"icon": "fa fa-plus",
-					"name": "Grow",
-					"shortcut": "command-]"
-				},
-				{
-					"class": "expand-window",
-					"icon": "fa fa-expand",
-					"name": "Expand",
-					"shortcut": "command-\\"
-				}
-			]
-		},
-		"divider",
-		{
-			"class": "spaces",
-			"icon": "far fa-window-maximize",
-			"name": "Spaces",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "prev-space",
-					"icon": "fa fa-chevron-left",
-					"name": "Prev",
-					"shortcut": "command-left arrow"
-				},
-				{
-					"class": "next-space",
-					"icon": "fa fa-chevron-right",
-					"name": "Next",
-					"shortcut": "command-right arrow"
-				}
-			]
-		},
-		{
-			"class": "windows",
-			"icon": "far fa-window-restore",
-			"name": "Windows",
-			"state": "unselected",
-			"menu": [
-				{
-					"class": "minimize-all",
-					"icon": "fa fa-window-minimize",
-					"name": "Minimize All"
-				},
-				{
-					"class": "unminimize-all",
-					"icon": "fa fa-window-restore",
-					"name": "Unminimize All"
-				}
-			]
-		},
-		{
-			"class": "view-full-screen",
-			"icon": "fa fa-desktop",
-			"name": "Full Screen",
-			"shortcut": "command-up arrow",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "view-preferences",
-			"icon": "fa fa-snowflake",
-			"name": "Preferences"
-		}
-	]
-}
+[
+	{
+		"name": "map",
+		"group": "map-mode",
+		"icon": "fa fa-map",
+		"text": "Map",
+		"state": "unselected"
+	},
+	{
+		"name": "satellite",
+		"group": "map-mode",
+		"icon": "fa fa-satellite",
+		"text": "Satellite",
+		"state": "unselected"
+	},
+	{
+		"name": "hybrid",
+		"group": "map-mode",
+		"icon": "fa fa-map-marked-alt",
+		"text": "Hybrid",
+		"state": "unselected"
+	},
+	{
+		"name": "streets",
+		"group": "map-mode",
+		"icon": "fa fa-road",
+		"text": "Streets",
+		"state": "unselected"
+	},
+	{
+		"name": "transportation",
+		"group": "map-mode",
+		"icon": "fa fa-bus",
+		"text": "Transportation",
+		"state": "unselected"
+	},
+	{
+		"name": "elevation",
+		"group": "map-mode",
+		"icon": "fa fa-mountain",
+		"text": "Elevation",
+		"state": "unselected"
+	},
+	{
+		"name": "aeronautical",
+		"group": "map-mode",
+		"icon": "fa fa-plane",
+		"text": "Aeronautical",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "vfr",
+				"group": "aero-mode",
+				"icon": "fa fa-eye",
+				"text": "VFR (Sectional)",
+				"state": "unselected"
+			},
+			{
+				"name": "ifrlo",
+				"group": "aero-mode",
+				"icon": "fa fa-arrow-up",
+				"text": "IFR / Low",
+				"state": "unselected"
+			},
+			{
+				"name": "ifrhi",
+				"group": "aero-mode",
+				"icon": "fa fa-arrow-down",
+				"text": "IFR / High",
+				"state": "unselected"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "navigation",
+		"group": "left",
+		"icon": "fa fa-arrows-alt",
+		"text": "Navigation",
+		"menu": [
+			{
+				"name": "zoom-to-location",
+				"icon": "fa fa-crosshairs",
+				"text": "Current Location",
+				"shortcut": "command-H"
+			},
+			"divider",
+			{
+				"name": "zoom-to",
+				"icon": "fa fa-search",
+				"text": "Zoom To",
+				"shortcut": "command-Z"
+			},
+			{
+				"name": "zoom-in",
+				"icon": "fa fa-search-plus",
+				"text": "Zoom In",
+				"shortcut": "="
+			},
+			{
+				"name": "zoom-out",
+				"icon": "fa fa-search-minus",
+				"text": "Zoom Out",
+				"shortcut": "-"
+			},
+			"divider",
+			{
+				"name": "pan-north",
+				"icon": "fa fa-arrow-up",
+				"text": "North",
+				"shortcut": "up arrow"
+			},
+			{
+				"name": "pan-south",
+				"icon": "fa fa-arrow-down",
+				"text": "South",
+				"shortcut": "down arrow"
+			},
+			{
+				"name": "pan-east",
+				"icon": "fa fa-arrow-right",
+				"text": "East",
+				"shortcut": "right arrow"
+			},
+			{
+				"name": "pan-west",
+				"icon": "fa fa-arrow-left",
+				"text": "West",
+				"shortcut": "left arrow"
+			},
+			"divider",
+			{
+				"name": "reset-view",
+				"icon": "fa fa-undo",
+				"text": "Reset",
+				"shortcut": "shift-command-R"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "show-toolbars",
+		"icon": "fa fa-wrench",
+		"text": "Toolbars",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "nav",
+				"group": "toolbars",
+				"icon": "fa fa-sitemap",
+				"text": "Nav",
+				"state": "unselected"
+			},
+			{
+				"name": "mouse-mode",
+				"group": "toolbars",
+				"icon": "fa fa-mouse-pointer",
+				"text": "Mouse Mode",
+				"state": "unselected"
+			},
+			{
+				"name": "nav-mode",
+				"group": "toolbars",
+				"icon": "fa fa-arrows-alt",
+				"text": "Nav Mode",
+				"state": "unselected"
+			},
+			{
+				"name": "annotations",
+				"group": "toolbars",
+				"icon": "fa fa-pencil",
+				"text": "Annotations",
+				"state": "unselected"
+			},
+			{
+				"name": "zoom",
+				"group": "toolbars",
+				"icon": "fa fa-search",
+				"text": "Zoom",
+				"state": "unselected"
+			},
+			{
+				"name": "map",
+				"group": "toolbars",
+				"icon": "fa fa-map",
+				"text": "Map",
+				"state": "unselected"
+			}
+		]
+	},
+	{
+		"name": "show-map-layers",
+		"icon": "fa fa-layer-group",
+		"text": "Layers",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "crosshairs",
+				"group": "map-layers",
+				"icon": "fa fa-crosshairs",
+				"text": "Crosshairs",
+				"state": "unselected"
+			},
+			{
+				"name": "photos",
+				"group": "map-layers",
+				"icon": "fa fa-camera",
+				"text": "Photos",
+				"state": "unselected"
+			},
+			{
+				"name": "videos",
+				"group": "map-layers",
+				"icon": "fa fa-camera",
+				"text": "Videos",
+				"state": "unselected"
+			},
+			{
+				"name": "overlays",
+				"group": "map-layers",
+				"icon": "fa fa-grip-lines",
+				"text": "Overlays",
+				"state": "unselected"
+			},
+			{
+				"name": "people",
+				"group": "map-layers",
+				"icon": "fa fa-user-friends",
+				"text": "People",
+				"state": "unselected"
+			},
+			{
+				"name": "places",
+				"group": "map-layers",
+				"icon": "fa fa-map-marker-alt",
+				"text": "Places",
+				"state": "unselected"
+			},
+			{
+				"name": "favorites",
+				"group": "map-layers",
+				"icon": "fa fa-map-pin",
+				"text": "Favorites",
+				"state": "unselected"
+			},
+			{
+				"name": "annotations",
+				"group": "map-layers",
+				"icon": "fa fa-pencil",
+				"text": "Annotations",
+				"state": "unselected"
+			},
+			{
+				"name": "weather",
+				"group": "map-layers",
+				"icon": "fa fa-cloud-sun-rain",
+				"text": "Weather",
+				"state": "unselected"
+			},
+			"divider",
+			{
+				"name": "all-layers",
+				"icon": "fa fa-plus",
+				"text": "All"
+			},
+			{
+				"name": "no-layers",
+				"icon": "fa fa-minus",
+				"text": "None"
+			}
+		]
+	},
+	{
+		"name": "show-map-options",
+		"icon": "fa fa-map",
+		"text": "Map Options",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "grid",
+				"group": "map-options",
+				"icon": "fa fa-border-none",
+				"text": "Grid",
+				"state": "unselected"
+			},
+			{
+				"name": "smoothing",
+				"group": "map-options",
+				"icon": "fa fa-wave-square",
+				"text": "Smoothing",
+				"state": "unselected"
+			},
+			{
+				"name": "item-names",
+				"group": "map-options",
+				"icon": "fa fa-font",
+				"text": "Names",
+				"state": "unselected"
+			},
+			{
+				"name": "geo-orientations",
+				"group": "map-options",
+				"icon": "fa fa-location-arrow",
+				"text": "Orientations",
+				"state": "unselected"
+			}
+		]
+	},
+	{
+		"name": "view-map-items",
+		"icon": "fa fa-map-location",
+		"text": "Map Items",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "icons",
+				"group": "map-view-kind",
+				"icon": "fa fa-th",
+				"text": "Icons",
+				"state": "unselected"
+			},
+			{
+				"name": "lists",
+				"group": "map-view-kind",
+				"icon": "fa fa-list",
+				"text": "Lists",
+				"state": "unselected"
+			},
+			{
+				"name": "cards",
+				"group": "map-view-kind",
+				"icon": "fa fa-id-card",
+				"text": "Cards",
+				"state": "unselected"
+			},
+			{
+				"name": "tiles",
+				"group": "map-view-kind",
+				"icon": "fa fa-th-large",
+				"text": "Tiles",
+				"state": "unselected"
+			}
+		]
+	},
+	{
+		"name": "show-sidebar",
+		"icon": "fa fa-pause",
+		"text": "Sidebar",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "maps",
+				"group": "sidebar-panels",
+				"icon": "fa fa-map",
+				"text": "Maps",
+				"state": "unselected"
+			},
+			{
+				"name": "photos",
+				"group": "sidebar-panels",
+				"icon": "fa fa-camera",
+				"text": "Photos",
+				"state": "unselected"
+			},
+			{
+				"name": "videos",
+				"group": "sidebar-panels",
+				"icon": "fa fa-video",
+				"text": "Videos",
+				"state": "unselected"
+			},
+			{
+				"name": "overlays",
+				"group": "sidebar-panels",
+				"icon": "fa fa-grip-lines",
+				"text": "Overlays",
+				"state": "unselected"
+			},
+			{
+				"name": "people",
+				"group": "sidebar-panels",
+				"icon": "fa fa-user-friends",
+				"text": "People",
+				"state": "unselected"
+			},
+			{
+				"name": "places",
+				"group": "sidebar-panels",
+				"icon": "fa fa-map-marker-alt",
+				"text": "Places",
+				"state": "unselected"
+			},
+			{
+				"name": "favorites",
+				"group": "sidebar-panels",
+				"icon": "fa fa-map-pin",
+				"text": "Favorites",
+				"state": "unselected"
+			},
+			{
+				"name": "shared",
+				"group": "sidebar-panels",
+				"icon": "fa fa-share",
+				"text": "Shared",
+				"state": "unselected"
+			}
+		]
+	},
+	{
+		"name": "view-sidebar-items",
+		"icon": "fa fa-th",
+		"text": "Sidebar Items",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "icons",
+				"group": "sidebar-view-kind",
+				"icon": "fa fa-th",
+				"text": "Icons",
+				"state": "unselected"
+			},
+			{
+				"name": "lists",
+				"group": "sidebar-view-kind",
+				"icon": "fa fa-list",
+				"text": "Lists",
+				"state": "unselected"
+			},
+			{
+				"name": "trees",
+				"group": "sidebar-view-kind",
+				"icon": "fa fa-tree",
+				"text": "Trees",
+				"state": "unselected"
+			},
+			{
+				"name": "cards",
+				"group": "sidebar-view-kind",
+				"icon": "fa fa-id-card",
+				"text": "Cards",
+				"state": "unselected"
+			},
+			{
+				"name": "tiles",
+				"group": "sidebar-view-kind",
+				"icon": "fa fa-th-large",
+				"text": "Tiles",
+				"state": "unselected"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "window-size",
+		"icon": "far fa-window-maximize",
+		"text": "Window Size",
+		"menu": [
+			{
+				"name": "shrink-window",
+				"icon": "fa fa-minus",
+				"text": "Shrink",
+				"shortcut": "command-["
+			},
+			{
+				"name": "grow-window",
+				"icon": "fa fa-plus",
+				"text": "Grow",
+				"shortcut": "command-]"
+			},
+			{
+				"name": "expand-window",
+				"icon": "fa fa-expand",
+				"text": "Expand",
+				"shortcut": "command-\\"
+			}
+		]
+	},
+	"divider",
+	{
+		"name": "spaces",
+		"icon": "far fa-window-maximize",
+		"text": "Spaces",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "prev-space",
+				"icon": "fa fa-chevron-left",
+				"text": "Prev",
+				"shortcut": "command-left arrow"
+			},
+			{
+				"name": "next-space",
+				"icon": "fa fa-chevron-right",
+				"text": "Next",
+				"shortcut": "command-right arrow"
+			}
+		]
+	},
+	{
+		"name": "windows",
+		"icon": "far fa-window-restore",
+		"text": "Windows",
+		"state": "unselected",
+		"menu": [
+			{
+				"name": "minimize-all",
+				"icon": "fa fa-window-minimize",
+				"text": "Minimize All"
+			},
+			{
+				"name": "unminimize-all",
+				"icon": "fa fa-window-restore",
+				"text": "Unminimize All"
+			}
+		]
+	},
+	{
+		"name": "view-full-screen",
+		"icon": "fa fa-desktop",
+		"text": "Full Screen",
+		"shortcut": "command-up arrow",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "view-preferences",
+		"icon": "fa fa-snowflake",
+		"text": "Preferences"
+	}
+]

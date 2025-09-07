@@ -16,13 +16,10 @@
 \******************************************************************************/
 
 import AppView from '../../../views/apps/common/app-view.js';
-import Timeable from '../../../views/behaviors/effects/timeable.js';
 import FaceView from '../../../views/apps/clock/mainbar/face-view.js';
 import ButtonsView from '../../../views/apps/clock/mainbar/buttons-view.js';
-import PreferencesFormView from '../../../views/apps/clock/forms/preferences/preferences-form-view.js'
-import TimeUtils from '../../../utilities/time/time-utils.js';
 
-export default AppView.extend(_.extend({}, Timeable, {
+export default AppView.extend({
 
 	//
 	// attributes
@@ -84,18 +81,6 @@ export default AppView.extend(_.extend({}, Timeable, {
 		this.getChildView('face').setMode(mode);
 		this.getChildView('buttons').setMode(mode);
 
-		// update animation
-		//
-		switch (mode) {
-			case 'analog':
-				this.stop();
-				break;
-			case 'digital':		
-				this.animate();
-				this.update();
-				break;
-		}
-
 		// save user preferences
 		//
 		if (save && application.isSignedIn()) {
@@ -114,13 +99,9 @@ export default AppView.extend(_.extend({}, Timeable, {
 
 		// show child views
 		//
-		this.showChildView('face', new FaceView({
-			mode: this.mode
-		}));
+		this.showFace();
 		if (this.preferences.get('show_mode')) {
-			this.showChildView('buttons', new ButtonsView({
-				mode: this.mode
-			}));
+			this.showButtons();
 		}
 
 		// update scale
@@ -128,32 +109,21 @@ export default AppView.extend(_.extend({}, Timeable, {
 		this.onResize();
 	},
 
+	showFace: function() {
+		this.showChildView('face', new FaceView({
+			mode: this.mode
+		}));
+	},
+
+	showButtons: function() {
+		this.showChildView('buttons', new ButtonsView({
+			mode: this.mode
+		}));
+	},
+
 	onAttach: function() {
 		this.original_width = this.$el.width();
 		this.original_height = this.$el.height();
-	},
-
-	//
-	// animating methods
-	//
-
-	update: function() {
-		this.getChildView('face').setDigitalTime(TimeUtils.daysOfWeek[new Date().getDay()], TimeUtils.getTime());
-	},
-
-	animate: function() {
-		if (!this.interval) {
-			this.setInterval(() => {
-
-				// update view
-				//
-				this.update();
-			}, 1000);
-		}
-	},
-
-	stop: function() {
-		this.clearInterval();
 	},
 
 	//
@@ -196,14 +166,5 @@ export default AppView.extend(_.extend({}, Timeable, {
 		// clear static attributes
 		//
 		this.constructor.current = null;
-	}
-}), {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
 	}
 });

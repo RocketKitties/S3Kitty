@@ -1,0 +1,11 @@
+{
+	"name": "Decibels",
+	"icon": "fa fa-volume-up",
+	"category": "utility",
+	"platform": "all",
+	"access": "user",
+	"disabled": false,
+	"hidden": true,
+	"args": false,
+	"color": "plum"
+}

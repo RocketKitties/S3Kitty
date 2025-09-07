@@ -24,8 +24,8 @@ export default SortMenuView.extend({
 	//
 
 	events: {
-		'click .sort-by a': 'onClickSortBy',
-		'click .sort-order a': 'onClickSortOrder'
+		'click .sort-kind': 'onClickSortKind',
+		'click .sort-order': 'onClickSortOrder'
 	},
 
 	//
@@ -34,17 +34,15 @@ export default SortMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let sortKind = preferences.get('sort_kind');
-		let sortOrder = preferences.get('sort_order');
 
 		// set initial menu state
 		//
 		return {
-			'sort-by-name': sortKind == 'name',
-			'sort-by-members': sortKind == 'members',
-			'sort-by-create-date': sortKind == 'create_date',
-			'sort-increasing': sortOrder == 'increasing',
-			'sort-decreasing': sortOrder == 'decreasing'
+			'sort-kind name': preferences.matches('sort_kind', 'name'),
+			'sort-kind members': preferences.matches('sort_kind', 'members'),
+			'sort-kind create-date': preferences.matches('sort_kind', 'create_date'),
+			'sort-order increasing': preferences.matches('sort_order', 'increasing'),
+			'sort-order decreasing': preferences.matches('sort_order', 'decreasing')
 		};
 	}
 });

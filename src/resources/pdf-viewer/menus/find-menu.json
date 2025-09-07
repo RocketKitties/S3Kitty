@@ -1,16 +1,14 @@
-{
-	"items": [
-		{
-			"class": "find",
-			"icon": "fa fa-search",
-			"name": "Find",
-			"shortcut": "command-F"
-		},
-		{
-			"class": "find-next",
-			"icon": "fa fa-search",
-			"name": "Find Next",
-			"shortcut": "shift-command-F"
-		}
-	]
-}
+[
+	{
+		"name": "find",
+		"icon": "fa fa-search",
+		"text": "Find",
+		"shortcut": "command-F"
+	},
+	{
+		"name": "find-next",
+		"icon": "fa fa-search",
+		"text": "Find Next",
+		"shortcut": "shift-command-F"
+	}
+]

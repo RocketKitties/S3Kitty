@@ -19,11 +19,31 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec extends \Google\Model
 {
+  protected $boostSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec::class;
+  protected $boostSpecDataType = '';
   /**
    * @var string
    */
   public $dataStore;
+  /**
+   * @var string
+   */
+  public $filter;
 
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec
+   */
+  public function setBoostSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec $boostSpec)
+  {
+    $this->boostSpec = $boostSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec
+   */
+  public function getBoostSpec()
+  {
+    return $this->boostSpec;
+  }
   /**
    * @param string
    */
@@ -37,6 +57,20 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec extends \Googl
   public function getDataStore()
   {
     return $this->dataStore;
+  }
+  /**
+   * @param string
+   */
+  public function setFilter($filter)
+  {
+    $this->filter = $filter;
+  }
+  /**
+   * @return string
+   */
+  public function getFilter()
+  {
+    return $this->filter;
   }
 }
 

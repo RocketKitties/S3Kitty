@@ -1,0 +1,63 @@
+{
+	"general": {
+		"view_kind": {
+			"phone": "cards",
+			"tablet": "cards",
+			"desktop": "lists"
+		},
+		"tile_size": "medium",
+		"detail_kind": "priority",
+		"date_format": "date_only",
+		"default_project": "To Do List",
+		"tasks_per_page": 10,
+		"show_comments": true,
+		"show_options": true,
+		"show_elapsed_time": true,
+		"sort_kind": "title",
+		"sort_order": "increasing"
+	},
+	"display": {
+		"toolbars": {
+			"tasks": true
+		},
+		"panes": {
+			"sidebar": true
+		},
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": {
+			"info": true,
+			"projects": true
+		},
+		"sidebar_info_kind": {
+			"phone": "cards",
+			"tablet": "icons",
+			"desktop": "icons"
+		},
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		}
+	},
+	"window": {
+		"window_size": "medium",
+		"window_state": {
+			"maximized": true,
+			"full_screen": false
+		}
+	},
+	"storage": {
+		"copy_attachments": true,
+		"uploads_directory": "Uploads/",
+		"storage_directory": "Projects/"
+	}
+}

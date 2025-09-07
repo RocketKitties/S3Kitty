@@ -1,0 +1,32 @@
+[
+	{
+		"name": "volume",
+		"icon": "fa fa-volume-up",
+		"text": "Volume",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 100,
+			"step": 5
+		},
+		"help": "This is the initial audio volume to use."
+	},
+	{
+		"name": "looping",
+		"icon": "fa fa-redo",
+		"text": "Looping",
+		"kind": "multiple-answer",
+		"options": {
+			"track-looping": "Track",
+			"album-looping": "Album"
+		},
+		"help": "This is whether or not to play the track or album in a repeating loop."
+	},
+	{
+		"name": "home-directory",
+		"icon": "fa fa-folder",
+		"text": "Home Folder",
+		"kind": "directory",
+		"help": "This is the initial folder to use when opening files."
+	}
+]

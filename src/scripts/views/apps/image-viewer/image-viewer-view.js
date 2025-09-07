@@ -29,7 +29,6 @@ import HeaderBarView from '../../../views/apps/image-viewer/header-bar/header-ba
 import SideBarView from '../../../views/apps/image-viewer/sidebar/sidebar-view.js';
 import ImageSplitView from '../../../views/apps/image-viewer/mainbar/image-split-view.js';
 import FooterBarView from '../../../views/apps/image-viewer/footer-bar/footer-bar-view.js';
-import PreferencesFormView from '../../../views/apps/image-viewer/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
 export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFavorable, FileDownloadable, FileUploadable, FileDisposable, {
@@ -506,7 +505,7 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFav
 		// show split view
 		//
 		if (!this.getChildView('contents').hasChildView('sidebar')) {
-			if (this.preferences.get('show_sidebar')) {
+			if (this.preferences.includes('panes', 'sidebar')) {
 				this.getChildView('contents').showSideBar();
 			}
 		}
@@ -813,7 +812,7 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFav
 			// options
 			//
 			preferences: this.preferences,
-			show_sidebar: this.preferences.get('show_image_info'),
+			show_sidebar: this.preferences.includes('panes', 'image_info'),
 			sidebar_size: this.preferences.get('info_bar_size'),
 
 			// callbacks
@@ -896,19 +895,6 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFav
 				model: this.model
 			}, options)));				
 		});	
-	},
-
-	showPreferencesDialog: function() {
-		import(
-			'../../../views/apps/image-viewer/dialogs/preferences/preferences-dialog-view.js'
-		).then((PreferencesDialogView) => {
-
-			// show preferences dialog
-			//
-			this.show(new PreferencesDialogView.default({
-				model: this.preferences
-			}));
-		});
 	},
 
 	showDeleteDialog: function(items) {
@@ -1088,13 +1074,4 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFav
 			this.animation.stop();
 		}
 	}
-}), {
-
-	//
-	// static getting methods
-	//
-
-	getPreferencesFormView: function(options) {
-		return new PreferencesFormView(options);
-	}
-});
+}));

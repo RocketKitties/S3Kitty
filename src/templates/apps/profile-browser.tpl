@@ -1,18 +1,18 @@
-<h1><i class="<%= config.apps['profile_browser'].icon %>"></i><%= config.apps['profile_browser'].name %></h1>
+<h1><i class="<%= config.apps.profile_browser.icon %>"></i><%= config.apps.profile_browser.name %></h1>
 
 <ol class="breadcrumb">
 	<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
 	<li><a href="#apps"><i class="fa fa-rocket"></i>Apps</a></li>
-	<li><i class="fa fa-user"></i><%= config.apps['profile_browser'].name %></li>
+	<li><i class="fa fa-user"></i><%= config.apps.profile_browser.name %></li>
 </ol>
 
 <div class="content">
-	<div class="attention icon colored <%= config.apps['profile_browser'].color %>">
-		<img src="images/icons/apps/<%= config.apps['profile_browser'].image || config.apps['profile_browser'].app + '.svg' %>" />
+	<div class="attention icon colored <%= config.apps.profile_browser.color %>">
+		<img src="images/icons/apps/<%= config.apps.profile_browser.image || config.apps.profile_browser.app + '.svg' %>" />
 	</div>
 
 	<div class="description section">
-		<p>The <%= config.apps['profile_browser'].name %> app is used to find and connect with people you know. </p>
+		<p>The <%= config.apps.profile_browser.name %> app is used to find and connect with people you know. </p>
 	</div>
 
 	<div class="details section">
@@ -43,11 +43,11 @@
 	
 	<h2><i class="fa fa-desktop"></i>Screen Shots</h2>
 	<div class="figure desktop-only">
-		<a href="images/info/apps/profile-browser/profile-browser.png" target="_blank" class="lightbox" title="<%= config.apps['profile_browser'].name %>"><img class="dialog" src="images/info/apps/profile-browser/profile-browser.png" /></a>
-		<div class="caption"><%= config.apps['profile_browser'].name %></div>
+		<a href="images/info/apps/profile-browser/profile-browser.png" target="_blank" class="lightbox" title="<%= config.apps.profile_browser.name %>"><img class="dialog" src="images/info/apps/profile-browser/profile-browser.png" /></a>
+		<div class="caption"><%= config.apps.profile_browser.name %></div>
 	</div>
 	<div class="figure mobile-only">
-		<a href="images/info/apps/profile-browser/mobile/mobile-profile-browser.png" target="_blank" class="lightbox" title="<%= config.apps['profile_browser'].name %>"><img class="dialog" src="images/info/apps/profile-browser/mobile/mobile-profile-browser.png" /></a>
-		<div class="caption"><%= config.apps['profile_browser'].name %></div>
+		<a href="images/info/apps/profile-browser/mobile/mobile-profile-browser.png" target="_blank" class="lightbox" title="<%= config.apps.profile_browser.name %>"><img class="dialog" src="images/info/apps/profile-browser/mobile/mobile-profile-browser.png" /></a>
+		<div class="caption"><%= config.apps.profile_browser.name %></div>
 	</div>
 </div>

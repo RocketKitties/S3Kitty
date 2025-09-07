@@ -42,10 +42,10 @@ use PHPUnit\Framework\TestCase;
 use PHPUnit\Metadata\Parser\Registry as MetadataRegistry;
 use PHPUnit\Metadata\TestDox;
 use PHPUnit\Util\Color;
-use PHPUnit\Util\Exporter;
 use ReflectionEnum;
 use ReflectionMethod;
 use ReflectionObject;
+use SebastianBergmann\Exporter\Exporter;
 
 /**
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -55,12 +55,12 @@ use ReflectionObject;
 final class NamePrettifier
 {
     /**
-     * @var array<string, int>
+     * @psalm-var array<string, int>
      */
     private static array $strings = [];
 
     /**
-     * @param class-string $className
+     * @psalm-param class-string $className
      */
     public function prettifyTestClassName(string $className): string
     {
@@ -194,7 +194,7 @@ final class NamePrettifier
                     array_keys($providedData),
                 );
 
-                $result = trim(preg_replace($variables, $providedData, $annotation));
+                $result = preg_replace($variables, $providedData, $annotation);
 
                 $annotationWithPlaceholders = true;
             }
@@ -222,9 +222,6 @@ final class NamePrettifier
         return Color::dim(' with ') . Color::colorize('fg-cyan', Color::visualizeWhitespace($test->dataName()));
     }
 
-    /**
-     * @return array<non-empty-string, non-empty-string>
-     */
     private function mapTestMethodParameterNamesToProvidedDataValues(TestCase $test, bool $colorize): array
     {
         assert(method_exists($test, $test->name()));
@@ -246,21 +243,7 @@ final class NamePrettifier
             $value = $providedDataValues[$i++] ?? null;
 
             if (is_object($value)) {
-                $reflector = new ReflectionObject($value);
-
-                if ($reflector->isEnum()) {
-                    $enumReflector = new ReflectionEnum($value);
-
-                    if ($enumReflector->isBacked()) {
-                        $value = $value->value;
-                    } else {
-                        $value = $value->name;
-                    }
-                } elseif ($reflector->hasMethod('__toString')) {
-                    $value = (string) $value;
-                } else {
-                    $value = $value::class;
-                }
+                $value = $this->objectToString($value);
             }
 
             if (!is_scalar($value)) {
@@ -272,7 +255,7 @@ final class NamePrettifier
             }
 
             if (is_bool($value) || is_int($value) || is_float($value)) {
-                $value = Exporter::export($value);
+                $value = (new Exporter)->export($value);
             }
 
             if ($value === '') {
@@ -283,7 +266,7 @@ final class NamePrettifier
                 }
             }
 
-            $providedData['$' . $parameter->getName()] = $value;
+            $providedData['$' . $parameter->getName()] = str_replace('$', '\\$', $value);
         }
 
         if ($colorize) {
@@ -294,5 +277,29 @@ final class NamePrettifier
         }
 
         return $providedData;
+    }
+
+    /**
+     * @return non-empty-string
+     */
+    private function objectToString(object $value): string
+    {
+        $reflector = new ReflectionObject($value);
+
+        if ($reflector->isEnum()) {
+            $enumReflector = new ReflectionEnum($value);
+
+            if ($enumReflector->isBacked()) {
+                return (string) $value->value;
+            }
+
+            return $value->name;
+        }
+
+        if ($reflector->hasMethod('__toString')) {
+            return $value->__toString();
+        }
+
+        return $value::class;
     }
 }

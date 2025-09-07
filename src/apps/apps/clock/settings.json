@@ -1,0 +1,11 @@
+{
+	"name": "Clock",
+	"icon": "fa fa-clock",
+	"category": "utility",
+	"platform": "mobile",
+	"access": "all",
+	"disabled": false,
+	"hidden": false,
+	"args": false,
+	"color": "cyan"
+}

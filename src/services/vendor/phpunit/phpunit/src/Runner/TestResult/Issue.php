@@ -19,29 +19,29 @@ use PHPUnit\Event\Code\Test;
 final class Issue
 {
     /**
-     * @var non-empty-string
+     * @psalm-var non-empty-string
      */
     private readonly string $file;
 
     /**
-     * @var positive-int
+     * @psalm-var positive-int
      */
     private readonly int $line;
 
     /**
-     * @var non-empty-string
+     * @psalm-var non-empty-string
      */
     private readonly string $description;
 
     /**
-     * @var non-empty-array<non-empty-string, array{test: Test, count: int}>
+     * @psalm-var non-empty-array<non-empty-string, array{test: Test, count: int}>
      */
     private array $triggeringTests;
 
     /**
-     * @param non-empty-string $file
-     * @param positive-int     $line
-     * @param non-empty-string $description
+     * @psalm-param non-empty-string $file
+     * @psalm-param positive-int $line
+     * @psalm-param non-empty-string $description
      */
     public static function from(string $file, int $line, string $description, Test $triggeringTest): self
     {
@@ -49,9 +49,9 @@ final class Issue
     }
 
     /**
-     * @param non-empty-string $file
-     * @param positive-int     $line
-     * @param non-empty-string $description
+     * @psalm-param non-empty-string $file
+     * @psalm-param positive-int $line
+     * @psalm-param non-empty-string $description
      */
     private function __construct(string $file, int $line, string $description, Test $triggeringTest)
     {
@@ -82,7 +82,7 @@ final class Issue
     }
 
     /**
-     * @return non-empty-string
+     * @psalm-return non-empty-string
      */
     public function file(): string
     {
@@ -90,7 +90,7 @@ final class Issue
     }
 
     /**
-     * @return positive-int
+     * @psalm-return positive-int
      */
     public function line(): int
     {
@@ -98,7 +98,7 @@ final class Issue
     }
 
     /**
-     * @return non-empty-string
+     * @psalm-return non-empty-string
      */
     public function description(): string
     {
@@ -106,7 +106,7 @@ final class Issue
     }
 
     /**
-     * @return non-empty-array<non-empty-string, array{test: Test, count: int}>
+     * @psalm-return non-empty-array<non-empty-string, array{test: Test, count: int}>
      */
     public function triggeringTests(): array
     {

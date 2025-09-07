@@ -59,7 +59,7 @@ export default BaseView.extend({
 				<i class="fa fa-check"></i>Register
 			</button>
 			<% if (show_storage) { %>
-			<button class="check-storage btn">
+			<button class="check-storage btn btn-lg">
 				<i class="fa fa-check"></i>Check Storage
 			</button>
 			<% } %>

@@ -50,6 +50,18 @@ class HangoutsChat extends \Google\Service
   /** View display name, description, and other metadata for all Google Chat conversations owned by your organization. */
   const CHAT_ADMIN_SPACES_READONLY =
       "https://www.googleapis.com/auth/chat.admin.spaces.readonly";
+  /** On their own behalf, apps in Google Chat can delete conversations and spaces and remove access to associated files. */
+  const CHAT_APP_DELETE =
+      "https://www.googleapis.com/auth/chat.app.delete";
+  /** On their own behalf, apps in Google Chat can see, add, update, and remove members from conversations and spaces. */
+  const CHAT_APP_MEMBERSHIPS =
+      "https://www.googleapis.com/auth/chat.app.memberships";
+  /** On their own behalf, apps in Google Chat can create conversations and spaces and see or update their metadata (including history settings and access settings). */
+  const CHAT_APP_SPACES =
+      "https://www.googleapis.com/auth/chat.app.spaces";
+  /** On their own behalf, apps in Google Chat can create conversations and spaces. */
+  const CHAT_APP_SPACES_CREATE =
+      "https://www.googleapis.com/auth/chat.app.spaces.create";
   /** Private Service: https://www.googleapis.com/auth/chat.bot. */
   const CHAT_BOT =
       "https://www.googleapis.com/auth/chat.bot";
@@ -68,22 +80,22 @@ class HangoutsChat extends \Google\Service
   /** View members in Google Chat conversations.. */
   const CHAT_MEMBERSHIPS_READONLY =
       "https://www.googleapis.com/auth/chat.memberships.readonly";
-  /** See, compose, send, update, and delete messages and their associated attachments, and add, see, and delete reactions to messages.. */
+  /** See, compose, send, update, and delete messages as well as their message content; add, see, and delete reactions to messages.. */
   const CHAT_MESSAGES =
       "https://www.googleapis.com/auth/chat.messages";
   /** Compose and send messages in Google Chat. */
   const CHAT_MESSAGES_CREATE =
       "https://www.googleapis.com/auth/chat.messages.create";
-  /** See, add, and delete reactions to messages in Google Chat. */
+  /** See, add, and delete reactions as well as their reaction content to messages in Google Chat. */
   const CHAT_MESSAGES_REACTIONS =
       "https://www.googleapis.com/auth/chat.messages.reactions";
   /** Add reactions to messages in Google Chat. */
   const CHAT_MESSAGES_REACTIONS_CREATE =
       "https://www.googleapis.com/auth/chat.messages.reactions.create";
-  /** View reactions to messages in Google Chat. */
+  /** View reactions as well as their reaction content to messages in Google Chat. */
   const CHAT_MESSAGES_REACTIONS_READONLY =
       "https://www.googleapis.com/auth/chat.messages.reactions.readonly";
-  /** See messages and their associated reactions and attachments in Google Chat. */
+  /** See messages as well as their reactions and message content in Google Chat. */
   const CHAT_MESSAGES_READONLY =
       "https://www.googleapis.com/auth/chat.messages.readonly";
   /** Create conversations and spaces and see or update metadata (including history settings and access settings) in Google Chat. */

@@ -42,7 +42,7 @@ export default BaseView.extend({
 				<%= icons[icon.replace(' icon', '').replace(/-/g, '_')] %>
 				<% } %>
 				<% } %>
-				<%= name %>
+				<%= text %>
 
 				<% if (menu) { %>
 				<i class="fa fa-caret-left"></i>
@@ -207,10 +207,36 @@ export default BaseView.extend({
 		return originLeft + menuWidth > containerWidth? 'left' : 'right';
 	},
 
+	getItemClassName: function(name) {
+		let classNames = name.replace(/_/g, '-').split(' ');
+		let className = '';
+		for (let i = 0; i < classNames.length; i++) {
+			className += '.' + classNames[i];
+		}
+		return className;
+	},
+
 	getItem: function(name) {
-		let className = name.replace(' ', '.').replace(/_/g, '-');
+		if (!name) {
+			return;
+		}
+		let className = this.getItemClassName(name);
+		return this.$el.find(className).closest('li');
+	},
+
+	getItemName: function(element) {
+		let className = $(element).closest('a').attr('class').trim();
+
+		// get first name
+		//
 		if (className) {
-			return this.$el.find('.' + className).closest('li');
+			className = className.split(' ')[0];
+		}
+
+		// convert class to name
+		//
+		if (className) {
+			return className.replace(/-/g, '_');
 		}
 	},
 
@@ -229,7 +255,7 @@ export default BaseView.extend({
 			let resources = appView.getResources(resourceName);
 
 			if (resources) {
-				return resources.items;
+				return resources;
 			} else {
 				return [];
 			}
@@ -285,6 +311,26 @@ export default BaseView.extend({
 				return $(shortcut).closest('a').attr('class');
 			}
 		}
+	},
+
+	//
+	// group item methods
+	//
+
+	getGroupItems: function(group) {
+		return this.getElementAttributes('.' + group.replace(/_/g, '-'), 'class', (value) => {
+			return value.replace(/-/g, '_').split(' ')[0];
+		});
+	},
+
+	getSelectedGroupItem: function(group) {
+		return this.getSelectedGroupItems(group)[0];
+	},
+
+	getSelectedGroupItems: function(group) {
+		return this.getElementAttributes('.selected > .' + group.replace(/_/g, '-'), 'class', (value) => {
+			return value.replace(/-/g, '_').split(' ')[0];
+		});
 	},
 
 	//
@@ -526,8 +572,7 @@ export default BaseView.extend({
 				//
 				let items = this.$el.find('li a');
 				for (let i = 0; i < items.length; i++) {
-					let className = $(items[i]).attr('class').split(' ')[0];
-					this.setItemEnabled(className, enabled);
+					this.setItemEnabled(this.getItemName(items[i]), enabled);
 				}
 				break;
 			}
@@ -622,6 +667,25 @@ export default BaseView.extend({
 				}
 				break;
 			}
+		}
+	},
+
+	//
+	// choice selection methods
+	//
+
+	setGroupItemSelected: function(group, choice) {
+		let groupClass = '.' + group.replace(/_/g, '-');
+
+		// deselect group items
+		//
+		this.$el.find('.selected ' + groupClass).parent().removeClass('selected');
+
+		// select new choice
+		//
+		if (choice) {
+			let choiceClass = '.' + choice.replace(/_/g, '-');
+			this.$el.find(groupClass + choiceClass).parent().addClass('selected');
 		}
 	},
 
@@ -777,23 +841,27 @@ export default BaseView.extend({
 	},
 
 	itemToHtml: function(item) {
-		let className = item.group || '';
+		let itemClass = '';
+		let linkClass = item.name;
 
 		// add to item class
 		//
 		if (item.menu) {
-			className += (className? ' ' : '') + 'dropdown dropdown-submenu';
+			itemClass += (itemClass? ' ' : '') + 'dropdown dropdown-submenu';
 		}
 		if (item.hidden) {
-			className += (className? ' ' : '') + 'hidden';
+			itemClass += (itemClass? ' ' : '') + 'hidden';
+		}
+		if (item.group) {
+			linkClass += (linkClass? ' ' : '') + item.group.replace(/_/g, '-');
 		}
 
 		return this.itemTemplate({
-			name: item.name,
+			text: item.text,
 			icon: item.icon,
 			state: item.state,
-			item_class: className,
-			link_class: item.class,
+			item_class: itemClass,
+			link_class: linkClass,
 			shortcut: this.getShortcutName(item.shortcut),
 			shortcut_class: this.getShortcutClass(item.shortcut),
 			menu: item.menu? this.toHtml(item.menu) : undefined,

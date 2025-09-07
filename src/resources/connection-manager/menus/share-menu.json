@@ -1,14 +1,12 @@
-{
-	"items": [
-		{
-			"class": "share-message",
-			"icon": "fa fa-comments",
-			"name": "Message"
-		},
-		{
-			"class": "share-gesture",
-			"icon": "fa fa-hand-pointer",
-			"name": "Gesture"
-		}
-	]
-}
+[
+	{
+		"name": "share-message",
+		"icon": "fa fa-comments",
+		"text": "Message"
+	},
+	{
+		"name": "share-gesture",
+		"icon": "fa fa-hand-pointer",
+		"text": "Gesture"
+	}
+]

@@ -36,7 +36,7 @@ export default SideBarPanelView.extend({
 	`),
 
 	events: {
-		'click .new-project a': 'onClickNewProject'
+		'click .new-project': 'onClickNewProject'
 	},	
 
 	//

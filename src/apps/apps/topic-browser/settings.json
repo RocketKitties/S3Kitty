@@ -1,0 +1,11 @@
+{
+	"name": "Topics",
+	"icon": "fa fa-hashtag",
+	"category": "social",
+	"platform": "all",
+	"access": "all",
+	"disabled": false,
+	"hidden": true,
+	"args": true,
+	"color": "blue"
+}

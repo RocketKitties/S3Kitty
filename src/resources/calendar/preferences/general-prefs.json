@@ -1,0 +1,13 @@
+[
+	{
+		"name": "view-kind",
+		"icon": "fa fa-eye",
+		"text": "View",
+		"kind": "multiple-choice",
+		"options": {
+			"month": "Month",
+			"day": "Day"
+		},
+		"help": "This is the view mode that the calendar is in."
+	}
+]

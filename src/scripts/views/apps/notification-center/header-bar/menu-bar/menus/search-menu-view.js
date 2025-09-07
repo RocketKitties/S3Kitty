@@ -24,7 +24,7 @@ export default SearchMenuView.extend({
 	//
 
 	events: {
-		'click .search-by > a': 'onClickSearchBy'
+		'click .search-kind': 'onClickSearchKind'
 	},
 
 	//
@@ -33,12 +33,11 @@ export default SearchMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let searchKind = preferences.get('search_kind');
 
 		return {
-			'search-by-name': searchKind == 'name',
-			'search-by-kind': searchKind == 'kind',
-			'search-by-date': searchKind == 'date'
+			'search-kind name': preferences.matches('search_kind', 'name'),
+			'search-kind kind': preferences.matches('search_kind', 'kind'),
+			'search-kind date': preferences.matches('search_kind', 'date')
 		};
 	}
 });

@@ -1,0 +1,16 @@
+[
+	{
+		"name": "background-color",
+		"icon": "fa fa-paint-brush",
+		"text": "Background",
+		"kind": "color",
+		"help": "This is the color used for the viewer background."
+	},
+	{
+		"name": "home-directory",
+		"icon": "fa fa-folder",
+		"text": "Home Folder",
+		"kind": "directory",
+		"help": "This is the initial directory to use when opening files."
+	}
+]

@@ -1,223 +1,221 @@
-{
-	"items": [
-		{
-			"class": "edit name",
-			"group": "name option",
-			"icon": "fa fa-font",
-			"name": "Edit Name"
-		},
-		{
-			"class": "edit profile",
-			"group": "profile option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Profile"
-		},
-		{
-			"class": "add home",
-			"group": "home option",
-			"icon": "fa fa-plus",
-			"name": "Add Home"
-		},
-		{
-			"class": "edit home",
-			"group": "home option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Home"
-		},
-		{
-			"class": "delete home",
-			"group": "home option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Homes",
-			"shortcut": "delete"
-		},
-		{
-			"class": "add job",
-			"group": "work option",
-			"icon": "fa fa-plus",
-			"name": "Add Job"
-		},
-		{
-			"class": "edit job",
-			"group": "work option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Job"
-		},
-		{
-			"class": "delete job",
-			"group": "work option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Job",
-			"shortcut": "delete"
-		},
-		{
-			"class": "add family member",
-			"group": "family option",
-			"icon": "fa fa-plus",
-			"name": "Add Family Member"
-		},
-		{
-			"class": "edit family member",
-			"group": "family option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Family Member"
-		},
-		{
-			"class": "delete family member",
-			"group": "family option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Family Member",
-			"shortcut": "delete"
-		},
-		{
-			"class": "add school",
-			"group": "school option",
-			"icon": "fa fa-plus",
-			"name": "Add School"
-		},
-		{
-			"class": "edit school",
-			"group": "school option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit School"
-		},
-		{
-			"class": "delete school",
-			"group": "school option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete School",
-			"shortcut": "delete"
-		},
-		{
-			"class": "add publications",
-			"group": "publications option",
-			"icon": "fa fa-plus",
-			"name": "Add Publication"
-		},
-		{
-			"class": "edit publications",
-			"group": "publications option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Publication"
-		},
-		{
-			"class": "delete publications",
-			"group": "publications option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Publication",
-			"shortcut": "delete"
-		},
-		{
-			"class": "add contact",
-			"group": "contact option",
-			"icon": "fa fa-plus",
-			"name": "Add Contact"
-		},
-		{
-			"class": "edit contact",
-			"group": "contact option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Contact"
-		},
-		{
-			"class": "delete contact",
-			"group": "contact option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Contacts",
-			"shortcut": "delete"
-		},
-		{
-			"class": "add affiliations",
-			"group": "affiliations option",
-			"icon": "fa fa-plus",
-			"name": "Add Affiliation"
-		},
-		{
-			"class": "edit affiliations",
-			"group": "affiliations option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Affiliation"
-		},
-		{
-			"class": "delete affiliations",
-			"group": "affiliations option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Affiliations",
-			"shortcut": "delete"
-		},
-		{
-			"class": "edit post",
-			"group": "post option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Post",
-			"shortcut": "command-E"
-		},
-		{
-			"class": "delete post",
-			"group": "post option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Posts",
-			"shortcut": "delete"
-		},
-		{
-			"class": "edit comment",
-			"group": "comment option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Comment",
-			"shortcut": "command-E"
-		},
-		{
-			"class": "delete comment",
-			"group": "comment option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Comment",
-			"shortcut": "delete"
-		},
-		{
-			"class": "edit reply",
-			"group": "reply option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Reply",
-			"shortcut": "command-E"
-		},
-		{
-			"class": "delete reply",
-			"group": "reply option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Reply",
-			"shortcut": "delete"
-		},
-		{
-			"class": "delete connection",
-			"group": "connection option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Connections"
-		},
-		{
-			"class": "delete share",
-			"group": "shares sharing option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Shares",
-			"shortcut": "delete"
-		},
-		{
-			"class": "edit link",
-			"group": "link sharing option",
-			"icon": "fa fa-pencil-alt",
-			"name": "Edit Link"
-		},
-		{
-			"class": "copy link",
-			"group": "link sharing option",
-			"icon": "fa fa-copy",
-			"name": "Copy Link"
-		},
-		{
-			"class": "delete link",
-			"group": "link sharing option",
-			"icon": "fa fa-trash-alt",
-			"name": "Delete Link",
-			"shortcut": "delete"
-		}
-	]
-}
+[
+	{
+		"name": "edit name",
+		"group": "name option",
+		"icon": "fa fa-font",
+		"text": "Edit Name"
+	},
+	{
+		"name": "edit profile",
+		"group": "profile option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Profile"
+	},
+	{
+		"name": "add home",
+		"group": "home option",
+		"icon": "fa fa-plus",
+		"text": "Add Home"
+	},
+	{
+		"name": "edit home",
+		"group": "home option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Home"
+	},
+	{
+		"name": "delete home",
+		"group": "home option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Homes",
+		"shortcut": "delete"
+	},
+	{
+		"name": "add job",
+		"group": "work option",
+		"icon": "fa fa-plus",
+		"text": "Add Job"
+	},
+	{
+		"name": "edit job",
+		"group": "work option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Job"
+	},
+	{
+		"name": "delete job",
+		"group": "work option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Job",
+		"shortcut": "delete"
+	},
+	{
+		"name": "add family member",
+		"group": "family option",
+		"icon": "fa fa-plus",
+		"text": "Add Family Member"
+	},
+	{
+		"name": "edit family member",
+		"group": "family option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Family Member"
+	},
+	{
+		"name": "delete family member",
+		"group": "family option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Family Member",
+		"shortcut": "delete"
+	},
+	{
+		"name": "add school",
+		"group": "school option",
+		"icon": "fa fa-plus",
+		"text": "Add School"
+	},
+	{
+		"name": "edit school",
+		"group": "school option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit School"
+	},
+	{
+		"name": "delete school",
+		"group": "school option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete School",
+		"shortcut": "delete"
+	},
+	{
+		"name": "add publications",
+		"group": "publications option",
+		"icon": "fa fa-plus",
+		"text": "Add Publication"
+	},
+	{
+		"name": "edit publications",
+		"group": "publications option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Publication"
+	},
+	{
+		"name": "delete publications",
+		"group": "publications option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Publication",
+		"shortcut": "delete"
+	},
+	{
+		"name": "add contact",
+		"group": "contact option",
+		"icon": "fa fa-plus",
+		"text": "Add Contact"
+	},
+	{
+		"name": "edit contact",
+		"group": "contact option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Contact"
+	},
+	{
+		"name": "delete contact",
+		"group": "contact option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Contacts",
+		"shortcut": "delete"
+	},
+	{
+		"name": "add affiliations",
+		"group": "affiliations option",
+		"icon": "fa fa-plus",
+		"text": "Add Affiliation"
+	},
+	{
+		"name": "edit affiliations",
+		"group": "affiliations option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Affiliation"
+	},
+	{
+		"name": "delete affiliations",
+		"group": "affiliations option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Affiliations",
+		"shortcut": "delete"
+	},
+	{
+		"name": "edit post",
+		"group": "post option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Post",
+		"shortcut": "command-E"
+	},
+	{
+		"name": "delete post",
+		"group": "post option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Posts",
+		"shortcut": "delete"
+	},
+	{
+		"name": "edit comment",
+		"group": "comment option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Comment",
+		"shortcut": "command-E"
+	},
+	{
+		"name": "delete comment",
+		"group": "comment option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Comment",
+		"shortcut": "delete"
+	},
+	{
+		"name": "edit reply",
+		"group": "reply option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Reply",
+		"shortcut": "command-E"
+	},
+	{
+		"name": "delete reply",
+		"group": "reply option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Reply",
+		"shortcut": "delete"
+	},
+	{
+		"name": "delete connection",
+		"group": "connection option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Connections"
+	},
+	{
+		"name": "delete share",
+		"group": "shares sharing option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Shares",
+		"shortcut": "delete"
+	},
+	{
+		"name": "edit link",
+		"group": "link sharing option",
+		"icon": "fa fa-pencil-alt",
+		"text": "Edit Link"
+	},
+	{
+		"name": "copy link",
+		"group": "link sharing option",
+		"icon": "fa fa-copy",
+		"text": "Copy Link"
+	},
+	{
+		"name": "delete link",
+		"group": "link sharing option",
+		"icon": "fa fa-trash-alt",
+		"text": "Delete Link",
+		"shortcut": "delete"
+	}
+]

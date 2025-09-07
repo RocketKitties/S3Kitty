@@ -33,14 +33,14 @@ export default ViewMenuView.extend({
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
-		'click .sidebar-tile-size > a': 'onClickSideBarTileSize',
+		'click .sidebar-panels': 'onClickSideBarPanel',
+		'click .sidebar-view-kind': 'onClickSideBarViewKind',
+		'click .sidebar-tile-size': 'onClickSideBarTileSize',
 		'click .show-video-info': 'onClickOption',
 
 		// window options
@@ -68,39 +68,35 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let toolbars = preferences.get('toolbars') || [];
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
-		let sidebarViewKind = preferences.get('sidebar_view_kind');
-		let sidebarTileSize = preferences.get('sidebar_tile_size');
 
 		return {
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-clip-bar': toolbars.includes('clip'),
-			'show-volume-bar': toolbars.includes('volume'),
-			'show-video-bar': toolbars.includes('video'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolbars clip': preferences.includes('toolbars', 'clip'),
+			'toolbars volume': preferences.includes('toolbars', 'volume'),
+			'toolbars video': preferences.includes('toolbars', 'video'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-favorites-panel': sidebarPanels.includes('favorites'),
-			'show-videos-panel': sidebarPanels.includes('videos'),
-			'show-files-panel': sidebarPanels.includes('files'),
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels favorites': preferences.includes('sidebar_panels', 'favorites'),
+			'sidebar-panels videos': preferences.includes('sidebar_panels', 'videos'),
+			'sidebar-panels files': preferences.includes('sidebar_panels', 'files'),
 
 			// sidebar item options
 			//
-			'view-sidebar-icons': sidebarViewKind == 'icons',
-			'view-sidebar-lists': sidebarViewKind == 'lists',
-			'view-sidebar-cards': sidebarViewKind == 'cards',
-			'view-sidebar-tiles': sidebarViewKind == 'tiles',
+			'sidebar-view-kind icons': preferences.matches('sidebar_view_kind', 'icons'),
+			'sidebar-view-kind lists': preferences.matches('sidebar_view_kind', 'lists'),
+			'sidebar-view-kind cards': preferences.matches('sidebar_view_kind', 'cards'),
+			'sidebar-view-kind tiles': preferences.matches('sidebar_view_kind', 'tiles'),
 
 			// sidebar tile sizes
 			//
-			'small-tile-size': sidebarTileSize == 'small',
-			'medium-tile-size': sidebarTileSize == 'medium',
-			'large-tile-size': sidebarTileSize == 'large'
+			'sidebar-tile-size small': preferences.matches('sidebar_tile_size', 'small'),
+			'sidebar-tile-size medium': preferences.matches('sidebar_tile_size', 'medium'),
+			'sidebar-tile-size large': preferences.matches('sidebar_tile_size', 'large')
 		};
 	},
 

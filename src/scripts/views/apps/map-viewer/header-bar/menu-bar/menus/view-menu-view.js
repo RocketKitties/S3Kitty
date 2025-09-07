@@ -27,8 +27,8 @@ export default ViewMenuView.extend({
 
 		// view options
 		//
-		'click li.map-mode a': 'onClickMapMode',
-		'click li.aero-mode a': 'onClickAeroMode',
+		'click .map-mode': 'onClickMapMode',
+		'click .aero-mode': 'onClickAeroMode',
 
 		// navigation options
 		//
@@ -45,28 +45,25 @@ export default ViewMenuView.extend({
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// layer options
 		//
-		'click .show-layer > a': 'onClickShowLayer',
-		'click .show-all-layers': 'onClickShowAllLayers',
-		'click .show-no-layers': 'onClickShowNoLayers',
+		'click .map-layers': 'onClickMapLayers',
+		'click .all-layers': 'onClickAllLayers',
+		'click .no-layers': 'onClickNoLayers',
 		
 		// map options
 		//
-		'click .show-grid': 'onClickOption',
-		'click .show-smoothing': 'onClickOption',
-		'click .map-view-kind a': 'onClickMapViewKind',
-		'click .show-item-names': 'onClickOption',
-		'click .show-geo-orientations': 'onClickOption',
+		'click .map-options': 'onClickMapOptions',
+		'click .map-view-kind': 'onClickMapViewKind',
 
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
-		'click .sidebar-tile-size > a': 'onClickSideBarTileSize',
+		'click .sidebar-panels': 'onClickSideBarPanel',
+		'click .sidebar-view-kind': 'onClickSideBarViewKind',
+		'click .sidebar-tile-size': 'onClickSideBarTileSize',
 		'click .show-image-info': 'onClickOption',
 
 		// view options
@@ -123,126 +120,78 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let mapLayers = preferences.get('map_layers') || [];
-		let toolbars = preferences.get('toolbars') || [];
-		let mapMode = this.parent.app.getMapMode() || preferences.get('map_mode');
-		let aeroMode = this.parent.app.getAeroMode() || preferences.get('aero_mode');
-		let mapViewKind = preferences.get('map_view_kind');
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
-		let sidebarViewKind = preferences.get('sidebar_view_kind');
 
 		return {
 
 			// map options
 			//
-			'show-map': mapMode == 'map',
-			'show-satellite': mapMode == 'satellite',
-			'show-hybrid': mapMode == 'hybrid',
-			'show-streets': mapMode == 'streets',
-			'show-transportation': mapMode == 'transportation',
-			'show-elevation': mapMode == 'elevation',
-			'show-aeronautical': mapMode == 'aeronautical',
-			'show-vfr': aeroMode == 'vfr',
-			'show-ifrlo': aeroMode == 'ifrlo',
-			'show-ifrhi': aeroMode == 'ifrhi',
+			'map-mode map': preferences.matches('map_mode', 'map'),
+			'map-mode satellite': preferences.matches('map_mode', 'satellite'),
+			'map-mode hybrid': preferences.matches('map_mode', 'hybrid'),
+			'map-mode streets': preferences.matches('map_mode', 'streets'),
+			'map-mode transportation': preferences.matches('map_mode', 'transportation'),
+			'map-mode elevation': preferences.matches('map_mode', 'elevation'),
+			'map-mode aeronautical': preferences.matches('map_mode', 'aeronautical'),
+			'aero-mode vfr': preferences.matches('aero_mode', 'vfr'),
+			'aero-mode ifrlo': preferences.matches('aero_mode', 'ifrlo'),
+			'aero-mode ifrhi': preferences.matches('aero_mode', 'ifrhi'),
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-nav-bar': toolbars.includes('nav'),
-			'show-mouse-mode-bar': toolbars.includes('mouse_mode'),
-			'show-nav-mode-bar': toolbars.includes('nav_mode'),
-			'show-zoom-bar': toolbars.includes('zoom'),
-			'show-annotations-bar': toolbars.includes('annotations'),
-			'show-map-bar': toolbars.includes('map'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolbars nav': preferences.includes('toolbars', 'nav'),
+			'toolbars mouse-mode': preferences.includes('toolbars', 'mouse_mode'),
+			'toolbars nav-mode': preferences.includes('toolbars', 'nav_mode'),
+			'toolbars zoom': preferences.includes('toolbars', 'zoom'),
+			'toolbars annotations': preferences.includes('toolbars', 'annotations'),
+			'toolbars map': preferences.includes('toolbars', 'map'),
 
 			// layer options
 			//
-			'show-crosshairs-layer': mapLayers.includes('crosshairs'),
-			'show-photos-layer': mapLayers.includes('photos'),
-			'show-videos-layer': mapLayers.includes('videos'),
-			'show-overlays-layer': mapLayers.includes('overlays'),
-			'show-people-layer': mapLayers.includes('people'),
-			'show-places-layer': mapLayers.includes('places'),
-			'show-favorites-layer': mapLayers.includes('favorites'),
-			'show-annotations-layer': mapLayers.includes('annotations'),
-			'show-weather-layer': mapLayers.includes('weather'),
+			'map-layers crosshairs': preferences.includes('map_layers', 'crosshairs'),
+			'map-layers photos': preferences.includes('map_layers', 'photos'),
+			'map-layers videos': preferences.includes('map_layers', 'videos'),
+			'map-layers overlays': preferences.includes('map_layers', 'overlays'),
+			'map-layers people': preferences.includes('map_layers', 'people'),
+			'map-layers places': preferences.includes('map_layers', 'places'),
+			'map-layers favorites': preferences.includes('map_layers', 'favorites'),
+			'map-layers annotations': preferences.includes('map_layers', 'annotations'),
+			'map-layers weather': preferences.includes('map_layers', 'weather'),
 
-			// viewing options
+			// map options
 			//
-			'show-grid': preferences.get('show_grid'),
-			'show-smoothing': preferences.get('show_smoothing'),
+			'map-options grid': preferences.includes('map_options', 'grid'),
+			'map-options smoothing': preferences.includes('map_options', 'smoothing'),
+			'map-options item-names': preferences.includes('map_options', 'item_names'),
+			'map-options geo-orientations': preferences.includes('map_options', 'geo_orientations'),
 
 			// map item options
 			//
-			'view-map-icons': mapViewKind == 'icons',
-			'view-map-lists': mapViewKind == 'lists',
-			'view-map-cards': mapViewKind == 'cards',
-			'view-map-tiles': mapViewKind == 'tiles',
-			'show-item-names': preferences.get('show_item_names'),
-			'show-geo-orientations': preferences.get('show_geo_orientations'),
+			'map-view-kind icons': preferences.matches('map_view_kind', 'icons'),
+			'map-view-kind lists': preferences.matches('map_view_kind', 'lists'),
+			'map-view-kind cards': preferences.matches('map_view_kind', 'cards'),
+			'map-view-kind tiles': preferences.matches('map_view_kind', 'tiles'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-maps-panel': sidebarPanels.includes('maps'),
-			'show-photos-panel': sidebarPanels.includes('photos'),
-			'show-videos-panel': sidebarPanels.includes('videos'),
-			'show-overlays-panel': sidebarPanels.includes('overlays'),
-			'show-people-panel': sidebarPanels.includes('people'),
-			'show-places-panel': sidebarPanels.includes('places'),
-			'show-favorites-panel': sidebarPanels.includes('favorites'),
-			'show-shared-panel': sidebarPanels.includes('shared'),	
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels maps': preferences.includes('sidebar_panels', 'maps'),
+			'sidebar-panels photos': preferences.includes('sidebar_panels', 'photos'),
+			'sidebar-panels videos': preferences.includes('sidebar_panels', 'videos'),
+			'sidebar-panels overlays': preferences.includes('sidebar_panels', 'overlays'),
+			'sidebar-panels people': preferences.includes('sidebar_panels', 'people'),
+			'sidebar-panels places': preferences.includes('sidebar_panels', 'places'),
+			'sidebar-panels favorites': preferences.includes('sidebar_panels', 'favorites'),
+			'sidebar-panels shared': preferences.includes('sidebar_panels', 'shared'),
 
 			// sidebar item options
 			//
-			'view-sidebar-icons': sidebarViewKind == 'icons',
-			'view-sidebar-lists': sidebarViewKind == 'lists',
-			'view-sidebar-trees': sidebarViewKind == 'trees',
-			'view-sidebar-cards': sidebarViewKind == 'cards',
-			'view-sidebar-tiles': sidebarViewKind == 'tiles'
+			'sidebar-view-kind icons': preferences.matches('sidebar_view_kind', 'icons'),
+			'sidebar-view-kind lists': preferences.matches('sidebar_view_kind', 'lists'),
+			'sidebar-view-kind trees': preferences.matches('sidebar_view_kind', 'trees'),
+			'sidebar-view-kind cards': preferences.matches('sidebar_view_kind', 'cards'),
+			'sidebar-view-kind tiles': preferences.matches('sidebar_view_kind', 'tiles')
 		};
-	},
-
-	//
-	// setting methods
-	//
-
-	setSmoothing: function(smoothing) {
-		this.parent.app.options.smoothing = smoothing;
-		this.setItemSelected('toggle-smoothing', smoothing);
-	},
-
-	setMapMode: function(mapMode) {
-		this.$el.find('li.map-mode').removeClass('selected');
-		this.$el.find('li .show-' + mapMode).closest('li').addClass('selected');
-	},
-
-	setAeroMode: function(aeroMode) {
-		this.$el.find('li.aero-mode').removeClass('selected');
-		this.$el.find('li .show-' + aeroMode).closest('li').addClass('selected');
-	},
-
-	toggleToolbar: function(className) {
-
-		// call superclass method
-		//
-		this.toggleMenuItem(className);
-
-		// update parent
-		//
-		this.parent.app.setOption('toolbars', this.getSelectedToolbars());
-	},
-
-	toggleLayer: function(className) {
-
-		// call superclass method
-		//
-		this.toggleMenuItem(className);
-
-		// update parent
-		//
-		this.parent.app.setOption('layers', this.getSelectedLayers());
 	},
 
 	//
@@ -250,27 +199,25 @@ export default ViewMenuView.extend({
 	//
 
 	onClickMapMode: function(event) {
-		let className = $(event.currentTarget).attr('class').split(' ')[0];
-		let mapMode = className.replace('show-', '');
+		let mapMode = this.getItemName(event.target);
 
 		// update menu
 		//
-		this.setMapMode(mapMode);
+		this.setGroupItemSelected('map_mode', mapMode);
 
-		// update parent
+		// update app
 		//
 		this.parent.app.setOption('map_mode', mapMode);
 	},
 
 	onClickAeroMode: function(event) {
-		let className = $(event.currentTarget).attr('class');
-		let aeroMode = className.replace('show-', '');
+		let aeroMode = this.getItemName(event.target);
 
 		// update menu
 		//
-		this.setAeroMode(aeroMode);
+		this.setGroupItemSelected('aero_mode', aeroMode);
 
-		// update parent
+		// update app
 		//
 		this.parent.app.setOption('aero_mode', aeroMode);
 	},
@@ -320,36 +267,56 @@ export default ViewMenuView.extend({
 	},
 
 	//
+	// map option mouse event handling methods
+	//
+
+	onClickMapOptions: function(event) {
+		let mapOption = this.getItemName(event.target);
+
+		// update menu
+		//
+		this.toggleMenuItem('map_options ' + mapOption);
+
+		// update map
+		//
+		this.parent.app.setOption('map_options', this.getSelectedGroupItems('map_options'));
+	},
+
+	//
 	// layer mouse event handling methods
 	//
 
-	onClickShowLayer: function(event) {
-		let className = $(event.target).closest('a').attr('class');	
-
-		// update menu and app
-		//
-		this.toggleLayer(className);
-	},
-
-	onClickShowAllLayers: function() {
+	onClickMapLayers: function(event) {
+		let mapLayer = this.getItemName(event.target);
 
 		// update menu
 		//
-		this.$el.find('.show-layer').addClass('selected');
+		this.toggleMenuItem('map_layers ' + mapLayer);
 
 		// update map
 		//
-		this.parent.app.setOption('layers', true);
+		this.parent.app.setLayerVisibility(mapLayer, this.isItemSelected('map_layers ' + mapLayer));
 	},
 
-	onClickShowNoLayers: function() {
+	onClickAllLayers: function() {
 
 		// update menu
 		//
-		this.$el.find('.show-layer').removeClass('selected');
+		this.setItemSelected('map-layers', true);
 
 		// update map
 		//
-		this.parent.app.setOption('layers', false);
+		this.parent.app.setAllLayersVisibility(true);
+	},
+
+	onClickNoLayers: function() {
+
+		// update menu
+		//
+		this.setItemSelected('map-layers', false);
+
+		// update map
+		//
+		this.parent.app.setAllLayersVisibility(false);
 	}
 });

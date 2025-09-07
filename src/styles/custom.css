@@ -1,0 +1,243 @@
+/******************************************************************************\
+|                                                                              |
+|                                  custom.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|       This defines various CSS styles used in this application.              |
+|                                                                              |
+|       Author(s): Abe Megahed                                                 |
+|                                                                              |
+|       This file is subject to the terms and conditions defined in            |
+|       'LICENSE.md', which is part of this source code distribution.          |
+|                                                                              |
+|******************************************************************************|
+|       Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com         |
+\******************************************************************************/
+
+.kitties {
+	width: 100%;
+	max-width: 100% !important;
+	max-height: calc(100% - 50px);
+	margin: 0 auto !important;
+	aspect-ratio: 1.5;
+
+	table {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		tr {
+			td {
+				position: relative;
+
+				label {
+					position: absolute;
+					top: 0;
+					left: 10px;
+				}
+
+				img {
+					width: auto !important;
+					height: auto !important;
+					width: 66% !important
+				}
+			}
+		}
+
+		&.outlined {
+			tr {
+				&:not(:first-child) {
+					td {
+						border-top: 2px solid black
+					}
+				}
+
+				&:not(:last-child) {
+					td {
+						border-bottom: 2px solid black
+					}
+				}
+
+				td {
+					&:not(:first-child) {
+						border-left: 2px solid black
+					}
+
+					&:not(:last-child) {
+						border-right: 2px solid black
+					}
+				}
+			}
+		}
+	}
+}
+
+.kitty {
+	&.chats {
+		background: hsl(220, 50%, 50%) !important;
+	}
+	&.maps {
+		background: hsl(220, 66%, 66%) !important;
+	}
+	&.data {
+		background: hsl(90, 50%, 60%) !important;
+	}
+	&.photos {
+		background: hsl(40, 90%, 66%) !important;
+	}
+	&.coder {
+		background: hsl(25, 90%, 66%) !important;
+	}
+	&.files {
+		background: hsl(30, 25%, 50%) !important;
+	}
+	&.buckets {
+		background: hsl(10, 75%, 60%) !important;
+	}
+	&.dreams {
+		background: hsl(300, 33%, 50%) !important;
+	}
+	&.audio {
+		background: hsl(250, 25%, 50%) !important;
+	}
+	&.video {
+		background: hsl(-10, 90%, 66%) !important;
+	}
+
+	label {
+		color: white;
+	}
+}
+
+.kitties.carousel {
+	margin: 20px -50px !important;
+	width: calc(100% + 100px) !important;
+	height: 200px !important;
+	max-width: none !important;
+
+	.flickity-viewport {
+		height: 200px !important;
+
+		.carousel-cell {
+			width: 200px !important;
+			height: 200px !important;
+			/* border-radius: 25% !important; */
+			border-radius: 0 !important;
+			margin-right: 0 !important;
+			vertical-align: middle;
+			padding: 10px;
+
+			img {
+				width: auto !important;
+				height: auto !important;
+			}
+		}
+	}
+}
+
+/*
+ * welcome page
+ */
+
+.welcome {
+
+	.cloud {
+		filter: drop-shadow(rgba(0, 0, 0, 0.25) 5px 5px 10px);
+	}
+
+	.kitty.section {
+		padding: 0;
+
+		.col-sm-6 {
+			padding: 30px 65px;
+		}
+
+		.colored {
+			color: white;
+
+			a {
+				color: white;
+			}
+		}
+	}
+
+	.overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		.layer {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			overflow: visible;
+
+			img {
+				position: absolute;
+				transform: translateZ(0);
+			}
+		}
+	}
+
+	.carousel {
+		.carousel-cell {
+			.caption {
+				img {
+					height: 50px;
+				}
+			}
+		}
+	}
+}
+
+body.paused {
+	.welcome {
+		.overlay {
+			.layer {
+				animation-play-state: paused
+			}
+		}
+	}
+}
+
+/*
+ * moon and stars
+ */
+
+body:not(.dark) {
+	.welcome {
+		.overlay {
+			.moon, .stars, .lights {
+				visibility: hidden;
+			}
+		}
+	}
+}
+
+.dark {
+	.welcome {
+		.overlay {
+			.sun {
+				visibility: hidden;
+			}
+
+			.layer:not(.moon):not(.stars):not(.lights) img {
+				filter: brightness(0.5);
+			}
+		}
+	}
+}
+
+/*
+ * animation
+ */
+
+.overlay 
+	.layer {
+		animation-duration: 10s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+}

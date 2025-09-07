@@ -1,0 +1,14 @@
+[
+	{
+		"name": "mode",
+		"icon": "fa fa-calculator",
+		"text": "Mode",
+		"kind": "multiple-choice",
+		"options": {
+			"basic": "Basic",
+			"scientific": "Scientific",
+			"programmer": "Programmer"
+		},
+		"help": "This is the mode that the calculator is in."
+	}
+]

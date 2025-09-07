@@ -686,7 +686,7 @@ export default FormView.extend(_.extend({}, Emotable, FileMovable, FileCopyable,
 			thumbnail_size: this.thumbnailSize + 'px',
 			message: HtmlUtils.textToHtml(this.model.get('message')),
 			privacy: this.model.get('public')? 'public' : 'connections',
-			sharing: config.defaults.sharing,
+			sharing: config.settings.defaults.sharing,
 
 			// capabilities
 			//
@@ -902,7 +902,7 @@ export default FormView.extend(_.extend({}, Emotable, FileMovable, FileCopyable,
 			return;
 		}
 
-		let files = config.defaults.sharing.files['Pictures'];
+		let files = config.settings.defaults.sharing.files['Pictures'];
 		let directoryName = files? files.directory : '';
 
 		this.showOpenImagesDialog({

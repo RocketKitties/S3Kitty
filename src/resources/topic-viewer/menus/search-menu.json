@@ -1,41 +1,39 @@
-{
-	"items": [
-		{
-			"class": "search-by-message",
-			"group": "search-by",
-			"icon": "fa fa-quote-left",
-			"name": "By Message",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "search-by-date",
-			"group": "search-by",
-			"icon": "fa fa-calendar-alt",
-			"name": "By Date",
-			"state": "unselected"
-		},
-		"divider",
-		{
-			"class": "search-by-num-likes",
-			"group": "search-by",
-			"icon": "fa fa-thumbs-up",
-			"name": "By Likes",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-num-comments",
-			"group": "search-by",
-			"icon": "fa fa-comment",
-			"name": "By Comments",
-			"state": "unselected"
-		},
-		{
-			"class": "search-by-num-attachments",
-			"group": "search-by",
-			"icon": "fa fa-file",
-			"name": "By Attachments",
-			"state": "unselected"
-		}
-	]
-}
+[
+	{
+		"name": "message",
+		"group": "search-kind",
+		"icon": "fa fa-quote-left",
+		"text": "By Message",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "date",
+		"group": "search-kind",
+		"icon": "fa fa-calendar-alt",
+		"text": "By Date",
+		"state": "unselected"
+	},
+	"divider",
+	{
+		"name": "num-likes",
+		"group": "search-kind",
+		"icon": "fa fa-thumbs-up",
+		"text": "By Likes",
+		"state": "unselected"
+	},
+	{
+		"name": "num-comments",
+		"group": "search-kind",
+		"icon": "fa fa-comment",
+		"text": "By Comments",
+		"state": "unselected"
+	},
+	{
+		"name": "num-attachments",
+		"group": "search-kind",
+		"icon": "fa fa-file",
+		"text": "By Attachments",
+		"state": "unselected"
+	}
+]

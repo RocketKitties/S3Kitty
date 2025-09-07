@@ -40,8 +40,8 @@ export default SideBarPanelView.extend({
 	`),
 
 	events: {
-		'click .new-chat a': 'onClickNewChat',
-		'click .end-chat a': 'onClickEndChat'
+		'click .new-chat': 'onClickNewChat',
+		'click .end-chat': 'onClickEndChat'
 	},	
 
 	//

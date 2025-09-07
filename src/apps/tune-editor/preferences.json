@@ -1,0 +1,43 @@
+{
+	"general": {
+		"home_directory": "/Music",
+		"notation_size": 100,
+		"fit_width": false,
+		"tune_looping": false,
+	},
+	"display": {
+		"toolbars": {
+			"nav": true,
+			"track": true
+		},
+		"panes": {
+			"sidebar": true,
+			"markup_bar": true
+		},
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": {
+			"tunes": true
+		},
+		"markup_bar_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+	"window": {
+		"window_size": "medium",
+		"window_state": {
+			"maximized": true,
+			"full_screen": false
+		}
+	}
+}

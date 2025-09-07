@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 32 512 416">
 	<defs>
 		<style>
 			#cloud {
 				fill: white;
-				stroke: white;
+				stroke: rgba(255, 255, 255, 0.5);
+				stroke-width: 2;
 				stroke-linejoin: round;
 			}
 

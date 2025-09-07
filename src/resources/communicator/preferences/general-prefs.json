@@ -1,0 +1,60 @@
+[
+	{
+		"name": "posts-per-page",
+		"icon": "fa fa-long-arrow-alt-down",
+		"text": "Posts / Page",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 100,
+			"step": 5
+		},
+		"help": "This is the number of posts to display per page."
+	},
+	{
+		"name": "posts-direction",
+		"icon": "fa fa-arrows-alt-v",
+		"text": "Posts Direction",
+		"kind": "multiple-choice",
+		"options": {
+			"top-down": "Top Down",
+			"bottom-up": "Bottom Up"
+		},
+		"help": "This is layout direction to use for the posts view."
+	},
+	{
+		"name": "messages-per-page",
+		"icon": "fa fa-long-arrow-alt-down",
+		"text": "Messages / Page",
+		"kind": "range",
+		"options": {
+			"min": 0,
+			"max": 100,
+			"step": 5
+		},
+		"help": "This is the number of messages to display per page."
+	},
+	{
+		"name": "default-privacy",
+		"icon": "fa fa-lock",
+		"text": "Default Privacy",
+		"kind": "multiple-choice",
+		"options": {
+			"connections": "Connections",
+			"public": "Public"
+		},
+		"help": "This is default privacy setting to use when creating new posts."
+	},
+	{
+		"name": "show-items",
+		"icon": "fa fa-eye",
+		"text": "Show",
+		"kind": "multiple-answer",
+		"options": {
+			"show-comments": "Comments",
+			"show-options": "Options",
+			"show-elapsed-time": "Elapsed Time"
+		},
+		"help": "This determines if post comments are initially shown or hidden."
+	}
+]

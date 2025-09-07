@@ -27,17 +27,17 @@ export default ViewMenuView.extend({
 
 		// view options
 		//
-		'click .view-kind > a': 'onClickViewKind',
+		'click .view-kind': 'onClickViewKind',
 
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
+		'click .sidebar-panels': 'onClickSideBarPanel',
 		'click .show-analyser': 'onClickOption',
 
 		// window options
@@ -71,26 +71,24 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let toolbars = preferences.get('toolbars') || [];
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
 
 		return {
 
 			// viewing options
 			//
-			'view-day': preferences.get('view_kind') == 'day',
-			'view-week': preferences.get('view_kind') == 'week',
-			'view-month': preferences.get('view_kind') == 'month',
+			'view-kind day': preferences.matches('view_kind', 'day'),
+			'view-kind week': preferences.matches('view_kind', 'week'),
+			'view-kind month': preferences.matches('view_kind', 'month'),
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-nav-bar': toolbars.includes('nav'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolbars nav': preferences.includes('toolbars', 'nav'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-events-panel': sidebarPanels.includes('events')
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels events': preferences.includes('sidebar_panels', 'events')
 		};	
 	}
 });

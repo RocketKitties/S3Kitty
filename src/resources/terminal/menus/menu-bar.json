@@ -1,24 +1,22 @@
-{
-	"menus": [
-		{
-			"class": "file",
-			"icon": "fa fa-file",
-			"name": "File"
-		},
-		{
-			"class": "edit",
-			"icon": "fa fa-pencil",
-			"name": "Edit"
-		},
-		{
-			"class": "view",
-			"icon": "fa fa-eye",
-			"name": "View"
-		},
-		{
-			"class": "help",
-			"icon": "fa fa-question-circle",
-			"name": "Help"
-		}
-	]
-}
+[
+	{
+		"name": "file",
+		"icon": "fa fa-file",
+		"text": "File"
+	},
+	{
+		"name": "edit",
+		"icon": "fa fa-pencil",
+		"text": "Edit"
+	},
+	{
+		"name": "view",
+		"icon": "fa fa-eye",
+		"text": "View"
+	},
+	{
+		"name": "help",
+		"icon": "fa fa-question-circle",
+		"text": "Help"
+	}
+]

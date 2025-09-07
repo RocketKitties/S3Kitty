@@ -27,19 +27,19 @@ export default ViewMenuView.extend({
 
 		// view options
 		//
-		'click .detail-kind a': 'onClickDetailKind',
+		'click .detail-kind': 'onClickDetailKind',
 
 		// toolbar options
 		//
 		'click .show-toolbars': 'onClickShowToolbars',
-		'click .show-toolbar > a': 'onClickShowToolbar',
+		'click .toolbars': 'onClickShowToolbar',
 
 		// sidebar options
 		//
 		'click .show-sidebar': 'onClickShowSidebar',
-		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
-		'click .show-analyser': 'onClickOption',
+		'click .sidebar-panels': 'onClickSideBarPanel',
+		'click .sidebar-view-kind': 'onClickSideBarViewKind',
+		'click .show-analyzer': 'onClickOption',
 
 		// window options
 		//
@@ -66,48 +66,44 @@ export default ViewMenuView.extend({
 
 	selected: function() {
 		let preferences = this.parent.app.preferences;
-		let detailKind = preferences.get('detail_kind');
-		let toolbars = preferences.get('toolbars') || [];
-		let sidebarPanels = preferences.get('sidebar_panels') || [];
-		let sidebarViewKind = preferences.get('sidebar_view_kind');
 
 		return {
 
 			// detail options
 			//
-			'view-name-only': !detailKind,
-			'view-album': detailKind == 'album',
-			'view-artist': detailKind == 'artist',
-			'view-band': detailKind == 'band',
-			'view-composer': detailKind == 'composer',
-			'view-genre': detailKind == 'genre',
-			'view-length': detailKind == 'length',
-			'view-publisher': detailKind == 'publisher',
-			'view-track-number': detailKind == 'track_number',
-			'view-year': detailKind == 'year',
+			'detail-kind name_only': !preferences.has('detail_kind'),
+			'detail-kind album': preferences.matches('detail_kind', 'album'),
+			'detail-kind artist': preferences.matches('detail_kind', 'artist'),
+			'detail-kind band': preferences.matches('detail_kind', 'band'),
+			'detail-kind composer': preferences.matches('detail_kind', 'composer'),
+			'detail-kind genre': preferences.matches('detail_kind', 'genre'),
+			'detail-kind length': preferences.matches('detail_kind', 'length'),
+			'detail-kind publisher': preferences.matches('detail_kind', 'publisher'),
+			'detail-kind track-number': preferences.matches('detail_kind', 'track_number'),
+			'detail-kind year': preferences.matches('detail_kind', 'year'),
 
 			// toolbar options
 			//
-			'show-toolbars': toolbars.length > 0,
-			'show-play-bar': toolbars.includes('play'),
-			'show-volume-bar': toolbars.includes('volume'),
-			'show-track-bar': toolbars.includes('track'),
+			'show-toolbars': preferences.hasMultiple('toolbars'),
+			'toolbars play': preferences.includes('toolbars', 'play'),
+			'toolbars volume': preferences.includes('toolbars', 'volume'),
+			'toolbars track': preferences.includes('toolbars', 'track'),
 
 			// sidebar options
 			//
-			'show-sidebar': preferences.get('show_sidebar'),
-			'show-favorites-panel': sidebarPanels.includes('favorites'),
-			'show-track-info-panel': sidebarPanels.includes('track_info'),
-			'show-files-panel': sidebarPanels.includes('files'),
-			'show-analyser': preferences.get('show_analyser'),
+			'show-sidebar': preferences.includes('panes', 'sidebar'),
+			'sidebar-panels favorites': preferences.includes('sidebar_panels', 'favorites'),
+			'sidebar-panels track_info': preferences.includes('sidebar_panels', 'track_info'),
+			'sidebar-panels files': preferences.includes('sidebar_panels', 'files'),
+			'show-analyzer': preferences.includes('panes', 'analyzer'),
 
 			// sidebar item options
 			//
-			'view-sidebar-icons': sidebarViewKind == 'icons',
-			'view-sidebar-lists': sidebarViewKind == 'lists',
-			'view-sidebar-trees': sidebarViewKind == 'trees',
-			'view-sidebar-cards': sidebarViewKind == 'cards',
-			'view-sidebar-tiles': sidebarViewKind == 'tiles'
+			'sidebar-view-kind icons': preferences.matches('sidebar_view_kind', 'icons'),
+			'sidebar-view-kind lists': preferences.matches('sidebar_view_kind', 'lists'),
+			'sidebar-view-kind trees': preferences.matches('sidebar_view_kind', 'trees'),
+			'sidebar-view-kind cards': preferences.matches('sidebar_view_kind', 'cards'),
+			'sidebar-view-kind tiles': preferences.matches('sidebar_view_kind', 'tiles')
 		};	
 	},
 

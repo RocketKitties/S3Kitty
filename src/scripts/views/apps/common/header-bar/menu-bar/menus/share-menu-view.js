@@ -55,7 +55,7 @@ export default MenuView.extend({
 	//
 
 	getFileItems: function() {
-		let files = config.defaults.sharing.files;
+		let files = config.settings.defaults.sharing.files;
 		let items = [];
 
 		// add file types
@@ -72,9 +72,10 @@ export default MenuView.extend({
 			for (let i = 0; i < keys.length; i++) {
 				let key = keys[i];
 				items.push({
-					class: 'share-attachments',
+					name: key.toLowerCase(),
+					group: 'share-attachments',
 					icon: files[key].icon,
-					name: key
+					text: key.toTitleCase()
 				});
 			}
 		}
