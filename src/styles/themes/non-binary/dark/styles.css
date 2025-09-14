@@ -1658,10 +1658,10 @@ body:not(.binary).dark .desktop.app:not(.focused) > .body .item-list .item.selec
 
 body:not(.binary).dark .dropdown-menu, body:not(.binary).dark .menu-content {
   background: #272740;
-  border-color: #3a3a60;
+  border-color: #4d4d80;
 }
 body:not(.binary).dark ul.panels li {
-  border-color: #3a3a60;
+  border-color: #4d4d80;
 }
 body:not(.binary).dark.transparent .dropdown-menu {
   background: linear-gradient(to bottom, rgba(39, 39, 64, 0.75) 0%, transparent 100%) no-repeat, rgba(39, 39, 64, 0.75);
@@ -1685,7 +1685,7 @@ body:not(.binary).dark.translucent .dropdown-menu .dropdown-menu, body:not(.bina
 }
 body:not(.binary).dark .menu, body:not(.binary).dark .dropdown-menu {
   color: #c0c0d9;
-  border-color: #3a3a60;
+  border-color: #4d4d80;
 }
 body:not(.binary).dark .menu > li:not(.disabled), body:not(.binary).dark .dropdown-menu > li:not(.disabled) {
   color: #c0c0d9;
@@ -1721,8 +1721,8 @@ body:not(.binary).dark .menu > li.disabled > a:hover > i, body:not(.binary).dark
   fill: #6060a0;
 }
 body:not(.binary).dark .menu .divider:not(.disabled), body:not(.binary).dark .dropdown-menu .divider:not(.disabled) {
-  border-color: #3a3a60;
-  background-color: #3a3a60;
+  border-color: #4d4d80;
+  background-color: #4d4d80;
 }
 body:not(.binary).dark .menu > li:nth-child(odd) {
   background-color: rgba(192, 192, 217, 0.25);

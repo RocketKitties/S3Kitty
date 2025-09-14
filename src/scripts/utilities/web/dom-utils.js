@@ -20,6 +20,36 @@ import CssUtils from '../../utilities/web/css-utils.js';
 export default {
 
 	//
+	// conversion methods
+	//
+
+	toDimension(dimension) {
+		if (dimension && (typeof dimension == 'string')
+			&& (dimension.contains(' - ') || dimension.contains(' + '))) {
+			dimension = 'calc(' + dimension + ')';
+		}
+		if (typeof dimension != 'string') {
+			return dimension + 'px';
+		} else {
+			return dimension;
+		}
+	},
+
+	toHorizontalDimension(dimension) {
+		if (dimension && (typeof dimension == 'string') && dimension.contains('%')) {
+			dimension = dimension.replace('%', 'vw');
+		}
+		return this.toDimension(dimension);
+	},
+
+	toVerticalDimension(dimension) {
+		if (dimension && (typeof dimension == 'string') && dimension.contains('%')) {
+			dimension = dimension.replace('%', 'vh');
+		}
+		return this.toDimension(dimension);
+	},
+
+	//
 	// setting methods
 	//
 
@@ -50,75 +80,92 @@ export default {
 		}
 	},
 
-	setBlockStyles: function(element, attributes) {
-		if (!attributes) {
-			return;
-		}
-
-		function toDimension(dimension) {
-			if (typeof dimension != 'string') {
-				return dimension + 'px';
-			} else {
-				return dimension;
-			}
-		}
-
-		// set dimension styles
-		//
+	setSizeStyles: function(element, attributes) {
 		if (attributes.width) {
-			$(element).css('width', toDimension(attributes.width));
+			$(element).css('width', this.toDimension(attributes.width));
 		}
 		if (attributes.height) {
-			$(element).css('height', toDimension(attributes.height));
+			$(element).css('height', this.toDimension(attributes.height));
 		}
 		if (attributes.transform) {
 			$(element).css('transform', attributes.transform);
 		}
+	},
 
-		// set margin styles
-		//
+	setViewportSizeStyles: function(element, attributes) {
+		if (attributes.width) {
+			$(element).css('width', this.toHorizontalDimension(attributes.width));
+			if (typeof attributes.width == 'string' && attributes.width.includes('%')) {
+				$(element).addClass('viewport-relative');
+			}
+		}
+		if (attributes.height) {
+			$(element).css('height', this.toVerticalDimension(attributes.height));
+			if (typeof attributes.height == 'string' && attributes.height.includes('%')) {
+				$(element).addClass('viewport-relative');
+			}
+		}
+		if (attributes.transform) {
+			$(element).css('transform', attributes.transform);
+		}
+	},
+
+	setMarginStyles: function(element, attributes) {
 		if (attributes.margin != undefined) {
-			$(element).css('margin', toDimension(attributes.margin));
+			$(element).css('margin', this.toDimension(attributes.margin));
 		}
 		if (attributes.margin_top != undefined) {
-			$(element).css('margin-top', toDimension(attributes.margin_top));
+			$(element).css('margin-top', this.toDimension(attributes.margin_top));
 		}
 		if (attributes.margin_bottom != undefined) {
-			$(element).css('margin-bottom', toDimension(attributes.margin_bottom));
+			$(element).css('margin-bottom', this.toDimension(attributes.margin_bottom));
 		}
 		if (attributes.margin_bottom != undefined) {
-			$(element).css('margin-left', toDimension(attributes.margin_left));
+			$(element).css('margin-left', this.toDimension(attributes.margin_left));
 		}
 		if (attributes.margin_right != undefined) {
-			$(element).css('margin-left', toDimension(attributes.margin_right));
+			$(element).css('margin-left', this.toDimension(attributes.margin_right));
 		}
+	},
 
-		// set padding styles
-		//
+	setPaddingStyles: function(element, attributes) {
 		if (attributes.padding != undefined) {
-			$(element).css('padding', toDimension(attributes.padding));
+			$(element).css('padding', this.toDimension(attributes.padding));
 		}
 		if (attributes.margin_top != undefined) {
-			$(element).css('padding-top', toDimension(attributes.padding_top));
+			$(element).css('padding-top', this.toDimension(attributes.padding_top));
 		}
 		if (attributes.padding_bottom != undefined) {
-			$(element).css('padding-bottom', toDimension(attributes.padding_bottom));
+			$(element).css('padding-bottom', this.toDimension(attributes.padding_bottom));
 		}
 		if (attributes.padding_left != undefined) {
-			$(element).css('padding-left', toDimension(attributes.padding_left));
+			$(element).css('padding-left', this.toDimension(attributes.padding_left));
 		}
 		if (attributes.padding_right != undefined) {
-			$(element).css('padding-right', toDimension(attributes.padding_right));
+			$(element).css('padding-right', this.toDimension(attributes.padding_right));
 		}
+	},
 
-		// set visibility styles
-		//
+	setPlatformStyles: function(element, attributes) {
 		if (attributes.platform == 'mobile') {
 			$(element).addClass('mobile-only');
 		}
 		if (attributes.platform == 'desktop') {
 			$(element).addClass('desktop-only');
 		}
+	},
+
+	setBlockStyles: function(element, attributes) {
+		if (!attributes) {
+			return;
+		}
+
+		// set styles
+		//
+		this.setSizeStyles(element, attributes);
+		this.setMarginStyles(element, attributes);
+		this.setPaddingStyles(element, attributes);
+		this.setPlatformStyles(element, attributes);
 
 		// set shadow styles
 		//

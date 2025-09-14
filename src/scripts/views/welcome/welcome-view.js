@@ -49,9 +49,7 @@ export default BaseView.extend({
 				<div class="carousel-cell">
 					<div class="background"></div>
 					<div class="full-size overlay"></div>
-					<div class="contents">
-						<div class="splash"></div>
-					</div>
+					<div class="splash"></div>
 				</div>
 
 				<div class="carousel-cells"></div>
@@ -175,6 +173,9 @@ export default BaseView.extend({
 	//
 
 	setRibbonStyles(element, attributes) {
+		if (!attributes) {
+			return;
+		}
 
 		// set ribbon styles
 		//
@@ -210,7 +211,20 @@ export default BaseView.extend({
 		}
 	},
 
+	setMastheadStyles: function(element, attributes) {
+		if (!attributes) {
+			return;
+		}
+
+		DomUtils.setBlockStyles(element, attributes);
+		DomUtils.setViewportSizeStyles(element, attributes);
+		DomUtils.setBackgroundStyles($(element).find('.carousel-cell .background')[0], attributes);
+	},
+
 	setWelcomeStyles: function(element, attributes) {
+		if (!attributes) {
+			return;
+		}
 
 		// set ribbon styles
 		//
@@ -220,14 +234,12 @@ export default BaseView.extend({
 
 		// set background styles
 		//
-		if (config.branding.welcome) {
-			DomUtils.setBackgroundStyles($(element).find('.masthead'), attributes);
+		DomUtils.setBackgroundStyles($(element).find('.masthead'), attributes);
+		if (attributes.masthead) {
+			this.setMastheadStyles($(element).find('.masthead'), attributes.masthead);
 		}
-		if (config.branding.welcome.masthead) {
-			DomUtils.setBackgroundStyles($(element).find('.carousel-cell')[0], attributes.masthead);
-		}
-		if (config.branding.welcome.overlay) {
-			DomUtils.setBackgroundStyles($(element).find('.masthead > .overlay'), attributes.overlay);
+		if (attributes.overlay) {
+			DomUtils.setBackgroundStyles($($(element).find('.carousel-cell')[0]).find('.overlay'), attributes.overlay);
 		}
 	},
 
@@ -259,11 +271,12 @@ export default BaseView.extend({
 
 	templateContext: function() {
 		let hasCarousel = config.branding.welcome.carousel != undefined;
-		let hasCarouselScroller = hasCarousel && config.branding.welcome.carousel.scroller != undefined;
+		let hasCarouselScroller = hasCarousel && config.branding.welcome.scroller != undefined;
+		let hasCarouselScrollerAnimation = hasCarouselScroller && config.branding.welcome.scroller.speed != 0;
 		let hasOverlay = config.branding.welcome.overlay != undefined;
 		let hasOverlayScroller = hasOverlay && config.branding.welcome.overlay.scroller != undefined;
-		let isAnimated = (hasCarouselScroller && config.branding.welcome.carousel.scroller.speed != 0) ||
-			(hasOverlayScroller && config.branding.welcome.overlay.scroller.speed != 0);
+		let hasOverlayScrollerAnimation = hasOverlayScroller && config.branding.welcome.overlay.scroller.speed != 0;
+		let hasAnimation = hasCarouselScrollerAnimation || hasOverlayScrollerAnimation;
 		let theme = application.getTheme();
 
 		return {
@@ -272,9 +285,9 @@ export default BaseView.extend({
 
 			// animation button
 			//
-			show_animation: isAnimated && !Browser.isMobile(),
+			show_animation: hasAnimation && !Browser.isMobile(),
 			animate_icon: this.getAnimateIcon(this.isAnimating()),
-			animate_tooltip: isAnimated? 'Play' : 'Stop',
+			animate_tooltip: hasAnimation? 'Play' : 'Stop',
 
 			// theme button
 			//
@@ -302,9 +315,9 @@ export default BaseView.extend({
 			//
 			if (config.branding.welcome.splash) {
 				if (config.branding.welcome.splash.columns == 2) {
-					this.showChildView('splash', new SplashTwoColumnView());
+					this.showSplashTwoColumn();
 				} else {
-					this.showChildView('splash', new SplashView());
+					this.showSplash();
 				}
 			}
 
@@ -350,6 +363,22 @@ export default BaseView.extend({
 		}
 	},
 
+	showSplash: function() {
+		fetch('templates/welcome/splash.tpl').then((response) => response.text()).then((text) => {
+			this.showChildView('splash', new SplashView({
+				template: template(text)
+			}));
+		});
+	},
+
+	showSplashTwoColumn: function() {
+		fetch('templates/welcome/splash-two-columns.tpl').then((response) => response.text()).then((text) => {
+			this.showChildView('splash', new SplashTwoColumnView({
+				template: template(text)
+			}));
+		});
+	},
+
 	showWelcome: function(welcome) {
 		if (!welcome.template) {
 			this.$el.parent().addClass('full-size');
@@ -357,14 +386,11 @@ export default BaseView.extend({
 		if (welcome.crawler) {
 			this.showCrawler(welcome.crawler);
 		}
+		if (welcome.scroller && Browser.device != 'phone') {
+			this.showCarouselScroller(welcome.scroller);
+		}
 		if (welcome.overlay && welcome.overlay.scroller && Browser.device != 'phone') {
 			this.showOverlayScroller(welcome.overlay.scroller);
-		}
-		if (welcome.carousel && welcome.carousel.scroller && Browser.device != 'phone') {
-			this.showCarouselScroller(welcome.carousel.scroller);
-		}
-		if (welcome.overlay) {
-			this.showOverlay(this.$el.find('.masthead > .overlay'), welcome.overlay);
 		}
 	},
 
@@ -474,27 +500,6 @@ export default BaseView.extend({
 
 	showCarouselScroller: function(options) {
 		this.showChildView('carousel', new ScrollerView(options));
-	},
-
-	showOverlay: function(element, overlay) {
-
-		// add overlay colors
-		//
-		if (overlay.far_color && overlay.near_color) {
-			$(element).css('background', 'linear-gradient(to bottom, ' + overlay.far_color + ' 0%, ' + overlay.near_color + ' 100%)');
-		} else if (overlay.background) {
-			$(element).css('background', overlay.background);
-		} else if (overlay.background_color) {
-			$(element).css('background-color', overlay.background_color);
-		} else if (overlay.background_image) {
-			$(element).css('background-image', 'url("' + overlay.background_image + '")');
-		}
-
-		// set overlay opacity
-		//
-		if (overlay.opacity) {
-			$(element).css('opacity', overlay.opacity);
-		}
 	},
 
 	showDetails: function(address, done) {

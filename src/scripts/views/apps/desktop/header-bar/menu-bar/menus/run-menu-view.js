@@ -66,9 +66,9 @@ export default MenuView.extend(_.extend({}, AppLaunchable, {
 		for (let i = 0; i < this.apps.length; i++) {
 			let app = this.apps.at(i);
 			items.push({
-				class: 'app-item',
+				name: 'app-item',
 				icon: app.get('icon'),
-				name: app.get('name'),
+				text: app.get('name'),
 				tags: {
 					'data-index': i
 				}
@@ -78,14 +78,14 @@ export default MenuView.extend(_.extend({}, AppLaunchable, {
 		// add tasks
 		//
 		if (this.tasks.length > 0) {
-			items.push("separator");
+			items.push('divider');
 
 			for (let i = 0; i < this.tasks.length; i++) {
 				let task = this.tasks.at(i);
 				items.push({
-					class: 'task-item',
+					name: 'task-item',
 					icon: task.get('icon'),
-					name: task.get('title'),
+					text: task.get('title'),
 					tags: {
 						'data-index': i
 					}

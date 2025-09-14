@@ -29,7 +29,7 @@ export default BaseView.extend({
 	className: 'dropdown-menu',
 
 	itemTemplate: template(`
-		<li role="presentation"<% if (item_class || state == 'selected' || tags) { %> class="<%= item_class %><% if (tags) { %> <%= tags %><% } %><% if (state == 'selected') { %> selected<% } %>"<% } %>>
+		<li role="presentation"<% if (item_class || state == 'selected') { %> class="<%= item_class %><% if (state == 'selected') { %> selected<% } %>"<% } %><% if (tags) { %> <%= tags %><% } %>>
 			<a class="<%= link_class %><% if (menu) { %> dropdown-toggle<% } %>">
 				<% if (state == 'selected' || state == 'unselected') { %>
 				<i class="fa fa-check"></i>
@@ -171,6 +171,10 @@ export default BaseView.extend({
 		return item.hasClass('hidden');
 	},
 
+	isInputEvent: function(event) {
+		return this.constructor.inputs.includes(event.target.type) || event.target.isContentEditable;
+	},
+
 	isValidEvent: function(event) {
 
 		// disregard editable or handled or repeated key events
@@ -181,7 +185,7 @@ export default BaseView.extend({
 
 		// disregard key events on input elements
 		//
-		if (this.constructor.inputs.includes(event.target.type) || event.target.isContentEditable) {
+		if (this.isInputEvent(event) && !event.shiftKey && !event.ctrlKey) {
 			return false;
 		}
 
@@ -1138,7 +1142,7 @@ export default BaseView.extend({
 
 		// check if this is a valid menu event
 		//
-		if (!this.isValidEvent(event) || event.target.type) {
+		if (!this.isValidEvent(event)) {
 			return;
 		}
 

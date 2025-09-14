@@ -27,6 +27,7 @@ export default FileMenuView.extend({
 		'click .new-file': 'onClickNewFile',
 		'click .new-window': 'onClickNewWindow',
 		'click .open-file': 'onClickOpenFile',
+		'click .open-text-file': 'onClickOpenTextFile',
 		'click .show-info': 'onClickShowInfo',
 		'click .save-file': 'onClickSaveFile',
 		'click .save-as': 'onClickSaveAs',
@@ -81,6 +82,10 @@ export default FileMenuView.extend({
 
 	onClickOpenFile: function() {
 		this.parent.app.openFile();
+	},
+
+	onClickOpenTextFile: function() {
+		this.parent.app.openTextFile();
 	},
 
 	onClickShowInfo: function() {

@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                        open-video-file-dialog-view.js                        |
+|                        open-video-items-dialog-view.js                       |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -17,15 +17,15 @@
 
 import Directory from '../../../../../models/storage/directories/directory.js';
 import VideoFile from '../../../../../models/storage/media/video-file.js';
-import OpenFileDialogView from '../../../../../views/apps/file-browser/dialogs/files/open-file-dialog-view.js';
+import OpenItemsDialogView from '../../../../../views/apps/file-browser/dialogs/files/open-items-dialog-view.js';
 
-export default OpenFileDialogView.extend({
+export default OpenItemsDialogView.extend({
 
 	//
 	// attributes
 	//
 
-	title: "Open Video File",
+	title: "Open Video Files",
 
 	//
 	// filtering methods

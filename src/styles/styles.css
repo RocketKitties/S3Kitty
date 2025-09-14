@@ -1710,6 +1710,7 @@ body:not(.sidebar-panels) .app .body .contents > .sidebar .panels .panel, body:n
 }
 .desktop.app > .footer-bar .desktop-info-bar > div {
   display: inline-flex;
+  margin: -1px;
 }
 .desktop.app > .footer-bar .desktop-info-bar > div .toolbar {
   display: inline-flex;
@@ -14160,7 +14161,6 @@ body[os=ios] .main-carousel {
   height: 1em;
   height: 1em;
   margin-top: 0;
-  transform: scale(1.25);
 }
 .page .section h2 .icon {
   float: left;
@@ -14266,11 +14266,11 @@ body[os=ios] .main-carousel {
 .page .section.colored {
   color: white;
 }
-.page .section.colored h2 {
+.page .section.colored h1, .page .section.colored h2, .page .section.colored h3 {
   color: white !important;
   border-color: white !important;
 }
-.page .section.colored h2 i {
+.page .section.colored h1 i, .page .section.colored h2 i, .page .section.colored h3 i {
   color: white !important;
 }
 .page .section.colored a {
@@ -14963,34 +14963,34 @@ table.numbered.count-bubbles td:first-child::before {
   display: none !important;
 }
 
-.thin-menu-bars .header-bar .toolbar, .thin-menu-bars .footer-bar .toolbar {
+.thin-menu-bars .header-bar .toolbar {
   height: 25px;
 }
-.thin-menu-bars .header-bar .toolbar > .icon, .thin-menu-bars .footer-bar .toolbar > .icon {
+.thin-menu-bars .header-bar .toolbar > .icon {
   margin: 1px;
 }
-.thin-menu-bars .header-bar .toolbar input[type=range], .thin-menu-bars .footer-bar .toolbar input[type=range] {
+.thin-menu-bars .header-bar .toolbar input[type=range] {
   height: 25px;
 }
-.thin-menu-bars .header-bar .toolbar .input-label, .thin-menu-bars .footer-bar .toolbar .input-label {
+.thin-menu-bars .header-bar .toolbar .input-label {
   line-height: 25px;
 }
-.thin-menu-bars .header-bar .toolbar .input-group, .thin-menu-bars .footer-bar .toolbar .input-group {
+.thin-menu-bars .header-bar .toolbar .input-group {
   margin: 0 2px;
 }
-.thin-menu-bars .header-bar .toolbar .input-group input, .thin-menu-bars .footer-bar .toolbar .input-group input {
+.thin-menu-bars .header-bar .toolbar .input-group input {
   height: 25px;
 }
-.thin-menu-bars .header-bar .toolbar .button, .thin-menu-bars .footer-bar .toolbar .button {
+.thin-menu-bars .header-bar .toolbar .button {
   margin: 0 2px;
 }
-.thin-menu-bars .header-bar .toolbar .tools, .thin-menu-bars .footer-bar .toolbar .tools {
+.thin-menu-bars .header-bar .toolbar .tools {
   margin-top: 26px;
 }
-.thin-menu-bars .header-bar .toolbar .tools .button, .thin-menu-bars .footer-bar .toolbar .tools .button {
+.thin-menu-bars .header-bar .toolbar .tools .button {
   margin: 1px;
 }
-.thin-menu-bars .header-bar .toolbar .current + .tools, .thin-menu-bars .footer-bar .toolbar .current + .tools {
+.thin-menu-bars .header-bar .toolbar .current + .tools {
   margin-top: -27px;
   margin-left: 0px;
 }
@@ -18512,7 +18512,7 @@ body:not(.binary):not(.flat-buttons):not(.flat.auto-buttons) .btn:active {
 
 .page .btn-lg {
   font-size: 125%;
-  line-height: 125%;
+  padding: 10px;
 }
 
 .buttons:empty {
@@ -20367,6 +20367,7 @@ body.round .progress .bar {
 }
 .footer-bar .task-bar .task-list li .title {
   font-size: 115%;
+  line-height: 1em;
   font-weight: normal;
   display: inline;
   white-space: nowrap;
@@ -21693,6 +21694,158 @@ svg .selection {
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
+|                                   _apps.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _modals.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _image-viewer.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                _welcome.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
+\******************************************************************************/
+.welcome.page .masthead .carousel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.welcome.page .masthead .carousel .flickity-viewport {
+  height: 100%;
+}
+.welcome.page .masthead .carousel .carousel-cell {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+.welcome.page .masthead .carousel .carousel-cell:not(:first-child) {
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+.welcome.page .masthead .carousel .carousel-cell:not(:first-child) iframe {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(127, 127, 127, 0.25);
+  border-radius: 15px;
+}
+.welcome.page .masthead .carousel .carousel-cell:not(:first-child) iframe + .caption {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  margin-top: -40px;
+}
+.welcome.page .masthead .carousel .carousel-cell > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 50px 65px;
+}
+.welcome.page .masthead .carousel .carousel-cell > .container > img {
+  max-height: calc(100% - 50px);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.welcome.page .masthead .carousel .carousel-cell > .background {
+  pointer-events: none;
+}
+.welcome.page .masthead .carousel .carousel-cell .caption {
+  font-size: 1.25em;
+  margin-top: 10px;
+}
+.welcome.page .masthead .carousel .carousel-cell .caption img {
+  height: 50px;
+}
+.welcome.page .masthead .carousel .flickity-page-dots {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+  bottom: 0;
+}
+.welcome.page .masthead .carousel .flickity-page-dots .dot {
+  pointer-events: auto;
+}
+.welcome.page .masthead.viewport-relative .carousel .flickity-viewport {
+  height: 100% !important;
+}
+.welcome.page .masthead.viewport-relative .carousel .carousel-cell {
+  height: 100% !important;
+}
+.welcome.page .apps .flickity-viewport {
+  height: 150px !important;
+}
+
+@media (max-width: 480px) {
+  .welcome.page .masthead .carousel iframe + .caption {
+    display: none;
+  }
+  .welcome.page .masthead .carousel .flickity-page-dots {
+    bottom: 10px;
+  }
+}
+/******************************************************************************\
+|                                                                              |
 |                                 _modals.scss                                 |
 |                                                                              |
 |******************************************************************************|
@@ -22105,7 +22258,7 @@ svg .selection {
     height: 100px;
   }
   .welcome.page .splash .logo.large img {
-    height: 150px;
+    height: 125px;
   }
 }
 /******************************************************************************\
@@ -22158,6 +22311,32 @@ svg .selection {
   right: 0;
   transform: rotate(-45deg) translate(50%, -50px);
   transform-origin: bottom right;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                _scroller.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|       This defines various CSS styles used in this application.              |
+|                                                                              |
+|       Author(s): Abe Megahed                                                 |
+|                                                                              |
+|       This file is subject to the terms and conditions defined in            |
+|       'LICENSE.md', which is part of this source code distribution.          |
+|                                                                              |
+|******************************************************************************|
+|       Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com         |
+\******************************************************************************/
+body.paused {
+  .welcome {
+    .overlay {
+      .layer {
+        animation-play-state: paused;
+      }
+    }
+  }
 }
 
 /******************************************************************************\
@@ -22227,8 +22406,8 @@ svg .selection {
 .welcome.page .splash {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: auto;
+  width: 75%;
+  margin: 50px 70px;
   padding: 20px;
   justify-content: center;
   border-radius: 15px;
@@ -22275,11 +22454,11 @@ svg .selection {
 .welcome.page .splash .tagline {
   display: inline-block;
   font-size: 1.25em;
+  line-height: 1.5em;
   padding: 5px 20px;
   margin: 0 auto;
 }
 .welcome.page .splash .description {
-  width: 75%;
   font-size: 2em;
   line-height: 125%;
   margin: 20px auto;
@@ -22314,18 +22493,13 @@ body.round .welcome.page .splash .tagline, body.round .welcome.page .splash .des
     font-size: 150%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .welcome.page .splash {
     width: 100%;
     margin: 0;
     padding: 10px;
     border-radius: 0;
   }
-  .welcome.page .splash .description {
-    width: 75%;
-  }
-}
-@media (max-width: 480px) {
   .welcome.page .splash .search {
     padding: 0 15px;
   }
@@ -22333,10 +22507,6 @@ body.round .welcome.page .splash .tagline, body.round .welcome.page .splash .des
     width: 100%;
   }
 }
-body[device=phone] .welcome.page .splash, body[device=tablet] .welcome.page .splash {
-  padding: 0;
-}
-
 /******************************************************************************\
 |                                                                              |
 |                                   _apps.scss                                 |
@@ -22466,16 +22636,15 @@ body[device=phone] .welcome.page .splash, body[device=tablet] .welcome.page .spl
 \******************************************************************************/
 .welcome.page .contents .masthead {
   display: flex;
-  height: calc(100vh - 70px);
-  min-height: 500px;
   flex-grow: 1;
   position: relative;
   background: none;
   line-height: 2em;
   margin-bottom: 0;
+  overflow: hidden;
+  justify-content: center;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
 }
 .welcome.page .contents .masthead .background {
   position: absolute;
@@ -22484,15 +22653,21 @@ body[device=phone] .welcome.page .splash, body[device=tablet] .welcome.page .spl
   background-size: cover;
   background-position: center;
 }
-.welcome.page .contents .masthead .container {
+.welcome.page .contents .masthead .overlay {
+  position: absolute;
+  width: 100%;
   height: 100%;
-  padding: 50px;
+  overflow: hidden;
 }
-.welcome.page .contents .masthead .container > img {
-  max-height: calc(100% - 50px);
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.welcome.page .contents .masthead .overlay .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.welcome.page .contents .masthead .overlay .layer img {
+  position: absolute;
+  transform: translateZ(0);
 }
 .welcome.page .contents .masthead .panel {
   background-color: rgba(255, 255, 255, 0.5);
@@ -22513,99 +22688,6 @@ body[device=phone] .welcome.page .splash, body[device=tablet] .welcome.page .spl
   height: 25px;
   image-rendering: pixelated;
 }
-.welcome.page .contents .masthead .contents {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  padding: 0 65px;
-}
-.welcome.page .contents .masthead .contents .splash {
-  margin: auto;
-}
-.welcome.page .contents .masthead .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.welcome.page .contents .masthead .overlay .layer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-.welcome.page .contents .masthead .overlay .layer img {
-  position: absolute;
-  transform: translateZ(0);
-}
-.welcome.page .contents .masthead .overlay .layer:not(.cloud):not(.sun):not(.moon):not(.stars):not(.lights) {
-  filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 1px 2px);
-}
-.welcome.page .contents .masthead .carousel {
-  width: 100% !important;
-  height: 100% !important;
-  position: absolute;
-}
-.welcome.page .contents .masthead .carousel .carousel-cell {
-  display: flex;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-.welcome.page .contents .masthead .carousel .carousel-cell:not(:first-child) {
-  flex-direction: column;
-  height: 100%;
-  text-align: center;
-}
-.welcome.page .contents .masthead .carousel .carousel-cell:not(:first-child) iframe {
-  position: relative;
-  height: 90%;
-  margin: 65px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(127, 127, 127, 0.25);
-  border-radius: 15px;
-}
-.welcome.page .contents .masthead .carousel .carousel-cell:not(:first-child) iframe + .caption {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  margin-top: -40px;
-}
-.welcome.page .contents .masthead .carousel .carousel-cell > .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.welcome.page .contents .masthead .carousel .carousel-cell > .background {
-  pointer-events: none;
-}
-.welcome.page .contents .masthead .carousel .carousel-cell .caption {
-  font-size: 1.25em;
-  margin-top: 10px;
-}
-.welcome.page .contents .masthead .carousel .carousel-cell .caption img {
-  height: 50px;
-}
-.welcome.page .contents .masthead .carousel .flickity-viewport {
-  width: 100% !important;
-  height: 100% !important;
-}
-.welcome.page .contents .masthead .carousel .flickity-viewport .flickity-slider {
-  width: 100% !important;
-  height: 100% !important;
-}
-.welcome.page .contents .masthead .carousel .flickity-viewport .flickity-slider .carousel-cell {
-  width: 100% !important;
-  height: 100% !important;
-}
-.welcome.page .contents .masthead .carousel .flickity-page-dots {
-  bottom: 20px;
-  pointer-events: none;
-}
-.welcome.page .contents .masthead .carousel .flickity-page-dots .dot {
-  pointer-events: auto;
-}
 .welcome.page .contents .masthead .options.buttons {
   position: absolute;
   left: 10px;
@@ -22615,17 +22697,11 @@ body[device=phone] .welcome.page .splash, body[device=tablet] .welcome.page .spl
   width: 30px;
   height: 30px;
 }
-.welcome.page .contents .apps .flickity-viewport {
-  height: 150px !important;
-}
 .welcome.page.full-size .contents {
   padding: 0;
 }
 .welcome.page.full-size .contents .masthead {
   margin: 0;
-}
-.welcome.page.full-size .contents .masthead .carousel-cell {
-  height: 100%;
 }
 .welcome.page.full-size .footer .info {
   display: none;
@@ -22637,19 +22713,11 @@ body[device=phone] .welcome.page .splash, body[device=tablet] .welcome.page .spl
     margin-bottom: 0;
   }
 }
-@media (max-width: 768px) {
-  .welcome.page > .contents .masthead .contents {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-  }
-  .welcome.page > .contents .masthead .contents .splash {
-    width: 100%;
-    height: 100%;
-  }
-}
 @media (max-width: 480px) {
   .welcome.page > .contents {
+    padding: 0;
+  }
+  .welcome.page > .contents .masthead {
     padding: 0;
   }
   .welcome.page > .contents .masthead .col-sm-4 {
@@ -22657,12 +22725,6 @@ body[device=phone] .welcome.page .splash, body[device=tablet] .welcome.page .spl
   }
   .welcome.page > .contents .masthead .col-sm-4:last-child {
     margin-bottom: 0;
-  }
-  .welcome.page > .contents .masthead .carousel iframe + .caption {
-    display: none;
-  }
-  .welcome.page > .contents .masthead .carousel .flickity-page-dots {
-    bottom: 10px;
   }
   .welcome.page > .contents .section {
     margin: 0 -25px;

@@ -1045,9 +1045,6 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 		// check that control keys are not down
 		//
 		if (!event.shiftKey && !event.metaKey && !event.ctrlKey) {
-
-			// check return key
-			//
 			switch (event.keyCode) {
 
 				// return key
@@ -1061,7 +1058,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 
 						// trigger primary button
 						//
-						if (buttons.length > 0) {
+						if (keyEvent == 'onKeyUp' && buttons.length > 0) {
 							$(buttons[0]).trigger('click');
 
 							// prevent further handling of event

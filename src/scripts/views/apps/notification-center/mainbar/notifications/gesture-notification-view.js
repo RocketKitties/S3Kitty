@@ -86,7 +86,7 @@ export default NotificationsListItemView.extend({
 	getIcon: function() {
 		switch (this.get('gesture').get('kind')) {
 			case 'poke':
-				return '<i class="fa fa-hand-right"></i>';
+				return '<i class="fa fa-hand-point-right"></i>';
 			case 'wink':
 				return '<i class="fa fa-eye"></i>';
 			case 'wave':

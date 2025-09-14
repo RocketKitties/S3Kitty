@@ -66,6 +66,20 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
+			<h2><i class="fa fa-smile"></i>It's Easy to Use</h2>
+			<p>The easy to use and familiar user interface blends the power of the cloud with the best aspects of the user interfaces that you already know and love. </p>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<img src="images/welcome/smile.svg" />
+			</div>	
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
 			<h2><i class="fa fa-fire"></i>It's Easy to Launch</h2>
 			<p><%= application.name %> makes it <a href="#installation">quick and easy to launch</a> your own personal, customized <%= application.name %> on your own server. </p>
 		</div>
@@ -77,6 +91,26 @@
 				<div class="caption">
 					Launch Me!
 				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-sign-in-alt"></i>It's Easy to Try</h2>
+			<p>Before installing <%= application.name %> on your own server, you can try it out right here.  Just hit the "Sign Up" button to create an account and give the platform a try.</p>
+		</div>
+		<div class="col-sm-6">
+			<div class="well">
+				<br />
+				<div class="buttons">
+					<a href="#sign-up"><button class="sign-up btn btn-lg">
+						<i class="fa fa-pencil-alt"></i>Sign Up!
+					</button></a>
+				</div>
+				<br />
 			</div>
 		</div>
 	</div>

@@ -563,12 +563,12 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, {
 
 	showOpenDialog: function() {
 		import(
-			'../../../views/apps/video-player/dialogs/videos/open-video-file-dialog-view.js'
-		).then((OpenVideoFileDialogView) => {
+			'../../../views/apps/video-player/dialogs/videos/open-video-items-dialog-view.js'
+		).then((OpenVideoItemsDialogView) => {
 			
 			// show open dialog
 			//
-			this.show(new OpenVideoFileDialogView.default({
+			this.show(new OpenVideoItemsDialogView.default({
 
 				// start with home directory
 				//

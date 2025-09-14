@@ -7,7 +7,7 @@
 <div class="content">
 	<p><%= application.name %> is a cloud-based web interface for managing S3 bucket data.  It combines the capacity of S3 with the familiar look and feel of your desktop or mobile OS. It can be used with S3 buckets from any S3 compatible storage provider. Best of all, you can run it on your own server. </p>
 
-	<div class="attention"><div class="emphasis">Your Files, <br />Your Cloud!</div></div>
+	<div class="attention"><div class="emphasis">Your Buckets, <br />Your Cloud!</div></div>
 
 	<div class="details section">
 		<div class="row">

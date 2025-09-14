@@ -4,21 +4,21 @@
 
 @font-face {
 	font-family: 'Proxima Nova';
-	src: url('Proxima-Nova-Alt-Regular.ttf') format('truetype');
+	src: url('Proxima-Nova-Light.ttf') format('truetype');
 	font-weight: light;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Proxima Nova';
-	src: url('Proxima-Nova-Alt-Regular.ttf') format('truetype');
+	src: url('Proxima-Nova-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Proxima Nova';
-	src: url('Proxima-Nova-Alt-Bold.ttf') format('truetype');
+	src: url('Proxima-Nova-Semibold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }

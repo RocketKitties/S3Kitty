@@ -38,11 +38,18 @@
 			"text": "New Window",
 			"shortcut": "command-enter"
 		},
+		"divider",
 		{
 			"name": "open-file",
 			"icon": "fa fa-folder-open",
 			"text": "Open",
 			"shortcut": "command-O"
+		},
+		{
+			"name": "open-text-file",
+			"icon": "fa fa-folder-open",
+			"text": "Open Text File",
+			"shortcut": "shift-command-O"
 		},
 		"divider",
 		{

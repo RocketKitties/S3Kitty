@@ -1,10 +1,10 @@
 /******************************************************************************\
 |                                                                              |
-|                        open-video-file-dialog-view.js                        |
+|                           open-file-dialog-view.js                           |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines a dialog for opening video files.                        |
+|        This defines a dialog box to open a file or directory.                |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -15,40 +15,35 @@
 |        Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com        |
 \******************************************************************************/
 
-import Directory from '../../../../../models/storage/directories/directory.js';
-import VideoFile from '../../../../../models/storage/media/video-file.js';
-import OpenFileDialogView from '../../../../../views/apps/file-browser/dialogs/files/open-file-dialog-view.js';
+import File from '../../../../../models/storage/files/file.js';
+import OpenItemsDialogView from '../../../../../views/apps/file-browser/dialogs/files/open-items-dialog-view.js';
 
-export default OpenFileDialogView.extend({
-
-	//
-	// attributes
-	//
-
-	title: "Open Video File",
+export default OpenItemsDialogView.extend({
 
 	//
-	// filtering methods
+	// dialog attributes
+	//
+	
+	icon: '<i class="fa fa-file"></i>',
+	title: "Open File",
+
+	//
+	// querying methods
 	//
 
-	filter: function (child) {
+	hasSelected: function() {
+		return this.getChildView('file_browser').numSelected() == 1 &&
+			this.getChildView('file_browser').getSelectedModel() instanceof File;
+	},
 
-		// check if hidden
+	onRender: function() {
+
+		// call superclass method
 		//
-		if (child.options.preferences) {
-			if (!child.options.preferences.includes('options', 'hidden_files') && child.isHidden()) {
-				return false;
-			}
-		}
+		OpenItemsDialogView.prototype.onRender.call(this);
 
-		// check if a directory
+		// set initial state
 		//
-		if (child.model instanceof Directory) {
-			return true;
-		}
-
-		// check if valid file type
-		//
-		return child.model instanceof VideoFile;
+		this.setDisabled(true);
 	}
 });

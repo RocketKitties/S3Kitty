@@ -11,57 +11,85 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2><i class="fa fa-smile"></i>Easy to Use</h2>
-				<p>The easy to use and familiar user interface blends the power of the cloud with the best aspects of the user interfaces that you already know and love. </p>
+				<h2><i class="fa fa-server"></i>Self-Hostable</h2>
+				<p><%= application.name %> can be hosted on your own server. Any standard web server can be used to host your own <%= application.name %> instance on your own hardware or hardware that you control. </p>
+			</div>
+			<div class="col-sm-6">
+				<div class="figure">
+					<img src="images/info/features/server.svg" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2><i class="fab fa-docker"></i>Docker Installable</h2>
+				<p><%= application.name %> can be installed in one easy step using Docker or you can install it manually if you'd prefer. Either way, we've worked hard to make it so that you don't have to. </p>
+			</div>
+			<div class="col-sm-6">
+				<div class="figure">
+					<img height="150px" src="images/info/features/docker-mark-blue.svg" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2><i class="fa fa-smile"></i>Friendly User Interface</h2>
+				<p>The friendly and familiar user interface has been designed to blend the power of the cloud with the best aspects of the user interfaces that you already know and love. </p>
 			</div>
 			<div class="col-sm-6">
 				<div class="icon-grid figure">
 					<div class="directory item">
 						<div class="row">
-							<div class="icon"><img src="images/icons/folders/documents-full.svg" /></div>
+							<div class="icon"><img src="images/icons/files/txt.svg" /></div>
 						</div>
 						<div class="row">
-							<div class="name">Documents</div>
-						</div>
-					</div>
-					<div class="directory item">
-						<div class="row">
-							<div class="icon"><img src="images/icons/folders/music-full.svg" /></div>
-						</div>
-						<div class="row">
-							<div class="name">Music</div>
+							<div class="name">File</div>
 						</div>
 					</div>
 					<div class="directory item">
 						<div class="row">
-							<div class="icon"><img src="images/icons/folders/photos-full.svg" /></div>
+							<div class="icon"><img src="images/icons/folders/folder-full.svg" /></div>
 						</div>
 						<div class="row">
-							<div class="name">Photos</div>
-						</div>
-					</div>
-					<div class="directory item">
-						<div class="row">
-							<div class="icon"><img src="images/icons/folders/research-full.svg" /></div>
-						</div>
-						<div class="row">
-							<div class="name">Research</div>
+							<div class="name">Folder</div>
 						</div>
 					</div>
 					<div class="directory item">
 						<div class="row">
-							<div class="icon"><img src="images/icons/folders/videos-full.svg" /></div>
+							<div class="icon"><img src="images/icons/folders/folder-empty.svg" /></div>
 						</div>
 						<div class="row">
-							<div class="name">Videos</div>
+							<div class="name">Empty Folder</div>
 						</div>
 					</div>
 					<div class="directory item">
 						<div class="row">
-							<div class="icon"><img src="images/icons/folders/websites-full.svg" /></div>
+							<div class="icon"><img src="images/icons/files/jpg.svg" /></div>
 						</div>
 						<div class="row">
-							<div class="name">Websites</div>
+							<div class="name">Photo</div>
+						</div>
+					</div>
+					<div class="directory item">
+						<div class="row">
+							<div class="icon"><img src="images/icons/files/mp4.svg" /></div>
+						</div>
+						<div class="row">
+							<div class="name">Video</div>
+						</div>
+					</div>
+					<div class="directory item">
+						<div class="row">
+							<div class="icon"><img src="images/icons/folders/trash-empty.svg" /></div>
+						</div>
+						<div class="row">
+							<div class="name">Trash</div>
 						</div>
 					</div>
 				</div>
@@ -72,7 +100,7 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2><i class="fa fa-share"></i>Easy to Share</h2>
+				<h2><i class="fa fa-share"></i>File Sharing</h2>
 				<p><%= application.name %> allows you to share your bucket data in a variety of ways without sharing your bucket credentials.  Create hyperlinks to files or folders for easy sharing with anyone or create shared files or folders to share with your <%= application.name %> connections. </p>
 			</div>
 			<div class="col-sm-6">
@@ -155,12 +183,17 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2><i class="fa fa-lock"></i>Allows Controlled Access</h2>
-				<p><%= application.name %> allows you to control access to your buckets. You can share as read-only or read-write.  When sharing items by hyperlink, you can also set a access limits, expiration time, date, and password. </p>
+				<h2><i class="fa fa-key"></i>Access Controls</h2>
+				<p>When sharing files and folders, you can: </p>
+				<ul>
+					<li>allow readonly or password access</li>
+					<li>limit number of accesses</li>
+					<li>set expiration time / date</li>
+				</ul>
 			</div>
 			<div class="col-sm-6">
 				<div class="figure">
-					<img src="images/info/features/lock-icon.svg" />
+					<img src="images/info/features/key.svg" />
 				</div>
 			</div>
 		</div>
@@ -169,12 +202,36 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2><i class="fa fa-download"></i>Easy to Install</h2>
-				<p><%= application.name %> can be installed in one easy step using Docker or you can install it manually if you'd prefer. Either way, we've worked hard to make it so that you don't have to. </p>
+				<h2><i class="fa fa-rocket"></i>Apps</h2>
+				<p><%= application.name %> has a collection of <a href="#apps">apps</a> for viewing, managing and sharing your data.</p>
 			</div>
 			<div class="col-sm-6">
-				<div class="figure">
-					<img height="150px" src="images/info/features/docker-mark-blue.svg" />
+				<div class="icons animated carousel">
+					<% let apps = application.getVisibleApps(); %>
+					<% for (let i = 0; i < apps.length; i++) { %>
+					<% let app = apps.at(i); %>
+
+					<% if (!app.get('disabled')) { %>
+					<div class="carousel-cell">
+						<div class="app-icons large icon-grid items">
+							<a href="#apps/<%= app.get('app') %>">
+							<div class="item" href="#apps/profile-browser" style="text-decoration:none">	
+								<div class="row">
+									<div class="icon colored <%= app.get('color') %>">
+										<img src="images/icons/apps/<%= app.get('image') || app.get('app') + '.svg' %>" />
+										<i class="<%= app.get('icon') %>"></i>
+									</div>
+								</div>
+								<div class="row">
+									<div class="name"><%= app.get('name') %></div>
+								</div>
+							</div>
+							</a>
+						</div>
+					</div>
+					<% } %>
+
+					<% } %>
 				</div>
 			</div>
 		</div>
@@ -225,11 +282,13 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2><i class="fa fa-key"></i>Secure</h2>
-				<p>Your data and files are secure.  If you want, you can even sign in using a third party identity provider so we never even have to see your password. </p>
+				<h2><i class="fa fa-vault"></i>Secure</h2>
+				<p><%= application.name %> was designed to keep users' data and files safe and secure.  For added security and convenience, you can configure the platform to use third party identity providers to manage user passwords. </p>
 			</div>
 			<div class="col-sm-6">
-				<div class="attention"><div class="emphasis">Use third party sign in for added security. </div></div>
+				<div class="figure">
+					<img src="images/info/features/safe.svg" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -238,10 +297,12 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<h2><i class="fa fa-lock"></i>Private</h2>
-				<p>We are not supported by advertising. We have no need to sell, mine, or “monetize” your data.  Your data is your data.  See our <a href="#policies/user-data-policy">User Data Policy</a> for more details. </p>
+				<p>By hosting your own cloud, your data is private and controlled by you.  You decide who can see it and how they use it.  You can even run <%= application.name %> on a private network or SCIF to control access to sensitive data. </p>
 			</div>
 			<div class="col-sm-6">
-				<div class="attention"><div class="emphasis">We have no need to sell, mine, or “monetize” your data. </div></div>
+				<div class="figure">
+					<img src="images/info/features/lock.svg" />
+				</div>
 			</div>
 		</div>
 	</div>

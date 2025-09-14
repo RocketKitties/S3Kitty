@@ -38,8 +38,8 @@ $rounded-border-radius: 10px;
 	.splash {
 		display: flex;
 		flex-direction: column;
-		width: 90%;
-		margin: auto;
+		width: 75%;
+		margin: 50px 70px;
 		padding: 20px;
 		justify-content: center;
 		border-radius: 15px;
@@ -106,12 +106,12 @@ $rounded-border-radius: 10px;
 		.tagline {
 			display: inline-block;
 			font-size: $text-size;
+			line-height: 1.5em;
 			padding: 5px 20px;
 			margin: 0 auto;
 		}
 
 		.description {
-			width: 75%;
 			font-size: $description-size;
 			line-height: 125%;
 			margin: 20px auto;
@@ -190,35 +190,16 @@ body.round {
 }
 
 //
-// small styles
-//
-
-@media (max-width: variables.$screen-sm-min) {
-	.welcome.page {
-		.splash {
-			width: 100%;
-			margin: 0;
-			padding: 10px;
-			border-radius: 0;
-
-			//
-			// small descriptions
-			//
-
-			.description {
-				width: 75%;
-			}
-		}
-	}
-}
-
-//
 // extra small styles
 //
 
 @media (max-width: variables.$screen-xs-min) {
 	.welcome.page {
 		.splash {
+			width: 100%;
+			margin: 0;
+			padding: 10px;
+			border-radius: 0;
 
 			//
 			// extra small search bars
@@ -231,18 +212,6 @@ body.round {
 					width: 100%;
 				}
 			}
-		}
-	}
-}
-
-//
-// mobile styles
-//
-
-body[device="phone"], body[device="tablet"] {
-	.welcome.page {
-		.splash {
-			padding: 0;
 		}
 	}
 }

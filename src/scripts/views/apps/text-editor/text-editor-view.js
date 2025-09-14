@@ -206,6 +206,18 @@ export default AppView.extend(_.extend({}, FindReplaceable, ItemShareable, {
 		});
 	},
 
+	openTextFile: function() {
+
+		// close current file
+		//
+		this.closeFile(() => {
+
+			// open new file
+			//
+			this.showOpenTextDialog();
+		});
+	},
+
 	openItems: function(items) {
 
 		// find first item that is a file
@@ -627,10 +639,27 @@ export default AppView.extend(_.extend({}, FindReplaceable, ItemShareable, {
 
 	showOpenDialog: function() {
 		import(
+			'../../../views/apps/file-browser/dialogs/files/open-file-dialog-view.js'
+		).then((OpenFileDialogView) => {
+
+			// show open dialog
+			//
+			this.show(new OpenFileDialogView.default({
+				model: this.getHomeDirectory(),
+
+				// callbacks
+				//
+				onopen: (items) => this.openItems(items)
+			}));
+		});
+	},
+
+	showOpenTextDialog: function() {
+		import(
 			'../../../views/apps/text-editor/dialogs/files/open-text-file-dialog-view.js'
 		).then((OpenTextFileDialogView) => {
 
-			// show open dialog
+			// show open text file dialog
 			//
 			this.show(new OpenTextFileDialogView.default({
 				model: this.getHomeDirectory(),

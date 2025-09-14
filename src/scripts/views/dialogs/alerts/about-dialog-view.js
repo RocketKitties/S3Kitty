@@ -165,9 +165,17 @@ export default ModalView.extend({
 		if (!attributes) {
 			return;
 		}
-		if (attributes.color && (attributes.color != 'white' || (attributes.background || attributes.background_color))) {
-			$(element).css('color', attributes.color);
+
+		// create copy of attributes
+		//
+		attributes = { ...attributes };
+
+		// don't set color unless setting background color
+		//
+		if (!attributes.background && !attributes.background_color) {
+			attributes.color = null;
 		}
+
 		DomUtils.setTextStyles(element, attributes);
 		DomUtils.setBorderStyles(element, attributes);
 		DomUtils.setBackgroundStyles(element, attributes);
@@ -177,12 +185,16 @@ export default ModalView.extend({
 	// setting methods
 	//
 
-	setDialogStyles: function(styles) {
-		if (styles.tagline) {
-			this.setTextBlockStyles(this.$el.find('.tagline'), styles.tagline);
+	setDialogStyles: function(attributes) {
+		if (attributes.tagline) {
+			attributes = { ...attributes.tagline };
+			attributes.font_size = undefined;
+			this.setTextBlockStyles(this.$el.find('.tagline'), attributes);
 		}
-		if (styles.description) {
-			DomUtils.setTextStyles(this.$el.find('.description'), styles.description);
+		if (attributes.description) {
+			attributes = { ...attributes.description };
+			attributes.font_size = undefined;
+			this.setTextBlockStyles(this.$el.find('.description'), attributes);
 		}
 	},
 

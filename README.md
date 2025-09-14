@@ -7,10 +7,10 @@
 S3Kitty is a cloud-based web interface for managing S3 data. It combines the capacity of S3 with the familiar look and feel of your desktop or mobile OS. Best of all, you can run it on your own server.
 
 ![Screen Shot](images/screen-shots/welcome.png)
-Welcome Screen
+*Welcome Screen*
 
 ![Screen Shot](images/screen-shots/desktop.png)
-Desktop
+*Desktop*
 
 ## Features
 

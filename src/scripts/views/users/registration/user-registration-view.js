@@ -225,7 +225,7 @@ export default BaseView.extend({
 
 			// display error message
 			//
-			this.showWarning();	
+			this.showWarning();
 		}
 	},
 
@@ -284,7 +284,7 @@ export default BaseView.extend({
 		});
 	},
 
-	showWarning: function(message) {	
+	showWarning: function(message) {
 		if (message) {
 			this.$el.find('.alert-warning .message').html(message);
 		}
@@ -302,7 +302,7 @@ export default BaseView.extend({
 	onClickAlertClose: function() {
 		this.hideWarning();
 	},
-	
+
 	onClickAup: function() {
 
 		// go to aup view
